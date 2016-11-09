@@ -34,7 +34,7 @@ typedef void (^VPKUserStatsErrorBlock)(  VPKUserStats* _Nullable userStats
 @interface VPKit : NSObject
 
 + (void)setApplicationIdentifier:(nonnull NSString*)appID;
-+ (void)setConsumerIdentifier:(nullable NSString*)consumerID;
+//+ (void)setConsumerIdentifier:(nullable NSString*)consumerID;
 //+ (void)setProduction:(BOOL)production;
 //+ (void)setConsumerId:(nullable NSString*)consumerID;
 //+ (nonnull NSString*)requestConsumerId;
