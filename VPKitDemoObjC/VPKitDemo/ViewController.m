@@ -1,0 +1,208 @@
+//
+//  ViewController.m
+//  VPKitDemo
+//
+//  Created by jonathan on 01/03/2016.
+//  Copyright © 2016 jonathan. All rights reserved.
+//
+
+#import "ViewController.h"
+#import "Common.h"
+
+@import AVFoundation;
+@import AVKit;
+#import <VPKit/VPKit.h>
+
+
+@interface ViewController ()
+<
+  VPKVeepViewerDelegate
+, VPKVeepEditorDelegate
+, VPKPreviewDelegate
+>
+
+@property (nonatomic, strong) VPKVeepViewer* vpViewer;
+@property (nonatomic, strong) VPKVeepEditor* vpEditor;
+@property (nonatomic, strong) UIImageView* imageButton;
+@property (nonatomic, strong) VPKPreview* vpkPreview;
+@property (nonatomic, strong) UILabel* consumeLabel;
+@property (nonatomic, strong) UILabel* createLabel;
+@property (nonatomic, strong) UILabel* titleLabel;
+
+@end
+
+@implementation ViewController
+
+#pragma mark - lazy initialisers
+
+-(VPKPreview*)vpkPreview {
+    if (!_vpkPreview) {
+        _vpkPreview = [[VPKPreview alloc] init];
+        _vpkPreview.translatesAutoresizingMaskIntoConstraints = NO;
+    }
+    return _vpkPreview;
+}
+
+- (UIImageView*)imageButton {
+    if (!_imageButton) {
+        UIButton* button = [UIButton buttonWithType:UIButtonTypeCustom];
+        button.translatesAutoresizingMaskIntoConstraints = NO;
+        [button addTarget:self
+                   action:@selector(imageViewButtonPushed:)
+         forControlEvents:UIControlEventTouchUpInside];
+        
+        _imageButton = [[UIImageView alloc] initWithFrame:CGRectZero];
+        _imageButton.translatesAutoresizingMaskIntoConstraints = NO;
+        _imageButton.image = [UIImage imageNamed:@"stock_photo"];
+        _imageButton.contentMode = UIViewContentModeScaleAspectFit;
+        _imageButton.userInteractionEnabled = YES;
+        [_imageButton addSubview:button];
+        
+        NSArray* formats =
+        @[
+          @"V:|[button]|",
+          @"H:|[button]|"
+          ];
+        
+        for (NSString* format in formats) {
+            [_imageButton addConstraints:
+             [NSLayoutConstraint constraintsWithVisualFormat:format
+                                                     options:0 metrics:@{}
+                                                       views:@{@"button":button}]];
+        }
+    }
+    return _imageButton;
+}
+
+
+#pragma mark - viewController lifecycle
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    [self configureLabels];
+    [self configureVpkPreview];
+    [self configureImageButton];
+    [self configureConstraints];
+}
+
+#pragma mark - configuration
+
+- (void)configureLabels {
+    self.createLabel = [self newLabel:@"Create Veep"];
+    self.consumeLabel = [self newLabel:@"Consume Veep"];
+    self.titleLabel = [self newLabel:@"Veepio SDK Demo"];
+}
+
+- (UILabel*)newLabel:(NSString*)text {
+    UILabel* label = [[UILabel alloc] init];
+    label.translatesAutoresizingMaskIntoConstraints = NO;
+    label.textAlignment = NSTextAlignmentCenter;
+    label.font = [UIFont systemFontOfSize:14];
+    label.text = text;
+    [self.view addSubview:label];
+    return label;
+}
+
+- (void)configureImageButton {
+    [self.view addSubview:self.imageButton];
+}
+
+- (void)configureVpkPreview {
+    [self.view addSubview:self.vpkPreview];
+    UIImage* image = [UIImage imageNamed:@"KrispyGlas"];
+    image = [[VPKImage alloc] initWithImage:image veepID:@"527"];
+    self.vpkPreview.image = image;
+}
+
+- (void)configureConstraints {
+    NSDictionary* dict = NSDictionaryOfVariableBindings(_titleLabel,_vpkPreview,_consumeLabel,_imageButton,_createLabel);
+    CGFloat vMargin = 50;
+    NSArray* formats =
+    @[
+     @"H:|-(vMargin)-[_titleLabel]-(vMargin)-|",
+     @"H:|-(vMargin)-[_vpkPreview]-(vMargin)-|",
+     @"H:|-(vMargin)-[_consumeLabel]-(vMargin)-|",
+     @"H:|-(vMargin)-[_imageButton]-(vMargin)-|",
+     @"H:|-(vMargin)-[_createLabel]-|",
+     @"V:|-(30)-[_titleLabel]-(10)-[_vpkPreview]-(4)-[_consumeLabel]-(20)-[_imageButton]-(4)-[_createLabel]"
+     ];
+    
+    
+    for (NSString* format in formats) {
+        [self.view addConstraints:
+         [NSLayoutConstraint constraintsWithVisualFormat:format
+                                                 options:0
+                                                 metrics:@{@"vMargin":@(vMargin)}
+                                                   views:dict]];
+    }
+    CGSize size = self.vpkPreview.image.size;
+    [self alignHeightToWidth:self.vpkPreview ratio: size.height/size.width];
+    size = self.imageButton.image.size;
+    [self alignHeightToWidth:self.imageButton ratio: size.height/size.width];
+    
+}
+
+- (void)alignHeightToWidth:(UIView*)view ratio:(CGFloat)ratio{
+    [view.superview addConstraint:
+     [NSLayoutConstraint constraintWithItem:view
+                                  attribute:NSLayoutAttributeHeight
+                                  relatedBy:NSLayoutRelationEqual
+                                     toItem:view
+                                  attribute:NSLayoutAttributeWidth
+                                 multiplier:ratio
+                                   constant:0]];
+}
+
+#pragma mark - interactions
+
+
+- (void)imageViewButtonPushed:(UIButton*)sender {
+    self.vpEditor = [VPKit editorWithImage:self.imageButton.image
+                                  fromView:self.imageButton];
+    self.vpEditor.useVeepLogo = NO;
+    if (self.vpEditor) {
+        self.vpEditor.delegate = self;
+        self.vpEditor.modalPresentationStyle = UIModalPresentationOverFullScreen;
+        [self presentViewController:self.vpEditor animated:YES completion:nil];
+    }
+}
+
+
+#pragma mark - VPKPreview delegate
+
+
+- (void)vpkPreviewTouched:(VPKPreview *)preview image:(VPKImage*)image {
+    self.vpViewer = [VPKit viewerWithImage:image
+                                  fromView:preview];
+    self.vpViewer.delegate = self;
+    self.vpViewer.modalPresentationStyle = UIModalPresentationOverFullScreen;
+    [preview hideIcon];
+    [self presentViewController:self.vpViewer animated:YES completion:nil];
+}
+
+#pragma mark - VPKViewController delegate
+
+- (void)veepViewer:(VPKVeepViewer *)viewer didFinishViewingWithInfo:(NSDictionary *)info {
+    NSLog(@"%s",__func__);
+    [self dismissViewControllerAnimated:YES completion:^{
+        [self.vpkPreview showIcon];
+    }];
+}
+
+- (void)veepViewerDidCancel:(VPKVeepViewer *)viewer {
+    NSLog(@"%s",__func__);
+}
+
+- (void)veepEditorDidCancel:(VPKVeepEditor *)editor {
+    NSLog(@"%s",__func__);
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void)veepEditor:(VPKVeepEditor *)editor didPublishVeep:(NSString *)veepID  {
+    NSLog(@"%s %@",__func__,veepID);
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+
+
+@end
