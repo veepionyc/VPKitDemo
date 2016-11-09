@@ -19,7 +19,7 @@ class ViewController:
     //MARK: - properties
     
     lazy var titleLabel: UILabel = {
-        return ViewController.newLabel(text: "Veepio SDK Demo")
+        return ViewController.newLabel(text: "VEEPIO SDK Demo")
     }()
     
     lazy var  consumeLabel: UILabel = {
@@ -122,7 +122,7 @@ class ViewController:
                 "H:|-(vMargin)-[consumeLabel]-(vMargin)-|",
                 "H:|-(vMargin)-[imageButton]-(vMargin)-|",
                 "H:|-(vMargin)-[createLabel]-(vMargin)-|",
-                "V:|-(30)-[titleLabel]-(10)-[preview]-(4)-[consumeLabel]-(20)-[imageButton]-(4)-[createLabel]"
+                "V:|-(38)-[titleLabel]-(18)-[preview]-(4)-[consumeLabel]-(18)-[imageButton]-(4)-[createLabel]"
         ];
         
         for format in formats {

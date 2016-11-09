@@ -90,7 +90,7 @@
 - (void)configureLabels {
     self.createLabel = [self newLabel:@"Create Veep"];
     self.consumeLabel = [self newLabel:@"Consume Veep"];
-    self.titleLabel = [self newLabel:@"Veepio SDK Demo"];
+    self.titleLabel = [self newLabel:@"VEEPIO SDK Demo"];
 }
 
 - (UILabel*)newLabel:(NSString*)text {
@@ -124,7 +124,7 @@
      @"H:|-(vMargin)-[_consumeLabel]-(vMargin)-|",
      @"H:|-(vMargin)-[_imageButton]-(vMargin)-|",
      @"H:|-(vMargin)-[_createLabel]-|",
-     @"V:|-(30)-[_titleLabel]-(10)-[_vpkPreview]-(4)-[_consumeLabel]-(20)-[_imageButton]-(4)-[_createLabel]"
+     @"V:|-(38)-[_titleLabel]-(18)-[_vpkPreview]-(4)-[_consumeLabel]-(18)-[_imageButton]-(4)-[_createLabel]"
      ];
     
     

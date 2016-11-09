@@ -290,7 +290,7 @@
 					"$(PROJECT_DIR)/VPKitDemoSwift",
 				);
 				INFOPLIST_FILE = VPKitDemoSwift/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = io.veep.VPKitDemoSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -312,7 +312,7 @@
 					"$(PROJECT_DIR)/VPKitDemoSwift",
 				);
 				INFOPLIST_FILE = VPKitDemoSwift/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = io.veep.VPKitDemoSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
