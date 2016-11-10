@@ -1,6 +1,6 @@
 # VPKitDemo
 
-Documentation: [veepionyc.github.io](veepionyc.github.io)  
+Documentation: [veepionyc.github.io](https://veepionyc.github.io)  
 
 ![](https://veepionyc.github.io/assets/img/consume.jpg)
 
