@@ -31,15 +31,13 @@
       "scale" : "3x"
     },
     {
-      "size" : "60x60",
       "idiom" : "iphone",
-      "filename" : "veepio_icon_black_unbounded_48@2x.png",
+      "size" : "60x60",
       "scale" : "2x"
     },
     {
-      "size" : "60x60",
       "idiom" : "iphone",
-      "filename" : "veepio_icon_black_unbounded_48@3x.png",
+      "size" : "60x60",
       "scale" : "3x"
     },
     {
