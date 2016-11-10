@@ -7,24 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		AB7E2C0B1DD3C23B005CD150 /* VPKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB7E2C0A1DD3C23B005CD150 /* VPKit.framework */; };
 		AB86A5171DD2DF4100843D98 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB86A5161DD2DF4100843D98 /* AppDelegate.swift */; };
 		AB86A5191DD2DF4100843D98 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB86A5181DD2DF4100843D98 /* ViewController.swift */; };
 		AB86A51C1DD2DF4100843D98 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB86A51A1DD2DF4100843D98 /* Main.storyboard */; };
 		AB86A51E1DD2DF4100843D98 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB86A51D1DD2DF4100843D98 /* Assets.xcassets */; };
 		AB86A5211DD2DF4100843D98 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB86A51F1DD2DF4100843D98 /* LaunchScreen.storyboard */; };
-		ABB568B71DD3C78A0053C112 /* VPKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB7E2C0A1DD3C23B005CD150 /* VPKit.framework */; };
-		ABB568B81DD3C78A0053C112 /* VPKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AB7E2C0A1DD3C23B005CD150 /* VPKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		ABB568B91DD3F3B30053C112 /* VPKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB7E2C0A1DD3C23B005CD150 /* VPKit.framework */; };
+		ABB568BA1DD3F3B30053C112 /* VPKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AB7E2C0A1DD3C23B005CD150 /* VPKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		AB86A52D1DD3614900843D98 /* Embed Frameworks */ = {
+		ABB568BB1DD3F3B30053C112 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				ABB568B81DD3C78A0053C112 /* VPKit.framework in Embed Frameworks */,
+				ABB568BA1DD3F3B30053C112 /* VPKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -47,8 +46,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AB7E2C0B1DD3C23B005CD150 /* VPKit.framework in Frameworks */,
-				ABB568B71DD3C78A0053C112 /* VPKit.framework in Frameworks */,
+				ABB568B91DD3F3B30053C112 /* VPKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,7 +93,7 @@
 				AB86A50F1DD2DF4100843D98 /* Sources */,
 				AB86A5101DD2DF4100843D98 /* Frameworks */,
 				AB86A5111DD2DF4100843D98 /* Resources */,
-				AB86A52D1DD3614900843D98 /* Embed Frameworks */,
+				ABB568BB1DD3F3B30053C112 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);

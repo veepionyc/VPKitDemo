@@ -110,7 +110,7 @@
 - (void)configureVpkPreview {
     [self.view addSubview:self.vpkPreview];
     UIImage* image = [UIImage imageNamed:@"KrispyGlas"];
-    image = [[VPKImage alloc] initWithImage:image veepID:@"527"];
+    image = [[VPKImage alloc] initWithImage:image veepID:@"658"];
     self.vpkPreview.image = image;
 }
 
@@ -123,7 +123,7 @@
      @"H:|-(vMargin)-[_vpkPreview]-(vMargin)-|",
      @"H:|-(vMargin)-[_consumeLabel]-(vMargin)-|",
      @"H:|-(vMargin)-[_imageButton]-(vMargin)-|",
-     @"H:|-(vMargin)-[_createLabel]-|",
+     @"H:|-(vMargin)-[_createLabel]-(vMargin)-|",
      @"V:|-(38)-[_titleLabel]-(18)-[_vpkPreview]-(4)-[_consumeLabel]-(18)-[_imageButton]-(4)-[_createLabel]"
      ];
     
