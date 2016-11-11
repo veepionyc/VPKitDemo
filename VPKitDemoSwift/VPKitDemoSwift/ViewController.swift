@@ -100,6 +100,9 @@ class ViewController:
         guard let image = UIImage.init(named: "KrispyGlas") else {return}
         let previewImage: VPKImage = VPKImage(image: image, veepID:"658")
         self.preview.image = previewImage;
+        /*
+         setting the delegate is OPTIONAL - if it is unset, default behaviour handles presenting and dismissing
+         */
         self.preview.delegate = self
         self.view.addSubview(self.preview)
     }
@@ -158,9 +161,14 @@ class ViewController:
     //MARK: - interactions
 
     func imageViewButtonPushed(sender:UIButton){
+        /*
+         invoking the VPKVeepEditor
+         
+         set the editor's transitioning delegate to a custom transitioning object (or nil) to override supplied transition animations
+         
+         */
         guard let image = self.imageButton.image else {return}
         guard let vpEditor = VPKit.editor(with: image, from: self.imageButton) else {return}
-        vpEditor.useVeepLogo = false
         vpEditor.delegate = self
         vpEditor.modalPresentationStyle = UIModalPresentationStyle.overFullScreen
         self.present(vpEditor, animated: true, completion: nil)
@@ -168,6 +176,13 @@ class ViewController:
     }
     
     func vpkPreviewTouched(_ preview:VPKPreview, image:VPKImage){
+        /*
+         invoking the VPKVeepViewer
+         
+         set the viewer's transitioning delegate to a custom transitioning object (or nil) to override supplied transition animations
+         
+         this code is all OPTIONAL - if you don't set the delegate on VPKPreview, presenting and dismissing behaviour occurs as a default
+         */
         guard let viewer = VPKit.viewer(with: image, from: preview) else {return}
         viewer.delegate = self
         viewer.modalPresentationStyle = UIModalPresentationStyle.overFullScreen
@@ -177,15 +192,15 @@ class ViewController:
     
     //MARK: - VPKViewController delegate functions
     
-    func veepEditor(_ editor: VPKVeepEditor, didPublishVeep veepID: String) {
-        self.dismiss(animated: true, completion: nil)
-    }
-    
-    func veepEditorDidCancel(_ editor: VPKVeepEditor) {
-        self.dismiss(animated: true, completion: nil)
-    }
+    /*
+     delegate methods for VPKVeepViewer
+     
+     */
     
     func veepViewer(_ viewer: VPKVeepViewer, didFinishViewingWithInfo info: [AnyHashable : Any]?) {
+        
+        // the veep object can be read from info["veep"] if required
+
         self.dismiss(animated: true, completion:  {
             self.preview.showIcon(true)
         })
@@ -194,5 +209,20 @@ class ViewController:
     func veepViewerDidCancel(_ viewer: VPKVeepViewer) {
         self.dismiss(animated: true, completion: nil)
     }
+    
+    /*
+     delegate mathods for VPKVeepEditor
+     
+     */
+    
+    func veepEditor(_ editor: VPKVeepEditor, didPublishVeep veepID: String) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    func veepEditorDidCancel(_ editor: VPKVeepEditor) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+
 }
 

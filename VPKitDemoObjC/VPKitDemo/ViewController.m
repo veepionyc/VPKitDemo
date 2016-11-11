@@ -112,6 +112,12 @@
     UIImage* image = [UIImage imageNamed:@"KrispyGlas"];
     image = [[VPKImage alloc] initWithImage:image veepID:@"658"];
     self.vpkPreview.image = image;
+    
+    /*
+     setting the delegate is OPTIONAL - if it is unset, default behaviour handles presenting and dismissing
+     */
+    
+    self.vpkPreview.delegate = self;
 }
 
 - (void)configureConstraints {
@@ -157,9 +163,14 @@
 
 
 - (void)imageViewButtonPushed:(UIButton*)sender {
+    /*
+     invoking the VPKVeepEditor
+     
+     set the editor's transitioning delegate to a custom transitioning object (or nil) to override supplied transition animations
+
+     */
     self.vpEditor = [VPKit editorWithImage:self.imageButton.image
                                   fromView:self.imageButton];
-    self.vpEditor.useVeepLogo = NO;
     if (self.vpEditor) {
         self.vpEditor.delegate = self;
         self.vpEditor.modalPresentationStyle = UIModalPresentationOverFullScreen;
@@ -172,6 +183,14 @@
 
 
 - (void)vpkPreviewTouched:(VPKPreview *)preview image:(VPKImage*)image {
+    /*
+     invoking the VPKVeepViewer
+     
+     set the viewer's transitioning delegate to a custom transitioning object (or nil) to override supplied transition animations
+     
+     this code is all OPTIONAL - if you don't set the delegate on VPKPreview, presenting and dismissing behaviour occurs as a default
+     
+     */
     self.vpViewer = [VPKit viewerWithImage:image
                                   fromView:preview];
     self.vpViewer.delegate = self;
@@ -182,8 +201,14 @@
 
 #pragma mark - VPKViewController delegate
 
+/*
+    delegate methods for VPKVeepViewer
+ 
+ */
+
 - (void)veepViewer:(VPKVeepViewer *)viewer didFinishViewingWithInfo:(NSDictionary *)info {
-    NSLog(@"%s",__func__);
+    VPKPublicVeep* pVeep = info[@"veep"];
+    NSLog(@"%s %@",__func__, pVeep);
     [self dismissViewControllerAnimated:YES completion:^{
         [self.vpkPreview showIcon];
     }];
@@ -191,18 +216,27 @@
 
 - (void)veepViewerDidCancel:(VPKVeepViewer *)viewer {
     NSLog(@"%s",__func__);
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+/*
+    delegate mathods for VPKVeepEditor
+ 
+ */
+
+- (void)veepEditor:(VPKVeepEditor *)editor didPublishVeep:(NSString *)veepID  {
+    [VPKit requestVeep:veepID completionBlock:
+     ^(VPKPublicVeep * _Nullable veep, NSError * _Nullable error) {
+         NSLog(@"%@",veep);
+     }];
+    NSLog(@"%s %@",__func__,veepID);
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void)veepEditorDidCancel:(VPKVeepEditor *)editor {
     NSLog(@"%s",__func__);
     [self dismissViewControllerAnimated:YES completion:nil];
 }
-
-- (void)veepEditor:(VPKVeepEditor *)editor didPublishVeep:(NSString *)veepID  {
-    NSLog(@"%s %@",__func__,veepID);
-    [self dismissViewControllerAnimated:YES completion:nil];
-}
-
 
 
 @end

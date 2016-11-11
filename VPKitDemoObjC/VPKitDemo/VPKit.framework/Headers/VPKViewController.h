@@ -35,7 +35,6 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong, nullable) id selectedTrackObserver;
 @property (nonatomic, strong, nonnull) VPKCollectionVC* collectionVC;
 //@property (nonatomic, strong, nonnull) VPKGoogleCellModel* googleCellModel;
-@property (nonatomic, assign) BOOL useVeepLogo;
 //@property (nonatomic, strong, nonnull) VPKVeepViewModel* veepViewModel;
 @property (nonatomic, strong, nullable) NSString* veepID;
 @property (nonatomic, strong, nullable) NSString* mediaID;
