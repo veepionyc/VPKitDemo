@@ -13,18 +13,8 @@
 		AB1F17C71C866C3700F740A2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB1F17C51C866C3700F740A2 /* Main.storyboard */; };
 		AB1F17C91C866C3700F740A2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB1F17C81C866C3700F740A2 /* Assets.xcassets */; };
 		AB1F17CC1C866C3700F740A2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB1F17CA1C866C3700F740A2 /* LaunchScreen.storyboard */; };
-		ABABDD541DDB9AEE00944F82 /* VPKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABABDD511DDB9AC800944F82 /* VPKit.framework */; };
+		ABDA9E391DDD07DC00E6128C /* VPKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABDA9E381DDD07DC00E6128C /* VPKit.framework */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		ABABDD501DDB9AC800944F82 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = ABABDD4C1DDB9AC800944F82 /* VPKit.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = AB0DC97F1C99A78C00123D73;
-			remoteInfo = VPKit;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		AB7E2C121DD3C2BB005CD150 /* Embed Frameworks */ = {
@@ -53,7 +43,7 @@
 		AB1F17CD1C866C3700F740A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AB4854D31C88E44A00C0D35E /* Common.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
 		AB4854D41C88E46700C0D35E /* Blocks.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Blocks.h; sourceTree = "<group>"; };
-		ABABDD4C1DDB9AC800944F82 /* VPKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = VPKit.xcodeproj; path = ../../../VPKit_deployed/VPKit.xcodeproj; sourceTree = "<group>"; };
+		ABDA9E381DDD07DC00E6128C /* VPKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = VPKit.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,7 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ABABDD541DDB9AEE00944F82 /* VPKit.framework in Frameworks */,
+				ABDA9E391DDD07DC00E6128C /* VPKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,7 +86,7 @@
 		AB1F17BB1C866C3700F740A2 /* VPKitDemo */ = {
 			isa = PBXGroup;
 			children = (
-				ABABDD4C1DDB9AC800944F82 /* VPKit.xcodeproj */,
+				ABDA9E381DDD07DC00E6128C /* VPKit.framework */,
 				AB1F17BF1C866C3700F740A2 /* AppDelegate.h */,
 				AB1F17C01C866C3700F740A2 /* AppDelegate.m */,
 				AB1F17C21C866C3700F740A2 /* ViewController.h */,
@@ -118,14 +108,6 @@
 				AB1F17BD1C866C3700F740A2 /* main.m */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		ABABDD4D1DDB9AC800944F82 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				ABABDD511DDB9AC800944F82 /* VPKit.framework */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -176,28 +158,12 @@
 			mainGroup = AB1F17B01C866C3700F740A2;
 			productRefGroup = AB1F17BA1C866C3700F740A2 /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = ABABDD4D1DDB9AC800944F82 /* Products */;
-					ProjectRef = ABABDD4C1DDB9AC800944F82 /* VPKit.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				AB1F17B81C866C3700F740A2 /* VPKitDemo */,
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		ABABDD511DDB9AC800944F82 /* VPKit.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = VPKit.framework;
-			remoteRef = ABABDD501DDB9AC800944F82 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		AB1F17B71C866C3700F740A2 /* Resources */ = {
