@@ -40,7 +40,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong, nullable) NSString* mediaID;
 @property (nonatomic, strong, nonnull) VPKTouchView* touchView;
 @property (nonatomic, assign) VPKViewMode mode;
-
+@property (nonatomic, assign) BOOL forwardErrors;
 
 - (nonnull UIView*)transitioningView;
 - (nonnull UIImageView*)transitioningImageView;

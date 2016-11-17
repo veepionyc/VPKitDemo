@@ -71,6 +71,9 @@ typedef void (^VPK_BOOLBlock) (BOOL success);
 #define VPK_EMBEDDED_ERROR_KEY @"VPK_EMBEDDED_ERROR_KEY"
 #define VPK_RESET_NOTIFICATION @"VPK_RESET_NOTIFICATION"
 
+static NSString* const vpkInternalErrorNotification = @"vpkInternalErrorNotification";
+static NSString* const vpkInternalErrorKey = @"vpkInternalErrorKey";
+
 static NSString* const kVPKStateKey = @"kVPKStateKey";
 
 static NSString* const kVPKStateChangeRequest = @"kVPKStateChangeRequest";

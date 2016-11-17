@@ -35,6 +35,8 @@
 
 #pragma mark - lazy initialisers
 
+
+
 -(VPKPreview*)vpkPreview {
     if (!_vpkPreview) {
         _vpkPreview = [[VPKPreview alloc] init];
@@ -77,12 +79,17 @@
 
 #pragma mark - viewController lifecycle
 
+- (void)dealloc {
+    [self stopListening];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self configureLabels];
     [self configureVpkPreview];
     [self configureImageButton];
     [self configureConstraints];
+    [self startListening];
 }
 
 #pragma mark - configuration
@@ -238,5 +245,41 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
+
+#pragma mark - error handling
+
+/**
+ Error handling
+
+ 
+ @param notification NSNotification with userInfo dictionary containing a single item: the NSError at userInfo[VPKErrorKey].
+ 
+ 
+ @discussion
+ 
+ To propagate error notifications to the host app, call:
+ [VPKit setForwardErrorNotifications:YES]  
+ 
+ if notifications are not forwarded, they are handled by the SDK with user-facing alerts where appropriate.
+ 
+ */
+
+- (void)errorReceived:(NSNotification*)notification {
+    NSError* error = notification.userInfo[VPKErrorKey];
+    if (!error) return;
+    [UIAlertController vpk_presentAlertWithError:error];
+}
+
+- (void)startListening {
+    SEL selector = NSSelectorFromString(VPKErrorNotification);
+    [NSNotificationCenter.defaultCenter addObserver:self
+                                           selector:selector
+                                               name:VPKErrorNotification
+                                             object:nil];
+}
+
+- (void)stopListening {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
 
 @end

@@ -13,6 +13,7 @@
 @property (nonatomic, strong) NSString* email;
 @property (nonatomic, strong) NSString* appID;
 @property (nonatomic, assign) BOOL production;
+@property (nonatomic, assign) BOOL forwardErrors;
 
 //- (NSString*)newConsumerID;
 - (void)verifyState;

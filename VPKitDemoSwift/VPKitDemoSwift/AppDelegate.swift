@@ -23,7 +23,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
          */
         
         VPKit.setApplicationIdentifier("VEEPIO_test_app_id")
-
+        /*
+         Forward error notifications from the SDK to the app
+         This is optional
+         
+         If not forwarded, the SDK will provide user error alerts where appropriate. 
+         
+         If forwarded, this becomes the app's responsibility.
+         */
+        
+        VPKit.forwardErrorNotifications(true);
         
         /*
          Style changes

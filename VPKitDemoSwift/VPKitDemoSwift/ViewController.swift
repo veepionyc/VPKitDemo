@@ -16,7 +16,10 @@ class ViewController:
     , VPKPreviewDelegate
 {
     
+ 
+    
     //MARK: - properties
+
     
     lazy var titleLabel: UILabel = {
         return ViewController.newLabel(text: "VEEPIO SDK Demo")
@@ -74,6 +77,10 @@ class ViewController:
     
     //MARK: - viewController lifecycle
     
+    deinit {
+        self.stopListening()
+    }
+    
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         //fatalError("init(coder:) has not been implemented")
@@ -87,6 +94,7 @@ class ViewController:
         self.configurePreview()
         self.configureImageButton()
         self.configureConstraints()
+        self.startListening()
         
     }
     
@@ -98,7 +106,7 @@ class ViewController:
     
     func configurePreview() {
         guard let image = UIImage.init(named: "KrispyGlas") else {return}
-        let previewImage: VPKImage = VPKImage(image: image, veepID:"658")
+        let previewImage: VPKImage = VPKImage(image: image, veepID:"674")
         self.preview.image = previewImage;
         /*
          setting the delegate is OPTIONAL - if it is unset, default behaviour handles presenting and dismissing
@@ -223,6 +231,36 @@ class ViewController:
         self.dismiss(animated: true, completion: nil)
     }
     
+    //MARK: Error handling
+    
+    /**
+     Error handling
+     
+     
+     @param notification NSNotification with userInfo dictionary containing a single item: the NSError at userInfo[VPKErrorKey].
+     
+     
+     @discussion
+     
+     To propagate error notifications to the host app, call:
+     [VPKit setForwardErrorNotifications:YES]
+     
+     if notifications are not forwarded, they are handled by the SDK with user-facing alerts where appropriate.
+     
+     */
+    
+    func errorReceived(notification: NSNotification) {
+        guard let error: NSError = notification.userInfo?[VPKErrorKey] as! NSError? else {return}
+        UIAlertController.vpk_presentAlertWithError(error)
+    }
+    
+    func startListening() {
+        NotificationCenter.default.addObserver(self, selector: #selector(errorReceived), name: NSNotification.Name(rawValue: VPKErrorNotification), object: nil)
+    }
+    
+    func stopListening() {
+        NotificationCenter.default.removeObserver(self)
+    }
 
 }
 

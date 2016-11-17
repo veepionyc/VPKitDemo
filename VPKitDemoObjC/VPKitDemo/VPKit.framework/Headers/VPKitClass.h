@@ -25,13 +25,32 @@ typedef NS_ENUM(NSInteger, VPKServerEnvironment) {
     VPKServerProduction
 };
 
+
 typedef void (^VPKitConsumerIdCompletionBlock)(NSString* consumerID);
 typedef void (^VPKitPublicVeepErrorCompletionBlock)(  VPKPublicVeep* _Nullable veep
                                                     , NSError* _Nullable error);
 typedef void (^VPKUserStatsErrorBlock)(  VPKUserStats* _Nullable userStats
                                                     , NSError* _Nullable error);
 
+
+static NSString* const VPKErrorNotification = @"VPKErrorNotification";
+static NSString* const VPKErrorKey = @"VPKErrorKey";
+
+
 @interface VPKit : NSObject
+
+
+
+/**
+ sets the location for error dialogue handling - in the SDK or in the host app.
+
+ @param sendErrors
+ YES - error alerts are supressed in the SDK and NSNotifications are forwarded for interception by the host app.
+ NO - user-facing error alerts are presented by the SDK.
+ 
+ 
+ */
++ (void)forwardErrorNotifications:(BOOL)forwardErrors;
 
 + (void)setApplicationIdentifier:(nonnull NSString*)appID;
 //+ (void)setConsumerIdentifier:(nullable NSString*)consumerID;
@@ -55,6 +74,8 @@ typedef void (^VPKUserStatsErrorBlock)(  VPKUserStats* _Nullable userStats
 + (nonnull VPKVeepFetcher*)fetcher;
 
 + (BOOL)loggedIn;
+
+
 
 NS_ASSUME_NONNULL_END
 @end
