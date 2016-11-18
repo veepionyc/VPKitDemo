@@ -252,7 +252,7 @@
  Error handling
 
  
- @param notification NSNotification with userInfo dictionary containing a single item: the NSError at userInfo[VPKErrorKey].
+ @param notification NSNotification with userInfo dictionary containing a single item: the NSError at userInfo[vpkErrorKey].
  
  
  @discussion
@@ -265,16 +265,20 @@
  */
 
 - (void)errorReceived:(NSNotification*)notification {
-    NSError* error = notification.userInfo[VPKErrorKey];
+    NSError* error = notification.userInfo[vpkErrorKey];
     if (!error) return;
-    [UIAlertController vpk_presentAlertWithError:error];
+    UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"App alert"
+                                                                   message:error.localizedDescription
+                                                            preferredStyle:UIAlertControllerStyleAlert];
+    [alert addAction:[UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {}]];
+    UIViewController* controller = self.presentedViewController?:self;
+    [controller presentViewController:alert animated:YES completion:nil];
 }
 
 - (void)startListening {
-    SEL selector = NSSelectorFromString(VPKErrorNotification);
     [NSNotificationCenter.defaultCenter addObserver:self
-                                           selector:selector
-                                               name:VPKErrorNotification
+                                           selector:@selector(errorReceived:)
+                                               name:vpkErrorNotification
                                              object:nil];
 }
 

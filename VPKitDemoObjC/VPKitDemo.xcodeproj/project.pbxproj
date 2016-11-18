@@ -13,8 +13,7 @@
 		AB1F17C71C866C3700F740A2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB1F17C51C866C3700F740A2 /* Main.storyboard */; };
 		AB1F17C91C866C3700F740A2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB1F17C81C866C3700F740A2 /* Assets.xcassets */; };
 		AB1F17CC1C866C3700F740A2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB1F17CA1C866C3700F740A2 /* LaunchScreen.storyboard */; };
-		AB34F8721DDE3A38001D6561 /* VPKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB34F8701DDE3A2C001D6561 /* VPKit.framework */; };
-		AB34F8731DDE3A38001D6561 /* VPKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AB34F8701DDE3A2C001D6561 /* VPKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		ABBE16001DDF6C020076EA82 /* VPKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABBE15FF1DDF6C020076EA82 /* VPKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -24,7 +23,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				AB34F8731DDE3A38001D6561 /* VPKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -43,9 +41,9 @@
 		AB1F17C81C866C3700F740A2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AB1F17CB1C866C3700F740A2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AB1F17CD1C866C3700F740A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AB34F8701DDE3A2C001D6561 /* VPKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = VPKit.framework; sourceTree = "<group>"; };
 		AB4854D31C88E44A00C0D35E /* Common.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
 		AB4854D41C88E46700C0D35E /* Blocks.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Blocks.h; sourceTree = "<group>"; };
+		ABBE15FF1DDF6C020076EA82 /* VPKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = VPKit.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,7 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AB34F8721DDE3A38001D6561 /* VPKit.framework in Frameworks */,
+				ABBE16001DDF6C020076EA82 /* VPKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,7 +86,7 @@
 		AB1F17BB1C866C3700F740A2 /* VPKitDemo */ = {
 			isa = PBXGroup;
 			children = (
-				AB34F8701DDE3A2C001D6561 /* VPKit.framework */,
+				ABBE15FF1DDF6C020076EA82 /* VPKit.framework */,
 				AB1F17BF1C866C3700F740A2 /* AppDelegate.h */,
 				AB1F17C01C866C3700F740A2 /* AppDelegate.m */,
 				AB1F17C21C866C3700F740A2 /* ViewController.h */,

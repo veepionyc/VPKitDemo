@@ -237,7 +237,7 @@ class ViewController:
      Error handling
      
      
-     @param notification NSNotification with userInfo dictionary containing a single item: the NSError at userInfo[VPKErrorKey].
+     @param notification NSNotification with userInfo dictionary containing a single item: the NSError at userInfo[vpkErrorKey].
      
      
      @discussion
@@ -250,12 +250,26 @@ class ViewController:
      */
     
     func errorReceived(notification: NSNotification) {
-        guard let error: NSError = notification.userInfo?[VPKErrorKey] as! NSError? else {return}
+        
+        guard let error: NSError = notification.userInfo?[vpkErrorKey] as! NSError? else {return}
+        let alert = UIAlertController.init(title:"App alert",message:error.localizedDescription,preferredStyle:UIAlertControllerStyle.alert)
+        alert.addAction(UIAlertAction.init(title:"OK",style:UIAlertActionStyle.default,handler:nil))
+        
+        var viewController: UIViewController
+        if self.presentedViewController != nil {
+            viewController = self.presentedViewController!
+        } else {
+            viewController =  self
+        }
+        
+        viewController.present(alert, animated: true, completion: nil)
+        
+        
         UIAlertController.vpk_presentAlertWithError(error)
     }
     
     func startListening() {
-        NotificationCenter.default.addObserver(self, selector: #selector(errorReceived), name: NSNotification.Name(rawValue: VPKErrorNotification), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(errorReceived), name: NSNotification.Name(rawValue: vpkErrorNotification), object: nil)
     }
     
     func stopListening() {

@@ -33,8 +33,7 @@ typedef void (^VPKUserStatsErrorBlock)(  VPKUserStats* _Nullable userStats
                                                     , NSError* _Nullable error);
 
 
-static NSString* const VPKErrorNotification = @"VPKErrorNotification";
-static NSString* const VPKErrorKey = @"VPKErrorKey";
+
 
 
 @interface VPKit : NSObject
