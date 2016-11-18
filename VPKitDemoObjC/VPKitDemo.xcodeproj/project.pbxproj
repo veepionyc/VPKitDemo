@@ -13,7 +13,8 @@
 		AB1F17C71C866C3700F740A2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB1F17C51C866C3700F740A2 /* Main.storyboard */; };
 		AB1F17C91C866C3700F740A2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB1F17C81C866C3700F740A2 /* Assets.xcassets */; };
 		AB1F17CC1C866C3700F740A2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB1F17CA1C866C3700F740A2 /* LaunchScreen.storyboard */; };
-		ABBE16001DDF6C020076EA82 /* VPKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABBE15FF1DDF6C020076EA82 /* VPKit.framework */; };
+		AB69D1551DDF831D00F6CAD0 /* VPKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABBE15FF1DDF6C020076EA82 /* VPKit.framework */; };
+		AB69D1561DDF831D00F6CAD0 /* VPKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = ABBE15FF1DDF6C020076EA82 /* VPKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -23,6 +24,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				AB69D1561DDF831D00F6CAD0 /* VPKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -51,7 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ABBE16001DDF6C020076EA82 /* VPKit.framework in Frameworks */,
+				AB69D1551DDF831D00F6CAD0 /* VPKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
