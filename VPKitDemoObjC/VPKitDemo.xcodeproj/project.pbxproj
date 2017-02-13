@@ -13,8 +13,9 @@
 		AB1F17C71C866C3700F740A2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB1F17C51C866C3700F740A2 /* Main.storyboard */; };
 		AB1F17C91C866C3700F740A2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB1F17C81C866C3700F740A2 /* Assets.xcassets */; };
 		AB1F17CC1C866C3700F740A2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB1F17CA1C866C3700F740A2 /* LaunchScreen.storyboard */; };
-		AB69D1551DDF831D00F6CAD0 /* VPKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABBE15FF1DDF6C020076EA82 /* VPKit.framework */; };
-		AB69D1561DDF831D00F6CAD0 /* VPKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = ABBE15FF1DDF6C020076EA82 /* VPKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		ABE8BB001E52738700A10F79 /* VPKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABE8BAFF1E52738700A10F79 /* VPKit.framework */; };
+		ABE8BB011E52739600A10F79 /* VPKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABE8BAFF1E52738700A10F79 /* VPKit.framework */; };
+		ABE8BB021E52739600A10F79 /* VPKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = ABE8BAFF1E52738700A10F79 /* VPKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -24,7 +25,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				AB69D1561DDF831D00F6CAD0 /* VPKit.framework in Embed Frameworks */,
+				ABE8BB021E52739600A10F79 /* VPKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -45,7 +46,7 @@
 		AB1F17CD1C866C3700F740A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AB4854D31C88E44A00C0D35E /* Common.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
 		AB4854D41C88E46700C0D35E /* Blocks.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Blocks.h; sourceTree = "<group>"; };
-		ABBE15FF1DDF6C020076EA82 /* VPKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = VPKit.framework; sourceTree = "<group>"; };
+		ABE8BAFF1E52738700A10F79 /* VPKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = VPKit.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,7 +54,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AB69D1551DDF831D00F6CAD0 /* VPKit.framework in Frameworks */,
+				ABE8BB001E52738700A10F79 /* VPKit.framework in Frameworks */,
+				ABE8BB011E52739600A10F79 /* VPKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,6 +73,7 @@
 		AB1F17B01C866C3700F740A2 = {
 			isa = PBXGroup;
 			children = (
+				ABE8BAFF1E52738700A10F79 /* VPKit.framework */,
 				AB1F17BB1C866C3700F740A2 /* VPKitDemo */,
 				AB1F17BA1C866C3700F740A2 /* Products */,
 				54DE0DBF416CFA6047AACDA0 /* Frameworks */,
@@ -88,7 +91,6 @@
 		AB1F17BB1C866C3700F740A2 /* VPKitDemo */ = {
 			isa = PBXGroup;
 			children = (
-				ABBE15FF1DDF6C020076EA82 /* VPKit.framework */,
 				AB1F17BF1C866C3700F740A2 /* AppDelegate.h */,
 				AB1F17C01C866C3700F740A2 /* AppDelegate.m */,
 				AB1F17C21C866C3700F740A2 /* ViewController.h */,

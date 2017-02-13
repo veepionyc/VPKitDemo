@@ -12,8 +12,8 @@
 		AB86A51C1DD2DF4100843D98 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB86A51A1DD2DF4100843D98 /* Main.storyboard */; };
 		AB86A51E1DD2DF4100843D98 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB86A51D1DD2DF4100843D98 /* Assets.xcassets */; };
 		AB86A5211DD2DF4100843D98 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB86A51F1DD2DF4100843D98 /* LaunchScreen.storyboard */; };
-		ABDB57601E358CA900DBE17C /* VPKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABD30E8D1DDF6AA4000A38B2 /* VPKit.framework */; };
-		ABDB57611E358CA900DBE17C /* VPKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = ABD30E8D1DDF6AA4000A38B2 /* VPKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		ABE6CA671E52726600DBC4D4 /* VPKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABE6CA651E52725B00DBC4D4 /* VPKit.framework */; };
+		ABE6CA681E52726600DBC4D4 /* VPKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = ABE6CA651E52725B00DBC4D4 /* VPKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -23,7 +23,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				ABDB57611E358CA900DBE17C /* VPKit.framework in Embed Frameworks */,
+				ABE6CA681E52726600DBC4D4 /* VPKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -38,7 +38,7 @@
 		AB86A51D1DD2DF4100843D98 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AB86A5201DD2DF4100843D98 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AB86A5221DD2DF4100843D98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		ABD30E8D1DDF6AA4000A38B2 /* VPKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = VPKit.framework; sourceTree = "<group>"; };
+		ABE6CA651E52725B00DBC4D4 /* VPKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = VPKit.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,7 +46,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ABDB57601E358CA900DBE17C /* VPKit.framework in Frameworks */,
+				ABE6CA671E52726600DBC4D4 /* VPKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,6 +56,7 @@
 		AB86A50A1DD2DF4100843D98 = {
 			isa = PBXGroup;
 			children = (
+				ABE6CA651E52725B00DBC4D4 /* VPKit.framework */,
 				AB86A5151DD2DF4100843D98 /* VPKitDemoSwift */,
 				AB86A5141DD2DF4100843D98 /* Products */,
 			);
@@ -72,7 +73,6 @@
 		AB86A5151DD2DF4100843D98 /* VPKitDemoSwift */ = {
 			isa = PBXGroup;
 			children = (
-				ABD30E8D1DDF6AA4000A38B2 /* VPKit.framework */,
 				AB86A5161DD2DF4100843D98 /* AppDelegate.swift */,
 				AB86A5181DD2DF4100843D98 /* ViewController.swift */,
 				AB86A51A1DD2DF4100843D98 /* Main.storyboard */,
@@ -299,6 +299,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 2Y9BM25FS4;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -321,6 +322,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				DEVELOPMENT_TEAM = 2Y9BM25FS4;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
