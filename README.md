@@ -1,8 +1,9 @@
 # VPKitDemo
 
-This is a test distribution of the VPKit framework.  
+This is a test distribution of the VPKit framework. Demo host apps are provided in Objective-C and Swift. 
 
-The framework is provided as a binary distribution to run on XCode Simulator and will not run on a hardware device. Demo host apps are provided in Objective-C and Swift. 
+
+_update 1.1.3_ - VPKit framework now supplied as fat binary, to run both on simulator and device.
 
 
 
