@@ -20,10 +20,14 @@
 
 @property (nonatomic, assign) UIBlurEffectStyle blurEffectStyle;
 @property (nullable, nonatomic, weak) id <VPKPreviewDelegate> delegate;
-
+@property (nonatomic, assign) BOOL showData;
 - (void)showIcon;
 - (void)hideIcon;
 - (void)showIcon:(BOOL)animated;
 - (void)hideIcon:(BOOL)animated;
 - (void)reset;
+
+#pragma mark - utility function for preview of youtube veep (only used for demo app)
+
++ (nullable NSURL*)previewURLforYoutubeID:(nonnull NSString*)youtubeID;
 @end

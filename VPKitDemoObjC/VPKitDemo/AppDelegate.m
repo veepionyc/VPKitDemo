@@ -16,33 +16,57 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-
+    
     /*
-     Use this app id for testing purposes only. For app deployment, email sdk_support@veepio.com to obtain a unique app id
+     
+     VPKIT CREDENTIALS
+     These test app credentials are for testing purposes only.
+     To obtain credentials unique to your app email sdk_support@veepio.com
+     
      */
     
-    [VPKit setApplicationIdentifier:@"VEEPIO_test_app_id"];
-   
+    NSString* appID = @"VEEPIO_test_app_id";
+    NSString* clientID = @"VsRIkxIfTtkFJhw1ABItnO50B6fSW23NhIRnST53";
+    NSString* clientSecret = @"OdWbCaP9i1I2AV2yZUzwfDFE4gU04RDX1HdubnTEg8oWw8F9yWQwjX179zHRXLUad5vrsOo5B7UtFq2utsrWbkjVus5aJKxW8wXTvDknqdgeowunL9yeEN8selNpTOJF";
+    
     
     /*
-     Forward error notifications from the SDK to the app
-     This is optional
      
-     If not forwarded, the SDK will provide user error alerts where appropriate.
+     INITIALISATION
      
-     If forwarded, this becomes the app's responsibility.
      */
     
-    [VPKit forwardErrorNotifications:YES];
+    [VPKit setApplicationId:appID
+                   clientId:clientID
+               clientSecret:clientSecret];
+    
+    
     /*
-     Style changes
-     These are all optional
+     
+     SANDBOXING
+     Testing and development - NO
+     Deployment - YES
+     
+     */
+    
+    [VPKit setProduction:NO];
+    
+    
+    
+    /*
+     
+     STYLE SETTINGS - OPTIONAL
+     See header files for full list of settable properties
+     
      */
     
     [VPKit styles].margin = 12;
     VPKit.styles.color.navBar = [UIColor colorWithWhite:0.1 alpha:1.0];
     VPKit.styles.font.navBarFont = [UIFont systemFontOfSize:18 weight:UIFontWeightHeavy];
     VPKit.styles.font.cellNavBarFont = [UIFont systemFontOfSize:14 weight:UIFontWeightBold];
+    
+    
+    
     return YES;
 }
 

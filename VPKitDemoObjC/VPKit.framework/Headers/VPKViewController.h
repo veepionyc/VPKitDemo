@@ -7,25 +7,36 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "VPKVeepView.h"
-#import "VPKVeep.h"
-#import "VPKVeepTrack+CellModels.h"
+//#import "VPKViews.h"
+//#import "VPKModels.h"
+//#import "VPKNetwork.h"
 
-#import "VPKVeepViewModel.h"
-#import "VPKCollectionVC.h"
-#import "VPKGoogleCellModel.h"
-#import "VPKTouchView.h"
-#import "VPKViewController_StateMachine.h"
-#import "UIViewController_vpkKeyboardWatcher.h"
+@class VPKVeepFetcher;
 
-#import "VPKConstants.h"
+//#import "VPKVeepTrack+CellModels.h"
+//#import "VPKVideo.h"
+//
+//#import "VPKCollectionVC.h"
+//#import "VPKGoogleCellModel.h"
+//#import "VPKTouchView.h"
+//#import "VPKViewController_StateMachine.h"
+//#import "UIViewController_vpkKeyboardWatcher.h"
+//
+//#import "VPKStyles.h"
 
+//#import "VPKConstants.h"
+
+@class VPKVeepVideoImageView;
+@class VPKCollectionVC;
+@class VPKBlurTouchView;
+@class VPKStyles;
 @class VPKGoogleCellModel;
+typedef NS_ENUM(NSInteger, VPKViewMode );
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface VPKViewController : UIViewController
-@property (nonatomic, strong, nonnull) VPKVeepView* veepView;
+@property (nonatomic, strong, nonnull) VPKVeepVideoImageView* veepView;
 @property (nonatomic, weak, nullable) UIImage* image;
 @property (nonatomic, strong, nonnull) UIView* sourceView;
 @property (nonatomic, assign) CGRect toRect;
@@ -37,10 +48,15 @@ NS_ASSUME_NONNULL_BEGIN
 //@property (nonatomic, strong, nonnull) VPKGoogleCellModel* googleCellModel;
 //@property (nonatomic, strong, nonnull) VPKVeepViewModel* veepViewModel;
 @property (nonatomic, strong, nullable) NSString* veepID;
-@property (nonatomic, strong, nullable) NSString* mediaID;
-@property (nonatomic, strong, nonnull) VPKTouchView* touchView;
+//@property (nonatomic, strong, nullable) NSString* mediaID;
+@property (nonatomic, strong, nonnull) VPKBlurTouchView* touchView;
 @property (nonatomic, assign) VPKViewMode mode;
+@property (nonatomic, strong) VPKVeepFetcher* fetcher;
+@property (nonatomic, strong) VPKStyles* styles;
 @property (nonatomic, assign) BOOL forwardErrors;
+@property (nonatomic, strong) NSURL* originalContentURL;
+
+
 
 - (nonnull UIView*)transitioningView;
 - (nonnull UIImageView*)transitioningImageView;
@@ -49,9 +65,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (nonnull instancetype)initWithView:(nullable UIView*)view
                                image:(nonnull UIImage*)image
-                              itemID:(nonnull NSString*)itemID;
+                              styles:(VPKStyles*)styles
+                              itemID:(nonnull NSString*)itemID
+                             fetcher:(VPKVeepFetcher*)fetcher;
 
 
+- (void)configureVeepView;
 - (CGFloat)navBarHeight;
 
 
@@ -59,9 +78,9 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)hideNavBar;
 
 - (void)showFooter;
-- (void)showFooter:(nullable VPK_BOOLBlock)completion;
+- (void)showFooter:(nullable void ( ^)(BOOL finished))completion;
 - (void)hideFooter;
-- (void)hideFooter:(nullable VPK_BOOLBlock)completion;
+- (void)hideFooter:(nullable void ( ^)(BOOL finished))completion;
 
 
 
