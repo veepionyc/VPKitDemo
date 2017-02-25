@@ -25,5 +25,8 @@
 @property (nonatomic, strong) UIFont* cellTextViewFont;
 @property (nonatomic, strong) UIFont* bigLabelFont;
 
+@property (nonatomic, strong) NSString* alertFontTitleName;
+@property (nonatomic, strong) NSString* alertFontBodyName;
+
 
 @end

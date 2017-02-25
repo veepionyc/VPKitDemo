@@ -16,174 +16,81 @@ class ViewController:
     , VPKPreviewDelegate
 {
     
- 
-    
     //MARK: - properties
-
     
-    lazy var titleLabel: UILabel = {
-        return ViewController.newLabel(text: "VEEPIO SDK Demo")
-    }()
+    @IBOutlet var titleLabel: UILabel!
+    @IBOutlet var consumeLabel: UILabel!
+    @IBOutlet var createLabel: UILabel!
+    @IBOutlet var vPreview: VPKPreview!
+    @IBOutlet var ePreview: VPKPreview!
     
-    lazy var  consumeLabel: UILabel = {
-        return ViewController.newLabel(text: "Consume Veep")
-        
-    }()
     
-    lazy var  createLabel: UILabel = {
-        return  ViewController.newLabel(text: "Create Veep")
-    }()
-    
-    class func newLabel (text: String) -> UILabel {
-        let label = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.textAlignment = NSTextAlignment.center
-        label.font = UIFont.systemFont(ofSize: 14)
-        label.text = text
-        return label;
-    }
-    
-    lazy var preview: VPKPreview = {
-        let preview = VPKPreview()
-        preview.translatesAutoresizingMaskIntoConstraints = false
-        return preview
-    }()
-    
-    lazy var imageButton: UIImageView = {
-        let button = UIButton(type:UIButtonType.custom)
-        button.translatesAutoresizingMaskIntoConstraints = false
-        button.addTarget(self, action: #selector(imageViewButtonPushed(sender:)), for: UIControlEvents.touchUpInside)
-        let imageView = UIImageView(frame:CGRect.zero)
-        imageView.translatesAutoresizingMaskIntoConstraints = false
-        imageView.image = UIImage.init(named: "stock_photo")
-        imageView.contentMode = UIViewContentMode.scaleAspectFit
-        imageView.isUserInteractionEnabled = true
-        imageView.addSubview(button)
-        
-        let formats = [
-            "V:|[button]|",
-            "H:|[button]|"
-        ]
-        for format in formats {
-            imageView.addConstraints(
-                NSLayoutConstraint.constraints(withVisualFormat: format,
-                                               options:NSLayoutFormatOptions(rawValue:0),
-                                               metrics: [:],
-                                               views: ["button":button])
-            )
-        }
-        return imageView
-    }()
     
     //MARK: - viewController lifecycle
     
-    deinit {
-        self.stopListening()
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
+    required init?(coder aDecoder: NSCoder)
+    {
         super.init(coder: aDecoder)
         //fatalError("init(coder:) has not been implemented")
     }
 
-    override func viewDidLoad() {
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
-        self.view.addSubview(self.titleLabel)
-        self.view.addSubview(self.consumeLabel)
-        self.view.addSubview(self.createLabel)
-        self.configurePreview()
-        self.configureImageButton()
+        VPKit.setProduction(false)
+        VPKit.setEmail("fake@email.com");
+        self.configureViewerWithTestImage()
+        self.configureEditor()
         self.configureConstraints()
-        self.startListening()
         
     }
     
+    
+
     //MARK: - configuration
     
-    func configureImageButton() {
-        self.view.addSubview(self.imageButton)
-    }
-    
-    func configurePreview() {
+    func configureViewerWithTestImage()
+    {
         guard let image = UIImage.init(named: "KrispyGlas") else {return}
-        let previewImage: VPKImage = VPKImage(image: image, veepID:"674")
-        self.preview.image = previewImage;
-        /*
-         setting the delegate is OPTIONAL - if it is unset, default behaviour handles presenting and dismissing
-         */
-        self.preview.delegate = self
-        self.view.addSubview(self.preview)
+        let previewImage: VPKImage = VPKImage(image: image, veepID:"560")
+        self.vPreview.image = previewImage
     }
     
-   
-    func configureConstraints() {
-        let views:[String:UIView] =  [
-            "titleLabel":self.titleLabel
-            ,"consumeLabel":self.consumeLabel
-            ,"createLabel":self.createLabel
-            ,"preview":self.preview
-            ,"imageButton":self.imageButton
-            
-        ]
-        let vMargin = 50;
-        let formats =
-            [
-                "H:|-(vMargin)-[titleLabel]-(vMargin)-|",
-                "H:|-(vMargin)-[preview]-(vMargin)-|",
-                "H:|-(vMargin)-[consumeLabel]-(vMargin)-|",
-                "H:|-(vMargin)-[imageButton]-(vMargin)-|",
-                "H:|-(vMargin)-[createLabel]-(vMargin)-|",
-                "V:|-(38)-[titleLabel]-(18)-[preview]-(4)-[consumeLabel]-(18)-[imageButton]-(4)-[createLabel]"
-        ];
-        
-        for format in formats {
-            self.view.addConstraints(
-                NSLayoutConstraint.constraints(withVisualFormat: format,
-                                               options:NSLayoutFormatOptions(rawValue:0),
-                                               metrics: ["vMargin":vMargin],
-                                               views: views)
-            )
+    func configureViewerWithTestVideo()
+    {
+        guard let image = UIImage.init(named: "tomcruise") else {return}
+        let previewImage: VPKImage = VPKImage(image: image, veepID:"680")
+        self.vPreview.image = previewImage
+    }
+    
+    func configureEditor()
+    {
+        guard let image = UIImage.init(named: "stock_photo") else {return}
+        let previewImage: VPKImage = VPKImage(image: image, veepID:nil)
+        self.ePreview.image = previewImage
+        /*
+         for the editor example, we'll set an optional delegate.
+         */
+        self.ePreview.delegate = self
+    }
+    
+    
+    
+    
+    //MARK: -  VPKPreview delegate
+    
+    func vpkPreviewTouched(_ preview:VPKPreview, image:VPKImage)
+    {
+        if preview.isEqual(self.vPreview) {
+            self.invokeViewer(image: image, fromView: preview)
+        } else {
+            self.invokeEditor(image: image, fromView: preview)
         }
-        
-        guard let previewImage = self.preview.image else {return}
-        var size = previewImage.size;
-        self.alignHeightToWidth(view:self.preview, ratio: size.height/size.width);
-        guard let buttonImage = self.imageButton.image else {return}
-        size = buttonImage.size;
-        self.alignHeightToWidth(view:self.imageButton, ratio: size.height/size.width);
-        
     }
-    
-    func alignHeightToWidth (view:UIView, ratio:CGFloat) {
-        view.superview?.addConstraint(
-            NSLayoutConstraint.init(
-                item: view,
-                attribute: NSLayoutAttribute.height,
-                relatedBy: NSLayoutRelation.equal,
-                toItem: view,
-                attribute: NSLayoutAttribute.width,
-                multiplier: ratio, constant: 0)
-        )
-    }
-    
-    //MARK: - interactions
 
-    func imageViewButtonPushed(sender:UIButton){
-        /*
-         invoking the VPKVeepEditor
-         
-         set the editor's transitioning delegate to a custom transitioning object (or nil) to override supplied transition animations
-         
-         */
-        guard let image = self.imageButton.image else {return}
-        guard let vpEditor = VPKit.editor(with: image, from: self.imageButton) else {return}
-        vpEditor.delegate = self
-        vpEditor.modalPresentationStyle = UIModalPresentationStyle.overFullScreen
-        self.present(vpEditor, animated: true, completion: nil)
+    func invokeViewer(image:VPKImage, fromView view:UIView)
+    {
         
-    }
-    
-    func vpkPreviewTouched(_ preview:VPKPreview, image:VPKImage){
         /*
          invoking the VPKVeepViewer
          
@@ -191,12 +98,68 @@ class ViewController:
          
          this code is all OPTIONAL - if you don't set the delegate on VPKPreview, presenting and dismissing behaviour occurs as a default
          */
-        guard let viewer = VPKit.viewer(with: image, from: preview) else {return}
-        viewer.delegate = self
-        viewer.modalPresentationStyle = UIModalPresentationStyle.overFullScreen
-        preview.hideIcon()
-        self.present(viewer, animated: true, completion: nil)
+        
+        
+        guard let vpViewer = VPKit.viewer(with: image, from: view) else { return }
+        vpViewer.delegate = self
+        vpViewer.modalPresentationStyle = UIModalPresentationStyle.overFullScreen
+        self.present(vpViewer, animated: true, completion: nil)
     }
+    
+    func invokeEditor(image:VPKImage, fromView view:UIView)
+    {
+        
+        
+        /*
+         
+         invoking the VPKVeepEditor
+         
+         
+         set the editor's transitioning delegate to a custom transitioning object (or nil) to override supplied transition animations
+         
+         this code is all OPTIONAL - if you don't set the delegate on VPKPreview, presenting and dismissing behaviour occurs as a default. However, at some point before invoking the editor, user authentication needs to be dealt with.
+         
+         */
+        
+        
+        VPKit.authenticate(withEmail: "public_test_2_4_6@example.com")
+        {
+            [weak self] (success, responseCode, error) in
+            
+            /*
+             
+             Authentication
+             
+             We authenticate before invoking the editor, as veep creation requires an authenticated user.
+             
+             Authenticated users are weak (no password) or strong (password-protected)
+             
+             If responseCode to a weak login attempt is 401 (unauthorised), we can make a similar call for strong authentication with a password.
+             
+             User account admin can be an implementation detail in the host app or the Veepio Developer control panel.
+             
+             */
+            
+            if (success) {
+                guard let vpEditor = VPKit.editor(with: image, from: view) else { return }
+                vpEditor.delegate = self
+                vpEditor.modalPresentationStyle = UIModalPresentationStyle.overFullScreen
+                self?.present(vpEditor, animated: true, completion: nil)
+
+            } else {
+                print("\(error)")
+            }
+        }
+        
+        
+    }
+    
+    
+
+
+
+    
+    
     
     //MARK: - VPKViewController delegate functions
     
@@ -205,12 +168,13 @@ class ViewController:
      
      */
     
-    func veepViewer(_ viewer: VPKVeepViewer, didFinishViewingWithInfo info: [AnyHashable : Any]?) {
+    func veepViewer(_ viewer: VPKVeepViewer, didFinishViewingWithInfo info: [AnyHashable : Any]?)
+    {
         
         // the veep object can be read from info["veep"] if required
 
         self.dismiss(animated: true, completion:  {
-            self.preview.showIcon(true)
+            self.vPreview?.showIcon(true)
         })
     }
     
@@ -223,58 +187,86 @@ class ViewController:
      
      */
     
-    func veepEditor(_ editor: VPKVeepEditor, didPublishVeep veepID: String) {
+    func veepEditor(_ editor: VPKVeepEditor, didPublishVeep veepID: String)
+    {
+        /*
+         demo method to get a publicVeep object from a veepID
+         */
+        VPKit.requestVeep(veepID) { (veep, error) in
+            if ((veep) != nil){
+                print("\(veep)")
+            } else {
+                print("\(error)")
+            }
+        }
         self.dismiss(animated: true, completion: nil)
     }
     
-    func veepEditorDidCancel(_ editor: VPKVeepEditor) {
+    func veepEditorDidCancel(_ editor: VPKVeepEditor)
+    {
         self.dismiss(animated: true, completion: nil)
     }
     
-    //MARK: Error handling
     
-    /**
-     Error handling
-     
-     
-     @param notification NSNotification with userInfo dictionary containing a single item: the NSError at userInfo[vpkErrorKey].
-     
-     
-     @discussion
-     
-     To propagate error notifications to the host app, call:
-     [VPKit setForwardErrorNotifications:YES]
-     
-     if notifications are not forwarded, they are handled by the SDK with user-facing alerts where appropriate.
-     
-     */
+    //MARK: - layout boilerplate
     
-    func errorReceived(notification: NSNotification) {
-        
-        guard let error: NSError = notification.userInfo?[vpkErrorKey] as! NSError? else {return}
-        let alert = UIAlertController.init(title:"App alert",message:error.localizedDescription,preferredStyle:UIAlertControllerStyle.alert)
-        alert.addAction(UIAlertAction.init(title:"OK",style:UIAlertActionStyle.default,handler:nil))
-        
-        var viewController: UIViewController
-        if self.presentedViewController != nil {
-            viewController = self.presentedViewController!
-        } else {
-            viewController =  self
+    
+    func configureConstraints()
+    {
+        let views:[String:UIView] =  [
+            "titleLabel":self.titleLabel!
+            ,"consumeLabel":self.consumeLabel!
+            ,"createLabel":self.createLabel!
+            ,"vPreview":self.vPreview!
+            ,"ePreview":self.ePreview!
+            
+        ]
+        for (_,view) in views {
+            view.translatesAutoresizingMaskIntoConstraints = false
         }
         
-        viewController.present(alert, animated: true, completion: nil)
+        let vMargin = 50;
+        let formats =
+            [
+                "H:|-(vMargin)-[titleLabel]-(vMargin)-|",
+                "H:|-(vMargin)-[vPreview]-(vMargin)-|",
+                "H:|-(vMargin)-[consumeLabel]-(vMargin)-|",
+                "H:|-(vMargin)-[ePreview]-(vMargin)-|",
+                "H:|-(vMargin)-[createLabel]-(vMargin)-|",
+                "V:|-(38)-[titleLabel]-(18)-[vPreview]-(4)-[consumeLabel]-(18)-[ePreview]-(4)-[createLabel]"
+        ];
         
+        for format in formats {
+            self.view.addConstraints(
+                NSLayoutConstraint.constraints(withVisualFormat: format,
+                                               options:NSLayoutFormatOptions(rawValue:0),
+                                               metrics: ["vMargin":vMargin],
+                                               views: views)
+            )
+        }
         
-        UIAlertController.vpk_presentAlertWithError(error)
+        guard let vImage = self.vPreview?.image else {return}
+        var size = vImage.size;
+        self.alignHeightToWidth(view:self.vPreview!, ratio: size.height/size.width);
+        guard let eImage = self.ePreview?.image else {return}
+        size = eImage.size;
+        self.alignHeightToWidth(view:self.ePreview!, ratio: size.height/size.width);
+        
     }
     
-    func startListening() {
-        NotificationCenter.default.addObserver(self, selector: #selector(errorReceived), name: NSNotification.Name(rawValue: vpkErrorNotification), object: nil)
+    func alignHeightToWidth (view:UIView, ratio:CGFloat)
+    {
+        view.superview?.addConstraint(
+            NSLayoutConstraint.init(
+                item: view,
+                attribute: NSLayoutAttribute.height,
+                relatedBy: NSLayoutRelation.equal,
+                toItem: view,
+                attribute: NSLayoutAttribute.width,
+                multiplier: ratio, constant: 0)
+        )
     }
     
-    func stopListening() {
-        NotificationCenter.default.removeObserver(self)
-    }
 
 }
 

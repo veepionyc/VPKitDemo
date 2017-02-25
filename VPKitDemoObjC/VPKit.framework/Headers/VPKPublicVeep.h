@@ -9,8 +9,9 @@
 #import <Foundation/Foundation.h>
 
 @interface VPKPublicVeep : NSObject
-@property (nonnull, nonatomic, strong) NSString* veepID;
+@property (nonnull, nonatomic, strong) NSString* identifier;
 @property (nullable, nonatomic, strong) NSString* title;
 @property (nullable, nonatomic, strong) NSString* descriptionString;
+@property (nullable, nonatomic, strong) NSURL* originalContentURI;
 
 @end

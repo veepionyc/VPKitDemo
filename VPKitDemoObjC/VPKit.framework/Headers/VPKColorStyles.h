@@ -19,7 +19,9 @@
 @property (nonatomic, strong) UIColor* cellMidGrey; //used
 
 @property (nonatomic, strong) UIColor* searchBar;
-@property (nonatomic, strong) UIColor* alert;
+@property (nonatomic, strong) UIColor* alertButton;
+@property (nonatomic, strong) UIColor* alertText;
+
 @property (nonatomic, strong) UIColor* on;
 @property (nonatomic, strong) UIColor* off;
 
