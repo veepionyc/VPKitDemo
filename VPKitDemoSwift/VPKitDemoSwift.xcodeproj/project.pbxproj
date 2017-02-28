@@ -12,8 +12,8 @@
 		AB86A51C1DD2DF4100843D98 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB86A51A1DD2DF4100843D98 /* Main.storyboard */; };
 		AB86A51E1DD2DF4100843D98 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB86A51D1DD2DF4100843D98 /* Assets.xcassets */; };
 		AB86A5211DD2DF4100843D98 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB86A51F1DD2DF4100843D98 /* LaunchScreen.storyboard */; };
-		ABE6CA671E52726600DBC4D4 /* VPKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABE6CA651E52725B00DBC4D4 /* VPKit.framework */; };
-		ABE6CA681E52726600DBC4D4 /* VPKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = ABE6CA651E52725B00DBC4D4 /* VPKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		ABECD8C71E65E23600184B29 /* VPKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABECD8C61E65E23600184B29 /* VPKit.framework */; };
+		ABECD8C81E65E23600184B29 /* VPKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = ABECD8C61E65E23600184B29 /* VPKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -23,7 +23,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				ABE6CA681E52726600DBC4D4 /* VPKit.framework in Embed Frameworks */,
+				ABECD8C81E65E23600184B29 /* VPKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -38,7 +38,7 @@
 		AB86A51D1DD2DF4100843D98 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AB86A5201DD2DF4100843D98 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AB86A5221DD2DF4100843D98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		ABE6CA651E52725B00DBC4D4 /* VPKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = VPKit.framework; sourceTree = "<group>"; };
+		ABECD8C61E65E23600184B29 /* VPKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VPKit.framework; path = ../VPKit.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,7 +46,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ABE6CA671E52726600DBC4D4 /* VPKit.framework in Frameworks */,
+				ABECD8C71E65E23600184B29 /* VPKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,7 +56,7 @@
 		AB86A50A1DD2DF4100843D98 = {
 			isa = PBXGroup;
 			children = (
-				ABE6CA651E52725B00DBC4D4 /* VPKit.framework */,
+				ABECD8C61E65E23600184B29 /* VPKit.framework */,
 				AB86A5151DD2DF4100843D98 /* VPKitDemoSwift */,
 				AB86A5141DD2DF4100843D98 /* Products */,
 			);
@@ -306,6 +306,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/VPKitDemoSwift",
+					"${PROJECT_DIR}/../",
 				);
 				INFOPLIST_FILE = VPKitDemoSwift/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
@@ -329,6 +330,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/VPKitDemoSwift",
+					"${PROJECT_DIR}/../",
 				);
 				INFOPLIST_FILE = VPKitDemoSwift/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;

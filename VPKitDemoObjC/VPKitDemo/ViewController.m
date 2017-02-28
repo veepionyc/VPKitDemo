@@ -14,6 +14,7 @@
 #import <VPKit/VPKit.h>
 
 
+
 @interface ViewController ()
 <
   VPKVeepViewerDelegate
@@ -23,173 +24,81 @@
 
 @property (nonatomic, strong) VPKVeepViewer* vpViewer;
 @property (nonatomic, strong) VPKVeepEditor* vpEditor;
-@property (nonatomic, strong) UIImageView* imageButton;
-@property (nonatomic, strong) VPKPreview* vpkPreview;
-@property (nonatomic, strong) UILabel* consumeLabel;
-@property (nonatomic, strong) UILabel* createLabel;
-@property (nonatomic, strong) UILabel* titleLabel;
+
+@property (nonatomic, strong) IBOutlet VPKPreview* viewerPreview;
+@property (nonatomic, strong) IBOutlet VPKPreview* editorPreview;
+@property (nonatomic, strong) IBOutlet UILabel* consumeLabel;
+@property (nonatomic, strong) IBOutlet UILabel* createLabel;
+@property (nonatomic, strong) IBOutlet UILabel* titleLabel;
 
 @end
 
 @implementation ViewController
 
-#pragma mark - lazy initialisers
 
-
-
--(VPKPreview*)vpkPreview {
-    if (!_vpkPreview) {
-        _vpkPreview = [[VPKPreview alloc] init];
-        _vpkPreview.translatesAutoresizingMaskIntoConstraints = NO;
-    }
-    return _vpkPreview;
-}
-
-- (UIImageView*)imageButton {
-    if (!_imageButton) {
-        UIButton* button = [UIButton buttonWithType:UIButtonTypeCustom];
-        button.translatesAutoresizingMaskIntoConstraints = NO;
-        [button addTarget:self
-                   action:@selector(imageViewButtonPushed:)
-         forControlEvents:UIControlEventTouchUpInside];
-        
-        _imageButton = [[UIImageView alloc] initWithFrame:CGRectZero];
-        _imageButton.translatesAutoresizingMaskIntoConstraints = NO;
-        _imageButton.image = [UIImage imageNamed:@"stock_photo"];
-        _imageButton.contentMode = UIViewContentModeScaleAspectFit;
-        _imageButton.userInteractionEnabled = YES;
-        [_imageButton addSubview:button];
-        
-        NSArray* formats =
-        @[
-          @"V:|[button]|",
-          @"H:|[button]|"
-          ];
-        
-        for (NSString* format in formats) {
-            [_imageButton addConstraints:
-             [NSLayoutConstraint constraintsWithVisualFormat:format
-                                                     options:0 metrics:@{}
-                                                       views:@{@"button":button}]];
-        }
-    }
-    return _imageButton;
-}
 
 
 #pragma mark - viewController lifecycle
 
-- (void)dealloc {
-    [self stopListening];
-}
-
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self configureLabels];
-    [self configureVpkPreview];
-    [self configureImageButton];
+    [VPKit setProduction:NO];
+    [VPKit setEmail:@"fake@email.com"];
+    [self configureViewerWithTestImage];
+    [self configureEditor];
     [self configureConstraints];
-    [self startListening];
+
 }
+
+
 
 #pragma mark - configuration
 
-- (void)configureLabels {
-    self.createLabel = [self newLabel:@"Create Veep"];
-    self.consumeLabel = [self newLabel:@"Consume Veep"];
-    self.titleLabel = [self newLabel:@"VEEPIO SDK Demo"];
-}
 
-- (UILabel*)newLabel:(NSString*)text {
-    UILabel* label = [[UILabel alloc] init];
-    label.translatesAutoresizingMaskIntoConstraints = NO;
-    label.textAlignment = NSTextAlignmentCenter;
-    label.font = [UIFont systemFontOfSize:14];
-    label.text = text;
-    [self.view addSubview:label];
-    return label;
-}
 
-- (void)configureImageButton {
-    [self.view addSubview:self.imageButton];
-}
-
-- (void)configureVpkPreview {
-    [self.view addSubview:self.vpkPreview];
+- (void)configureViewerWithTestImage {
     UIImage* image = [UIImage imageNamed:@"KrispyGlas"];
-    image = [[VPKImage alloc] initWithImage:image veepID:@"674"];
-    self.vpkPreview.image = image;
+    image = [[VPKImage alloc] initWithImage:image veepID:@"560"];
+    self.viewerPreview.image = image;
+}
+
+- (void)configureViewerWithTestVideo {
+    UIImage* image = [UIImage imageNamed:@"tomcruise"];
+    image = [[VPKImage alloc] initWithImage:image veepID:@"680"];
+    self.viewerPreview.image = image;
     
+}
+
+
+- (void)configureEditor {
+    UIImage* image = [UIImage imageNamed:@"stock_photo"];
+    image = [[VPKImage alloc] initWithImage:image veepID:nil];
+    self.editorPreview.image = image;
     /*
-     setting the delegate is OPTIONAL - if it is unset, default behaviour handles presenting and dismissing
+     for the editor example, we'll set an optional delegate.
      */
-    
-    self.vpkPreview.delegate = self;
+    self.editorPreview.delegate = self;
 }
 
-- (void)configureConstraints {
-    NSDictionary* dict = NSDictionaryOfVariableBindings(_titleLabel,_vpkPreview,_consumeLabel,_imageButton,_createLabel);
-    CGFloat vMargin = 50;
-    NSArray* formats =
-    @[
-     @"H:|-(vMargin)-[_titleLabel]-(vMargin)-|",
-     @"H:|-(vMargin)-[_vpkPreview]-(vMargin)-|",
-     @"H:|-(vMargin)-[_consumeLabel]-(vMargin)-|",
-     @"H:|-(vMargin)-[_imageButton]-(vMargin)-|",
-     @"H:|-(vMargin)-[_createLabel]-(vMargin)-|",
-     @"V:|-(38)-[_titleLabel]-(18)-[_vpkPreview]-(4)-[_consumeLabel]-(18)-[_imageButton]-(4)-[_createLabel]"
-     ];
-    
-    
-    for (NSString* format in formats) {
-        [self.view addConstraints:
-         [NSLayoutConstraint constraintsWithVisualFormat:format
-                                                 options:0
-                                                 metrics:@{@"vMargin":@(vMargin)}
-                                                   views:dict]];
-    }
-    CGSize size = self.vpkPreview.image.size;
-    [self alignHeightToWidth:self.vpkPreview ratio: size.height/size.width];
-    size = self.imageButton.image.size;
-    [self alignHeightToWidth:self.imageButton ratio: size.height/size.width];
-    
-}
 
-- (void)alignHeightToWidth:(UIView*)view ratio:(CGFloat)ratio{
-    [view.superview addConstraint:
-     [NSLayoutConstraint constraintWithItem:view
-                                  attribute:NSLayoutAttributeHeight
-                                  relatedBy:NSLayoutRelationEqual
-                                     toItem:view
-                                  attribute:NSLayoutAttributeWidth
-                                 multiplier:ratio
-                                   constant:0]];
-}
-
-#pragma mark - interactions
-
-
-- (void)imageViewButtonPushed:(UIButton*)sender {
-    /*
-     invoking the VPKVeepEditor
-     
-     set the editor's transitioning delegate to a custom transitioning object (or nil) to override supplied transition animations
-
-     */
-    self.vpEditor = [VPKit editorWithImage:self.imageButton.image
-                                  fromView:self.imageButton];
-    if (self.vpEditor) {
-        self.vpEditor.delegate = self;
-        self.vpEditor.modalPresentationStyle = UIModalPresentationOverFullScreen;
-        [self presentViewController:self.vpEditor animated:YES completion:nil];
-    }
-}
 
 
 #pragma mark - VPKPreview delegate
 
 
 - (void)vpkPreviewTouched:(VPKPreview *)preview image:(VPKImage*)image {
+  
+    [preview hideIcon];
+
+    if ([preview isEqual:self.viewerPreview]) {
+        [self invokeViewer:image fromView:preview];
+    } else {
+        [self invokeEditor:image fromView:preview];
+    }
+}
+
+- (void)invokeViewer:(VPKImage*)image fromView:(UIView*)view {
+    
     /*
      invoking the VPKVeepViewer
      
@@ -198,18 +107,65 @@
      this code is all OPTIONAL - if you don't set the delegate on VPKPreview, presenting and dismissing behaviour occurs as a default
      
      */
-    self.vpViewer = [VPKit viewerWithImage:image
-                                  fromView:preview];
+    
+    
+    self.vpViewer =  [VPKit viewerWithImage:image
+                                   fromView:view];
     self.vpViewer.delegate = self;
     self.vpViewer.modalPresentationStyle = UIModalPresentationOverFullScreen;
-    [preview hideIcon];
     [self presentViewController:self.vpViewer animated:YES completion:nil];
+
 }
+
+- (void)invokeEditor:(VPKImage*)image fromView:(UIView*)view {
+    
+    /*
+        
+     invoking the VPKVeepEditor
+     
+        
+     set the editor's transitioning delegate to a custom transitioning object (or nil) to override supplied transition animations
+     
+     this code is all OPTIONAL - if you don't set the delegate on VPKPreview, presenting and dismissing behaviour occurs as a default. However, at some point before invoking the editor, user authentication needs to be dealt with.
+
+    */
+    __weak typeof(self) weakself = self;    [VPKit authenticateWithEmail:@"public_test_2_4_6@example.com" completion:^(BOOL success, NSInteger responseCode, NSError * _Nonnull error) {
+         __strong typeof(self) strongself = weakself;
+       
+        /*
+         
+         Authentication 
+         
+         We authenticate before invoking the editor, as veep creation requires an authenticated user.
+         
+         Authenticated users are weak (no password) or strong (password-protected)
+    
+         If responseCode to a weak login attempt is 401 (unauthorised), we can make a similar call for strong authentication with a password.
+        
+         User account admin can be an implementation detail in the host app or the Veepio Developer control panel.
+         
+         */
+        
+        
+        if (success) {
+            strongself.vpEditor =  [VPKit editorWithImage:image
+                                           fromView:view];
+            strongself.vpEditor.delegate = self;
+            strongself.vpEditor.modalPresentationStyle = UIModalPresentationOverFullScreen;
+            [strongself presentViewController:strongself.vpEditor animated:YES completion:nil];
+        } else {
+            NSLog(@"%@",error);
+        }
+    }];
+    
+
+}
+
 
 #pragma mark - VPKViewController delegate
 
 /*
-    delegate methods for VPKVeepViewer
+    example delegate methods for VPKVeepViewer
  
  */
 
@@ -217,7 +173,7 @@
     VPKPublicVeep* pVeep = info[@"veep"];
     NSLog(@"%s %@",__func__, pVeep);
     [self dismissViewControllerAnimated:YES completion:^{
-        [self.vpkPreview showIcon];
+        [self.viewerPreview showIcon];
     }];
 }
 
@@ -227,7 +183,7 @@
 }
 
 /*
-    delegate mathods for VPKVeepEditor
+    example delegate mathods for VPKVeepEditor
  
  */
 
@@ -246,44 +202,57 @@
 }
 
 
-#pragma mark - error handling
+#pragma mark - (layout boilerplate for the demo app, not relevant to the SDK)
 
-/**
- Error handling
 
- 
- @param notification NSNotification with userInfo dictionary containing a single item: the NSError at userInfo[vpkErrorKey].
- 
- 
- @discussion
- 
- To propagate error notifications to the host app, call:
- [VPKit setForwardErrorNotifications:YES]  
- 
- if notifications are not forwarded, they are handled by the SDK with user-facing alerts where appropriate.
- 
- */
+- (void)configureConstraints {
+    NSLog(@"%s",__func__);
+    
+    NSDictionary* dict = NSDictionaryOfVariableBindings(_titleLabel,_viewerPreview,_consumeLabel,_createLabel,_editorPreview);
+    for (UIView* view in dict.allValues) {
+        view.translatesAutoresizingMaskIntoConstraints = NO;
+    };
 
-- (void)errorReceived:(NSNotification*)notification {
-    NSError* error = notification.userInfo[vpkErrorKey];
-    if (!error) return;
-    UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"App alert"
-                                                                   message:error.localizedDescription
-                                                            preferredStyle:UIAlertControllerStyleAlert];
-    [alert addAction:[UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {}]];
-    UIViewController* controller = self.presentedViewController?:self;
-    [controller presentViewController:alert animated:YES completion:nil];
+    CGFloat vMargin = 50;
+    NSArray* formats =
+    @[
+      @"H:|-(vMargin)-[_titleLabel]-(vMargin)-|",
+      @"H:|-(vMargin)-[_viewerPreview]-(vMargin)-|",
+      @"H:|-(vMargin)-[_consumeLabel]-(vMargin)-|",
+      @"H:|-(vMargin)-[_editorPreview]-(vMargin)-|",
+      @"H:|-(vMargin)-[_createLabel]-(vMargin)-|",
+      @"V:|-(38)-[_titleLabel]-(18)-[_viewerPreview]-(4)-[_consumeLabel]-(18)-[_editorPreview]-(4)-[_createLabel]"
+      ];
+    
+    
+    for (NSString* format in formats) {
+        [self.view addConstraints:
+         [NSLayoutConstraint constraintsWithVisualFormat:format
+                                                 options:0
+                                                 metrics:@{@"vMargin":@(vMargin)}
+                                                   views:dict]];
+    }
+    CGSize size = self.viewerPreview.image.size;
+    if (size.width > 0)
+        [self alignHeightToWidth:self.viewerPreview ratio: size.height/size.width];
+    size = self.editorPreview.image.size;
+    if (size.width > 0)
+        [self alignHeightToWidth:self.editorPreview ratio: size.height/size.width];
+    
 }
 
-- (void)startListening {
-    [NSNotificationCenter.defaultCenter addObserver:self
-                                           selector:@selector(errorReceived:)
-                                               name:vpkErrorNotification
-                                             object:nil];
+- (void)alignHeightToWidth:(UIView*)view ratio:(CGFloat)ratio{
+    [view.superview addConstraint:
+     [NSLayoutConstraint constraintWithItem:view
+                                  attribute:NSLayoutAttributeHeight
+                                  relatedBy:NSLayoutRelationEqual
+                                     toItem:view
+                                  attribute:NSLayoutAttributeWidth
+                                 multiplier:ratio
+                                   constant:0]];
 }
 
-- (void)stopListening {
-    [[NSNotificationCenter defaultCenter] removeObserver:self];
-}
+
+
 
 @end
