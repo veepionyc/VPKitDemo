@@ -60,7 +60,6 @@
                         <outlet property="createLabel" destination="Oe8-vV-J0K" id="5rb-eV-z84"/>
                         <outlet property="ePreview" destination="0Ke-l6-Rgc" id="OH1-Ps-HEQ"/>
                         <outlet property="titleLabel" destination="oqf-V4-4Ps" id="0KC-5c-9av"/>
-                        <outlet property="vPreview" destination="Wof-IM-cI6" id="Mk6-Xv-YYL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

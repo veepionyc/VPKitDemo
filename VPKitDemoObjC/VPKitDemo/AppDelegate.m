@@ -28,12 +28,12 @@
     NSString* appID = @"VEEPIO_test_app_id";
     NSString* clientID = @"VsRIkxIfTtkFJhw1ABItnO50B6fSW23NhIRnST53";
     NSString* clientSecret = @"OdWbCaP9i1I2AV2yZUzwfDFE4gU04RDX1HdubnTEg8oWw8F9yWQwjX179zHRXLUad5vrsOo5B7UtFq2utsrWbkjVus5aJKxW8wXTvDknqdgeowunL9yeEN8selNpTOJF";
-    
+
     
     /*
      
      INITIALISATION
-     
+    
      */
     
     [VPKit setApplicationId:appID
@@ -46,12 +46,12 @@
      SANDBOXING
      Testing and development - NO
      Deployment - YES
-     
+    
      */
     
     [VPKit setProduction:NO];
-    
-    
+
+
     
     /*
      
