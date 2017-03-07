@@ -7,11 +7,10 @@
 //
 
 #import "ViewController.h"
-#import "Common.h"
+#import <VPKit/VPKit.h>
 
 @import AVFoundation;
 @import AVKit;
-#import <VPKit/VPKit.h>
 
 
 
