@@ -330,6 +330,7 @@
 				SWIFT_OBJC_BRIDGING_HEADER = "VPKitDemo/VPKitDemo-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 2.3;
+				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
 		};
@@ -361,6 +362,7 @@
 				PROVISIONING_PROFILE_SPECIFIER = "match AppStore io.veep.VPKitDemo";
 				SWIFT_OBJC_BRIDGING_HEADER = "VPKitDemo/VPKitDemo-Bridging-Header.h";
 				SWIFT_VERSION = 2.3;
+				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;
 		};

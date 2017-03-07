@@ -299,6 +299,7 @@
 				PROVISIONING_PROFILE = "6a728071-d759-4467-8895-1474114c515d";
 				PROVISIONING_PROFILE_SPECIFIER = "iOS Wildcard Development";
 				SWIFT_VERSION = 3.0;
+				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
 		};
@@ -323,6 +324,7 @@
 				PROVISIONING_PROFILE = "95ff9040-efa8-4e70-9c60-8e141afd1865";
 				PROVISIONING_PROFILE_SPECIFIER = "iOS Wildcard Distribution";
 				SWIFT_VERSION = 3.0;
+				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;
 		};
