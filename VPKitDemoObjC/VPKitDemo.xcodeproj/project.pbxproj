@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AB11EED01E6F53A800FA8663 /* Fastfile in Resources */ = {isa = PBXBuildFile; fileRef = AB11EECD1E6F53A800FA8663 /* Fastfile */; };
+		AB11EED11E6F53A800FA8663 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = AB11EECE1E6F53A800FA8663 /* README.md */; };
+		AB11EED21E6F53A800FA8663 /* report.xml in Resources */ = {isa = PBXBuildFile; fileRef = AB11EECF1E6F53A800FA8663 /* report.xml */; };
 		AB1F17BE1C866C3700F740A2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AB1F17BD1C866C3700F740A2 /* main.m */; };
 		AB1F17C11C866C3700F740A2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AB1F17C01C866C3700F740A2 /* AppDelegate.m */; };
 		AB1F17C41C866C3700F740A2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB1F17C31C866C3700F740A2 /* ViewController.m */; };
@@ -34,6 +37,9 @@
 
 /* Begin PBXFileReference section */
 		AB0DC9E51C99EA9B00123D73 /* libVPKit.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libVPKit.a; path = "Pods/../build/Debug-iphoneos/libVPKit.a"; sourceTree = "<group>"; };
+		AB11EECD1E6F53A800FA8663 /* Fastfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; fileEncoding = 4; path = Fastfile; sourceTree = "<group>"; };
+		AB11EECE1E6F53A800FA8663 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		AB11EECF1E6F53A800FA8663 /* report.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = report.xml; sourceTree = "<group>"; };
 		AB1F17B91C866C3700F740A2 /* VPKitDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VPKitDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB1F17BD1C866C3700F740A2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		AB1F17BF1C866C3700F740A2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -71,9 +77,21 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		AB11EECC1E6F53A800FA8663 /* fastlane */ = {
+			isa = PBXGroup;
+			children = (
+				AB11EECD1E6F53A800FA8663 /* Fastfile */,
+				AB11EECE1E6F53A800FA8663 /* README.md */,
+				AB11EECF1E6F53A800FA8663 /* report.xml */,
+			);
+			name = fastlane;
+			path = ../fastlane;
+			sourceTree = "<group>";
+		};
 		AB1F17B01C866C3700F740A2 = {
 			isa = PBXGroup;
 			children = (
+				AB11EECC1E6F53A800FA8663 /* fastlane */,
 				ABECD8C31E65E1E200184B29 /* VPKit.framework */,
 				AB1F17BB1C866C3700F740A2 /* VPKitDemo */,
 				AB1F17BA1C866C3700F740A2 /* Products */,
@@ -176,7 +194,9 @@
 			files = (
 				AB1F17CC1C866C3700F740A2 /* LaunchScreen.storyboard in Resources */,
 				AB1F17C91C866C3700F740A2 /* Assets.xcassets in Resources */,
+				AB11EED01E6F53A800FA8663 /* Fastfile in Resources */,
 				AB1F17C71C866C3700F740A2 /* Main.storyboard in Resources */,
+				AB11EED21E6F53A800FA8663 /* report.xml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -189,6 +209,7 @@
 			files = (
 				AB1F17C41C866C3700F740A2 /* ViewController.m in Sources */,
 				AB1F17C11C866C3700F740A2 /* AppDelegate.m in Sources */,
+				AB11EED11E6F53A800FA8663 /* README.md in Sources */,
 				AB1F17BE1C866C3700F740A2 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -308,6 +329,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Veep The Veeper (2YL8SFLV92)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Veep The Veeper (2YL8SFLV92)";
+				CURRENT_PROJECT_VERSION = 1.0;
 				DEVELOPMENT_TEAM = 6R3CG82D75;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -341,6 +363,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Veepio Holdings, LLC (6R3CG82D75)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Veepio Holdings, LLC (6R3CG82D75)";
+				CURRENT_PROJECT_VERSION = 1.0;
 				DEVELOPMENT_TEAM = 6R3CG82D75;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (

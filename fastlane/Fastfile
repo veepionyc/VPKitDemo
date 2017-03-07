@@ -4,7 +4,7 @@ SWIFT_PROJECT =  "VPKitDemoSwift/VPKitDemoSwift.xcodeproj"
 OBJC_PROJECT = "VPKitDemoObjC/VPKitDemo.xcodeproj"
 DEMO_PROJECTS = [SWIFT_PROJECT,OBJC_PROJECT]
 
-def version()
+def framework_version()
 	path = "#{FRAMEWORK_PLIST}"
 	sh("plutil -convert xml1 ../#{path}")
 	version =  get_info_plist_value(
@@ -12,6 +12,8 @@ def version()
 			key: 'CFBundleShortVersionString'
 			)
 	sh("plutil -convert binary1 ../#{path}")
+	puts ("version: #{version}")
+	version
 end
 
 
@@ -24,7 +26,7 @@ private_lane :prepare do  |options|
 end
 
 lane :sync_project_version_numbers do
-    version = version()
+    version = framework_version()
     DEMO_PROJECTS.each do |project|
         increment_version_number(xcodeproj:project,version_number:version)
     end
@@ -37,13 +39,30 @@ end
 
 
 lane :test do
-    git_commit(path:".", message: "test")
+    x=1/0
+end
+
+lane :pre_publish do
+    prepare(branch: "develop")
+end
+
+lane :post_publish do
+    sync_project_version_numbers	
+    test_projects
+    version = framework_version()
+    git_commit(path:".", message: "VPKit publish v #{version}")
+    add_git_tag(tag:"#{version}")
+    push_to_git_remote
 end
 
 
 lane :publish do
-    prepare(branch: "develop")
-    sync_project_version_numbers
-    test_projects
-    git_commit(path:".", message: "VPKit publish v #{version()}")
+    pre_publish
+    post_publish
+end
+
+
+
+error do |lane, exception|
+    notification(message:"Lane #{lane} failed to complete.")
 end
