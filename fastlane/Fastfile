@@ -1,0 +1,49 @@
+FRAMEWORK = "VPKit.framework"
+FRAMEWORK_PLIST = "VPKit.framework/Info.plist"
+SWIFT_PROJECT =  "VPKitDemoSwift/VPKitDemoSwift.xcodeproj"
+OBJC_PROJECT = "VPKitDemoObjC/VPKitDemo.xcodeproj"
+DEMO_PROJECTS = [SWIFT_PROJECT,OBJC_PROJECT]
+
+def version()
+	path = "#{FRAMEWORK_PLIST}"
+	sh("plutil -convert xml1 ../#{path}")
+	version =  get_info_plist_value(
+			path: path,
+			key: 'CFBundleShortVersionString'
+			)
+	sh("plutil -convert binary1 ../#{path}")
+end
+
+
+private_lane :prepare do  |options|
+    ensure_git_status_clean
+    if (options[:branch])
+        ensure_git_branch(branch: options[:branch])
+    end
+    clear_derived_data
+end
+
+lane :sync_project_version_numbers do
+    version = version()
+    DEMO_PROJECTS.each do |project|
+        increment_version_number(xcodeproj:project,version_number:version)
+    end
+end
+
+lane :test_projects do
+    xcbuild(project:OBJC_PROJECT,scheme: "VPKitDemo")
+    xcbuild(project:SWIFT_PROJECT,scheme: "VPKitDemoSwift")
+end
+
+
+lane :test do
+    git_commit(path:".", message: "test")
+end
+
+
+lane :publish do
+    prepare(branch: "develop")
+    sync_project_version_numbers
+    test_projects
+    git_commit(path:".", message: "VPKit publish v #{version()}")
+end
