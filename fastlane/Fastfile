@@ -1,0 +1,54 @@
+import "../../fastlane/Fastfile"
+
+
+SWIFT_PROJECT_CONSUME =  "View(swift)/VPKitDemoSwift.xcodeproj"
+OBJC_PROJECT_CONSUME = "View(objc)/VPKitDemo.xcodeproj"
+
+SWIFT_PROJECTS = [SWIFT_PROJECT,SWIFT_PROJECT_CONSUME]
+OBJC_PROJECTS = [OBJC_PROJECT,OBJC_PROJECT_CONSUME]
+DEPLOYMENT_DEMO_PROJECTS = [SWIFT_PROJECT,SWIFT_PROJECT_CONSUME,OBJC_PROJECT,OBJC_PROJECT_CONSUME]
+
+
+
+lane :sync_project_version_numbers do
+    version = framework_version()
+    DEPLOYMENT_DEMO_PROJECTS.each do |project|
+        increment_version_number(xcodeproj:project,version_number:version)
+    end
+end
+
+lane :test_projects do
+    OBJC_PROJECTS.each do |project| 
+		xcbuild(project:project,scheme: "VPKitDemo")
+    end
+    
+    SWIFT_PROJECTS.each do |project|
+		xcbuild(project:project,scheme: "VPKitDemoSwift")
+    end
+end
+
+
+lane :pre_publish do
+    prepare(branch: "develop")
+end
+
+lane :post_publish do
+    sync_project_version_numbers	
+    test_projects
+    version = framework_version()
+    git_commit(path:".", message: "deployed - v #{version}")
+    add_git_tag(tag:"#{version}")
+    #push_to_git_remote
+end
+
+
+lane :deploy do
+    pre_publish
+    post_publish
+end
+
+
+
+error do |lane, exception|
+    notification(message:"Lane #{lane} failed to complete.")
+end
