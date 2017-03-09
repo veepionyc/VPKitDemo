@@ -55,20 +55,23 @@ typedef void (^VPKDailyStatsBlock)(VPKDailyStats* _Nullable stats, NSError* _Nul
 + (void)forwardErrorNotifications:(BOOL)forwardErrors;
 
 + (void)start;
-+ (void)setApplicationIdentifier:(nonnull NSString*)appID;
-+ (void)setApplicationId:(nonnull NSString*)appId
-                clientId:(nullable NSString*)clientId
++ (void)setApplicationID:(nonnull NSString*)appID;
++ (void)setApplicationID:(nonnull NSString*)appID
+                clientID:(nullable NSString*)clientID
                   clientSecret:(nullable NSString*)secret;
 
 
 + (void)setEmail:(nullable NSString*)email;  //deprecated
+
+
 + (void)authenticateWithEmail:(NSString*)email completion:(VPKBOOLResponseCodeErrorBlock)completion;
 + (void)authenticateWithEmail:(NSString*)email password:(nullable NSString*)password completion:(VPKBOOLResponseCodeErrorBlock)completion;
 
 + (void)setProduction:(BOOL)production;
-//+ (void)setConsumerId:(nullable NSString*)consumerID;
-//+ (nonnull NSString*)requestConsumerId;
-//+ (void)requestConsumerId:(VPKitConsumerIdCompletionBlock)completionBlock;
++ (void)sendIDFA:(BOOL)idfa;
+
+//+ (nonnull NSString*)requestConsumerID;
+//+ (void)requestConsumerID:(VPKitConsumerIdCompletionBlock)completionBlock;
 + (void)requestUserStats:(VPKUserStatsErrorBlock)completionBlock;
 
 /**
