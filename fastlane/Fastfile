@@ -38,7 +38,7 @@ lane :post_publish do
     version = framework_version()
     git_commit(path:".", message: "deployed - v #{version}")
     add_git_tag(tag:"#{version}")
-    #push_to_git_remote
+    push_to_git_remote
 end
 
 
