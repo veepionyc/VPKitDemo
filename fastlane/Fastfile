@@ -1,8 +1,8 @@
 import "../../fastlane/Fastfile"
 
 
-SWIFT_PROJECT_CONSUME =  "Demo_View_swift/VPKitDemoSwift.xcodeproj"
-OBJC_PROJECT_CONSUME = "Demo_View_objc/VPKitDemo.xcodeproj"
+SWIFT_PROJECT_CONSUME =  "demo_view_swift/VPKitDemoSwift.xcodeproj"
+OBJC_PROJECT_CONSUME = "demo_view_objc/VPKitDemo.xcodeproj"
 
 SWIFT_PROJECTS = [SWIFT_PROJECT,SWIFT_PROJECT_CONSUME]
 OBJC_PROJECTS = [OBJC_PROJECT,OBJC_PROJECT_CONSUME]

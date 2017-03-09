@@ -68,6 +68,11 @@ fastlane postpublish_demo_projects
 fastlane publish_demos
 ```
 
+### test
+```
+fastlane test
+```
+
 ### demo
 ```
 fastlane demo
