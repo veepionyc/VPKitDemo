@@ -33,23 +33,29 @@
     NSString* clientSecret = @"OdWbCaP9i1I2AV2yZUzwfDFE4gU04RDX1HdubnTEg8oWw8F9yWQwjX179zHRXLUad5vrsOo5B7UtFq2utsrWbkjVus5aJKxW8wXTvDknqdgeowunL9yeEN8selNpTOJF";
     NSString* userEmail = @"anoymous@example.com";
     
-    
-    /* IDFA support
+    /* 
      
-     if the host app is IDFA-enabled and the user is opt-in, use the IDFA in place of email for anonymous users
-     */
-
+     IDFA support
     
-    if([[ASIdentifierManager sharedManager] isAdvertisingTrackingEnabled])
-    {
-        NSUUID *IDFA = [[ASIdentifierManager sharedManager] advertisingIdentifier];
-        userEmail = [NSString stringWithFormat:@"idfa:%@",[IDFA UUIDString]];
-    }
+     (optional) send IDFA for Veep tracking
+     
+     This requires host app linking to AdSupport.framework ("link binary with libarires" section of project Build Phases)
+     
+     Setting this option to YES entails additional reporting requirements when submitting to the app store
+     
+      https://developer.apple.com/library/content/documentation/LanguagesUtilities/Conceptual/iTunesConnect_Guide/Chapters/SubmittingTheApp.html#//apple_ref/doc/uid/TP40011225-CH33-SW8
+     
+     */
+    
+    
+    [VPKit sendIDFA:YES];
+    
+
     
     /*
      
      INITIALISATION
-    
+     
      */
     
     [VPKit setApplicationID:appID
@@ -57,19 +63,19 @@
                clientSecret:clientSecret];
     
     [VPKit setEmail:userEmail];
-   
+    
     
     /*
      
      SANDBOXING
      Testing and development - NO
      Deployment - YES
-    
+     
      */
     
     [VPKit setProduction:NO];
-
-
+    
+    
     
     /*
      
