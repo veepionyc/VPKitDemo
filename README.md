@@ -1,9 +1,12 @@
 # VPKitDemo
 
-This is a test distribution of the VPKit framework. Demo host apps are provided in Objective-C and Swift. 
+This is a test distribution of the VPKit framework. Framework supplied as precompliled binary. Swift and Objective-C compatible.
 
+Demo host apps are provided in Objective-C and Swift. 
 
-_update 1.1.3_ - VPKit framework now supplied as fat binary, to run both on simulator and device.
+_View_ - shows quick-start integration with minimal code requirements. View veeps only.  
+
+_Create_ - more elaborate integration example with use of delegates. Create new veeps, view existing veeps.  
 
 
 

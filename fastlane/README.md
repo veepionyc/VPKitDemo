@@ -23,11 +23,66 @@ xcode-select --install
 </tr>
 <tr>
 <td width="33%"><code>brew cask install fastlane</code></td>
-<td width="33%"><a href="https://download.fastlane.tools/fastlane.zip">Download the zip file</a>. Then double click on the <code>install</code> script (or run it in a terminal window).</td>
+<td width="33%"><a href="https://download.fastlane.tools">Download the zip file</a>. Then double click on the <code>install</code> script (or run it in a terminal window).</td>
 <td width="33%"><code>sudo gem install fastlane -NV</code></td>
 </tr>
 </table>
 # Available Actions
+### archive
+```
+fastlane archive
+```
+
+### test_demo_projects
+```
+fastlane test_demo_projects
+```
+
+### sync_demo_version_numbers
+```
+fastlane sync_demo_version_numbers
+```
+
+### increment
+```
+fastlane increment
+```
+
+### prepublish_deployed_demo_projects
+```
+fastlane prepublish_deployed_demo_projects
+```
+
+### postpublish_deployed_demo_projects
+```
+fastlane postpublish_deployed_demo_projects
+```
+
+### postpublish_demo_projects
+```
+fastlane postpublish_demo_projects
+```
+
+### publish_demos
+```
+fastlane publish_demos
+```
+
+### test
+```
+fastlane test
+```
+
+### demo
+```
+fastlane demo
+```
+
+### publish
+```
+fastlane publish
+```
+
 ### sync_project_version_numbers
 ```
 fastlane sync_project_version_numbers
@@ -38,14 +93,19 @@ fastlane sync_project_version_numbers
 fastlane test_projects
 ```
 
-### test
+### pre_publish
 ```
-fastlane test
+fastlane pre_publish
 ```
 
-### publish
+### post_publish
 ```
-fastlane publish
+fastlane post_publish
+```
+
+### deploy
+```
+fastlane deploy
 ```
 
 

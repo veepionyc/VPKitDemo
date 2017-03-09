@@ -1,49 +1,54 @@
-FRAMEWORK = "VPKit.framework"
-FRAMEWORK_PLIST = "VPKit.framework/Info.plist"
-SWIFT_PROJECT =  "VPKitDemoSwift/VPKitDemoSwift.xcodeproj"
-OBJC_PROJECT = "VPKitDemoObjC/VPKitDemo.xcodeproj"
-DEMO_PROJECTS = [SWIFT_PROJECT,OBJC_PROJECT]
-
-def version()
-	path = "#{FRAMEWORK_PLIST}"
-	sh("plutil -convert xml1 ../#{path}")
-	version =  get_info_plist_value(
-			path: path,
-			key: 'CFBundleShortVersionString'
-			)
-	sh("plutil -convert binary1 ../#{path}")
-end
+import "../../fastlane/Fastfile"
 
 
-private_lane :prepare do  |options|
-    ensure_git_status_clean
-    if (options[:branch])
-        ensure_git_branch(branch: options[:branch])
-    end
-    clear_derived_data
-end
+SWIFT_PROJECT_CONSUME =  "demo_view_swift/VPKitDemoSwift.xcodeproj"
+OBJC_PROJECT_CONSUME = "demo_view_objc/VPKitDemo.xcodeproj"
+
+SWIFT_PROJECTS = [SWIFT_PROJECT,SWIFT_PROJECT_CONSUME]
+OBJC_PROJECTS = [OBJC_PROJECT,OBJC_PROJECT_CONSUME]
+DEPLOYMENT_DEMO_PROJECTS = [SWIFT_PROJECT,SWIFT_PROJECT_CONSUME,OBJC_PROJECT,OBJC_PROJECT_CONSUME]
+
+
 
 lane :sync_project_version_numbers do
-    version = version()
-    DEMO_PROJECTS.each do |project|
+    version = framework_version()
+    DEPLOYMENT_DEMO_PROJECTS.each do |project|
         increment_version_number(xcodeproj:project,version_number:version)
     end
 end
 
 lane :test_projects do
-    xcbuild(project:OBJC_PROJECT,scheme: "VPKitDemo")
-    xcbuild(project:SWIFT_PROJECT,scheme: "VPKitDemoSwift")
+    OBJC_PROJECTS.each do |project| 
+		xcbuild(project:project,scheme: "VPKitDemo")
+    end
+    
+    SWIFT_PROJECTS.each do |project|
+		xcbuild(project:project,scheme: "VPKitDemoSwift")
+    end
 end
 
 
-lane :test do
-    git_commit(path:".", message: "test")
-end
-
-
-lane :publish do
+lane :pre_publish do
     prepare(branch: "develop")
-    sync_project_version_numbers
+end
+
+lane :post_publish do
+    sync_project_version_numbers	
     test_projects
-    git_commit(path:".", message: "VPKit publish v #{version()}")
+    version = framework_version()
+    git_commit(path:".", message: "deployed - v #{version}")
+    add_git_tag(tag:"#{version}")
+    push_to_git_remote
+end
+
+
+lane :deploy do
+    pre_publish
+    post_publish
+end
+
+
+
+error do |lane, exception|
+    notification(message:"Lane #{lane} failed to complete.")
 end
