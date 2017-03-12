@@ -31,7 +31,7 @@ typedef NS_ENUM(NSInteger, VPKServerEnvironment) {
 
 typedef void (^VPKBOOLResponseCodeErrorBlock)(BOOL success, NSInteger responseCode, NSError* error);
 
-typedef void (^VPKitConsumerIdCompletionBlock)(NSString* consumerID);
+typedef void (^VPKitConsumerIdCompletionBlock)(NSString* consumerId);
 typedef void (^VPKitPublicVeepErrorCompletionBlock)(  VPKPublicVeep* _Nullable veep
                                                     , NSError* _Nullable error);
 typedef void (^VPKUserStatsErrorBlock)(  VPKUserStats* _Nullable userStats
@@ -55,23 +55,34 @@ typedef void (^VPKDailyStatsBlock)(VPKDailyStats* _Nullable stats, NSError* _Nul
 + (void)forwardErrorNotifications:(BOOL)forwardErrors;
 
 + (void)start;
-+ (void)setApplicationID:(nonnull NSString*)appID;
-+ (void)setApplicationID:(nonnull NSString*)appID
-                clientID:(nullable NSString*)clientID
+//+ (void)setApplicationId:(nonnull NSString*)appId;
++ (void)setApplicationId:(nonnull NSString*)appId
+                clientId:(nullable NSString*)clientId
                   clientSecret:(nullable NSString*)secret;
 
 
 + (void)setEmail:(nullable NSString*)email;  //deprecated
 
 
-+ (void)authenticateWithEmail:(NSString*)email completion:(VPKBOOLResponseCodeErrorBlock)completion;
-+ (void)authenticateWithEmail:(NSString*)email password:(nullable NSString*)password completion:(VPKBOOLResponseCodeErrorBlock)completion;
++ (void)authenticate:(VPKBOOLResponseCodeErrorBlock)completion;
 
 + (void)setProduction:(BOOL)production;
 + (void)sendIDFA:(BOOL)idfa;
 
-//+ (nonnull NSString*)requestConsumerID;
-//+ (void)requestConsumerID:(VPKitConsumerIdCompletionBlock)completionBlock;
+#pragma mark - authentication
+
++ (void)authenticateWithEmail:(NSString*)email
+                   completion:(VPKBOOLResponseCodeErrorBlock)completion;
+
++ (void)authenticateWithEmail:(NSString*)email
+                     password:(nullable NSString*)password
+                   completion:(VPKBOOLResponseCodeErrorBlock)completion;
+
++ (BOOL)authorized;
+
+
+#pragma mark - analytics
+
 + (void)requestUserStats:(VPKUserStatsErrorBlock)completionBlock;
 
 /**
@@ -79,12 +90,13 @@ typedef void (^VPKDailyStatsBlock)(VPKDailyStats* _Nullable stats, NSError* _Nul
  */
 + (void)getDailyStats:(VPKDailyStatsBlock)completion;
 
-+ (BOOL)authorized;
 
 /**
  gets competitive stats for this user
  */
 + (void)getCompetitiveStats:(VPKCompetitiveStatsBlock)completion;
+
+#pragma mark - view controllers
 
 + (nullable VPKVeepViewer*)viewerWithImage:(VPKImage*)image fromView:(UIView*)view;
 
@@ -92,11 +104,16 @@ typedef void (^VPKDailyStatsBlock)(VPKDailyStats* _Nullable stats, NSError* _Nul
 
 + (nullable VPKVeepEditor*)editorWithImage:(UIImage*)image fromView:(UIView*)view error:( NSError* _Nullable *)error;
 
+
+#pragma mark - environment
+
 + (nonnull VPKStyles*)styles;
 
 + (nonnull VPKEnvironment*) environment;
 
-+ (void) requestVeep:(NSString*)veepID completionBlock:(VPKitPublicVeepErrorCompletionBlock)completion;
+#pragma mark - getting veeps
+
++ (void) requestVeep:(NSString*)veepId completionBlock:(VPKitPublicVeepErrorCompletionBlock)completion;
 
 + (void) requestVeepWithURL:(NSURL*)imageURL completionBlock:(VPKitPublicVeepErrorCompletionBlock)completion;
 

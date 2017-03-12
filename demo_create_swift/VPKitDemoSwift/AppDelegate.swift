@@ -30,8 +30,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
          */
         
         
-        let appID = "VEEPIO_test_app_id"
-        let clientID = "VsRIkxIfTtkFJhw1ABItnO50B6fSW23NhIRnST53"
+        let appId = "VEEPIO_test_app_id"
+        let clientId = "VsRIkxIfTtkFJhw1ABItnO50B6fSW23NhIRnST53"
         let clientSecret = "OdWbCaP9i1I2AV2yZUzwfDFE4gU04RDX1HdubnTEg8oWw8F9yWQwjX179zHRXLUad5vrsOo5B7UtFq2utsrWbkjVus5aJKxW8wXTvDknqdgeowunL9yeEN8selNpTOJF"
         let userEmail = "anonymous@example.com"
         
@@ -59,8 +59,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
          
          */
         
-        VPKit.setApplicationID(appID,
-                               clientID: clientID,
+        VPKit.setApplicationId(appId,
+                               clientId: clientId,
                                clientSecret: clientSecret)
         
         VPKit.setEmail(userEmail)

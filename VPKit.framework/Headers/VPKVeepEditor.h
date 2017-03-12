@@ -13,7 +13,7 @@
 
 @protocol VPKVeepEditorDelegate <NSObject>
 
-- (void)veepEditor:(nonnull VPKVeepEditor*)editor didPublishVeep:(nonnull NSString*)veepID;
+- (void)veepEditor:(nonnull VPKVeepEditor*)editor didPublishVeep:(nonnull NSString*)veepId;
 
 - (void)veepEditorDidCancel:(nonnull VPKVeepEditor*)editor;
 

@@ -55,7 +55,7 @@
 
 - (void)configureViewer2 {
     UIImage* image = [UIImage imageNamed:@"KrispyGlas"];
-    image = [[VPKImage alloc] initWithImage:image veepID:@"560"];
+    image = [[VPKImage alloc] initWithImage:image veepId:@"560"];
     self.viewerPreview2.image = image;
 }
 

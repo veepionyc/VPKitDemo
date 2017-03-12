@@ -52,21 +52,21 @@ class ViewController:
     func configureViewerWithTestImage()
     {
         guard let image = UIImage.init(named: "KrispyGlas") else {return}
-        let previewImage: VPKImage = VPKImage(image: image, veepID:"560")
+        let previewImage: VPKImage = VPKImage(image: image, veepId:"560")
         self.viewerPreview.image = previewImage
     }
     
     func configureViewerWithTestVideo()
     {
         guard let image = UIImage.init(named: "tomcruise") else {return}
-        let previewImage: VPKImage = VPKImage(image: image, veepID:"680")
+        let previewImage: VPKImage = VPKImage(image: image, veepId:"680")
         self.viewerPreview.image = previewImage
     }
     
     func configureEditor()
     {
         guard let image = UIImage.init(named: "stock_photo") else {return}
-        let previewImage: VPKImage = VPKImage(image: image, veepID:nil)
+        let previewImage: VPKImage = VPKImage(image: image, veepId:nil)
         self.editorPreview.image = previewImage
         /*
          for the editor example, we'll set an optional delegate.
@@ -187,12 +187,12 @@ class ViewController:
      
      */
     
-    func veepEditor(_ editor: VPKVeepEditor, didPublishVeep veepID: String)
+    func veepEditor(_ editor: VPKVeepEditor, didPublishVeep veepId: String)
     {
         /*
-         demo method to get a publicVeep object from a veepID
+         demo method to get a publicVeep object from a veepId
          */
-        VPKit.requestVeep(veepID) { (veep, error) in
+        VPKit.requestVeep(veepId) { (veep, error) in
             if ((veep) != nil){
                 print("\(veep)")
             } else {
