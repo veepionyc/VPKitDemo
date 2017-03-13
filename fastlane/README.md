@@ -28,11 +28,6 @@ xcode-select --install
 </tr>
 </table>
 # Available Actions
-### sync_podspec_version
-```
-fastlane sync_podspec_version
-```
-
 ### archive
 ```
 fastlane archive
@@ -116,6 +111,11 @@ fastlane post_publish
 ### deploy
 ```
 fastlane deploy
+```
+
+### finished
+```
+fastlane finished
 ```
 
 

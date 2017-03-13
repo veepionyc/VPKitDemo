@@ -41,7 +41,7 @@ lane :post_publish do
     add_git_tag(tag:"#{version}")
     push_to_git_remote
     
-    sync_prodspec_version(version)
+    sync_podspec_version(version)
     sh("pod trunk push '../VPKit.podspec' --verbose --allow-warnings")
 
 end
@@ -53,7 +53,9 @@ lane :deploy do
     post_publish
 end
 
-
+lane :finished	 do
+    
+end
 
 error do |lane, exception|
     notification(message:"Lane #{lane} failed to complete.")
