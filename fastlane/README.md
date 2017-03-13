@@ -68,11 +68,6 @@ fastlane postpublish_demo_projects
 fastlane publish_demos
 ```
 
-### test
-```
-fastlane test
-```
-
 ### demo
 ```
 fastlane demo
@@ -81,6 +76,16 @@ fastlane demo
 ### publish
 ```
 fastlane publish
+```
+
+### finish
+```
+fastlane finish
+```
+
+### test
+```
+fastlane test
 ```
 
 ### sync_project_version_numbers
@@ -106,6 +111,11 @@ fastlane post_publish
 ### deploy
 ```
 fastlane deploy
+```
+
+### finished
+```
+fastlane finished
 ```
 
 

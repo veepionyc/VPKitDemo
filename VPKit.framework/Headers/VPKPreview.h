@@ -29,5 +29,5 @@
 
 #pragma mark - utility function for preview of youtube veep (only used for demo app)
 
-+ (nullable NSURL*)previewURLforYoutubeID:(nonnull NSString*)youtubeID;
++ (nullable NSURL*)previewURLforYoutubeId:(nonnull NSString*)youtubeId;
 @end

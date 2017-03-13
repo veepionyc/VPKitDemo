@@ -47,8 +47,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong, nonnull) VPKCollectionVC* collectionVC;
 //@property (nonatomic, strong, nonnull) VPKGoogleCellModel* googleCellModel;
 //@property (nonatomic, strong, nonnull) VPKVeepViewModel* veepViewModel;
-@property (nonatomic, strong, nullable) NSString* veepID;
-//@property (nonatomic, strong, nullable) NSString* mediaID;
+@property (nonatomic, strong, nullable) NSString* veepId;
+//@property (nonatomic, strong, nullable) NSString* mediaId;
 @property (nonatomic, strong, nonnull) VPKBlurTouchView* touchView;
 @property (nonatomic, assign) VPKViewMode mode;
 @property (nonatomic, strong) VPKVeepFetcher* fetcher;
@@ -66,7 +66,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (nonnull instancetype)initWithView:(nullable UIView*)view
                                image:(nonnull UIImage*)image
                               styles:(VPKStyles*)styles
-                              itemID:(nonnull NSString*)itemID
+                              itemId:(nonnull NSString*)itemId
                              fetcher:(VPKVeepFetcher*)fetcher;
 
 
@@ -84,7 +84,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 
-- (void)trackSelected:(nonnull NSString*)trackID;
+- (void)trackSelected:(nonnull NSString*)trackId;
 
 //- (nonnull UIBarButtonItem*)backButton;
 //- (nonnull UIBarButtonItem*)dismissButton;

@@ -1,6 +1,6 @@
-# VPKitDemo
+# VPKit
 
-This is a test distribution of the VPKit framework. Framework supplied as precompliled binary. Swift and Objective-C compatible.
+This is a binary distribution of the VPKit framework. Swift and Objective-C compatible.
 
 Demo host apps are provided in Objective-C and Swift. 
 

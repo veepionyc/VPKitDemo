@@ -57,13 +57,13 @@
 
 - (void)configureViewerWithTestImage {
     UIImage* image = [UIImage imageNamed:@"KrispyGlas"];
-    image = [[VPKImage alloc] initWithImage:image veepID:@"560"];
+    image = [[VPKImage alloc] initWithImage:image veepId:@"560"];
     self.viewerPreview.image = image;
 }
 
 - (void)configureViewerWithTestVideo {
     UIImage* image = [UIImage imageNamed:@"tomcruise"];
-    image = [[VPKImage alloc] initWithImage:image veepID:@"680"];
+    image = [[VPKImage alloc] initWithImage:image veepId:@"680"];
     self.viewerPreview.image = image;
     
 }
@@ -71,7 +71,7 @@
 
 - (void)configureEditor {
     UIImage* image = [UIImage imageNamed:@"stock_photo"];
-    image = [[VPKImage alloc] initWithImage:image veepID:nil];
+    image = [[VPKImage alloc] initWithImage:image veepId:nil];
     self.editorPreview.image = image;
     /*
      for the editor example, we'll set an optional delegate.
@@ -128,7 +128,9 @@
      this code is all OPTIONAL - if you don't set the delegate on VPKPreview, presenting and dismissing behaviour occurs as a default. However, at some point before invoking the editor, user authentication needs to be dealt with.
 
     */
-    __weak typeof(self) weakself = self;    [VPKit authenticateWithEmail:@"public_test_2_4_6@example.com" completion:^(BOOL success, NSInteger responseCode, NSError * _Nonnull error) {
+    __weak typeof(self) weakself = self;
+    [VPKit authenticateWithEmail:@"public_test_2_4_6@example.com"
+                      completion:^(BOOL success, NSInteger responseCode, NSError * _Nonnull error) {
          __strong typeof(self) strongself = weakself;
        
         /*
@@ -171,8 +173,9 @@
 - (void)veepViewer:(VPKVeepViewer *)viewer didFinishViewingWithInfo:(NSDictionary *)info {
     VPKPublicVeep* pVeep = info[@"veep"];
     NSLog(@"%s %@",__func__, pVeep);
+    __weak typeof(self) weakself = self;
     [self dismissViewControllerAnimated:YES completion:^{
-        [self.viewerPreview showIcon];
+        [weakself.viewerPreview showIcon];
     }];
 }
 
@@ -186,12 +189,12 @@
  
  */
 
-- (void)veepEditor:(VPKVeepEditor *)editor didPublishVeep:(NSString *)veepID  {
-    [VPKit requestVeep:veepID completionBlock:
+- (void)veepEditor:(VPKVeepEditor *)editor didPublishVeep:(NSString *)veepId  {
+    [VPKit requestVeep:veepId completionBlock:
      ^(VPKPublicVeep * _Nullable veep, NSError * _Nullable error) {
          NSLog(@"%@",veep);
      }];
-    NSLog(@"%s %@",__func__,veepID);
+    NSLog(@"%s %@",__func__,veepId);
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
