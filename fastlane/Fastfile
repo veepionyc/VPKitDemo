@@ -32,6 +32,7 @@ lane :pre_publish do
     prepare(branch: "develop")
 end
 
+
 lane :post_publish do
     sync_project_version_numbers	
     test_projects
@@ -39,7 +40,12 @@ lane :post_publish do
     git_commit(path:".", message: "deployed - v #{version}")
     add_git_tag(tag:"#{version}")
     push_to_git_remote
+    
+    sync_prodspec_version(version)
+    sh("pod trunk push '../VPKit.podspec' --verbose --allow-warnings")
+
 end
+
 
 
 lane :deploy do
