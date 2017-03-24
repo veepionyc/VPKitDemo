@@ -32,17 +32,19 @@ lane :pre_publish do
     prepare(branch: "develop")
 end
 
+lane :deploy_to_cocoapods do
+    version = framework_version()
+    sync_podspec_version(version:version)
+    sh("pod trunk push '../VPKit.podspec' --verbose --allow-warnings")
+end
 
 lane :post_publish do
     sync_project_version_numbers	
     test_projects
-    version = framework_version()
+    deploy_to_cocoapods
     git_commit(path:".", message: "deployed - v #{version}")
     add_git_tag(tag:"#{version}")
     push_to_git_remote
-    
-    sync_podspec_version(version)
-    sh("pod trunk push '../VPKit.podspec' --verbose --allow-warnings")
 
 end
 
@@ -54,7 +56,7 @@ lane :deploy do
 end
 
 lane :finished	 do
-    
+   
 end
 
 error do |lane, exception|

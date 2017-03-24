@@ -23,7 +23,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         /*
          
-         VPKIT CREDENTIALS
+         APP CREDENTIALS: required
+         
          These app credentials are for testing purposes only.
          To obtain credentials unique to your app email sdk_support@veepio.com
          
@@ -33,7 +34,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let appId = "VEEPIO_test_app_id"
         let clientId = "VsRIkxIfTtkFJhw1ABItnO50B6fSW23NhIRnST53"
         let clientSecret = "OdWbCaP9i1I2AV2yZUzwfDFE4gU04RDX1HdubnTEg8oWw8F9yWQwjX179zHRXLUad5vrsOo5B7UtFq2utsrWbkjVus5aJKxW8wXTvDknqdgeowunL9yeEN8selNpTOJF"
-        let userEmail = "anonymous@example.com"
         
         /*
          
@@ -62,9 +62,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         VPKit.setApplicationId(appId,
                                clientId: clientId,
                                clientSecret: clientSecret)
-        
-        VPKit.setEmail(userEmail)
-        
+                
         /*
          
          SANDBOXING
