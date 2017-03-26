@@ -54,19 +54,12 @@ typedef void (^VPKDailyStatsBlock)(VPKDailyStats* _Nullable stats, NSError* _Nul
  */
 + (void)forwardErrorNotifications:(BOOL)forwardErrors;
 
-+ (void)start;
-//+ (void)setApplicationId:(nonnull NSString*)appId;
 + (void)setApplicationId:(nonnull NSString*)appId
                 clientId:(nullable NSString*)clientId
                   clientSecret:(nullable NSString*)secret;
 
-
-+ (void)setEmail:(nullable NSString*)email;  //deprecated
-
-
-+ (void)authenticate:(VPKBOOLResponseCodeErrorBlock)completion;
-
 + (void)setProduction:(BOOL)production;
+
 + (void)sendIDFA:(BOOL)idfa;
 
 #pragma mark - authentication
