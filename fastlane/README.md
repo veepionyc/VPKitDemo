@@ -103,6 +103,11 @@ fastlane test_projects
 fastlane pre_publish
 ```
 
+### deploy_to_cocoapods
+```
+fastlane deploy_to_cocoapods
+```
+
 ### post_publish
 ```
 fastlane post_publish
