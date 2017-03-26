@@ -55,11 +55,7 @@ lane :deploy do
 end
 
 lane :finished	 do
-    git_commit(path:".", message: "deployed - v #{framework_version()}")
-    add_git_tag(tag:"#{framework_version()}")
-    push_to_git_remote
-    deploy_to_cocoapods
-
+ 
 end
 
 error do |lane, exception|
