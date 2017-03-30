@@ -2,6 +2,10 @@
 
 This is a binary distribution of the VPKit framework. Swift and Objective-C compatible.
 
+`VPKit.framework` - fat binary dynamic framework. Runs on simulator and device. Not suitable for app store submission.
+`VPKit_framework_iphoneos.zip` - zip file containing thin binary dynamic framework. Runs on device only. Suitable for app store submission.
+
+
 Demo host apps are provided in Objective-C and Swift. 
 
 _View_ - shows quick-start integration with minimal code requirements. View veeps only.  
