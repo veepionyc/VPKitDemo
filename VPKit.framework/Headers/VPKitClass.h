@@ -10,18 +10,14 @@
 #import <Foundation/Foundation.h>
 
 
-@class VPKUserStats;
-@class VPKCompetitiveStats;
-@class VPKDailyStats;
 @class VPKVeepViewer;
 @class VPKVeepEditor;
 @class VPKImage;
 @class VPKPublicVeep;
 @class VPKEnvironment;
+#import "VPKStats.h"
 #import "VPKStyles.h"
 #import "VPKPreview.h"
-//#import "VPKModels.h"
-//#import "VPKStatsConstants.h"
 
 NS_ASSUME_NONNULL_BEGIN
 typedef NS_ENUM(NSInteger, VPKServerEnvironment) {
