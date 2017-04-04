@@ -118,6 +118,7 @@
 				AB1F17B51C866C3700F740A2 /* Sources */,
 				AB1F17B61C866C3700F740A2 /* Frameworks */,
 				AB1F17B71C866C3700F740A2 /* Resources */,
+				ABFCE3E01E943887007DD125 /* Strip Frameworks */,
 				AB7E2C121DD3C2BB005CD150 /* Embed Frameworks */,
 			);
 			buildRules = (
@@ -175,6 +176,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		ABFCE3E01E943887007DD125 /* Strip Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Strip Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "bash \"${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}/VPKit.framework/strip-frameworks.sh\"";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		AB1F17B51C866C3700F740A2 /* Sources */ = {
