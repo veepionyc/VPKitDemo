@@ -38,7 +38,7 @@ class ViewController:
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        self.versionLabel.text = VPKit.version()
+        self.versionLabel.text = VPKit.sdkVersion()
         self.configureViewerWithTestImage()
         self.configureEditor()
         self.configureConstraints()
@@ -52,14 +52,14 @@ class ViewController:
     func configureViewerWithTestImage()
     {
         guard let image = UIImage.init(named: "KrispyGlas") else {return}
-        let previewImage: VPKImage = VPKImage(image: image, veepId:"560")
+        let previewImage: VPKImage = VPKImage(image: image, veepId:"1787")
         self.viewerPreview.image = previewImage
     }
     
     func configureViewerWithTestVideo()
     {
         guard let image = UIImage.init(named: "tomcruise") else {return}
-        let previewImage: VPKImage = VPKImage(image: image, veepId:"680")
+        let previewImage: VPKImage = VPKImage(image: image, veepId:"1788")
         self.viewerPreview.image = previewImage
     }
     
@@ -122,7 +122,7 @@ class ViewController:
          */
         
         
-        VPKit.authenticate(withEmail: "public_test_2_4_6@example.com")
+        VPKit.authenticate(withEmail: "test@example.com")
         {
             [weak self] (success, responseCode, error) in
             

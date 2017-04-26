@@ -55,7 +55,7 @@ class ViewController:
     func configurePreview2()
     {
         guard let image = UIImage.init(named: "KrispyGlas") else {return}
-        let previewImage: VPKImage = VPKImage(image: image, veepId:"560")
+        let previewImage: VPKImage = VPKImage(image: image, veepId:"1787")
         self.preview2.image = previewImage
     }
     
