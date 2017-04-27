@@ -8,6 +8,8 @@
 
 import UIKit
 import VPKit
+
+//optional for IDFA support
 import AdSupport
 
 
@@ -37,6 +39,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         /*
          
+         INITIALISATION
+         
+         */
+        
+        VPKit.setApplicationId(appId,
+                               clientId: clientId,
+                               clientSecret: clientSecret)
+
+        
+        /*
+         
          IDFA support
          
          (optional) send IDFA for Veep tracking
@@ -49,31 +62,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
          
          */
         
-        
         VPKit.sendIDFA(true)
         
-        
-        /*
-         
-         INITIALISATION
-         
-         */
-        
-        VPKit.setApplicationId(appId,
-                               clientId: clientId,
-                               clientSecret: clientSecret)
-                
-        /*
-         
-         SANDBOXING
-         Testing and development - NO
-         Deployment - YES
-         
-         */
-        
-        VPKit.setProduction(false)
-        
-        
+       
         /*
          
          STYLE SETTINGS - OPTIONAL

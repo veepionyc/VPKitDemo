@@ -42,7 +42,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.versionLabel.text = [VPKit version];
+    self.versionLabel.text = [VPKit sdkVersion];
     [self configureViewerWithTestImage];
     [self configureEditor];
     [self configureConstraints];
@@ -57,13 +57,13 @@
 
 - (void)configureViewerWithTestImage {
     UIImage* image = [UIImage imageNamed:@"KrispyGlas"];
-    image = [[VPKImage alloc] initWithImage:image veepId:@"560"];
+    image = [[VPKImage alloc] initWithImage:image veepId:@"1787"];
     self.viewerPreview.image = image;
 }
 
 - (void)configureViewerWithTestVideo {
     UIImage* image = [UIImage imageNamed:@"tomcruise"];
-    image = [[VPKImage alloc] initWithImage:image veepId:@"680"];
+    image = [[VPKImage alloc] initWithImage:image veepId:@"1788"];
     self.viewerPreview.image = image;
     
 }
@@ -129,7 +129,7 @@
 
     */
     __weak typeof(self) weakself = self;
-    [VPKit authenticateWithEmail:@"public_test_2_4_6@example.com"
+    [VPKit authenticateWithEmail:@"test@example.com"
                       completion:^(BOOL success, NSInteger responseCode, NSError * _Nonnull error) {
          __strong typeof(self) strongself = weakself;
        

@@ -8,6 +8,8 @@
 
 #import "AppDelegate.h"
 #import "VPKit/VPKit.h"
+
+//optional for IDFA support
 @import AdSupport;
 
 
@@ -43,20 +45,9 @@
                    clientId:clientId
                clientSecret:clientSecret];
     
+        
     /*
      
-     SANDBOXING
-     Different environments and databases are available for testing ("sandbox" and deployment ("production").
-     
-     Testing and development - set to NO (default if unset)
-     Deployment - set to YES
-     
-     */
-    
-    [VPKit setProduction:NO];
-    
-    
-    /*
      
      IDFA support - optional
      
@@ -70,9 +61,9 @@
      
      */
     
-    
     [VPKit sendIDFA:YES];
-    
+
+   
     /*
      
      STYLE SETTINGS - OPTIONAL

@@ -33,7 +33,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.versionLabel.text = [VPKit version];
+    self.versionLabel.text = [VPKit sdkVersion];
     [self configureViewer1];
     [self configureViewer2];
     [self configureConstraints];
@@ -55,7 +55,7 @@
 
 - (void)configureViewer2 {
     UIImage* image = [UIImage imageNamed:@"KrispyGlas"];
-    image = [[VPKImage alloc] initWithImage:image veepId:@"560"];
+    image = [[VPKImage alloc] initWithImage:image veepId:@"1787"];
     self.viewerPreview2.image = image;
 }
 

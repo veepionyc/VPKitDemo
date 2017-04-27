@@ -38,7 +38,7 @@ end
 
 lane :post_publish do
     sync_project_version_numbers	
-    test_project    
+    test_projects    
     sync_podspec_version(version:framework_version())
     git_commit(path:".", message: "deployed - v #{framework_version()}")
     add_git_tag(tag:"#{framework_version()}")

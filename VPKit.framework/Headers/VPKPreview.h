@@ -17,6 +17,7 @@
 @end
 
 @interface VPKPreview : UIImageView
+@property (nullable, nonatomic, strong, readonly) NSString* veepId;
 
 @property (nonatomic, assign) UIBlurEffectStyle blurEffectStyle;
 @property (nullable, nonatomic, weak) id <VPKPreviewDelegate> delegate;
