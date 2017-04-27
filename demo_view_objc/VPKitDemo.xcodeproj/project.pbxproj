@@ -118,8 +118,8 @@
 				AB1F17B51C866C3700F740A2 /* Sources */,
 				AB1F17B61C866C3700F740A2 /* Frameworks */,
 				AB1F17B71C866C3700F740A2 /* Resources */,
-				ABFCE3E01E943887007DD125 /* Strip Frameworks */,
 				AB7E2C121DD3C2BB005CD150 /* Embed Frameworks */,
+				ABFCE3E01E943887007DD125 /* Strip Frameworks */,
 			);
 			buildRules = (
 			);

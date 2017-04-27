@@ -17,6 +17,10 @@
  */
 @interface VPKParseableObject : NSObject
 
++ (instancetype)objectWithJsonData:(NSData*)data error:(NSError**)errorPtr;
+
++ (NSError*)parsingError;
+
 - (instancetype)initWithJSONDict:(NSDictionary*)dict;
 
 ///tanslate JSON key to obj property name

@@ -101,12 +101,6 @@
       "idiom" : "ipad",
       "filename" : "ipad-83@2x.png",
       "scale" : "2x"
-    },
-    {
-      "size" : "{1024, 1024}",
-      "idiom" : "itunes",
-      "filename" : "itunes-1024@1x.png",
-      "scale" : "1x"
     }
   ],
   "info" : {

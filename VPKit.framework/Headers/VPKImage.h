@@ -12,6 +12,10 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong, readonly) NSString* veepId;
 @property (nonatomic, strong, readonly) NSURL* imageURL;
 
+/**
+ If VPKImage is initialised with null veepId or imageURL it will behave as a standard UIImage
+*/
+
 - (instancetype)initWithImage:(UIImage*)image veepId:(nullable NSString*)veepId;
 
 - (instancetype)initWithImage:(UIImage*)image url:(NSURL*)imageURL;

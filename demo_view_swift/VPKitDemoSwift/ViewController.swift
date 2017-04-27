@@ -35,7 +35,7 @@ class ViewController:
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        self.versionLabel.text = VPKit.version()
+        self.versionLabel.text = VPKit.sdkVersion()
         self.configurePreview1()
         self.configurePreview2()
         self.configureConstraints()
