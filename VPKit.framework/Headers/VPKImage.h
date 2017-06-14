@@ -8,6 +8,14 @@
 
 #import <UIKit/UIKit.h>
 NS_ASSUME_NONNULL_BEGIN
+
+/**
+ Drop-in replacement (subclass) for UIImage
+ For use in conjunction with VPKPreview
+ 
+ @see VPKPreview
+ */
+
 @interface VPKImage : UIImage
 @property (nonatomic, strong, readonly) NSString* veepId;
 @property (nonatomic, strong, readonly) NSURL* imageURL;

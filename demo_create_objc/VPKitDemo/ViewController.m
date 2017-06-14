@@ -129,7 +129,7 @@
 
     */
     __weak typeof(self) weakself = self;
-    [VPKit authenticateWithEmail:@"test@example.com"
+    [VPKit authenticateWithEmail:@"user@example.com"
                       completion:^(BOOL success, NSInteger responseCode, NSError * _Nonnull error) {
          __strong typeof(self) strongself = weakself;
        

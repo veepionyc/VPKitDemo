@@ -33,9 +33,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
          */
         
         
-        let appId = "VEEPIO_by_url_test_app_id"
-        let clientId = "1zArpBErovQ1MjVHvigJqXwE8qt47U2Yy5XzG3CP"
-        let clientSecret = "VpLIvEetceUnHBEIf6fLUwLxELBh2QesZ6iLLiPHCesRLXfOLLJNcFfmp03wJfGaJquO3V8KqHjtvzlufuXfWWgcpWVw9wxfBJNYdZh96JHV5hk44dJbqiCqplrKcSml"
+        let appId = "VEEPIO_test_app_id"
+        let clientId = "VsRIkxIfTtkFJhw1ABItnO50B6fSW23NhIRnST53"
+        let clientSecret = "OdWbCaP9i1I2AV2yZUzwfDFE4gU04RDX1HdubnTEg8oWw8F9yWQwjX179zHRXLUad5vrsOo5B7UtFq2utsrWbkjVus5aJKxW8wXTvDknqdgeowunL9yeEN8selNpTOJF"
         
         /*
          
