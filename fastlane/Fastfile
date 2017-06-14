@@ -11,9 +11,11 @@ DEPLOYMENT_DEMO_PROJECTS = [SWIFT_PROJECT,SWIFT_PROJECT_CONSUME,OBJC_PROJECT,OBJ
 
 
 lane :sync_project_version_numbers do
-    version = framework_version()
+    _version = framework_version()
+    _build = framework_build()
     DEPLOYMENT_DEMO_PROJECTS.each do |project|
-        increment_version_number(xcodeproj:project,version_number:version)
+        increment_version_number(xcodeproj:project,version_number:_version)
+        increment_build_number(xcodeproj:project,build_number:_build)
     end
 end
 
@@ -28,7 +30,7 @@ lane :test_projects do
 end
 
 
-lane :pre_publish do
+lane :pre_deploy do
     prepare(branch: "develop")
 end
 
@@ -36,7 +38,7 @@ lane :deploy_to_cocoapods do
     sh("pod trunk push '../VPKit.podspec' --verbose --allow-warnings")
 end
 
-lane :post_publish do
+lane :publish_and_deploy do
     sync_project_version_numbers	
     test_projects    
     sync_podspec_version(version:framework_version())
@@ -49,7 +51,7 @@ end
 
 
 lane :deploy do
-    pre_publish
+    pre_deploy
     post_publish
 end
 
@@ -57,6 +59,4 @@ lane :finished	 do
 
 end
 
-error do |lane, exception|
-    notification(message:"Lane #{lane} failed to complete.")
-end
+

@@ -15,8 +15,8 @@ _Create_ - more elaborate integration example with use of delegates. Create new 
 
 
 Documentation: [veepionyc.github.io](https://veepionyc.github.io)   
-Help: sdk_support@veepio.com or use the [VPKitDemo issue tracker](https://github.com/veepionyc/VPKitDemo/issues)
+Help: sdk_support@veepio.com or use the [VPKitDemo issue tracker](https://github.com/veepionyc/VPKitDemo/issues)]j)
 
 ![](https://veepionyc.github.io/assets/img/consume.jpg)
-
 ![](https://veepionyc.github.io/assets/img/create.jpg)
+

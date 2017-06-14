@@ -54,14 +54,19 @@ fastlane increment
 fastlane prepublish_deployed_demo_projects
 ```
 
-### postpublish_deployed_demo_projects
+### publish_deployed_demo_projects
 ```
-fastlane postpublish_deployed_demo_projects
+fastlane publish_deployed_demo_projects
 ```
 
-### postpublish_demo_projects
+### sync_demo_projects_to_framework
 ```
-fastlane postpublish_demo_projects
+fastlane sync_demo_projects_to_framework
+```
+
+### upload_demo_projects_for_testing
+```
+fastlane upload_demo_projects_for_testing
 ```
 
 ### publish_demos
@@ -74,9 +79,24 @@ fastlane publish_demos
 fastlane demo
 ```
 
+### beta
+```
+fastlane beta
+```
+
 ### publish
 ```
 fastlane publish
+```
+
+### distribute
+```
+fastlane distribute
+```
+
+### post_publish
+```
+fastlane post_publish
 ```
 
 ### finish
@@ -104,9 +124,9 @@ fastlane sync_project_version_numbers
 fastlane test_projects
 ```
 
-### pre_publish
+### pre_deploy
 ```
-fastlane pre_publish
+fastlane pre_deploy
 ```
 
 ### deploy_to_cocoapods
@@ -114,9 +134,9 @@ fastlane pre_publish
 fastlane deploy_to_cocoapods
 ```
 
-### post_publish
+### publish_and_deploy
 ```
-fastlane post_publish
+fastlane publish_and_deploy
 ```
 
 ### deploy
