@@ -49,7 +49,7 @@
     UIImage* image = [UIImage imageNamed:@"stock_photo"];
     NSURL* imageURL = [NSURL URLWithString:@"https://raw.githubusercontent.com/veepionyc/VPKitDemo/master/VPKitDemoObjC/VPKitDemo/Assets.xcassets/stock_photo.imageset/photo-1468818461933-b1d79f62434e.jpg"];
     image = [[VPKImage alloc] initWithImage:image url:imageURL];
-    self.viewerPreview1.image = image;
+    self.viewerPreview1.image = image;    
 }
 
 

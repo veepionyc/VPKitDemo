@@ -38,6 +38,7 @@
  */
 
 @property (nullable, nonatomic, weak) id <VPKPreviewDelegate> delegate;
+@property (nonatomic, assign) CGFloat iconLength;
 
 - (void)showIcon;
 - (void)hideIcon;

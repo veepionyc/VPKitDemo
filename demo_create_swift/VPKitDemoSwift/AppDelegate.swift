@@ -28,8 +28,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
          APP CREDENTIALS: required
          
          These app credentials are for testing purposes only.
-         To obtain credentials unique to your app email sdk_support@veepio.com
-         
+         To obtain credentials unique to your app visit the VEEPIO developer portal
+         https://developer.veep.io
          */
         
         
