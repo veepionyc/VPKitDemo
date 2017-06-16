@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+/**
+ VPKit color styles are set and adjusted here.
+ 
+ */
+
 @interface VPKColorStyles : NSObject
 @property (nonatomic, strong) UIColor* vpkGreen; //used
 @property (nonatomic, strong) UIColor* navBar; //used

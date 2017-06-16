@@ -9,6 +9,10 @@
 #import <UIKit/UIKit.h>
 
 
+/**
+ VPKit font styles are set and adjusted here.
+ 
+ */
 
 
 @interface VPKFontStyles : NSObject
