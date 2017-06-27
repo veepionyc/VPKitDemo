@@ -39,11 +39,6 @@ fastlane archive
 fastlane test_demo_projects
 ```
 
-### sync_demo_version_numbers
-```
-fastlane sync_demo_version_numbers
-```
-
 ### increment
 ```
 fastlane increment
@@ -62,16 +57,6 @@ fastlane publish_deployed_demo_projects
 ### sync_demo_projects_to_framework
 ```
 fastlane sync_demo_projects_to_framework
-```
-
-### upload_demo_projects_for_testing
-```
-fastlane upload_demo_projects_for_testing
-```
-
-### publish_demos
-```
-fastlane publish_demos
 ```
 
 ### demo
