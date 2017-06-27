@@ -37,7 +37,8 @@
     [self configureViewer1];
     [self configureViewer2];
     [self configureConstraints];
-    
+    [self getstats];
+
 }
 
 
@@ -59,7 +60,14 @@
     self.viewerPreview2.image = image;
 }
 
-
+- (void)getstats {
+ 
+    
+    [VPKit getDailyStats:^(VPKDailyStats * _Nullable stats, NSError * _Nullable error) {
+        NSLog(@"getDailyStats %@ %@",stats,error);
+        
+    }];
+}
 
 #pragma mark - (layout boilerplate for the demo app, not relevant to the SDK)
 
