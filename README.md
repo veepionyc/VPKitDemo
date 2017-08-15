@@ -1,5 +1,15 @@
 # VPKit
 
+![](https://img.shields.io/badge/uses-badges-green.svg)
+
+![](https://img.shields.io/badge/build-passing-green.svg)
+![](https://img.shields.io/cocoapods/l/VPKit.svg)
+![](https://img.shields.io/cocoapods/v/VPKit.svg)
+![](https://img.shields.io/cocoapods/at/VPKit.svg)
+![](https://img.shields.io/cocoapods/p/VPKit.svg)
+![](https://img.shields.io/cocoapods/at/VPKit.svg)
+![](https://img.shields.io/badge/picklerick-passed-green.svg)
+
 This is a binary distribution of the VPKit framework. Swift and Objective-C compatible.
 
 `VPKit.framework` - fat binary dynamic framework. Runs on simulator and device. Not suitable for app store submission.
