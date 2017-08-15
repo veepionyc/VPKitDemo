@@ -3,7 +3,6 @@
 ![](https://img.shields.io/badge/uses-badges-green.svg)
 
 ![](https://img.shields.io/badge/build-passing-green.svg)
-![](https://img.shields.io/cocoapods/l/VPKit.svg)
 ![](https://img.shields.io/cocoapods/v/VPKit.svg)
 ![](https://img.shields.io/cocoapods/at/VPKit.svg)
 ![](https://img.shields.io/cocoapods/p/VPKit.svg)
@@ -12,6 +11,7 @@
 ![](https://img.shields.io/badge/swift-compatible-green.svg)
 ![](https://img.shields.io/badge/dependencies-compatible-yellow.svg)
 ![](https://img.shields.io/badge/picklerick-passing-green.svg)
+![](https://img.shields.io/cocoapods/l/VPKit.svg)
 
 This is a binary distribution of the VPKit framework. Swift and Objective-C compatible.
 
