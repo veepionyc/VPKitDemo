@@ -1,0 +1,1579 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <title>VPKit Class Reference</title>
+    <link rel='stylesheet' type='text/css' href='../css/jazzy.css' />
+    <link rel='stylesheet' type='text/css' href='../css/highlight.css' />
+    <meta charset='utf-8'>
+    <script src='../js/jquery.min.js' defer></script>
+    <script src='../js/jazzy.js' defer></script>
+  </head>
+  <body>
+
+    <a name='//apple_ref/objc/Class/VPKit' class='dashAnchor'></a>
+
+    <a title='VPKit Class Reference'></a>
+
+    <header class='header'>
+      <p class='header-col header-col--primary'>
+        <a class='header-link' href='../index.html'>
+          VPKit Docs
+        </a>
+         (35% documented)
+      </p>
+    
+        <p class='header-col header-col--secondary'>
+          <a class='header-link' href='https://github.com/veepionyc/VPKitDemo'>
+            <img class='header-icon' src='../img/gh.png'/>
+            View on GitHub
+          </a>
+        </p>
+    
+    </header>
+
+    <p class='breadcrumbs'>
+      <a class='breadcrumb' href='../index.html'>VPKit Reference</a>
+      <img class='carat' src='../img/carat.png' />
+      VPKit Class Reference
+    </p>
+
+    <div class='content-wrapper'>
+      <nav class='navigation'>
+        <ul class='nav-groups'>
+          <li class='nav-group-name'>
+            <a class='nav-group-name-link' href='../Classes.html'>Classes</a>
+            <ul class='nav-group-tasks'>
+              <li class='nav-group-task'>
+                <a class='nav-group-task-link' href='../Classes/VPKColorStyles.html'>VPKColorStyles</a>
+              </li>
+              <li class='nav-group-task'>
+                <a class='nav-group-task-link' href='../Classes/VPKCompetitiveStats.html'>VPKCompetitiveStats</a>
+              </li>
+              <li class='nav-group-task'>
+                <a class='nav-group-task-link' href='../Classes/VPKCompetitiveStatsItem.html'>VPKCompetitiveStatsItem</a>
+              </li>
+              <li class='nav-group-task'>
+                <a class='nav-group-task-link' href='../Classes/VPKDailyStats.html'>VPKDailyStats</a>
+              </li>
+              <li class='nav-group-task'>
+                <a class='nav-group-task-link' href='../Classes/VPKFontStyles.html'>VPKFontStyles</a>
+              </li>
+              <li class='nav-group-task'>
+                <a class='nav-group-task-link' href='../Classes/VPKParseableObject.html'>VPKParseableObject</a>
+              </li>
+              <li class='nav-group-task'>
+                <a class='nav-group-task-link' href='../Classes/VPKPreview.html'>VPKPreview</a>
+              </li>
+              <li class='nav-group-task'>
+                <a class='nav-group-task-link' href='../Classes/VPKStyles.html'>VPKStyles</a>
+              </li>
+              <li class='nav-group-task'>
+                <a class='nav-group-task-link' href='../Classes/VPKUserStats.html'>VPKUserStats</a>
+              </li>
+              <li class='nav-group-task'>
+                <a class='nav-group-task-link' href='../Classes/VPKit.html'>VPKit</a>
+              </li>
+            </ul>
+          </li>
+          <li class='nav-group-name'>
+            <a class='nav-group-name-link' href='../Enums.html'>Enums</a>
+            <ul class='nav-group-tasks'>
+              <li class='nav-group-task'>
+                <a class='nav-group-task-link' href='../Enums/VPKServerEnvironment.html'>VPKServerEnvironment</a>
+              </li>
+            </ul>
+          </li>
+          <li class='nav-group-name'>
+            <a class='nav-group-name-link' href='../Protocols.html'>Protocols</a>
+            <ul class='nav-group-tasks'>
+              <li class='nav-group-task'>
+                <a class='nav-group-task-link' href='../Protocols/VPKPreviewDelegate.html'>VPKPreviewDelegate</a>
+              </li>
+            </ul>
+          </li>
+          <li class='nav-group-name'>
+            <a class='nav-group-name-link' href='../Type Definitions.html'>Type Definitions</a>
+            <ul class='nav-group-tasks'>
+              <li class='nav-group-task'>
+                <a class='nav-group-task-link' href='../Type Definitions.html#/c:VPKitClass.h@T@VPKBOOLErrorBlock'>VPKBOOLErrorBlock</a>
+              </li>
+              <li class='nav-group-task'>
+                <a class='nav-group-task-link' href='../Type Definitions.html#/c:VPKitClass.h@T@VPKCompetitiveStatsBlock'>VPKCompetitiveStatsBlock</a>
+              </li>
+              <li class='nav-group-task'>
+                <a class='nav-group-task-link' href='../Type Definitions.html#/c:VPKitClass.h@T@VPKDailyStatsBlock'>VPKDailyStatsBlock</a>
+              </li>
+              <li class='nav-group-task'>
+                <a class='nav-group-task-link' href='../Type Definitions.html#/c:VPKitClass.h@T@VPKNetworkResponseBlock'>VPKNetworkResponseBlock</a>
+              </li>
+              <li class='nav-group-task'>
+                <a class='nav-group-task-link' href='../Type Definitions.html#/c:VPKitClass.h@T@VPKUserStatsErrorBlock'>VPKUserStatsErrorBlock</a>
+              </li>
+              <li class='nav-group-task'>
+                <a class='nav-group-task-link' href='../Type Definitions.html#/c:VPKitClass.h@T@VPKitConsumerIdCompletionBlock'>VPKitConsumerIdCompletionBlock</a>
+              </li>
+              <li class='nav-group-task'>
+                <a class='nav-group-task-link' href='../Type Definitions.html#/c:VPKitClass.h@T@VPKitPublicVeepErrorCompletionBlock'>VPKitPublicVeepErrorCompletionBlock</a>
+              </li>
+              <li class='nav-group-task'>
+                <a class='nav-group-task-link' href='../Type Definitions.html#/c:VPKStatsConstants.h@T@vpk_CompetitiveStatsBlock'>vpk_CompetitiveStatsBlock</a>
+              </li>
+              <li class='nav-group-task'>
+                <a class='nav-group-task-link' href='../Type Definitions.html#/c:VPKStatsConstants.h@T@vpk_DailyStatsBlock'>vpk_DailyStatsBlock</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class='main-content'>
+
+        <section class='section'>
+          <div class='section-content'>
+            <h1>VPKit</h1>
+              <div class='declaration'>
+                <div class='language'>
+                  <pre class="highlight"><code><span class="k">@interface</span> <span class="nc">VPKit</span> <span class="p">:</span> <span class="nc">NSObject</span></code></pre>
+
+                </div>
+              </div>
+            <p>Public entry point for the VPKit framework</p>
+
+          </div>
+        </section>
+
+        <section class='section'>
+          <div class='section-content'>
+            <div class="task-group">
+              <ul class='item-container'>
+                <li class="item">
+                  <div class="item-heading">
+                    <code>
+                    <a name="/c:objc(cs)VPKit(cm)forwardErrorNotifications:"></a>
+                    <a name="//apple_ref/objc/Method/+forwardErrorNotifications:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)VPKit(cm)forwardErrorNotifications:">+forwardErrorNotifications:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>sets the location for error dialogue handling - in the SDK or in the host app.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h5>Declaration</h5>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">+</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">forwardErrorNotifications</span><span class="p">:(</span><span class="n">BOOL</span><span class="p">)</span><span class="nv">forwardErrors</span><span class="p">;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h5>Parameters</h5>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>forwardErrors</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>YES - error alerts are supressed in the SDK and NSNotifications are forwarded for interception by the host app.
+NO - user-facing error alerts are presented by the SDK.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        
+                          <a href="https://github.com/veepionyc/VPKitDemo/tree/2.4.44/VPKit/VPKitClass.h#L58" class="button">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div class="item-heading">
+                    <code>
+                    <a name="/c:objc(cs)VPKit(cm)setApplicationId:clientId:clientSecret:"></a>
+                    <a name="//apple_ref/objc/Method/+setApplicationId:clientId:clientSecret:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)VPKit(cm)setApplicationId:clientId:clientSecret:">+setApplicationId:clientId:clientSecret:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>SDK initialization.</p>
+
+<p>This method is usually called from your App Delegate</p>
+
+<p>Obtain these credentials by registering your app with the VEEPIO developer portal
+ <a href="https://developer.veep.io">https://developer.veep.io</a></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h5>Declaration</h5>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">+</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">setApplicationId</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">appId</span>
+                <span class="nf">clientId</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">clientId</span>
+            <span class="nf">clientSecret</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">clientSecret</span><span class="p">;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h5>Parameters</h5>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>clientId</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>- OAuth2 client_id credential</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>clientSecret</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>- OAuth2 client_secret credential</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        
+                          <a href="https://github.com/veepionyc/VPKitDemo/tree/2.4.44/VPKit/VPKitClass.h#L75-L77" class="button">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div class="item-heading">
+                    <code>
+                    <a name="/c:objc(cs)VPKit(im)setApplicationId:clientId:clientSecret:"></a>
+                    <a name="//apple_ref/objc/Method/-setApplicationId:clientId:clientSecret:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)VPKit(im)setApplicationId:clientId:clientSecret:">-setApplicationId:clientId:clientSecret:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h5>Declaration</h5>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">@interface</span> <span class="nc">VPKit</span> <span class="p">:</span> <span class="nc">NSObject</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        
+                          <a href="https://github.com/veepionyc/VPKitDemo/tree/2.4.44/VPKit/VPKitClass.h#L79-L81" class="button">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div class="item-heading">
+                    <code>
+                    <a name="/c:objc(cs)VPKit(cm)setProduction:"></a>
+                    <a name="//apple_ref/objc/Method/+setProduction:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)VPKit(cm)setProduction:">+setProduction:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h5>Declaration</h5>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">@interface</span> <span class="nc">VPKit</span> <span class="p">:</span> <span class="nc">NSObject</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        
+                          <a href="https://github.com/veepionyc/VPKitDemo/tree/2.4.44/VPKit/VPKitClass.h#L" class="button">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div class="item-heading">
+                    <code>
+                    <a name="/c:objc(cs)VPKit(im)setProduction:"></a>
+                    <a name="//apple_ref/objc/Method/-setProduction:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)VPKit(im)setProduction:">-setProduction:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h5>Declaration</h5>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">@interface</span> <span class="nc">VPKit</span> <span class="p">:</span> <span class="nc">NSObject</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        
+                          <a href="https://github.com/veepionyc/VPKitDemo/tree/2.4.44/VPKit/VPKitClass.h#L" class="button">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div class="item-heading">
+                    <code>
+                    <a name="/c:objc(cs)VPKit(im)initUnique"></a>
+                    <a name="//apple_ref/objc/Method/-initUnique" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)VPKit(im)initUnique">-initUnique</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h5>Declaration</h5>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">@interface</span> <span class="nc">VPKit</span> <span class="p">:</span> <span class="nc">NSObject</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        
+                          <a href="https://github.com/veepionyc/VPKitDemo/tree/2.4.44/VPKit/VPKitClass.h#L" class="button">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div class="item-heading">
+                    <code>
+                    <a name="/c:objc(cs)VPKit(cm)sendIDFA:"></a>
+                    <a name="//apple_ref/objc/Method/+sendIDFA:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)VPKit(cm)sendIDFA:">+sendIDFA:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>IDFA support - optional</p>
+
+<p>This requires host app linking to AdSupport.framework (<q>link binary with libarires</q> section of project Build Phases)</p>
+
+<p><a href="https://developer.apple.com/library/content/documentation/LanguagesUtilities/Conceptual/iTunesConnect_Guide/Chapters/SubmittingTheApp.html#//apple_ref/doc/uid/TP40011225-CH33-SW8">See Apple docs for more information</a></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h5>Declaration</h5>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">+</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">sendIDFA</span><span class="p">:(</span><span class="n">BOOL</span><span class="p">)</span><span class="nv">idfa</span><span class="p">;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h5>Parameters</h5>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>idfa</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Setting this option to YES entails additional reporting requirements when submitting to the app store</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        
+                          <a href="https://github.com/veepionyc/VPKitDemo/tree/2.4.44/VPKit/VPKitClass.h#L100" class="button">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div class="item-heading">
+                    <code>
+                    <a name="/c:objc(cs)VPKit(cm)logout"></a>
+                    <a name="//apple_ref/objc/Method/+logout" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)VPKit(cm)logout">+logout</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Log out user from the default SDK.</p>
+
+<p>This method will teardown the networking stack, remove OAuth2 tokens and delete user data and permissions. Application credentials (clientId and clientSecret) will persist.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h5>Declaration</h5>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">+</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">logout</span><span class="p">;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        
+                          <a href="https://github.com/veepionyc/VPKitDemo/tree/2.4.44/VPKit/VPKitClass.h#L108" class="button">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div class="item-heading">
+                    <code>
+                    <a name="/c:objc(cs)VPKit(im)logout"></a>
+                    <a name="//apple_ref/objc/Method/-logout" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)VPKit(im)logout">-logout</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Log out user from an SDK instance.</p>
+
+<p>This method will teardown the networking stack, remove OAuth2 tokens and delete user data and permissions. Application credentials (clientId and clientSecret) will persist.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h5>Declaration</h5>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">logout</span><span class="p">;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        
+                          <a href="https://github.com/veepionyc/VPKitDemo/tree/2.4.44/VPKit/VPKitClass.h#L117" class="button">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/authentication"></a>
+                <a name="//apple_ref/objc/Section/authentication" class="dashAnchor"></a>
+                <a href="#/authentication">
+                  <h3 class="section-name">authentication</h3>
+                </a>
+              </div>
+              <ul class='item-container'>
+                <li class="item">
+                  <div class="item-heading">
+                    <code>
+                    <a name="/c:objc(cs)VPKit(cm)authenticateWithEmail:completion:"></a>
+                    <a name="//apple_ref/objc/Method/+authenticateWithEmail:completion:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)VPKit(cm)authenticateWithEmail:completion:">+authenticateWithEmail:completion:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Class-level lighweight authentication for users with email identifier but no password.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h5>Declaration</h5>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">+</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">authenticateWithEmail</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">email</span>
+                   <span class="nf">completion</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Type Definitions.html#/c:VPKitClass.h@T@VPKNetworkResponseBlock">VPKNetworkResponseBlock</a></span><span class="p">)</span><span class="nv">completion</span><span class="p">;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h5>Parameters</h5>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>email</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>user email as unique user identifier.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Block to run on completion of authentication request.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        
+                          <a href="https://github.com/veepionyc/VPKitDemo/tree/2.4.44/VPKit/VPKitClass.h#L129-L130" class="button">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div class="item-heading">
+                    <code>
+                    <a name="/c:objc(cs)VPKit(cm)authenticateWithEmail:password:completion:"></a>
+                    <a name="//apple_ref/objc/Method/+authenticateWithEmail:password:completion:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)VPKit(cm)authenticateWithEmail:password:completion:">+authenticateWithEmail:password:completion:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Class-level heavyweight authentication for users with email identifier and password.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h5>Declaration</h5>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">+</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">authenticateWithEmail</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">email</span>
+                     <span class="nf">password</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">password</span>
+                   <span class="nf">completion</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Type Definitions.html#/c:VPKitClass.h@T@VPKNetworkResponseBlock">VPKNetworkResponseBlock</a></span><span class="p">)</span><span class="nv">completion</span><span class="p">;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h5>Parameters</h5>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>email</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>user email as unique user identifier.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>password</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>user password string</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Block to run on completion of authentication request.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        
+                          <a href="https://github.com/veepionyc/VPKitDemo/tree/2.4.44/VPKit/VPKitClass.h#L141-L143" class="button">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div class="item-heading">
+                    <code>
+                    <a name="/c:objc(cs)VPKit(im)authenticateWithEmail:password:completion:"></a>
+                    <a name="//apple_ref/objc/Method/-authenticateWithEmail:password:completion:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)VPKit(im)authenticateWithEmail:password:completion:">-authenticateWithEmail:password:completion:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Instance-level heavyweight authentication for users with email identifier and password.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h5>Declaration</h5>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">authenticateWithEmail</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">email</span>
+                     <span class="nf">password</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">password</span>
+                   <span class="nf">completion</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Type Definitions.html#/c:VPKitClass.h@T@VPKNetworkResponseBlock">VPKNetworkResponseBlock</a></span><span class="p">)</span><span class="nv">completion</span><span class="p">;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h5>Parameters</h5>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>email</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>user email as unique user identifier.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>password</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>user password string</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Block to run on completion of authentication request.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        
+                          <a href="https://github.com/veepionyc/VPKitDemo/tree/2.4.44/VPKit/VPKitClass.h#L153-L155" class="button">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div class="item-heading">
+                    <code>
+                    <a name="/c:objc(cs)VPKit(cm)authorized"></a>
+                    <a name="//apple_ref/objc/Method/+authorized" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)VPKit(cm)authorized">+authorized</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h5>Declaration</h5>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">@interface</span> <span class="nc">VPKit</span> <span class="p">:</span> <span class="nc">NSObject</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        
+                          <a href="https://github.com/veepionyc/VPKitDemo/tree/2.4.44/VPKit/VPKitClass.h#L" class="button">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Analytics"></a>
+                <a name="//apple_ref/objc/Section/Analytics" class="dashAnchor"></a>
+                <a href="#/Analytics">
+                  <h3 class="section-name">Analytics</h3>
+                </a>
+              </div>
+              <ul class='item-container'>
+                <li class="item">
+                  <div class="item-heading">
+                    <code>
+                    <a name="/c:objc(cs)VPKit(cm)requestUserStats:"></a>
+                    <a name="//apple_ref/objc/Method/+requestUserStats:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)VPKit(cm)requestUserStats:">+requestUserStats:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h5>Declaration</h5>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">+</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">requestUserStats</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Type Definitions.html#/c:VPKitClass.h@T@VPKUserStatsErrorBlock">VPKUserStatsErrorBlock</a></span><span class="p">)</span><span class="nv">completionBlock</span><span class="p">;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        
+                          <a href="https://github.com/veepionyc/VPKitDemo/tree/2.4.44/VPKit/VPKitClass.h#L167" class="button">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div class="item-heading">
+                    <code>
+                    <a name="/c:objc(cs)VPKit(cm)getDailyStats:"></a>
+                    <a name="//apple_ref/objc/Method/+getDailyStats:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)VPKit(cm)getDailyStats:">+getDailyStats:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>gets daily stats for the last seven days for this user</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h5>Declaration</h5>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">+</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">getDailyStats</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Type Definitions.html#/c:VPKitClass.h@T@VPKDailyStatsBlock">VPKDailyStatsBlock</a></span><span class="p">)</span><span class="nv">completion</span><span class="p">;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        
+                          <a href="https://github.com/veepionyc/VPKitDemo/tree/2.4.44/VPKit/VPKitClass.h#L172" class="button">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div class="item-heading">
+                    <code>
+                    <a name="/c:objc(cs)VPKit(cm)getCompetitiveStats:"></a>
+                    <a name="//apple_ref/objc/Method/+getCompetitiveStats:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)VPKit(cm)getCompetitiveStats:">+getCompetitiveStats:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>gets competitive stats for this user</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h5>Declaration</h5>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">+</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">getCompetitiveStats</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Type Definitions.html#/c:VPKitClass.h@T@VPKCompetitiveStatsBlock">VPKCompetitiveStatsBlock</a></span><span class="p">)</span><span class="nv">completion</span><span class="p">;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        
+                          <a href="https://github.com/veepionyc/VPKitDemo/tree/2.4.44/VPKit/VPKitClass.h#L178" class="button">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/View%20Controllers"></a>
+                <a name="//apple_ref/objc/Section/View Controllers" class="dashAnchor"></a>
+                <a href="#/View%20Controllers">
+                  <h3 class="section-name">View Controllers</h3>
+                </a>
+              </div>
+              <ul class='item-container'>
+                <li class="item">
+                  <div class="item-heading">
+                    <code>
+                    <a name="/c:objc(cs)VPKit(cm)viewerWithImage:fromView:"></a>
+                    <a name="//apple_ref/objc/Method/+viewerWithImage:fromView:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)VPKit(cm)viewerWithImage:fromView:">+viewerWithImage:fromView:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h5>Declaration</h5>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">+</span> <span class="p">(</span><span class="n">nullable</span> <span class="n">VPKVeepViewer</span> <span class="o">*</span><span class="p">)</span><span class="nf">viewerWithImage</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">VPKImage</span> <span class="o">*</span><span class="p">)</span><span class="nv">image</span>
+                                   <span class="nf">fromView</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">UIView</span> <span class="o">*</span><span class="p">)</span><span class="nv">view</span><span class="p">;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        
+                          <a href="https://github.com/veepionyc/VPKitDemo/tree/2.4.44/VPKit/VPKitClass.h#L187" class="button">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div class="item-heading">
+                    <code>
+                    <a name="/c:objc(cs)VPKit(cm)editorWithImage:fromView:"></a>
+                    <a name="//apple_ref/objc/Method/+editorWithImage:fromView:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)VPKit(cm)editorWithImage:fromView:">+editorWithImage:fromView:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h5>Declaration</h5>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">@interface</span> <span class="nc">VPKit</span> <span class="p">:</span> <span class="nc">NSObject</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        
+                          <a href="https://github.com/veepionyc/VPKitDemo/tree/2.4.44/VPKit/VPKitClass.h#L" class="button">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div class="item-heading">
+                    <code>
+                    <a name="/c:objc(cs)VPKit(cm)editorWithImage:fromView:error:"></a>
+                    <a name="//apple_ref/objc/Method/+editorWithImage:fromView:error:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)VPKit(cm)editorWithImage:fromView:error:">+editorWithImage:fromView:error:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h5>Declaration</h5>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">@interface</span> <span class="nc">VPKit</span> <span class="p">:</span> <span class="nc">NSObject</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        
+                          <a href="https://github.com/veepionyc/VPKitDemo/tree/2.4.44/VPKit/VPKitClass.h#L" class="button">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/environment"></a>
+                <a name="//apple_ref/objc/Section/environment" class="dashAnchor"></a>
+                <a href="#/environment">
+                  <h3 class="section-name">environment</h3>
+                </a>
+              </div>
+              <ul class='item-container'>
+                <li class="item">
+                  <div class="item-heading">
+                    <code>
+                    <a name="/c:objc(cs)VPKit(cm)styles"></a>
+                    <a name="//apple_ref/objc/Method/+styles" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)VPKit(cm)styles">+styles</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h5>Declaration</h5>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">@interface</span> <span class="nc">VPKit</span> <span class="p">:</span> <span class="nc">NSObject</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        
+                          <a href="https://github.com/veepionyc/VPKitDemo/tree/2.4.44/VPKit/VPKitClass.h#L" class="button">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div class="item-heading">
+                    <code>
+                    <a name="/c:objc(cs)VPKit(cm)environment"></a>
+                    <a name="//apple_ref/objc/Method/+environment" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)VPKit(cm)environment">+environment</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h5>Declaration</h5>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">@interface</span> <span class="nc">VPKit</span> <span class="p">:</span> <span class="nc">NSObject</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        
+                          <a href="https://github.com/veepionyc/VPKitDemo/tree/2.4.44/VPKit/VPKitClass.h#L" class="button">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div class="item-heading">
+                    <code>
+                    <a name="/c:objc(cs)VPKit(im)environment"></a>
+                    <a name="//apple_ref/objc/Method/-environment" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)VPKit(im)environment">-environment</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h5>Declaration</h5>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">@interface</span> <span class="nc">VPKit</span> <span class="p">:</span> <span class="nc">NSObject</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        
+                          <a href="https://github.com/veepionyc/VPKitDemo/tree/2.4.44/VPKit/VPKitClass.h#L" class="button">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/getting%20veeps"></a>
+                <a name="//apple_ref/objc/Section/getting veeps" class="dashAnchor"></a>
+                <a href="#/getting%20veeps">
+                  <h3 class="section-name">getting veeps</h3>
+                </a>
+              </div>
+              <ul class='item-container'>
+                <li class="item">
+                  <div class="item-heading">
+                    <code>
+                    <a name="/c:objc(cs)VPKit(cm)requestVeep:completionBlock:"></a>
+                    <a name="//apple_ref/objc/Method/+requestVeep:completionBlock:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)VPKit(cm)requestVeep:completionBlock:">+requestVeep:completionBlock:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h5>Declaration</h5>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">@interface</span> <span class="nc">VPKit</span> <span class="p">:</span> <span class="nc">NSObject</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        
+                          <a href="https://github.com/veepionyc/VPKitDemo/tree/2.4.44/VPKit/VPKitClass.h#L" class="button">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div class="item-heading">
+                    <code>
+                    <a name="/c:objc(cs)VPKit(cm)requestVeepWithURL:completionBlock:"></a>
+                    <a name="//apple_ref/objc/Method/+requestVeepWithURL:completionBlock:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)VPKit(cm)requestVeepWithURL:completionBlock:">+requestVeepWithURL:completionBlock:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h5>Declaration</h5>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">@interface</span> <span class="nc">VPKit</span> <span class="p">:</span> <span class="nc">NSObject</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        
+                          <a href="https://github.com/veepionyc/VPKitDemo/tree/2.4.44/VPKit/VPKitClass.h#L" class="button">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div class="item-heading">
+                    <code>
+                    <a name="/c:objc(cs)VPKit(im)requestVeepWithURL:completionBlock:"></a>
+                    <a name="//apple_ref/objc/Method/-requestVeepWithURL:completionBlock:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)VPKit(im)requestVeepWithURL:completionBlock:">-requestVeepWithURL:completionBlock:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h5>Declaration</h5>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">@interface</span> <span class="nc">VPKit</span> <span class="p">:</span> <span class="nc">NSObject</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        
+                          <a href="https://github.com/veepionyc/VPKitDemo/tree/2.4.44/VPKit/VPKitClass.h#L" class="button">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div class="item-heading">
+                    <code>
+                    <a name="/c:objc(cs)VPKit(cm)sdkVersion"></a>
+                    <a name="//apple_ref/objc/Method/+sdkVersion" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)VPKit(cm)sdkVersion">+sdkVersion</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A string representation of the VPKit version.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h5>Declaration</h5>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">+</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="n">sdkVersion</span><span class="p">;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h5>Return Value</h5>
+                        <p>NSString description with version and build numbers.</p>
+                      </div>
+                      <div class="slightly-smaller">
+                        
+                          <a href="https://github.com/veepionyc/VPKitDemo/tree/2.4.44/VPKit/VPKitClass.h#L217" class="button">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/veep%20distribution"></a>
+                <a name="//apple_ref/objc/Section/veep distribution" class="dashAnchor"></a>
+                <a href="#/veep%20distribution">
+                  <h3 class="section-name">veep distribution</h3>
+                </a>
+              </div>
+              <ul class='item-container'>
+                <li class="item">
+                  <div class="item-heading">
+                    <code>
+                    <a name="/c:objc(cs)VPKit(cm)copyVeep:toKit:completion:"></a>
+                    <a name="//apple_ref/objc/Method/+copyVeep:toKit:completion:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)VPKit(cm)copyVeep:toKit:completion:">+copyVeep:toKit:completion:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Copy veeps from the default app to a destination app. The default app is invoked by the class method. The destination app instance is passed in as a parameter.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h5>Declaration</h5>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">+</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">copyVeep</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">veepId</span>
+           <span class="nf">toKit</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">VPKit</span> <span class="o">*</span><span class="p">)</span><span class="nv">kit</span>
+      <span class="nf">completion</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Type Definitions.html#/c:VPKitClass.h@T@VPKitPublicVeepErrorCompletionBlock">VPKitPublicVeepErrorCompletionBlock</a></span><span class="p">)</span><span class="nv">completion</span><span class="p">;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h5>Parameters</h5>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>veepId</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The identifier of the veep to be copied.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>kit</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Instance of VPKit that represents the destination app to copy to.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Block to run on completion of distribution network request.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        
+                          <a href="https://github.com/veepionyc/VPKitDemo/tree/2.4.44/VPKit/VPKitClass.h#L229-L231" class="button">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div class="item-heading">
+                    <code>
+                    <a name="/c:objc(cs)VPKit(cm)deleteVeep:completion:"></a>
+                    <a name="//apple_ref/objc/Method/+deleteVeep:completion:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)VPKit(cm)deleteVeep:completion:">+deleteVeep:completion:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Remove the most recent version of a veep from the default app.</p>
+
+<p>This is a <em>lightweight</em> deletion. It deletes the most recent version of a veep leaving previous versions intact.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h5>Declaration</h5>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">+</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">deleteVeep</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">veepId</span>
+        <span class="nf">completion</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Type Definitions.html#/c:VPKitClass.h@T@VPKBOOLErrorBlock">VPKBOOLErrorBlock</a></span><span class="p">)</span><span class="nv">completion</span><span class="p">;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h5>Parameters</h5>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>veepId</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The identifier of the veep to be deleted.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Block to run on completion of distribution network request.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        
+                          <a href="https://github.com/veepionyc/VPKitDemo/tree/2.4.44/VPKit/VPKitClass.h#L241-L242" class="button">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div class="item-heading">
+                    <code>
+                    <a name="/c:objc(cs)VPKit(im)deleteVeep:completion:"></a>
+                    <a name="//apple_ref/objc/Method/-deleteVeep:completion:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)VPKit(im)deleteVeep:completion:">-deleteVeep:completion:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Remove the most recent version of a veep from an app instance.</p>
+
+<p>This is a <em>lightweight</em> deletion. It deletes the most recent version of a veep leaving previous versions intact.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h5>Declaration</h5>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">deleteVeep</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">veepId</span>
+        <span class="nf">completion</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Type Definitions.html#/c:VPKitClass.h@T@VPKBOOLErrorBlock">VPKBOOLErrorBlock</a></span><span class="p">)</span><span class="nv">completion</span><span class="p">;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h5>Parameters</h5>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>veepId</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The identifier of the veep to be deleted.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Block to run on completion of distribution network request.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        
+                          <a href="https://github.com/veepionyc/VPKitDemo/tree/2.4.44/VPKit/VPKitClass.h#L252-L253" class="button">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div class="item-heading">
+                    <code>
+                    <a name="/c:objc(cs)VPKit(cm)deleteVeeps:completion:"></a>
+                    <a name="//apple_ref/objc/Method/+deleteVeeps:completion:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)VPKit(cm)deleteVeeps:completion:">+deleteVeeps:completion:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Remove all versions of a veep from the default app.</p>
+
+<p>This is a <em>heavyweight</em> deletion. It deletes the current version and all previous versions as identified by the veep&rsquo;s root ID.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h5>Declaration</h5>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">+</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">deleteVeeps</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">veepId</span>
+         <span class="nf">completion</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Type Definitions.html#/c:VPKitClass.h@T@VPKBOOLErrorBlock">VPKBOOLErrorBlock</a></span><span class="p">)</span><span class="nv">completion</span><span class="p">;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h5>Parameters</h5>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>veepId</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The identifier of the veep to be removed.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Block to run on completion of network request.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        
+                          <a href="https://github.com/veepionyc/VPKitDemo/tree/2.4.44/VPKit/VPKitClass.h#L267" class="button">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div class="item-heading">
+                    <code>
+                    <a name="/c:objc(cs)VPKit(im)deleteVeeps:completion:"></a>
+                    <a name="//apple_ref/objc/Method/-deleteVeeps:completion:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)VPKit(im)deleteVeeps:completion:">-deleteVeeps:completion:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Remove all versions of a veep from an app instance.</p>
+
+<p>This is a <em>heavyweight</em> deletion. It deletes the current version and all previous versions as identified by the veep&rsquo;s root ID.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h5>Declaration</h5>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">deleteVeeps</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">veepId</span>
+         <span class="nf">completion</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Type Definitions.html#/c:VPKitClass.h@T@VPKBOOLErrorBlock">VPKBOOLErrorBlock</a></span><span class="p">)</span><span class="nv">completion</span><span class="p">;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h5>Parameters</h5>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>veepId</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The identifier of the veep to be removed.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Block to run on completion of network request.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        
+                          <a href="https://github.com/veepionyc/VPKitDemo/tree/2.4.44/VPKit/VPKitClass.h#L279" class="button">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+      </article>
+    </div>
+    <section class='footer'>
+      <p>© 2017 <a class="link" href="https://veep.io" target="_blank" rel="external">Veepio</a>. All rights reserved.</p>
+      <p>Generated by <a class='link' href='https://github.com/realm/jazzy' target='_blank' rel='external'>jazzy ♪♫ v0.8.2</a>, a <a class='link' href='http://realm.io' target='_blank' rel='external'>Realm</a> project.</p>
+    </section>
+  </body>
+</div>
+</html>
