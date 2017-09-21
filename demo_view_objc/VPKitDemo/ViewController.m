@@ -10,7 +10,7 @@
 #import <VPKit/VPKit.h>
 
 
-@interface ViewController ()
+@interface ViewController ()<VPKPreviewPassThroughDelegate>
 
 
 @property (nonatomic, strong) VPKVeepViewer* vpViewer;
@@ -34,9 +34,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.versionLabel.text = [VPKit sdkVersion];
-    [self configureViewer1];
+    [self configureViewer1WithTestVideo];
     [self configureViewer2];
     [self configureConstraints];
+    self.viewerPreview1.passThroughDelegate = self;
+    self.viewerPreview2.passThroughDelegate = self;
+
+    
 
 }
 
@@ -44,12 +48,23 @@
 
 #pragma mark - configuration
 
-- (void)configureViewer1 {
+- (void)configureViewer1WithTestUrl {
     
     UIImage* image = [UIImage imageNamed:@"stock_photo"];
     NSURL* imageURL = [NSURL URLWithString:@"https://raw.githubusercontent.com/veepionyc/VPKitDemo/master/VPKitDemoObjC/VPKitDemo/Assets.xcassets/stock_photo.imageset/photo-1468818461933-b1d79f62434e.jpg"];
     image = [[VPKImage alloc] initWithImage:image url:imageURL];
-    self.viewerPreview1.image = image;    
+    self.viewerPreview1.image = image;
+}
+
+
+- (void)configureViewer1WithTestVideo {
+    
+    UIImage* image = [UIImage imageNamed:@"tomcruise"];
+    NSURL* contentURL = [NSURL URLWithString:@"youtube://ITjsb22-EwQ"];
+
+    image = [[VPKImage alloc] initWithImage:image url:contentURL];
+    self.viewerPreview1.image = image;
+    
 }
 
 
@@ -59,7 +74,11 @@
     self.viewerPreview2.image = image;
 }
 
+#pragma mark - example pass-through delegate. Relays UITapGestureRecongizer response in the event a Veep is not available.
 
+- (void)vpkPreview:(VPKPreview *)preview passedThroughTap:(UITapGestureRecognizer *)tapGestureRecognizer {
+    NSLog(@"tapped %@",tapGestureRecognizer);
+}
 
 #pragma mark - (layout boilerplate for the demo app, not relevant to the SDK)
 

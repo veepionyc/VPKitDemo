@@ -14,6 +14,13 @@
 @protocol VPKPreviewDelegate <NSObject>
 
 - (void)vpkPreviewTouched:(nonnull VPKPreview*)preview image:(nonnull VPKImage*)image;
+
+@end
+
+@protocol VPKPreviewPassThroughDelegate <NSObject>
+
+- (void)vpkPreview:(nonnull VPKPreview*)preview passedThroughTap:(nonnull UITapGestureRecognizer*)tapGestureRecognizer;
+
 @end
 
 /**
@@ -38,6 +45,26 @@
  */
 
 @property (nullable, nonatomic, weak) id <VPKPreviewDelegate> delegate;
+
+/**
+ The optional  pass-through delegate sends a tap gesture recogniser message to the receiver in the event that the VPKPreview doesn't handle it's tap. This is useful where the VPKPreview is view-only and the image has no associated veep content. and the host app wishes to respond to taps that the VPKPreview will ignore.
+ */
+
+@property (nullable, nonatomic, weak) id <VPKPreviewPassThroughDelegate> passThroughDelegate;
+
+
+/**
+ if YES the preview will animate when touched for better touch feedback.
+ Default is NO.
+ */
+
+@property (nonatomic, assign) BOOL animateTouch;
+
+
+/**
+ adjusts the size of the icon. Default is 50.
+ */
+
 @property (nonatomic, assign) CGFloat iconLength;
 
 - (void)showIcon;

@@ -71,7 +71,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 - (void)configureVeepView;
-- (CGFloat)navBarHeight;
 
 
 - (void)showNavBar;
@@ -105,7 +104,9 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)stopObserving;
 
 - (void)expandWebView:(NSNotification*)notification;
-
+    
+- (UIEdgeInsets)safeInsets;
+- (BOOL)isIphoneX;
 @end
 
 NS_ASSUME_NONNULL_END
