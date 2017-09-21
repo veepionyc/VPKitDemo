@@ -464,42 +464,49 @@
     },
     {
       "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit/VPKit.framework/Headers/VPKPreview.h",
-      "line": 41,
-      "symbol": "VPKPreview.iconLength",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
+      "line": 20,
+      "symbol": "VPKPreviewPassThroughDelegate",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.protocol",
       "warning": "undocumented"
     },
     {
       "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit/VPKit.framework/Headers/VPKPreview.h",
-      "line": 43,
+      "line": 22,
+      "symbol": "VPKPreviewPassThroughDelegate.-vpkPreview:passedThroughTap:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit/VPKit.framework/Headers/VPKPreview.h",
+      "line": 70,
       "symbol": "VPKPreview.-showIcon",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit/VPKit.framework/Headers/VPKPreview.h",
-      "line": 44,
+      "line": 71,
       "symbol": "VPKPreview.-hideIcon",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit/VPKit.framework/Headers/VPKPreview.h",
-      "line": 45,
+      "line": 72,
       "symbol": "VPKPreview.-showIcon:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit/VPKit.framework/Headers/VPKPreview.h",
-      "line": 46,
+      "line": 73,
       "symbol": "VPKPreview.-hideIcon:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit/VPKit.framework/Headers/VPKPreview.h",
-      "line": 47,
+      "line": 74,
       "symbol": "VPKPreview.-reset",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"

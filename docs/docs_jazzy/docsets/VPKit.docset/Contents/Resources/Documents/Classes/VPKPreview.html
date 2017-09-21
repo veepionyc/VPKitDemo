@@ -19,7 +19,7 @@
         <a class='header-link' href='../index.html'>
           VPKit Docs
         </a>
-         (35% documented)
+         (37% documented)
       </p>
     
         <p class='header-col header-col--secondary'>
@@ -88,6 +88,9 @@
             <ul class='nav-group-tasks'>
               <li class='nav-group-task'>
                 <a class='nav-group-task-link' href='../Protocols/VPKPreviewDelegate.html'>VPKPreviewDelegate</a>
+              </li>
+              <li class='nav-group-task'>
+                <a class='nav-group-task-link' href='../Protocols/VPKPreviewPassThroughDelegate.html'>VPKPreviewPassThroughDelegate</a>
               </li>
             </ul>
           </li>
@@ -180,7 +183,7 @@
                       </div>
                       <div class="slightly-smaller">
                         
-                          <a href="https://github.com/veepionyc/VPKitDemo/tree/2.4.48/VPKit.framework/Headers/VPKPreview.h#L34" class="button">Show on GitHub</a>
+                          <a href="https://github.com/veepionyc/VPKitDemo/tree/2.4.49/VPKit.framework/Headers/VPKPreview.h#L41" class="button">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -211,7 +214,71 @@
                       </div>
                       <div class="slightly-smaller">
                         
-                          <a href="https://github.com/veepionyc/VPKitDemo/tree/2.4.48/VPKit.framework/Headers/VPKPreview.h#L40" class="button">Show on GitHub</a>
+                          <a href="https://github.com/veepionyc/VPKitDemo/tree/2.4.49/VPKit.framework/Headers/VPKPreview.h#L47" class="button">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div class="item-heading">
+                    <code>
+                    <a name="/c:objc(cs)VPKPreview(py)passThroughDelegate"></a>
+                    <a name="//apple_ref/objc/Property/passThroughDelegate" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)VPKPreview(py)passThroughDelegate">passThroughDelegate</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The optional  pass-through delegate sends a tap gesture recogniser message to the receiver in the event that the VPKPreview doesn&rsquo;t handle it&rsquo;s tap. This is useful where the VPKPreview is view-only and the image has no associated veep content. and the host app wishes to respond to taps that the VPKPreview will ignore.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h5>Declaration</h5>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="../Protocols/VPKPreviewPassThroughDelegate.html">VPKPreviewPassThroughDelegate</a></span><span class="o">&gt;</span>
+    <span class="n">passThroughDelegate</span><span class="p">;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        
+                          <a href="https://github.com/veepionyc/VPKitDemo/tree/2.4.49/VPKit.framework/Headers/VPKPreview.h#L53" class="button">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div class="item-heading">
+                    <code>
+                    <a name="/c:objc(cs)VPKPreview(py)animateTouch"></a>
+                    <a name="//apple_ref/objc/Property/animateTouch" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)VPKPreview(py)animateTouch">animateTouch</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>if YES the preview will animate when touched for better touch feedback.
+Default is NO.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h5>Declaration</h5>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">@property</span> <span class="p">(</span><span class="n">assign</span><span class="p">,</span> <span class="n">readwrite</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">BOOL</span> <span class="n">animateTouch</span><span class="p">;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        
+                          <a href="https://github.com/veepionyc/VPKitDemo/tree/2.4.49/VPKit.framework/Headers/VPKPreview.h#L61" class="button">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -229,20 +296,20 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>adjusts the size of the icon. Default is 50.</p>
 
                       </div>
                       <div class="declaration">
                         <h5>Declaration</h5>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">@interface</span> <span class="nc">VPKPreview</span> <span class="p">:</span> <span class="nc">UIImageView</span></code></pre>
+                          <pre class="highlight"><code><span class="k">@property</span> <span class="p">(</span><span class="n">assign</span><span class="p">,</span> <span class="n">readwrite</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">CGFloat</span> <span class="n">iconLength</span><span class="p">;</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
                         
-                          <a href="https://github.com/veepionyc/VPKitDemo/tree/2.4.48/VPKit.framework/Headers/VPKPreview.h#L" class="button">Show on GitHub</a>
+                          <a href="https://github.com/veepionyc/VPKitDemo/tree/2.4.49/VPKit.framework/Headers/VPKPreview.h#L68" class="button">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -273,7 +340,7 @@
                       </div>
                       <div class="slightly-smaller">
                         
-                          <a href="https://github.com/veepionyc/VPKitDemo/tree/2.4.48/VPKit.framework/Headers/VPKPreview.h#L" class="button">Show on GitHub</a>
+                          <a href="https://github.com/veepionyc/VPKitDemo/tree/2.4.49/VPKit.framework/Headers/VPKPreview.h#L" class="button">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -304,7 +371,7 @@
                       </div>
                       <div class="slightly-smaller">
                         
-                          <a href="https://github.com/veepionyc/VPKitDemo/tree/2.4.48/VPKit.framework/Headers/VPKPreview.h#L" class="button">Show on GitHub</a>
+                          <a href="https://github.com/veepionyc/VPKitDemo/tree/2.4.49/VPKit.framework/Headers/VPKPreview.h#L" class="button">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -335,7 +402,7 @@
                       </div>
                       <div class="slightly-smaller">
                         
-                          <a href="https://github.com/veepionyc/VPKitDemo/tree/2.4.48/VPKit.framework/Headers/VPKPreview.h#L" class="button">Show on GitHub</a>
+                          <a href="https://github.com/veepionyc/VPKitDemo/tree/2.4.49/VPKit.framework/Headers/VPKPreview.h#L" class="button">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -366,7 +433,7 @@
                       </div>
                       <div class="slightly-smaller">
                         
-                          <a href="https://github.com/veepionyc/VPKitDemo/tree/2.4.48/VPKit.framework/Headers/VPKPreview.h#L" class="button">Show on GitHub</a>
+                          <a href="https://github.com/veepionyc/VPKitDemo/tree/2.4.49/VPKit.framework/Headers/VPKPreview.h#L" class="button">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -397,7 +464,7 @@
                       </div>
                       <div class="slightly-smaller">
                         
-                          <a href="https://github.com/veepionyc/VPKitDemo/tree/2.4.48/VPKit.framework/Headers/VPKPreview.h#L" class="button">Show on GitHub</a>
+                          <a href="https://github.com/veepionyc/VPKitDemo/tree/2.4.49/VPKit.framework/Headers/VPKPreview.h#L" class="button">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -428,7 +495,7 @@
                       </div>
                       <div class="slightly-smaller">
                         
-                          <a href="https://github.com/veepionyc/VPKitDemo/tree/2.4.48/VPKit.framework/Headers/VPKPreview.h#L53" class="button">Show on GitHub</a>
+                          <a href="https://github.com/veepionyc/VPKitDemo/tree/2.4.49/VPKit.framework/Headers/VPKPreview.h#L80" class="button">Show on GitHub</a>
                       </div>
                     </section>
                   </div>

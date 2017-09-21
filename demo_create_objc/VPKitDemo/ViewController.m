@@ -12,7 +12,7 @@
 @import AVFoundation;
 @import AVKit;
 
-
+#define LOG_ME 1
 
 @interface ViewController ()
 <
@@ -86,7 +86,6 @@
 
 
 - (void)vpkPreviewTouched:(VPKPreview *)preview image:(VPKImage*)image {
-  
     [preview hideIcon];
 
     if ([preview isEqual:self.viewerPreview]) {
@@ -118,6 +117,20 @@
 
 - (void)invokeEditor:(VPKImage*)image fromView:(UIView*)view {
     
+    __block UIActivityIndicatorView* activityView = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhite];
+    [activityView stopAnimating];
+    
+    activityView.center = CGPointMake(self.editorPreview.bounds.size.width/2.0f, self.editorPreview.bounds.size.height/2.0f);
+
+    dispatch_time_t  when  =dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC));
+    dispatch_queue_t queue = dispatch_get_main_queue();
+    dispatch_after(when, queue, ^{
+        if (activityView) {
+            [self.editorPreview addSubview:activityView];
+            [activityView startAnimating];
+        }
+    });
+    
     /*
         
      invoking the VPKVeepEditor
@@ -129,7 +142,7 @@
 
     */
     __weak typeof(self) weakself = self;
-    [VPKit authenticateWithEmail:@"user@example.com"
+    [VPKit authenticateWithEmail:@"test@example.com"
                       completion:^(BOOL success, NSInteger responseCode, NSError * _Nonnull error) {
          __strong typeof(self) strongself = weakself;
        
@@ -146,7 +159,8 @@
          User account admin can be an implementation detail in the host app or the Veepio Developer control panel.
          
          */
-        
+                          [activityView removeFromSuperview];
+                          activityView = nil;
         
         if (success) {
             strongself.vpEditor =  [VPKit editorWithImage:image
