@@ -1,4 +1,4 @@
 Documentation set was installed to Xcode!
 
 Path: docs/docs_appledoc/io.veep.VPKit.docset
-Time: 2017-10-10 12:29:41 +0000
+Time: 2017-10-12 16:02:59 +0000

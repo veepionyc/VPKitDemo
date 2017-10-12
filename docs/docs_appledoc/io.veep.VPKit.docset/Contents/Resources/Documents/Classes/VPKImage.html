@@ -56,7 +56,9 @@
 	
 	<optgroup label="Properties">
 		
-		<option value="//api/name/imageURL">imageURL</option>
+		<option value="//api/name/originalContentURI">originalContentURI</option>
+		
+		<option value="//api/name/veep">veep</option>
 		
 		<option value="//api/name/veepId">veepId</option>
 		
@@ -71,6 +73,8 @@
 		<option value="//api/name/initWithImage:url:">- initWithImage:url:</option>
 		
 		<option value="//api/name/initWithImage:veepId:">- initWithImage:veepId:</option>
+		
+		<option value="//api/name/updateVeep:">- updateVeep:</option>
 		
 		<option value="//api/name/updateVeepId:">- updateVeepId:</option>
 		
@@ -110,6 +114,8 @@
 						<h2 class="subtitle subtitle-overview">Overview</h2>
 						<p>Drop-in replacement (subclass) for UIImage
 For use in conjunction with <a href="../Classes/VPKPreview.html">VPKPreview</a></p>
+
+<p>  If VPKImage is initialised with null <a href="#//api/name/veepId">veepId</a> or imageURL it will behave as a standard UIImage</p>
 					</div>
 					
 					
@@ -141,8 +147,8 @@ For use in conjunction with <a href="../Classes/VPKPreview.html">VPKPreview</a><
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/imageURL" title="imageURL"></a>
-	<h3 class="method-title"><code><a href="#//api/name/imageURL">&nbsp;&nbsp;imageURL</a></code>
+	<a name="//api/name/originalContentURI" title="originalContentURI"></a>
+	<h3 class="method-title"><code><a href="#//api/name/originalContentURI">&nbsp;&nbsp;originalContentURI</a></code>
 </h3>
 
 	<div class="method-info">
@@ -151,7 +157,23 @@ For use in conjunction with <a href="../Classes/VPKPreview.html">VPKPreview</a><
 		<div class="method-info-container">
 			
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) NSURL *imageURL</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) NSURL *originalContentURI</code></div>
+
+		    
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/veep" title="veep"></a>
+	<h3 class="method-title"><code><a href="#//api/name/veep">&nbsp;&nbsp;veep</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) VPKVeep *veep</code></div>
 
 		    
 		</div>
@@ -168,7 +190,7 @@ For use in conjunction with <a href="../Classes/VPKPreview.html">VPKPreview</a><
 			
 			
 			<div class="method-subsection brief-description">
-				<p>If VPKImage is initialised with null <a href="#//api/name/veepId">veepId</a> or <a href="#//api/name/imageURL">imageURL</a> it will behave as a standard UIImage</p>
+				<p>Use initWithImage:<a href="#//api/name/veepId">veepId</a> if you are identifying <a href="#//api/name/veep">veep</a> content using the unique identifier (id) of the <a href="#//api/name/veep">veep</a>.</p>
 			</div>
 			
 		    
@@ -182,6 +204,11 @@ For use in conjunction with <a href="../Classes/VPKPreview.html">VPKPreview</a><
 
 			
 
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>The <a href="#//api/name/veep">veep</a> Id is returned as part of the <a href="#//api/name/veep">veep</a> creation process.</p>
+			</div>
 			
 
 			
@@ -207,10 +234,43 @@ For use in conjunction with <a href="../Classes/VPKPreview.html">VPKPreview</a><
 
 		<div class="method-info-container">
 			
+			
+			<div class="method-subsection brief-description">
+				<p>Use initWithImage:url if you are identifying <a href="#//api/name/veep">veep</a> content using the original URI used to create the <a href="#//api/name/veep">veep</a>.
+The contentURI is the unique identifier for the veep&rsquo;d resource.
+In the case of an image this will often be the source URL used to obtain the UIImage.
+In the case of video this will be the source address of the video asset.</p>
+			</div>
+			
+		    
 
-			<div class="method-subsection method-declaration"><code>- (instancetype)initWithImage:(UIImage *)<em>image</em> url:(NSURL *)<em>imageURL</em></code></div>
+			<div class="method-subsection method-declaration"><code>- (instancetype)initWithImage:(UIImage *)<em>image</em> url:(NSURL *)<em>contentURI</em></code></div>
 
 		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>The contentURI must be the same URI as was used to create the <a href="#//api/name/veep">veep</a> as that is how veeps are identified.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">VPKImage.h</code></p>
+			</div>
+			
+			
 		</div>
 	</div>
 </div><div class="section-method">
@@ -229,6 +289,22 @@ For use in conjunction with <a href="../Classes/VPKPreview.html">VPKPreview</a><
 		    
 		</div>
 	</div>
+</div><div class="section-method">
+	<a name="//api/name/updateVeep:" title="updateVeep:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/updateVeep:">&ndash;&nbsp;updateVeep:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+
+			<div class="method-subsection method-declaration"><code>- (void)updateVeep:(nonnull VPKVeep *)<em>veep</em></code></div>
+
+		    
+		</div>
+	</div>
 </div>
 						</div>
 						
@@ -242,7 +318,7 @@ For use in conjunction with <a href="../Classes/VPKPreview.html">VPKPreview</a><
 				<footer>
 					<div class="footer-copyright">
 						
-						<p class="copyright">Copyright &copy; 2017 Veepio. All rights reserved. Updated: 2017-10-10</p>
+						<p class="copyright">Copyright &copy; 2017 Veepio. All rights reserved. Updated: 2017-10-12</p>
 						
 						
 						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1333)</a>.</p>

@@ -7,36 +7,21 @@
 //
 
 #import <UIKit/UIKit.h>
-//#import "VPKViews.h"
-//#import "VPKModels.h"
-//#import "VPKNetwork.h"
 
 @class VPKVeepFetcher;
-
-//#import "VPKVeepTrack+CellModels.h"
-//#import "VPKVideo.h"
-//
-//#import "VPKCollectionVC.h"
-//#import "VPKGoogleCellModel.h"
-//#import "VPKTouchView.h"
-//#import "VPKViewController_StateMachine.h"
-//#import "UIViewController_vpkKeyboardWatcher.h"
-//
-//#import "VPKStyles.h"
-
-//#import "VPKConstants.h"
-
 @class VPKVeepVideoImageView;
 @class VPKCollectionVC;
 @class VPKBlurTouchView;
 @class VPKStyles;
 @class VPKGoogleCellModel;
+@class VPKVeep;
+@class VPKImage;
 typedef NS_ENUM(NSInteger, VPKViewMode );
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface VPKViewController : UIViewController
-@property (nonatomic, strong, nonnull) VPKVeepVideoImageView* veepView;
+@property (nonatomic, strong) VPKVeepVideoImageView* veepView;
 @property (nonatomic, weak, nullable) UIImage* image;
 @property (nonatomic, strong, nonnull) UIView* sourceView;
 @property (nonatomic, assign) CGRect toRect;
@@ -45,16 +30,12 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, assign) CGRect startRect;
 @property (nonatomic, strong, nullable) id selectedTrackObserver;
 @property (nonatomic, strong, nonnull) VPKCollectionVC* collectionVC;
-//@property (nonatomic, strong, nonnull) VPKGoogleCellModel* googleCellModel;
-//@property (nonatomic, strong, nonnull) VPKVeepViewModel* veepViewModel;
-@property (nonatomic, strong, nullable) NSString* veepId;
-//@property (nonatomic, strong, nullable) NSString* mediaId;
+//@property (nonatomic, strong, nullable) NSString* veepId;
 @property (nonatomic, strong, nonnull) VPKBlurTouchView* touchView;
 @property (nonatomic, assign) VPKViewMode mode;
 @property (nonatomic, strong) VPKVeepFetcher* fetcher;
 @property (nonatomic, strong) VPKStyles* styles;
 @property (nonatomic, assign) BOOL forwardErrors;
-@property (nonatomic, strong) NSURL* originalContentURL;
 
 
 
@@ -66,7 +47,6 @@ NS_ASSUME_NONNULL_BEGIN
 - (nonnull instancetype)initWithView:(nullable UIView*)view
                                image:(nonnull UIImage*)image
                               styles:(VPKStyles*)styles
-                              itemId:(nonnull NSString*)itemId
                              fetcher:(VPKVeepFetcher*)fetcher;
 
 
@@ -107,6 +87,8 @@ NS_ASSUME_NONNULL_BEGIN
     
 - (UIEdgeInsets)safeInsets;
 - (BOOL)isIphoneX;
+
+- (VPKImage*)vpkImage;
 @end
 
 NS_ASSUME_NONNULL_END
