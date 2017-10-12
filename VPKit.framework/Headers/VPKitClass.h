@@ -34,6 +34,9 @@ typedef void (^VPKBOOLErrorBlock)(BOOL success, NSError* _Nullable error);
 typedef void (^VPKitConsumerIdCompletionBlock)(NSString* consumerId);
 typedef void (^VPKitPublicVeepErrorCompletionBlock)(  VPKPublicVeep* _Nullable veep
                                                     , NSError* _Nullable error);
+typedef void (^VPKitVeepErrorCompletionBlock)(  VPKVeep* _Nullable veep
+                                                    , NSError* _Nullable error);
+
 typedef void (^VPKUserStatsErrorBlock)(  VPKUserStats* _Nullable userStats
                                                     , NSError* _Nullable error);
 
@@ -201,10 +204,32 @@ Instance-level heavyweight authentication for users with email identifier and pa
 
 
 #pragma mark - getting veeps
+/**
+    request a veep by veepId and return a VPKPublicVeep in the completion handler
+ */
 
 + (void) requestVeep:(NSString*)veepId completionBlock:(VPKitPublicVeepErrorCompletionBlock)completion;
 
+/**
+ request a veep by veepId and return a VPKVeep in the completion handler
+ */
+
++ (void) getVeep:(NSString*)veepId completionBlock:(VPKitVeepErrorCompletionBlock)completion;
+
+/**
+ request a veep by originalContentURI and return a VPKPublicVeep in the completion handler
+ */
 + (void) requestVeepWithURL:(NSURL*)imageURL completionBlock:(VPKitPublicVeepErrorCompletionBlock)completion;
+
+/**
+ request a veep by originalContentURI and return a VPKVeep in the completion handler
+ */
+
++ (void) getVeepWithURL:(NSURL*)imageURL completionBlock:(VPKitVeepErrorCompletionBlock)completion;
+
+/**
+ request a veep by originalContentURI and return a VPKPublicVeep in the completion handler
+ */
 
 - (void) requestVeepWithURL:(NSURL*)imageURL completionBlock:(VPKitPublicVeepErrorCompletionBlock)completion;
 

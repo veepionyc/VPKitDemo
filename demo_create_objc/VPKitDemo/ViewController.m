@@ -43,7 +43,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.versionLabel.text = [VPKit sdkVersion];
-    [self configureViewerWithTestImage];
+    [self configureViewerWithTestVideo];
     [self configureEditor];
     [self configureConstraints];
 
@@ -210,11 +210,14 @@
      }];
     NSLog(@"%s %@",__func__,veepId);
     [self dismissViewControllerAnimated:YES completion:nil];
+    [VPKit logout];
 }
 
 - (void)veepEditorDidCancel:(VPKVeepEditor *)editor {
     NSLog(@"%s",__func__);
     [self dismissViewControllerAnimated:YES completion:nil];
+    [VPKit logout];
+
 }
 
 

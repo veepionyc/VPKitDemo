@@ -68,8 +68,6 @@
 		
 		<option value="//api/name/navBar">navBar</option>
 		
-		<option value="//api/name/originalContentURL">originalContentURL</option>
-		
 		<option value="//api/name/selectedTrackObserver">selectedTrackObserver</option>
 		
 		<option value="//api/name/sourceView">sourceView</option>
@@ -81,8 +79,6 @@
 		<option value="//api/name/toRect">toRect</option>
 		
 		<option value="//api/name/touchView">touchView</option>
-		
-		<option value="//api/name/veepId">veepId</option>
 		
 		<option value="//api/name/veepView">veepView</option>
 		
@@ -110,7 +106,7 @@
 		
 		<option value="//api/name/hideNavBar">- hideNavBar</option>
 		
-		<option value="//api/name/initWithView:image:styles:itemId:fetcher:">- initWithView:image:styles:itemId:fetcher:</option>
+		<option value="//api/name/initWithView:image:styles:fetcher:">- initWithView:image:styles:fetcher:</option>
 		
 		<option value="//api/name/isIphoneX">- isIphoneX</option>
 		
@@ -139,6 +135,8 @@
 		<option value="//api/name/transitioningImageView">- transitioningImageView</option>
 		
 		<option value="//api/name/transitioningView">- transitioningView</option>
+		
+		<option value="//api/name/vpkImage">- vpkImage</option>
 		
 	</optgroup>
 	
@@ -192,7 +190,7 @@
 		<div class="method-info-container">
 			
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, nonnull) VPKVeepVideoImageView *veepView</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) VPKVeepVideoImageView *veepView</code></div>
 
 		    
 		</div>
@@ -326,22 +324,6 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/veepId" title="veepId"></a>
-	<h3 class="method-title"><code><a href="#//api/name/veepId">&nbsp;&nbsp;veepId</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, nullable) NSString *veepId</code></div>
-
-		    
-		</div>
-	</div>
-</div><div class="section-method">
 	<a name="//api/name/touchView" title="touchView"></a>
 	<h3 class="method-title"><code><a href="#//api/name/touchView">&nbsp;&nbsp;touchView</a></code>
 </h3>
@@ -422,22 +404,6 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/originalContentURL" title="originalContentURL"></a>
-	<h3 class="method-title"><code><a href="#//api/name/originalContentURL">&nbsp;&nbsp;originalContentURL</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) NSURL *originalContentURL</code></div>
-
-		    
-		</div>
-	</div>
-</div><div class="section-method">
 	<a name="//api/name/transitioningView" title="transitioningView"></a>
 	<h3 class="method-title"><code><a href="#//api/name/transitioningView">&ndash;&nbsp;transitioningView</a></code>
 </h3>
@@ -470,8 +436,8 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/initWithView:image:styles:itemId:fetcher:" title="initWithView:image:styles:itemId:fetcher:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/initWithView:image:styles:itemId:fetcher:">&ndash;&nbsp;initWithView:image:styles:itemId:fetcher:</a></code>
+	<a name="//api/name/initWithView:image:styles:fetcher:" title="initWithView:image:styles:fetcher:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/initWithView:image:styles:fetcher:">&ndash;&nbsp;initWithView:image:styles:fetcher:</a></code>
 </h3>
 
 	<div class="method-info">
@@ -480,7 +446,7 @@
 		<div class="method-info-container">
 			
 
-			<div class="method-subsection method-declaration"><code>- (nonnull instancetype)initWithView:(nullable UIView *)<em>view</em> image:(nonnull UIImage *)<em>image</em> styles:(VPKStyles *)<em>styles</em> itemId:(nonnull NSString *)<em>itemId</em> fetcher:(VPKVeepFetcher *)<em>fetcher</em></code></div>
+			<div class="method-subsection method-declaration"><code>- (nonnull instancetype)initWithView:(nullable UIView *)<em>view</em> image:(nonnull UIImage *)<em>image</em> styles:(VPKStyles *)<em>styles</em> fetcher:(VPKVeepFetcher *)<em>fetcher</em></code></div>
 
 		    
 		</div>
@@ -805,6 +771,22 @@
 		    
 		</div>
 	</div>
+</div><div class="section-method">
+	<a name="//api/name/vpkImage" title="vpkImage"></a>
+	<h3 class="method-title"><code><a href="#//api/name/vpkImage">&ndash;&nbsp;vpkImage</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+
+			<div class="method-subsection method-declaration"><code>- (VPKImage *)vpkImage</code></div>
+
+		    
+		</div>
+	</div>
 </div>
 						</div>
 						
@@ -818,7 +800,7 @@
 				<footer>
 					<div class="footer-copyright">
 						
-						<p class="copyright">Copyright &copy; 2017 Veepio. All rights reserved. Updated: 2017-10-10</p>
+						<p class="copyright">Copyright &copy; 2017 Veepio. All rights reserved. Updated: 2017-10-12</p>
 						
 						
 						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1333)</a>.</p>

@@ -54,6 +54,11 @@ fastlane prepublish_deployed_demo_projects
 fastlane publish_deployed_demo_projects
 ```
 
+### sync
+```
+fastlane sync
+```
+sync the demo projects version numbers and pod install
 ### sync_demo_projects_to_framework
 ```
 fastlane sync_demo_projects_to_framework
@@ -68,7 +73,7 @@ fastlane demo
 ```
 fastlane beta
 ```
-
+beta builds - run on release branch
 ### publish
 ```
 fastlane publish

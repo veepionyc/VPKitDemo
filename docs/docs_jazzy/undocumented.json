@@ -59,112 +59,98 @@
     {
       "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit/VPKit/VPKitClass.h",
       "line": 37,
-      "symbol": "VPKUserStatsErrorBlock",
+      "symbol": "VPKitVeepErrorCompletionBlock",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
       "warning": "undocumented"
     },
     {
       "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit/VPKit/VPKitClass.h",
       "line": 40,
+      "symbol": "VPKUserStatsErrorBlock",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit/VPKit/VPKitClass.h",
+      "line": 43,
       "symbol": "VPKCompetitiveStatsBlock",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
       "warning": "undocumented"
     },
     {
       "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit/VPKit/VPKitClass.h",
-      "line": 41,
+      "line": 44,
       "symbol": "VPKDailyStatsBlock",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
       "warning": "undocumented"
     },
     {
       "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit/VPKit/VPKitClass.h",
-      "line": 79,
+      "line": 82,
       "symbol": "VPKit.-setApplicationId:clientId:clientSecret:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit/VPKit/VPKitClass.h",
-      "line": 83,
+      "line": 86,
       "symbol": "VPKit.+setProduction:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.class",
       "warning": "undocumented"
     },
     {
       "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit/VPKit/VPKitClass.h",
-      "line": 85,
+      "line": 88,
       "symbol": "VPKit.-setProduction:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit/VPKit/VPKitClass.h",
-      "line": 88,
+      "line": 91,
       "symbol": "VPKit.-initUnique",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit/VPKit/VPKitClass.h",
-      "line": 157,
+      "line": 160,
       "symbol": "VPKit.+authorized",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.class",
       "warning": "undocumented"
     },
     {
       "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit/VPKit/VPKitClass.h",
-      "line": 189,
+      "line": 192,
       "symbol": "VPKit.+editorWithImage:fromView:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.class",
       "warning": "undocumented"
     },
     {
       "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit/VPKit/VPKitClass.h",
-      "line": 191,
+      "line": 194,
       "symbol": "VPKit.+editorWithImage:fromView:error:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.class",
       "warning": "undocumented"
     },
     {
       "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit/VPKit/VPKitClass.h",
-      "line": 196,
+      "line": 199,
       "symbol": "VPKit.+styles",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.class",
       "warning": "undocumented"
     },
     {
       "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit/VPKit/VPKitClass.h",
-      "line": 198,
+      "line": 201,
       "symbol": "VPKit.+environment",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.class",
       "warning": "undocumented"
     },
     {
       "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit/VPKit/VPKitClass.h",
-      "line": 200,
+      "line": 203,
       "symbol": "VPKit.-environment",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit/VPKit/VPKitClass.h",
-      "line": 205,
-      "symbol": "VPKit.+requestVeep:completionBlock:",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.class",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit/VPKit/VPKitClass.h",
-      "line": 207,
-      "symbol": "VPKit.+requestVeepWithURL:completionBlock:",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.class",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit/VPKit/VPKitClass.h",
-      "line": 209,
-      "symbol": "VPKit.-requestVeepWithURL:completionBlock:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
