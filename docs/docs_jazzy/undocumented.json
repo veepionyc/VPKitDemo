@@ -1,621 +1,621 @@
 {
   "warnings": [
     {
-      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit/VPKit/VPKitClass.h",
+      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit copy 7/VPKit/VPKitClass.h",
       "line": 25,
       "symbol": "VPKServerEnvironment",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enum",
       "warning": "undocumented"
     },
     {
-      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit/VPKit/VPKitClass.h",
+      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit copy 7/VPKit/VPKitClass.h",
       "line": 25,
       "symbol": "VPKServerEnvironment",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
       "warning": "undocumented"
     },
     {
-      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit/VPKit/VPKitClass.h",
+      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit copy 7/VPKit/VPKitClass.h",
       "line": 26,
       "symbol": "VPKServerEnvironment.VPKServerDev",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
-      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit/VPKit/VPKitClass.h",
+      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit copy 7/VPKit/VPKitClass.h",
       "line": 27,
       "symbol": "VPKServerEnvironment.VPKServerProduction",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
-      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit/VPKit/VPKitClass.h",
+      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit copy 7/VPKit/VPKitClass.h",
       "line": 30,
       "symbol": "VPKNetworkResponseBlock",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
       "warning": "undocumented"
     },
     {
-      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit/VPKit/VPKitClass.h",
+      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit copy 7/VPKit/VPKitClass.h",
       "line": 31,
       "symbol": "VPKBOOLErrorBlock",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
       "warning": "undocumented"
     },
     {
-      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit/VPKit/VPKitClass.h",
+      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit copy 7/VPKit/VPKitClass.h",
       "line": 34,
       "symbol": "VPKitConsumerIdCompletionBlock",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
       "warning": "undocumented"
     },
     {
-      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit/VPKit/VPKitClass.h",
+      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit copy 7/VPKit/VPKitClass.h",
       "line": 35,
       "symbol": "VPKitPublicVeepErrorCompletionBlock",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
       "warning": "undocumented"
     },
     {
-      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit/VPKit/VPKitClass.h",
+      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit copy 7/VPKit/VPKitClass.h",
       "line": 37,
       "symbol": "VPKitVeepErrorCompletionBlock",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
       "warning": "undocumented"
     },
     {
-      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit/VPKit/VPKitClass.h",
+      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit copy 7/VPKit/VPKitClass.h",
       "line": 40,
       "symbol": "VPKUserStatsErrorBlock",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
       "warning": "undocumented"
     },
     {
-      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit/VPKit/VPKitClass.h",
+      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit copy 7/VPKit/VPKitClass.h",
       "line": 43,
       "symbol": "VPKCompetitiveStatsBlock",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
       "warning": "undocumented"
     },
     {
-      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit/VPKit/VPKitClass.h",
+      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit copy 7/VPKit/VPKitClass.h",
       "line": 44,
       "symbol": "VPKDailyStatsBlock",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
       "warning": "undocumented"
     },
     {
-      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit/VPKit/VPKitClass.h",
+      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit copy 7/VPKit/VPKitClass.h",
       "line": 82,
       "symbol": "VPKit.-setApplicationId:clientId:clientSecret:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit/VPKit/VPKitClass.h",
+      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit copy 7/VPKit/VPKitClass.h",
       "line": 86,
       "symbol": "VPKit.+setProduction:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.class",
       "warning": "undocumented"
     },
     {
-      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit/VPKit/VPKitClass.h",
+      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit copy 7/VPKit/VPKitClass.h",
       "line": 88,
       "symbol": "VPKit.-setProduction:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit/VPKit/VPKitClass.h",
+      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit copy 7/VPKit/VPKitClass.h",
       "line": 91,
       "symbol": "VPKit.-initUnique",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit/VPKit/VPKitClass.h",
+      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit copy 7/VPKit/VPKitClass.h",
       "line": 160,
       "symbol": "VPKit.+authorized",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.class",
       "warning": "undocumented"
     },
     {
-      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit/VPKit/VPKitClass.h",
+      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit copy 7/VPKit/VPKitClass.h",
       "line": 192,
       "symbol": "VPKit.+editorWithImage:fromView:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.class",
       "warning": "undocumented"
     },
     {
-      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit/VPKit/VPKitClass.h",
+      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit copy 7/VPKit/VPKitClass.h",
       "line": 194,
       "symbol": "VPKit.+editorWithImage:fromView:error:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.class",
       "warning": "undocumented"
     },
     {
-      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit/VPKit/VPKitClass.h",
+      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit copy 7/VPKit/VPKitClass.h",
       "line": 199,
       "symbol": "VPKit.+styles",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.class",
       "warning": "undocumented"
     },
     {
-      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit/VPKit/VPKitClass.h",
+      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit copy 7/VPKit/VPKitClass.h",
       "line": 201,
       "symbol": "VPKit.+environment",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.class",
       "warning": "undocumented"
     },
     {
-      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit/VPKit/VPKitClass.h",
+      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit copy 7/VPKit/VPKitClass.h",
       "line": 203,
       "symbol": "VPKit.-environment",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit/VPKit.framework/Headers/VPKColorStyles.h",
+      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit copy 7/VPKit.framework/Headers/VPKColorStyles.h",
       "line": 17,
       "symbol": "VPKColorStyles.vpkGreen",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
       "warning": "undocumented"
     },
     {
-      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit/VPKit.framework/Headers/VPKColorStyles.h",
+      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit copy 7/VPKit.framework/Headers/VPKColorStyles.h",
       "line": 18,
       "symbol": "VPKColorStyles.navBar",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
       "warning": "undocumented"
     },
     {
-      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit/VPKit.framework/Headers/VPKColorStyles.h",
+      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit copy 7/VPKit.framework/Headers/VPKColorStyles.h",
       "line": 19,
       "symbol": "VPKColorStyles.navBarText",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
       "warning": "undocumented"
     },
     {
-      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit/VPKit.framework/Headers/VPKColorStyles.h",
+      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit copy 7/VPKit.framework/Headers/VPKColorStyles.h",
       "line": 21,
       "symbol": "VPKColorStyles.navBarLight",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
       "warning": "undocumented"
     },
     {
-      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit/VPKit.framework/Headers/VPKColorStyles.h",
+      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit copy 7/VPKit.framework/Headers/VPKColorStyles.h",
       "line": 22,
       "symbol": "VPKColorStyles.navBarDark",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
       "warning": "undocumented"
     },
     {
-      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit/VPKit.framework/Headers/VPKColorStyles.h",
+      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit copy 7/VPKit.framework/Headers/VPKColorStyles.h",
       "line": 23,
       "symbol": "VPKColorStyles.cellNavBar",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
       "warning": "undocumented"
     },
     {
-      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit/VPKit.framework/Headers/VPKColorStyles.h",
+      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit copy 7/VPKit.framework/Headers/VPKColorStyles.h",
       "line": 24,
       "symbol": "VPKColorStyles.cellMidGrey",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
       "warning": "undocumented"
     },
     {
-      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit/VPKit.framework/Headers/VPKColorStyles.h",
+      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit copy 7/VPKit.framework/Headers/VPKColorStyles.h",
       "line": 26,
       "symbol": "VPKColorStyles.searchBar",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
       "warning": "undocumented"
     },
     {
-      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit/VPKit.framework/Headers/VPKColorStyles.h",
+      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit copy 7/VPKit.framework/Headers/VPKColorStyles.h",
       "line": 27,
       "symbol": "VPKColorStyles.alertButton",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
       "warning": "undocumented"
     },
     {
-      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit/VPKit.framework/Headers/VPKColorStyles.h",
+      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit copy 7/VPKit.framework/Headers/VPKColorStyles.h",
       "line": 28,
       "symbol": "VPKColorStyles.alertText",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
       "warning": "undocumented"
     },
     {
-      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit/VPKit.framework/Headers/VPKColorStyles.h",
+      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit copy 7/VPKit.framework/Headers/VPKColorStyles.h",
       "line": 30,
       "symbol": "VPKColorStyles.on",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
       "warning": "undocumented"
     },
     {
-      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit/VPKit.framework/Headers/VPKColorStyles.h",
+      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit copy 7/VPKit.framework/Headers/VPKColorStyles.h",
       "line": 31,
       "symbol": "VPKColorStyles.off",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
       "warning": "undocumented"
     },
     {
-      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit/VPKit.framework/Headers/VPKCompetitiveStats.h",
+      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit copy 7/VPKit.framework/Headers/VPKCompetitiveStats.h",
       "line": 36,
       "symbol": "VPKCompetitiveStats.referrals",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
       "warning": "undocumented"
     },
     {
-      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit/VPKit.framework/Headers/VPKCompetitiveStats.h",
+      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit copy 7/VPKit.framework/Headers/VPKCompetitiveStats.h",
       "line": 37,
       "symbol": "VPKCompetitiveStats.veepscore",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
       "warning": "undocumented"
     },
     {
-      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit/VPKit.framework/Headers/VPKCompetitiveStats.h",
+      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit copy 7/VPKit.framework/Headers/VPKCompetitiveStats.h",
       "line": 38,
       "symbol": "VPKCompetitiveStats.views",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
       "warning": "undocumented"
     },
     {
-      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit/VPKit.framework/Headers/VPKCompetitiveStats.h",
+      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit copy 7/VPKit.framework/Headers/VPKCompetitiveStats.h",
       "line": 39,
       "symbol": "VPKCompetitiveStats.previewtouches",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
       "warning": "undocumented"
     },
     {
-      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit/VPKit.framework/Headers/VPKCompetitiveStats.h",
+      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit copy 7/VPKit.framework/Headers/VPKCompetitiveStats.h",
       "line": 40,
       "symbol": "VPKCompetitiveStats.expansions",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
       "warning": "undocumented"
     },
     {
-      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit/VPKit.framework/Headers/VPKCompetitiveStats.h",
+      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit copy 7/VPKit.framework/Headers/VPKCompetitiveStats.h",
       "line": 41,
       "symbol": "VPKCompetitiveStats.sales",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
       "warning": "undocumented"
     },
     {
-      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit/VPKit.framework/Headers/VPKCompetitiveStats.h",
+      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit copy 7/VPKit.framework/Headers/VPKCompetitiveStats.h",
       "line": 42,
       "symbol": "VPKCompetitiveStats.veepselects",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
       "warning": "undocumented"
     },
     {
-      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit/VPKit.framework/Headers/VPKCompetitiveStats.h",
+      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit copy 7/VPKit.framework/Headers/VPKCompetitiveStats.h",
       "line": 43,
       "symbol": "VPKCompetitiveStats.veeps",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
       "warning": "undocumented"
     },
     {
-      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit/VPKit.framework/Headers/VPKCompetitiveStats.h",
+      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit copy 7/VPKit.framework/Headers/VPKCompetitiveStats.h",
       "line": 44,
       "symbol": "VPKCompetitiveStats.impressions",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
       "warning": "undocumented"
     },
     {
-      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit/VPKit.framework/Headers/VPKCompetitiveStats.h",
+      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit copy 7/VPKit.framework/Headers/VPKCompetitiveStats.h",
       "line": 45,
       "symbol": "VPKCompetitiveStats.navigations",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
       "warning": "undocumented"
     },
     {
-      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit/VPKit.framework/Headers/VPKCompetitiveStatsItem.h",
+      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit copy 7/VPKit.framework/Headers/VPKCompetitiveStatsItem.h",
       "line": 20,
       "symbol": "VPKCompetitiveStatsItem.percentile",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
       "warning": "undocumented"
     },
     {
-      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit/VPKit.framework/Headers/VPKCompetitiveStatsItem.h",
+      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit copy 7/VPKit.framework/Headers/VPKCompetitiveStatsItem.h",
       "line": 21,
       "symbol": "VPKCompetitiveStatsItem.value",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
       "warning": "undocumented"
     },
     {
-      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit/VPKit.framework/Headers/VPKCompetitiveStatsItem.h",
+      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit copy 7/VPKit.framework/Headers/VPKCompetitiveStatsItem.h",
       "line": 22,
       "symbol": "VPKCompetitiveStatsItem.__percentile",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
       "warning": "undocumented"
     },
     {
-      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit/VPKit.framework/Headers/VPKCompetitiveStatsItem.h",
+      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit copy 7/VPKit.framework/Headers/VPKCompetitiveStatsItem.h",
       "line": 23,
       "symbol": "VPKCompetitiveStatsItem.__value",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
       "warning": "undocumented"
     },
     {
-      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit/VPKit.framework/Headers/VPKFontStyles.h",
+      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit copy 7/VPKit.framework/Headers/VPKFontStyles.h",
       "line": 22,
       "symbol": "VPKFontStyles.barButtonItemFontDisabled",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
       "warning": "undocumented"
     },
     {
-      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit/VPKit.framework/Headers/VPKFontStyles.h",
+      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit copy 7/VPKit.framework/Headers/VPKFontStyles.h",
       "line": 23,
       "symbol": "VPKFontStyles.barButtonItemFontEnabled",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
       "warning": "undocumented"
     },
     {
-      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit/VPKit.framework/Headers/VPKFontStyles.h",
+      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit copy 7/VPKit.framework/Headers/VPKFontStyles.h",
       "line": 24,
       "symbol": "VPKFontStyles.barButtonItemFont",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
       "warning": "undocumented"
     },
     {
-      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit/VPKit.framework/Headers/VPKFontStyles.h",
+      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit copy 7/VPKit.framework/Headers/VPKFontStyles.h",
       "line": 25,
       "symbol": "VPKFontStyles.navBarFont",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
       "warning": "undocumented"
     },
     {
-      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit/VPKit.framework/Headers/VPKFontStyles.h",
+      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit copy 7/VPKit.framework/Headers/VPKFontStyles.h",
       "line": 26,
       "symbol": "VPKFontStyles.cellNavBarFont",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
       "warning": "undocumented"
     },
     {
-      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit/VPKit.framework/Headers/VPKFontStyles.h",
+      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit copy 7/VPKit.framework/Headers/VPKFontStyles.h",
       "line": 28,
       "symbol": "VPKFontStyles.cellLabelFont",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
       "warning": "undocumented"
     },
     {
-      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit/VPKit.framework/Headers/VPKFontStyles.h",
+      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit copy 7/VPKit.framework/Headers/VPKFontStyles.h",
       "line": 29,
       "symbol": "VPKFontStyles.cellTextViewFont",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
       "warning": "undocumented"
     },
     {
-      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit/VPKit.framework/Headers/VPKFontStyles.h",
+      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit copy 7/VPKit.framework/Headers/VPKFontStyles.h",
       "line": 30,
       "symbol": "VPKFontStyles.bigLabelFont",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
       "warning": "undocumented"
     },
     {
-      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit/VPKit.framework/Headers/VPKFontStyles.h",
+      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit copy 7/VPKit.framework/Headers/VPKFontStyles.h",
       "line": 32,
       "symbol": "VPKFontStyles.alertFontTitleName",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
       "warning": "undocumented"
     },
     {
-      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit/VPKit.framework/Headers/VPKFontStyles.h",
+      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit copy 7/VPKit.framework/Headers/VPKFontStyles.h",
       "line": 33,
       "symbol": "VPKFontStyles.alertFontBodyName",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
       "warning": "undocumented"
     },
     {
-      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit/VPKit.framework/Headers/VPKParseableObject.h",
+      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit copy 7/VPKit.framework/Headers/VPKParseableObject.h",
       "line": 20,
       "symbol": "VPKParseableObject.+objectWithJsonData:error:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.class",
       "warning": "undocumented"
     },
     {
-      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit/VPKit.framework/Headers/VPKParseableObject.h",
+      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit copy 7/VPKit.framework/Headers/VPKParseableObject.h",
       "line": 22,
       "symbol": "VPKParseableObject.+parsingError",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.class",
       "warning": "undocumented"
     },
     {
-      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit/VPKit.framework/Headers/VPKParseableObject.h",
+      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit copy 7/VPKit.framework/Headers/VPKParseableObject.h",
       "line": 24,
       "symbol": "VPKParseableObject.-initWithJSONDict:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit/VPKit.framework/Headers/VPKParseableObject.h",
+      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit copy 7/VPKit.framework/Headers/VPKParseableObject.h",
       "line": 42,
       "symbol": "VPKParseableObject.-JSONRepresentation",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit/VPKit.framework/Headers/VPKPreview.h",
+      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit copy 7/VPKit.framework/Headers/VPKPreview.h",
       "line": 14,
       "symbol": "VPKPreviewDelegate",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.protocol",
       "warning": "undocumented"
     },
     {
-      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit/VPKit.framework/Headers/VPKPreview.h",
+      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit copy 7/VPKit.framework/Headers/VPKPreview.h",
       "line": 16,
       "symbol": "VPKPreviewDelegate.-vpkPreviewTouched:image:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit/VPKit.framework/Headers/VPKPreview.h",
+      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit copy 7/VPKit.framework/Headers/VPKPreview.h",
       "line": 20,
       "symbol": "VPKPreviewPassThroughDelegate",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.protocol",
       "warning": "undocumented"
     },
     {
-      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit/VPKit.framework/Headers/VPKPreview.h",
+      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit copy 7/VPKit.framework/Headers/VPKPreview.h",
       "line": 22,
       "symbol": "VPKPreviewPassThroughDelegate.-vpkPreview:passedThroughTap:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit/VPKit.framework/Headers/VPKPreview.h",
+      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit copy 7/VPKit.framework/Headers/VPKPreview.h",
       "line": 70,
       "symbol": "VPKPreview.-showIcon",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit/VPKit.framework/Headers/VPKPreview.h",
+      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit copy 7/VPKit.framework/Headers/VPKPreview.h",
       "line": 71,
       "symbol": "VPKPreview.-hideIcon",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit/VPKit.framework/Headers/VPKPreview.h",
+      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit copy 7/VPKit.framework/Headers/VPKPreview.h",
       "line": 72,
       "symbol": "VPKPreview.-showIcon:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit/VPKit.framework/Headers/VPKPreview.h",
+      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit copy 7/VPKit.framework/Headers/VPKPreview.h",
       "line": 73,
       "symbol": "VPKPreview.-hideIcon:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit/VPKit.framework/Headers/VPKPreview.h",
+      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit copy 7/VPKit.framework/Headers/VPKPreview.h",
       "line": 74,
       "symbol": "VPKPreview.-reset",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit/VPKit.framework/Headers/VPKStatsConstants.h",
+      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit copy 7/VPKit.framework/Headers/VPKStatsConstants.h",
       "line": 14,
       "symbol": "vpk_CompetitiveStatsBlock",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
       "warning": "undocumented"
     },
     {
-      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit/VPKit.framework/Headers/VPKStatsConstants.h",
+      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit copy 7/VPKit.framework/Headers/VPKStatsConstants.h",
       "line": 15,
       "symbol": "vpk_DailyStatsBlock",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
       "warning": "undocumented"
     },
     {
-      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit/VPKit.framework/Headers/VPKStyles.h",
+      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit copy 7/VPKit.framework/Headers/VPKStyles.h",
       "line": 24,
       "symbol": "VPKStyles.lineWidth",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
       "warning": "undocumented"
     },
     {
-      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit/VPKit.framework/Headers/VPKStyles.h",
+      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit copy 7/VPKit.framework/Headers/VPKStyles.h",
       "line": 60,
       "symbol": "VPKStyles.-configureAppearance",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit/VPKit.framework/Headers/VPKStyles.h",
+      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit copy 7/VPKit.framework/Headers/VPKStyles.h",
       "line": 61,
       "symbol": "VPKStyles.-barButtonItemFontAttributes",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit/VPKit.framework/Headers/VPKStyles.h",
+      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit copy 7/VPKit.framework/Headers/VPKStyles.h",
       "line": 62,
       "symbol": "VPKStyles.-barButtonItemFontAttributesDisabled",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit/VPKit.framework/Headers/VPKStyles.h",
+      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit copy 7/VPKit.framework/Headers/VPKStyles.h",
       "line": 63,
       "symbol": "VPKStyles.-barButtonItemFontAttributesEnabled",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit/VPKit.framework/Headers/VPKStyles.h",
+      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit copy 7/VPKit.framework/Headers/VPKStyles.h",
       "line": 64,
       "symbol": "VPKStyles.-configureNavBar:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit/VPKit.framework/Headers/VPKStyles.h",
+      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit copy 7/VPKit.framework/Headers/VPKStyles.h",
       "line": 65,
       "symbol": "VPKStyles.-configureCellNavBar:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit/VPKit.framework/Headers/VPKStyles.h",
+      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit copy 7/VPKit.framework/Headers/VPKStyles.h",
       "line": 66,
       "symbol": "VPKStyles.-configureBarButtonItem:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit/VPKit.framework/Headers/VPKUserStats.h",
+      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit copy 7/VPKit.framework/Headers/VPKUserStats.h",
       "line": 11,
       "symbol": "VPKUserStats",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.class",
       "warning": "undocumented"
     },
     {
-      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit/VPKit.framework/Headers/VPKUserStats.h",
+      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit copy 7/VPKit.framework/Headers/VPKUserStats.h",
       "line": 13,
       "symbol": "VPKUserStats.impressions",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
       "warning": "undocumented"
     },
     {
-      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit/VPKit.framework/Headers/VPKUserStats.h",
+      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit copy 7/VPKit.framework/Headers/VPKUserStats.h",
       "line": 14,
       "symbol": "VPKUserStats.views",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
       "warning": "undocumented"
     },
     {
-      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit/VPKit.framework/Headers/VPKUserStats.h",
+      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit copy 7/VPKit.framework/Headers/VPKUserStats.h",
       "line": 15,
       "symbol": "VPKUserStats.referrals",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
       "warning": "undocumented"
     },
     {
-      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit/VPKit.framework/Headers/VPKUserStats.h",
+      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit copy 7/VPKit.framework/Headers/VPKUserStats.h",
       "line": 18,
       "symbol": "VPKUserStats.__impressions",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
       "warning": "undocumented"
     },
     {
-      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit/VPKit.framework/Headers/VPKUserStats.h",
+      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit copy 7/VPKit.framework/Headers/VPKUserStats.h",
       "line": 19,
       "symbol": "VPKUserStats.__views",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
       "warning": "undocumented"
     },
     {
-      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit/VPKit.framework/Headers/VPKUserStats.h",
+      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit copy 7/VPKit.framework/Headers/VPKUserStats.h",
       "line": 20,
       "symbol": "VPKUserStats.__referrals",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
       "warning": "undocumented"
     }
   ],
-  "source_directory": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit"
+  "source_directory": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit copy 7"
 }

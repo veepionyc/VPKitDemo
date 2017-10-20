@@ -20,9 +20,9 @@ NS_ASSUME_NONNULL_BEGIN
  */
 
 @interface VPKImage : UIImage
-@property (nonatomic, strong, readonly) NSString* veepId;
-@property (nonatomic, strong, readonly) NSURL* originalContentURI;
-@property (nonatomic, strong, readonly) VPKVeep* veep;
+@property (nonatomic, strong, readonly, nullable) NSString* veepId;
+@property (nonatomic, strong, readonly, nullable) NSURL* originalContentURI;
+@property (nonatomic, strong, readonly, nullable) VPKVeep* veep;
 
 /**
  deprecated 2.5
@@ -50,11 +50,17 @@ In the case of video this will be the source address of the video asset.
 
 - (instancetype)initWithImage:(UIImage*)image url:(NSURL*)contentURI;
 
+/**
+ sets the veep, veepId and originalContentUri
+*/
+- (void)updateWithVeep:(VPKVeep*)veep;
+
+/**
+sets self.veep to nil and self.veepId to veepId
+ */
+- (void)updateWithVeepId:(nullable NSString*)veepId;
 
 
-- (void)updateVeepId:(nonnull NSString*)veepId;
-
-- (void)updateVeep:(nonnull VPKVeep*)veep;
 
 @end
 NS_ASSUME_NONNULL_END
