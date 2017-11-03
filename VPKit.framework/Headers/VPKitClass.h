@@ -28,19 +28,24 @@ typedef NS_ENUM(NSInteger, VPKServerEnvironment) {
 };
 
 typedef void (^VPKNetworkResponseBlock)(BOOL success, NSInteger responseCode, NSError* _Nullable error);
+
 typedef void (^VPKBOOLErrorBlock)(BOOL success, NSError* _Nullable error);
 
-
 typedef void (^VPKitConsumerIdCompletionBlock)(NSString* consumerId);
+
 typedef void (^VPKitPublicVeepErrorCompletionBlock)(  VPKPublicVeep* _Nullable veep
                                                     , NSError* _Nullable error);
 typedef void (^VPKitVeepErrorCompletionBlock)(  VPKVeep* _Nullable veep
                                                     , NSError* _Nullable error);
 
+typedef void (^VPKVeepIdentifierErrorCompletionBlock)(  NSString* _Nullable identifier
+                                              , NSError* _Nullable error);
+
 typedef void (^VPKUserStatsErrorBlock)(  VPKUserStats* _Nullable userStats
                                                     , NSError* _Nullable error);
 
 typedef void (^VPKCompetitiveStatsBlock)(VPKCompetitiveStats* _Nullable stats,  NSError* _Nullable  error);
+
 typedef void (^VPKDailyStatsBlock)(VPKDailyStats* _Nullable stats, NSError* _Nullable error);
 
 /**
@@ -232,6 +237,13 @@ Instance-level heavyweight authentication for users with email identifier and pa
  */
 
 - (void) requestVeepWithURL:(NSURL*)imageURL completionBlock:(VPKitPublicVeepErrorCompletionBlock)completion;
+
+/**
+ request a veep identifier by originalContentURI and return the identifier as an NSString in the completion handler
+ */
+
++ (void) getVeepIdWithURI:(NSURL*)originalContentURI completionBlock:(VPKVeepIdentifierErrorCompletionBlock)completion;
+
 
 /**
 A string representation of the VPKit version.

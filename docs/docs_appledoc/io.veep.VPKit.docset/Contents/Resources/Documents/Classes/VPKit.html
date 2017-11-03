@@ -82,6 +82,12 @@
 		
 		<option value="//api/name/getDailyStats:">+ getDailyStats:</option>
 		
+		<option value="//api/name/getVeep:completionBlock:">+ getVeep:completionBlock:</option>
+		
+		<option value="//api/name/getVeepIdWithURI:completionBlock:">+ getVeepIdWithURI:completionBlock:</option>
+		
+		<option value="//api/name/getVeepWithURL:completionBlock:">+ getVeepWithURL:completionBlock:</option>
+		
 		<option value="//api/name/logout">+ logout</option>
 		
 		<option value="//api/name/requestUserStats:">+ requestUserStats:</option>
@@ -972,10 +978,77 @@
 
 		<div class="method-info-container">
 			
+			
+			<div class="method-subsection brief-description">
+				<pre><code>request a veep by veepId and return a VPKPublicVeep in the completion handler
+</code></pre>
+			</div>
+			
+		    
 
 			<div class="method-subsection method-declaration"><code>+ (void)requestVeep:(NSString *)<em>veepId</em> completionBlock:(VPKitPublicVeepErrorCompletionBlock)<em>completion</em></code></div>
 
 		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">VPKitClass.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/getVeep:completionBlock:" title="getVeep:completionBlock:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/getVeep:completionBlock:">+&nbsp;getVeep:completionBlock:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>request a veep by veepId and return a VPKVeep in the completion handler</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (void)getVeep:(NSString *)<em>veepId</em> completionBlock:(VPKitVeepErrorCompletionBlock)<em>completion</em></code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">VPKitClass.h</code></p>
+			</div>
+			
+			
 		</div>
 	</div>
 </div><div class="section-method">
@@ -988,10 +1061,76 @@
 
 		<div class="method-info-container">
 			
+			
+			<div class="method-subsection brief-description">
+				<p>request a veep by originalContentURI and return a <a href="../Classes/VPKPublicVeep.html">VPKPublicVeep</a> in the completion handler</p>
+			</div>
+			
+		    
 
 			<div class="method-subsection method-declaration"><code>+ (void)requestVeepWithURL:(NSURL *)<em>imageURL</em> completionBlock:(VPKitPublicVeepErrorCompletionBlock)<em>completion</em></code></div>
 
 		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">VPKitClass.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/getVeepWithURL:completionBlock:" title="getVeepWithURL:completionBlock:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/getVeepWithURL:completionBlock:">+&nbsp;getVeepWithURL:completionBlock:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>request a veep by originalContentURI and return a VPKVeep in the completion handler</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (void)getVeepWithURL:(NSURL *)<em>imageURL</em> completionBlock:(VPKitVeepErrorCompletionBlock)<em>completion</em></code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">VPKitClass.h</code></p>
+			</div>
+			
+			
 		</div>
 	</div>
 </div><div class="section-method">
@@ -1004,10 +1143,76 @@
 
 		<div class="method-info-container">
 			
+			
+			<div class="method-subsection brief-description">
+				<p>request a veep by originalContentURI and return a <a href="../Classes/VPKPublicVeep.html">VPKPublicVeep</a> in the completion handler</p>
+			</div>
+			
+		    
 
 			<div class="method-subsection method-declaration"><code>- (void)requestVeepWithURL:(NSURL *)<em>imageURL</em> completionBlock:(VPKitPublicVeepErrorCompletionBlock)<em>completion</em></code></div>
 
 		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">VPKitClass.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/getVeepIdWithURI:completionBlock:" title="getVeepIdWithURI:completionBlock:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/getVeepIdWithURI:completionBlock:">+&nbsp;getVeepIdWithURI:completionBlock:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>request a veep identifier by originalContentURI and return the identifier as an NSString in the completion handler</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (void)getVeepIdWithURI:(NSURL *)<em>originalContentURI</em> completionBlock:(VPKVeepIdentifierErrorCompletionBlock)<em>completion</em></code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">VPKitClass.h</code></p>
+			</div>
+			
+			
 		</div>
 	</div>
 </div><div class="section-method">
@@ -1384,7 +1589,7 @@
 				<footer>
 					<div class="footer-copyright">
 						
-						<p class="copyright">Copyright &copy; 2017 Veepio. All rights reserved. Updated: 2017-10-10</p>
+						<p class="copyright">Copyright &copy; 2017 Veepio. All rights reserved. Updated: 2017-11-03</p>
 						
 						
 						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1333)</a>.</p>

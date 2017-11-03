@@ -35,6 +35,14 @@
 
 @interface VPKPreview : UIImageView
 
+
+/**
+ 
+ if set to YES the veep viewer will be presented regardless of whether the user has permissions to edit veeps. Default is NO.
+ 
+ */
+@property (nonatomic, assign) BOOL readonly;
+
 /**
  Read-only veepId - obtained from the VPKImage if initalised with a veepId, or from the imageURL if there is a matching veep available.
  */
