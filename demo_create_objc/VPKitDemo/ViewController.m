@@ -204,13 +204,15 @@
  */
 
 - (void)veepEditor:(VPKVeepEditor *)editor didPublishVeep:(NSString *)veepId  {
-    [VPKit requestVeep:veepId completionBlock:
-     ^(VPKPublicVeep * _Nullable veep, NSError * _Nullable error) {
-         NSLog(@"%@",veep);
-     }];
+   
     NSLog(@"%s %@",__func__,veepId);
-    [self dismissViewControllerAnimated:YES completion:nil];
-    [VPKit logout];
+    [self dismissViewControllerAnimated:YES completion:^{
+        //test that we can fetch the veep we just published
+        [VPKit requestVeep:veepId completionBlock:
+         ^(VPKPublicVeep * _Nullable veep, NSError * _Nullable error) {
+             NSLog(@"%@",veep);
+         }];
+    } ];   [VPKit logout];
 }
 
 - (void)veepEditorDidCancel:(VPKVeepEditor *)editor {
