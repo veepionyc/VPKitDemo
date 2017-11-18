@@ -192,14 +192,17 @@ class ViewController:
         /*
          demo method to get a publicVeep object from a veepId
          */
-        VPKit.requestVeep(veepId) { (veep, error) in
-            if ((veep) != nil){
+        
+        self.dismiss(animated: true, completion:  { () -> Void in
+            VPKit.requestVeep(veepId) { (veep, error) in
+                guard let veep = veep else {
+                    print("\(error.debugDescription)")
+                    return
+                }
                 print("\(veep)")
-            } else {
-                print("\(error)")
             }
-        }
-        self.dismiss(animated: true, completion: nil)
+            
+        })
     }
     
     func veepEditorDidCancel(_ editor: VPKVeepEditor)
