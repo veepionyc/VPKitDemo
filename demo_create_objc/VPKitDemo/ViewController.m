@@ -59,12 +59,16 @@
     UIImage* image = [UIImage imageNamed:@"KrispyGlas"];
     image = [[VPKImage alloc] initWithImage:image veepId:@"1787"];
     self.viewerPreview.image = image;
+    self.viewerPreview.delegate = self;
+
 }
 
 - (void)configureViewerWithTestVideo {
     UIImage* image = [UIImage imageNamed:@"tomcruise"];
     image = [[VPKImage alloc] initWithImage:image veepId:@"1788"];
     self.viewerPreview.image = image;
+    self.viewerPreview.delegate = self;
+
     
 }
 
@@ -212,13 +216,12 @@
          ^(VPKPublicVeep * _Nullable veep, NSError * _Nullable error) {
              NSLog(@"%@",veep);
          }];
-    } ];   [VPKit logout];
+    }];
 }
 
 - (void)veepEditorDidCancel:(VPKVeepEditor *)editor {
     NSLog(@"%s",__func__);
     [self dismissViewControllerAnimated:YES completion:nil];
-    [VPKit logout];
 
 }
 

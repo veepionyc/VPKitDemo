@@ -75,6 +75,12 @@
 
 @property (nonatomic, assign) CGFloat iconLength;
 
+
+/**
+ use short-term caching for VeepIds. Default is YES;
+ */
+@property (nonatomic, assign) BOOL useCache;
+
 - (void)showIcon;
 - (void)hideIcon;
 - (void)showIcon:(BOOL)animated;
