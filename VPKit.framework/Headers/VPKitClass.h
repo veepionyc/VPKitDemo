@@ -92,6 +92,16 @@ Obtain these credentials by registering your app with the VEEPIO developer porta
 
 - (void)setProduction:(BOOL)production;
 
+/**
+ Monetisation support
+ 
+@param shouldMonetise
+ 
+set to YES if requiring Amazon affiliation button during Veep Create
+ 
+*/
+
++ (void)setShouldMonetise:(BOOL)shouldMonetise;
 
 - (instancetype)initUnique;
 
@@ -242,7 +252,7 @@ Instance-level heavyweight authentication for users with email identifier and pa
  request a veep identifier by originalContentURI and return the identifier as an NSString in the completion handler
  */
 
-+ (void) getVeepIdWithURI:(NSURL*)originalContentURI completionBlock:(VPKVeepIdentifierErrorCompletionBlock)completion;
++ (void) getVeepIdWithURI:(NSURL*)originalContentURI useCache:(BOOL)useCache completionBlock:(VPKVeepIdentifierErrorCompletionBlock)completion;
 
 
 /**

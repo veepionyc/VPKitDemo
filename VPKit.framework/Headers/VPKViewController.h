@@ -16,6 +16,7 @@
 @class VPKGoogleCellModel;
 @class VPKVeep;
 @class VPKImage;
+@class VPKSessionData;
 typedef NS_ENUM(NSInteger, VPKViewMode );
 
 NS_ASSUME_NONNULL_BEGIN
@@ -27,7 +28,6 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, assign) CGRect toRect;
 @property (nonatomic, assign) CGRect fromRect;
 @property (nonatomic, strong, nonnull) UINavigationBar* navBar;
-@property (nonatomic, assign) CGRect startRect;
 @property (nonatomic, strong, nullable) id selectedTrackObserver;
 @property (nonatomic, strong, nonnull) VPKCollectionVC* collectionVC;
 //@property (nonatomic, strong, nullable) NSString* veepId;
@@ -36,8 +36,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) VPKVeepFetcher* fetcher;
 @property (nonatomic, strong) VPKStyles* styles;
 @property (nonatomic, assign) BOOL forwardErrors;
-
-
+@property (nonatomic, copy) VPKSessionData* sessionData;
 
 - (nonnull UIView*)transitioningView;
 - (nonnull UIImageView*)transitioningImageView;
@@ -86,9 +85,17 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)expandWebView:(NSNotification*)notification;
     
 - (UIEdgeInsets)safeInsets;
-- (BOOL)isIphoneX;
 
 - (VPKImage*)vpkImage;
+
+- (void)logVeepView:(VPKVeep*)veep;
+- (void)logVeepSelect:(NSString*)trackId;
+- (void)logProductView:(NSString*)trackId URL:(NSURL*)URL;
+- (void)logProductNavigation:(NSString*)trackId URL:(NSURL*)URL;
+- (void)logProductExpand:(NSString*)trackId;
+- (void)logProductClose:(NSString*)trackId;
+- (void)logVeepViewClose;
+
 @end
 
 NS_ASSUME_NONNULL_END

@@ -70,9 +70,9 @@
 		
 		<option value="//api/name/selectedTrackObserver">selectedTrackObserver</option>
 		
-		<option value="//api/name/sourceView">sourceView</option>
+		<option value="//api/name/sessionData">sessionData</option>
 		
-		<option value="//api/name/startRect">startRect</option>
+		<option value="//api/name/sourceView">sourceView</option>
 		
 		<option value="//api/name/styles">styles</option>
 		
@@ -108,7 +108,19 @@
 		
 		<option value="//api/name/initWithView:image:styles:fetcher:">- initWithView:image:styles:fetcher:</option>
 		
-		<option value="//api/name/isIphoneX">- isIphoneX</option>
+		<option value="//api/name/logProductClose:">- logProductClose:</option>
+		
+		<option value="//api/name/logProductExpand:">- logProductExpand:</option>
+		
+		<option value="//api/name/logProductNavigation:URL:">- logProductNavigation:URL:</option>
+		
+		<option value="//api/name/logProductView:URL:">- logProductView:URL:</option>
+		
+		<option value="//api/name/logVeepSelect:">- logVeepSelect:</option>
+		
+		<option value="//api/name/logVeepView:">- logVeepView:</option>
+		
+		<option value="//api/name/logVeepViewClose">- logVeepViewClose</option>
 		
 		<option value="//api/name/next">- next</option>
 		
@@ -276,22 +288,6 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/startRect" title="startRect"></a>
-	<h3 class="method-title"><code><a href="#//api/name/startRect">&nbsp;&nbsp;startRect</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) CGRect startRect</code></div>
-
-		    
-		</div>
-	</div>
-</div><div class="section-method">
 	<a name="//api/name/selectedTrackObserver" title="selectedTrackObserver"></a>
 	<h3 class="method-title"><code><a href="#//api/name/selectedTrackObserver">&nbsp;&nbsp;selectedTrackObserver</a></code>
 </h3>
@@ -399,6 +395,22 @@
 			
 
 			<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) BOOL forwardErrors</code></div>
+
+		    
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/sessionData" title="sessionData"></a>
+	<h3 class="method-title"><code><a href="#//api/name/sessionData">&nbsp;&nbsp;sessionData</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, copy) VPKSessionData *sessionData</code></div>
 
 		    
 		</div>
@@ -756,22 +768,6 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/isIphoneX" title="isIphoneX"></a>
-	<h3 class="method-title"><code><a href="#//api/name/isIphoneX">&ndash;&nbsp;isIphoneX</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-
-			<div class="method-subsection method-declaration"><code>- (BOOL)isIphoneX</code></div>
-
-		    
-		</div>
-	</div>
-</div><div class="section-method">
 	<a name="//api/name/vpkImage" title="vpkImage"></a>
 	<h3 class="method-title"><code><a href="#//api/name/vpkImage">&ndash;&nbsp;vpkImage</a></code>
 </h3>
@@ -783,6 +779,118 @@
 			
 
 			<div class="method-subsection method-declaration"><code>- (VPKImage *)vpkImage</code></div>
+
+		    
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/logVeepView:" title="logVeepView:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/logVeepView:">&ndash;&nbsp;logVeepView:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+
+			<div class="method-subsection method-declaration"><code>- (void)logVeepView:(VPKVeep *)<em>veep</em></code></div>
+
+		    
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/logVeepSelect:" title="logVeepSelect:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/logVeepSelect:">&ndash;&nbsp;logVeepSelect:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+
+			<div class="method-subsection method-declaration"><code>- (void)logVeepSelect:(NSString *)<em>trackId</em></code></div>
+
+		    
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/logProductView:URL:" title="logProductView:URL:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/logProductView:URL:">&ndash;&nbsp;logProductView:URL:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+
+			<div class="method-subsection method-declaration"><code>- (void)logProductView:(NSString *)<em>trackId</em> URL:(NSURL *)<em>URL</em></code></div>
+
+		    
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/logProductNavigation:URL:" title="logProductNavigation:URL:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/logProductNavigation:URL:">&ndash;&nbsp;logProductNavigation:URL:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+
+			<div class="method-subsection method-declaration"><code>- (void)logProductNavigation:(NSString *)<em>trackId</em> URL:(NSURL *)<em>URL</em></code></div>
+
+		    
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/logProductExpand:" title="logProductExpand:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/logProductExpand:">&ndash;&nbsp;logProductExpand:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+
+			<div class="method-subsection method-declaration"><code>- (void)logProductExpand:(NSString *)<em>trackId</em></code></div>
+
+		    
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/logProductClose:" title="logProductClose:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/logProductClose:">&ndash;&nbsp;logProductClose:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+
+			<div class="method-subsection method-declaration"><code>- (void)logProductClose:(NSString *)<em>trackId</em></code></div>
+
+		    
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/logVeepViewClose" title="logVeepViewClose"></a>
+	<h3 class="method-title"><code><a href="#//api/name/logVeepViewClose">&ndash;&nbsp;logVeepViewClose</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+
+			<div class="method-subsection method-declaration"><code>- (void)logVeepViewClose</code></div>
 
 		    
 		</div>
@@ -800,7 +908,7 @@
 				<footer>
 					<div class="footer-copyright">
 						
-						<p class="copyright">Copyright &copy; 2017 Veepio. All rights reserved. Updated: 2017-11-17</p>
+						<p class="copyright">Copyright &copy; 2017 Veepio. All rights reserved. Updated: 2017-12-19</p>
 						
 						
 						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1333)</a>.</p>
