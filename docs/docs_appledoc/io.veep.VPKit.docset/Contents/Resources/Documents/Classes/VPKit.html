@@ -84,6 +84,8 @@
 		
 		<option value="//api/name/getVeep:completionBlock:">+ getVeep:completionBlock:</option>
 		
+		<option value="//api/name/getVeepHeaderWithURI:useCache:completionBlock:">+ getVeepHeaderWithURI:useCache:completionBlock:</option>
+		
 		<option value="//api/name/getVeepIdWithURI:useCache:completionBlock:">+ getVeepIdWithURI:useCache:completionBlock:</option>
 		
 		<option value="//api/name/getVeepWithURL:completionBlock:">+ getVeepWithURL:completionBlock:</option>
@@ -123,6 +125,8 @@
 		<option value="//api/name/deleteVeeps:completion:">- deleteVeeps:completion:</option>
 		
 		<option value="//api/name/environment">- environment</option>
+		
+		<option value="//api/name/getVeepHeaderWithURI:useCache:completionBlock:">- getVeepHeaderWithURI:useCache:completionBlock:</option>
 		
 		<option value="//api/name/initUnique">- initUnique</option>
 		
@@ -1143,6 +1147,22 @@
 		</div>
 	</div>
 </div><div class="section-method">
+	<a name="//api/name/requestVeepWithURL:completionBlock:" title="requestVeepWithURL:completionBlock:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/requestVeepWithURL:completionBlock:">&ndash;&nbsp;requestVeepWithURL:completionBlock:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+
+			<div class="method-subsection method-declaration"><code>- (void)requestVeepWithURL:(NSURL *)<em>imageURL</em> completionBlock:(VPKitPublicVeepErrorCompletionBlock)<em>completion</em></code></div>
+
+		    
+		</div>
+	</div>
+</div><div class="section-method">
 	<a name="//api/name/getVeepWithURL:completionBlock:" title="getVeepWithURL:completionBlock:"></a>
 	<h3 class="method-title"><code><a href="#//api/name/getVeepWithURL:completionBlock:">+&nbsp;getVeepWithURL:completionBlock:</a></code>
 </h3>
@@ -1160,47 +1180,6 @@
 		    
 
 			<div class="method-subsection method-declaration"><code>+ (void)getVeepWithURL:(NSURL *)<em>imageURL</em> completionBlock:(VPKitVeepErrorCompletionBlock)<em>completion</em></code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">VPKitClass.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/requestVeepWithURL:completionBlock:" title="requestVeepWithURL:completionBlock:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/requestVeepWithURL:completionBlock:">&ndash;&nbsp;requestVeepWithURL:completionBlock:</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>request a veep by originalContentURI and return a <a href="../Classes/VPKPublicVeep.html">VPKPublicVeep</a> in the completion handler</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>- (void)requestVeepWithURL:(NSURL *)<em>imageURL</em> completionBlock:(VPKitPublicVeepErrorCompletionBlock)<em>completion</em></code></div>
 
 		    
 			
@@ -1263,6 +1242,63 @@
 			</div>
 			
 			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/getVeepHeaderWithURI:useCache:completionBlock:" title="getVeepHeaderWithURI:useCache:completionBlock:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/getVeepHeaderWithURI:useCache:completionBlock:">+&nbsp;getVeepHeaderWithURI:useCache:completionBlock:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>request a veep header by originalContentURI and return the header as an <a href="../Classes/VPKPublicVeep.html">VPKPublicVeep</a> in the completion handler</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (void)getVeepHeaderWithURI:(NSURL *)<em>originalContentURI</em> useCache:(BOOL)<em>useCache</em> completionBlock:(VPKitPublicVeepErrorCompletionBlock)<em>completion</em></code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">VPKitClass.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/getVeepHeaderWithURI:useCache:completionBlock:" title="getVeepHeaderWithURI:useCache:completionBlock:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/getVeepHeaderWithURI:useCache:completionBlock:">&ndash;&nbsp;getVeepHeaderWithURI:useCache:completionBlock:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+
+			<div class="method-subsection method-declaration"><code>- (void)getVeepHeaderWithURI:(NSURL *)<em>originalContentURI</em> useCache:(BOOL)<em>useCache</em> completionBlock:(VPKitPublicVeepErrorCompletionBlock)<em>completion</em></code></div>
+
+		    
 		</div>
 	</div>
 </div><div class="section-method">
@@ -1639,7 +1675,7 @@
 				<footer>
 					<div class="footer-copyright">
 						
-						<p class="copyright">Copyright &copy; 2017 Veepio. All rights reserved. Updated: 2017-12-19</p>
+						<p class="copyright">Copyright &copy; 2018 Veepio. All rights reserved. Updated: 2018-01-24</p>
 						
 						
 						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1333)</a>.</p>

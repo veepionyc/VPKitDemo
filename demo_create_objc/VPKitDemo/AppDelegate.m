@@ -76,7 +76,8 @@
     VPKit.styles.color.navBar = [UIColor colorWithWhite:0.1 alpha:1.0];
     VPKit.styles.font.navBarFont = [UIFont systemFontOfSize:18 weight:UIFontWeightHeavy];
     VPKit.styles.font.cellNavBarFont = [UIFont systemFontOfSize:14 weight:UIFontWeightBold];
-    
+   // [VPKit setProduction:YES    ];
+  //  [VPKit setShouldMonetise:YES];
     
     return YES;
 }

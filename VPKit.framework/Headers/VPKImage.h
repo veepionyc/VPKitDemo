@@ -3,11 +3,12 @@
 //  VPKit
 //
 //  Created by jonathan on 10/06/2016.
-//  Copyright © 2016 jonathan. All rights reserved.
+//  Copyright © 2016 VEEPIO LLC. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 @class VPKVeep;
+@class VPKPublicVeep;
 NS_ASSUME_NONNULL_BEGIN
 
 /**
@@ -23,6 +24,12 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong, readonly, nullable) NSString* veepId;
 @property (nonatomic, strong, readonly, nullable) NSURL* originalContentURI;
 @property (nonatomic, strong, readonly, nullable) VPKVeep* veep;
+@property (nonatomic, strong, readonly, nullable) VPKPublicVeep* publicVeep;
+
+/**
+ identifier is a courtesy property that the host app can use for tracking purposes.
+ */
+@property (nonatomic, strong, nullable) NSString* mediaIdentifier;
 
 /**
  deprecated 2.5
@@ -54,6 +61,11 @@ In the case of video this will be the source address of the video asset.
  sets the veep, veepId and originalContentUri
 */
 - (void)updateWithVeep:(VPKVeep*)veep;
+
+/**
+ sets the publicVeep (a veep header stub), veepId and originalContentUri
+ */
+- (void)updateWithPublicVeep:(VPKPublicVeep*)veep;
 
 /**
 sets self.veep to nil and self.veepId to veepId

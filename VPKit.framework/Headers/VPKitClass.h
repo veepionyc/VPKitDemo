@@ -236,17 +236,14 @@ Instance-level heavyweight authentication for users with email identifier and pa
  */
 + (void) requestVeepWithURL:(NSURL*)imageURL completionBlock:(VPKitPublicVeepErrorCompletionBlock)completion;
 
+- (void) requestVeepWithURL:(NSURL*)imageURL completionBlock:(VPKitPublicVeepErrorCompletionBlock)completion;
+
 /**
  request a veep by originalContentURI and return a VPKVeep in the completion handler
  */
 
 + (void) getVeepWithURL:(NSURL*)imageURL completionBlock:(VPKitVeepErrorCompletionBlock)completion;
 
-/**
- request a veep by originalContentURI and return a VPKPublicVeep in the completion handler
- */
-
-- (void) requestVeepWithURL:(NSURL*)imageURL completionBlock:(VPKitPublicVeepErrorCompletionBlock)completion;
 
 /**
  request a veep identifier by originalContentURI and return the identifier as an NSString in the completion handler
@@ -254,6 +251,13 @@ Instance-level heavyweight authentication for users with email identifier and pa
 
 + (void) getVeepIdWithURI:(NSURL*)originalContentURI useCache:(BOOL)useCache completionBlock:(VPKVeepIdentifierErrorCompletionBlock)completion;
 
+/**
+ request a veep header by originalContentURI and return the header as an VPKPublicVeep in the completion handler
+ */
+
++ (void) getVeepHeaderWithURI:(NSURL*)originalContentURI useCache:(BOOL)useCache completionBlock:(VPKitPublicVeepErrorCompletionBlock)completion;
+
+- (void) getVeepHeaderWithURI:(NSURL*)originalContentURI useCache:(BOOL)useCache completionBlock:(VPKitPublicVeepErrorCompletionBlock)completion;
 
 /**
 A string representation of the VPKit version.
