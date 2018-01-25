@@ -84,11 +84,19 @@
 	
 	<optgroup label="Instance Methods">
 		
+		<option value="//api/name/currentPlaybackTime">- currentPlaybackTime</option>
+		
 		<option value="//api/name/hideIcon">- hideIcon</option>
 		
 		<option value="//api/name/hideIcon:">- hideIcon:</option>
 		
+		<option value="//api/name/mediaIdentifier">- mediaIdentifier</option>
+		
+		<option value="//api/name/qualityOfServiceDict">- qualityOfServiceDict</option>
+		
 		<option value="//api/name/reset">- reset</option>
+		
+		<option value="//api/name/sessionIdentifier">- sessionIdentifier</option>
 		
 		<option value="//api/name/showIcon">- showIcon</option>
 		
@@ -241,7 +249,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>The optional  delegate affords the host app full control over the invoking of Veep Viewer and Veep Editors. If not set, VPKPreview will handle the presenting and dismissing of Viewers and Editors. If set, the host app is responsible for VeepViewer and VeepEditor management using the touch delegate callback.</p>
+				<p>The optional  touch delegate affords the host app full control over the invoking of Veep Viewer and Veep Editors. If not set, VPKPreview will handle the presenting and dismissing of Viewers and Editors. If set, the host app is responsible for VeepViewer and VeepEditor management using the touch delegate callback.</p>
 			</div>
 			
 		    
@@ -282,7 +290,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>The optional  pass-through <a href="#//api/name/delegate">delegate</a> sends a tap gesture recogniser message to the receiver in the event that the VPKPreview doesn&rsquo;t handle it&rsquo;s tap. This is useful where the VPKPreview is view-only and the image has no associated veep content. and the host app wishes to respond to taps that the VPKPreview will ignore.</p>
+				<p>The optional  pass-through <a href="#//api/name/delegate">delegate</a> sends tap gesture recogniser messages to the receiver. in the event that the VPKPreview doesn&rsquo;t handle it&rsquo;s tap. This is useful where the VPKPreview is view-only and the image has no associated veep content. and the host app wishes to respond to taps that the VPKPreview will ignore.</p>
 			</div>
 			
 		    
@@ -516,6 +524,171 @@ Default is NO.</p>
 		</div>
 	</div>
 </div><div class="section-method">
+	<a name="//api/name/currentPlaybackTime" title="currentPlaybackTime"></a>
+	<h3 class="method-title"><code><a href="#//api/name/currentPlaybackTime">&ndash;&nbsp;currentPlaybackTime</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>returns playback time if a video is currently playing in the <a href="../Classes/VPKit.html">VPKit</a> SDK.
+Returns -1 if video not loaded.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (NSTimeInterval)currentPlaybackTime</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">VPKPreview.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/qualityOfServiceDict" title="qualityOfServiceDict"></a>
+	<h3 class="method-title"><code><a href="#//api/name/qualityOfServiceDict">&ndash;&nbsp;qualityOfServiceDict</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>returns NSDictionary of Quality of Service data for currently playing video. Returns nil if video not loaded.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (nullable NSDictionary *)qualityOfServiceDict</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">VPKPreview.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/sessionIdentifier" title="sessionIdentifier"></a>
+	<h3 class="method-title"><code><a href="#//api/name/sessionIdentifier">&ndash;&nbsp;sessionIdentifier</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>returns a sessionId.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (nullable NSString *)sessionIdentifier</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">VPKPreview.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/mediaIdentifier" title="mediaIdentifier"></a>
+	<h3 class="method-title"><code><a href="#//api/name/mediaIdentifier">&ndash;&nbsp;mediaIdentifier</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>returns a mediaIdentifier.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (nullable NSString *)mediaIdentifier</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">VPKPreview.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
 	<a name="//api/name/previewURLforYoutubeId:" title="previewURLforYoutubeId:"></a>
 	<h3 class="method-title"><code><a href="#//api/name/previewURLforYoutubeId:">+&nbsp;previewURLforYoutubeId:</a></code>
 </h3>
@@ -527,7 +700,7 @@ Default is NO.</p>
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Utility function for preview of youtube veep (experimental).</p>
+				<p>Utility method for preview of youtube veep (experimental).</p>
 			</div>
 			
 		    
@@ -569,7 +742,7 @@ Default is NO.</p>
 				<footer>
 					<div class="footer-copyright">
 						
-						<p class="copyright">Copyright &copy; 2017 Veepio. All rights reserved. Updated: 2017-12-19</p>
+						<p class="copyright">Copyright &copy; 2018 Veepio. All rights reserved. Updated: 2018-01-24</p>
 						
 						
 						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1333)</a>.</p>

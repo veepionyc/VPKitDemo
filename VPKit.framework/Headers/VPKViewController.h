@@ -96,6 +96,11 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)logProductClose:(NSString*)trackId;
 - (void)logVeepViewClose;
 
+#pragma mark - heartbeat
+
+- (NSTimeInterval)currentPlaybackTime;
+- (nullable NSDictionary*)qualityOfServiceDict;
+
 @end
 
 NS_ASSUME_NONNULL_END

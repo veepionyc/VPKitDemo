@@ -35,6 +35,14 @@
     NSString* clientId = @"1zArpBErovQ1MjVHvigJqXwE8qt47U2Yy5XzG3CP";
     NSString* clientSecret = @"VpLIvEetceUnHBEIf6fLUwLxELBh2QesZ6iLLiPHCesRLXfOLLJNcFfmp03wJfGaJquO3V8KqHjtvzlufuXfWWgcpWVw9wxfBJNYdZh96JHV5hk44dJbqiCqplrKcSml";
     
+    
+    /*
+    NSString* appId = @"VeepMaker-Eagles";
+    NSString* clientId = @"XGTDTI3XGF91yoSudZmfYXuVu3ZZ5OeHM2UfCtZv";
+    NSString* clientSecret = @"4LNUTdiQkakzJH4ZWWnjqiiPX2zc4IADXaLANw0UIUAD35EWbw6NVEd2tLBJKx95jTCXTjIFj4wRUCsgXjAeHb2HtUYDYSaEz3GWuK6xJO7TAS0fZPQP4AZOatMCkFi0";
+    
+    
+    */
     /*
      
      INITIALISATION
@@ -45,7 +53,7 @@
                    clientId:clientId
                clientSecret:clientSecret];
     
-    
+    [VPKit setProduction:YES];
     /*
      
      
@@ -71,7 +79,7 @@
      
      */
     
-    [VPKit styles].margin = 12;
+    [VPKit styles].margin = 0;
     VPKit.styles.color.navBar = [UIColor colorWithWhite:0.1 alpha:1.0];
     VPKit.styles.font.navBarFont = [UIFont systemFontOfSize:18 weight:UIFontWeightHeavy];
     VPKit.styles.font.cellNavBarFont = [UIFont systemFontOfSize:14 weight:UIFontWeightBold];

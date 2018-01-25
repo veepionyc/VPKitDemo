@@ -18,9 +18,15 @@
 @end
 
 @protocol VPKPreviewPassThroughDelegate <NSObject>
-
+@optional
+/**
+ tap detected and ignored by VPKPreview.
+ */
 - (void)vpkPreview:(nonnull VPKPreview*)preview passedThroughTap:(nonnull UITapGestureRecognizer*)tapGestureRecognizer;
-
+/**
+ tap detected and handled by VPKPreview.
+ */
+- (void)vpkPreview:(nonnull VPKPreview*)preview handledTap:(nonnull UITapGestureRecognizer*)tapGestureRecognizer;
 @end
 
 /**
@@ -33,8 +39,8 @@
  @see VPKImage
  */
 
-@interface VPKPreview : UIImageView
 
+@interface VPKPreview : UIImageView
 
 /**
  
@@ -49,13 +55,14 @@
 @property (nullable, nonatomic, strong, readonly) NSString* veepId;
 
 /**
- The optional  delegate affords the host app full control over the invoking of Veep Viewer and Veep Editors. If not set, VPKPreview will handle the presenting and dismissing of Viewers and Editors. If set, the host app is responsible for VeepViewer and VeepEditor management using the touch delegate callback.
+ The optional  touch delegate affords the host app full control over the invoking of Veep Viewer and Veep Editors. If not set, VPKPreview will handle the presenting and dismissing of Viewers and Editors. If set, the host app is responsible for VeepViewer and VeepEditor management using the touch delegate callback.
  */
 
+//@property (nullable, nonatomic, weak) id <VPKPreviewDelegate> delegate;
 @property (nullable, nonatomic, weak) id <VPKPreviewDelegate> delegate;
 
 /**
- The optional  pass-through delegate sends a tap gesture recogniser message to the receiver in the event that the VPKPreview doesn't handle it's tap. This is useful where the VPKPreview is view-only and the image has no associated veep content. and the host app wishes to respond to taps that the VPKPreview will ignore.
+ The optional  pass-through delegate sends tap gesture recogniser messages to the receiver. in the event that the VPKPreview doesn't handle it's tap. This is useful where the VPKPreview is view-only and the image has no associated veep content. and the host app wishes to respond to taps that the VPKPreview will ignore.
  */
 
 @property (nullable, nonatomic, weak) id <VPKPreviewPassThroughDelegate> passThroughDelegate;
@@ -87,8 +94,31 @@
 - (void)hideIcon:(BOOL)animated;
 - (void)reset;
 
+
 /**
-Utility function for preview of youtube veep (experimental).
+ returns playback time if a video is currently playing in the VPKit SDK.
+ Returns -1 if video not loaded.
+*/
+- (NSTimeInterval)currentPlaybackTime;
+
+/**
+ returns NSDictionary of Quality of Service data for currently playing video. Returns nil if video not loaded.
+ */
+- (nullable NSDictionary*)qualityOfServiceDict;
+
+
+/**
+returns a sessionId.
+ */
+- (nullable NSString*)sessionIdentifier;
+
+/**
+ returns a mediaIdentifier.
+ */
+- (nullable NSString*)mediaIdentifier;
+
+/**
+Utility method for preview of youtube veep (experimental).
  */
 
 + (nullable NSURL*)previewURLforYoutubeId:(nonnull NSString*)youtubeId;
