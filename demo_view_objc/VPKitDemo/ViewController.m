@@ -72,7 +72,7 @@
 
 
 - (void)configureViewer2 {
-    UIImage* image = [UIImage imageNamed:@"stik_thin"];
+    UIImage* image = [UIImage imageNamed:@"KrispyGlas"];
     image = [[VPKImage alloc] initWithImage:image veepId:@"1787"];
     self.viewerPreview2.image = image;
 }
