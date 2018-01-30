@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang='en'>
   <head>
-    <title>VPKStyles Class Reference</title>
+    <title>VPKImage Class Reference</title>
     <link rel='stylesheet' type='text/css' href='../css/jazzy.css' />
     <link rel='stylesheet' type='text/css' href='../css/highlight.css' />
     <meta charset='utf-8'>
@@ -10,9 +10,9 @@
   </head>
   <body>
 
-    <a name='//apple_ref/objc/Class/VPKStyles' class='dashAnchor'></a>
+    <a name='//apple_ref/objc/Class/VPKImage' class='dashAnchor'></a>
 
-    <a title='VPKStyles Class Reference'></a>
+    <a title='VPKImage Class Reference'></a>
 
     <header class='header'>
       <p class='header-col header-col--primary'>
@@ -34,7 +34,7 @@
     <p class='breadcrumbs'>
       <a class='breadcrumb' href='../index.html'>VPKit Reference</a>
       <img class='carat' src='../img/carat.png' />
-      VPKStyles Class Reference
+      VPKImage Class Reference
     </p>
 
     <div class='content-wrapper'>
@@ -209,14 +209,22 @@
 
         <section class='section'>
           <div class='section-content'>
-            <h1>VPKStyles</h1>
+            <h1>VPKImage</h1>
               <div class='declaration'>
                 <div class='language'>
-                  <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">VPKStyles</span> <span class="p">:</span> <span class="nc">NSObject</span></code></pre>
+                  <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">VPKImage</span> <span class="p">:</span> <span class="nc">UIImage</span></code></pre>
 
                 </div>
               </div>
-            <p>Use VPKStyles and it&rsquo;s subclasses to alter the default appearance of the VPKit UI.</p>
+            <p>Drop-in replacement (subclass) for UIImage
+For use in conjunction with VPKPreview</p>
+
+<p>If VPKImage is initialised with null veepId or imageURL it will behave as a standard UIImage</p>
+<div class="aside aside-see">
+    <p class="aside-title">See</p>
+    <code><a href="../Classes/VPKPreview.html">VPKPreview</a></code>
+
+</div>
 
           </div>
         </section>
@@ -224,20 +232,13 @@
         <section class='section'>
           <div class='section-content'>
             <div class="task-group">
-              <div class="task-name-container">
-                <a name="/units"></a>
-                <a name="//apple_ref/objc/Section/units" class="dashAnchor"></a>
-                <a href="#/units">
-                  <h3 class="section-name">units</h3>
-                </a>
-              </div>
               <ul class='item-container'>
                 <li class="item">
                   <div class="item-heading">
                     <code>
-                    <a name="/c:objc(cs)VPKStyles(py)lineWidth"></a>
-                    <a name="//apple_ref/objc/Property/lineWidth" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)VPKStyles(py)lineWidth">lineWidth</a>
+                    <a name="/c:objc(cs)VPKImage(py)veepId"></a>
+                    <a name="//apple_ref/objc/Property/veepId" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)VPKImage(py)veepId">veepId</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -245,20 +246,20 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>The veepId, if available.</p>
 
                       </div>
                       <div class="declaration">
                         <h5>Declaration</h5>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">assign</span><span class="p">)</span> <span class="n">CGFloat</span> <span class="n">lineWidth</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">veepId</span><span class="p">;</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
                         
-                          <a href="https://github.com/veepionyc/VPKitDemo/tree/2.6.0/VPKit.framework/Headers/VPKStyles.h#L" class="button">Show on GitHub</a>
+                          <a href="https://github.com/veepionyc/VPKitDemo/tree/2.6.0/VPKit.framework/Headers/VPKImage.h#L27" class="button">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -266,9 +267,9 @@
                 <li class="item">
                   <div class="item-heading">
                     <code>
-                    <a name="/c:objc(cs)VPKStyles(py)margin"></a>
-                    <a name="//apple_ref/objc/Property/margin" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)VPKStyles(py)margin">margin</a>
+                    <a name="/c:objc(cs)VPKImage(py)originalContentURI"></a>
+                    <a name="//apple_ref/objc/Property/originalContentURI" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)VPKImage(py)originalContentURI">originalContentURI</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -276,20 +277,26 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>set this property to adjust the left and right margins for the Veep View.</p>
+                        <p>The original content URI, if available.</p>
+
+<p>In the case of an image veep, this will match the source URL of the supplied image.</p>
+
+<p>For a video veep, this is the source URI for the video media (<em>not</em> the placeholder image). This need not be an actual URL, but should be the unique identifier used when creating the veep (for example, it could be a youtube id).</p>
+
+<p>The URI is used to match the content to it&rsquo;s veep metadata. If a veepId is provided, the URI is not required as the veep will be fetched by it&rsquo;s id.</p>
 
                       </div>
                       <div class="declaration">
                         <h5>Declaration</h5>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">assign</span><span class="p">,</span> <span class="n">readwrite</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">CGFloat</span> <span class="n">margin</span><span class="p">;</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">NSURL</span> <span class="o">*</span><span class="n">originalContentURI</span><span class="p">;</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
                         
-                          <a href="https://github.com/veepionyc/VPKitDemo/tree/2.6.0/VPKit.framework/Headers/VPKStyles.h#L31" class="button">Show on GitHub</a>
+                          <a href="https://github.com/veepionyc/VPKitDemo/tree/2.6.0/VPKit.framework/Headers/VPKImage.h#L39" class="button">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -297,9 +304,9 @@
                 <li class="item">
                   <div class="item-heading">
                     <code>
-                    <a name="/c:objc(cs)VPKStyles(py)previewIconWidth"></a>
-                    <a name="//apple_ref/objc/Property/previewIconWidth" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)VPKStyles(py)previewIconWidth">previewIconWidth</a>
+                    <a name="/c:objc(cs)VPKImage(py)veep"></a>
+                    <a name="//apple_ref/objc/Property/veep" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)VPKImage(py)veep">veep</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -307,64 +314,20 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>set this property to adjust the  VPKPreview icon width.</p>
-
-<p>The default value is 50.</p>
+                        <p>The veep metadata associated with the image, if  available</p>
 
                       </div>
                       <div class="declaration">
                         <h5>Declaration</h5>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">assign</span><span class="p">,</span> <span class="n">readwrite</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">CGFloat</span> <span class="n">previewIconWidth</span><span class="p">;</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">VPKVeep</span> <span class="o">*</span><span class="n">veep</span><span class="p">;</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
                         
-                          <a href="https://github.com/veepionyc/VPKitDemo/tree/2.6.0/VPKit.framework/Headers/VPKStyles.h#L41" class="button">Show on GitHub</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <div class="task-name-container">
-                <a name="/color"></a>
-                <a name="//apple_ref/objc/Section/color" class="dashAnchor"></a>
-                <a href="#/color">
-                  <h3 class="section-name">color</h3>
-                </a>
-              </div>
-              <ul class='item-container'>
-                <li class="item">
-                  <div class="item-heading">
-                    <code>
-                    <a name="/c:objc(cs)VPKStyles(py)font"></a>
-                    <a name="//apple_ref/objc/Property/font" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)VPKStyles(py)font">font</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>VPKit font styles are set and adjusted in this VPKFontStyles object.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h5>Declaration</h5>
-                        <div class="language">
-                          <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n"><a href="../Classes/VPKFontStyles.html">VPKFontStyles</a></span> <span class="o">*</span><span class="n">font</span><span class="p">;</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div class="slightly-smaller">
-                        
-                          <a href="https://github.com/veepionyc/VPKitDemo/tree/2.6.0/VPKit.framework/Headers/VPKStyles.h#L52" class="button">Show on GitHub</a>
+                          <a href="https://github.com/veepionyc/VPKitDemo/tree/2.6.0/VPKit.framework/Headers/VPKImage.h#L44" class="button">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -372,9 +335,9 @@
                 <li class="item">
                   <div class="item-heading">
                     <code>
-                    <a name="/c:objc(cs)VPKStyles(py)color"></a>
-                    <a name="//apple_ref/objc/Property/color" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)VPKStyles(py)color">color</a>
+                    <a name="/c:objc(cs)VPKImage(py)publicVeep"></a>
+                    <a name="//apple_ref/objc/Property/publicVeep" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)VPKImage(py)publicVeep">publicVeep</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -382,20 +345,20 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>VPKit color styles are set and adjusted in this VPKColorStyles object.</p>
+                        <p>An abbreviated, header-only version of a veep, if available.</p>
 
                       </div>
                       <div class="declaration">
                         <h5>Declaration</h5>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n"><a href="../Classes/VPKColorStyles.html">VPKColorStyles</a></span> <span class="o">*</span><span class="n">color</span><span class="p">;</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n"><a href="../Classes/VPKPublicVeep.html">VPKPublicVeep</a></span> <span class="o">*</span><span class="n">publicVeep</span><span class="p">;</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
                         
-                          <a href="https://github.com/veepionyc/VPKitDemo/tree/2.6.0/VPKit.framework/Headers/VPKStyles.h#L58" class="button">Show on GitHub</a>
+                          <a href="https://github.com/veepionyc/VPKitDemo/tree/2.6.0/VPKit.framework/Headers/VPKImage.h#L49" class="button">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -403,9 +366,9 @@
                 <li class="item">
                   <div class="item-heading">
                     <code>
-                    <a name="/c:objc(cs)VPKStyles(im)configureAppearance"></a>
-                    <a name="//apple_ref/objc/Method/-configureAppearance" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)VPKStyles(im)configureAppearance">-configureAppearance</a>
+                    <a name="/c:objc(cs)VPKImage(py)mediaIdentifier"></a>
+                    <a name="//apple_ref/objc/Property/mediaIdentifier" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)VPKImage(py)mediaIdentifier">mediaIdentifier</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -413,20 +376,20 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>A courtesy property that the host app can use for tracking purposes.</p>
 
                       </div>
                       <div class="declaration">
                         <h5>Declaration</h5>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">configureAppearance</span><span class="p">;</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">mediaIdentifier</span><span class="p">;</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
                         
-                          <a href="https://github.com/veepionyc/VPKitDemo/tree/2.6.0/VPKit.framework/Headers/VPKStyles.h#L" class="button">Show on GitHub</a>
+                          <a href="https://github.com/veepionyc/VPKitDemo/tree/2.6.0/VPKit.framework/Headers/VPKImage.h#L54" class="button">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -434,9 +397,9 @@
                 <li class="item">
                   <div class="item-heading">
                     <code>
-                    <a name="/c:objc(cs)VPKStyles(im)barButtonItemFontAttributes"></a>
-                    <a name="//apple_ref/objc/Method/-barButtonItemFontAttributes" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)VPKStyles(im)barButtonItemFontAttributes">-barButtonItemFontAttributes</a>
+                    <a name="/c:objc(cs)VPKImage(im)initWithImage:veepId:"></a>
+                    <a name="//apple_ref/objc/Method/-initWithImage:veepId:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)VPKImage(im)initWithImage:veepId:">-initWithImage:veepId:</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -444,20 +407,61 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Use initWithImage:veepId if you are identifying veep content using the unique identifier (id) of the veep.</p>
+<div class="aside aside-see">
+    <p class="aside-title">See</p>
+    <p><code><a href="../Classes/VPKImage.html#/c:objc(cs)VPKImage(im)initWithImage:url:">-initWithImage:url:</a></code></p>
+
+</div>
 
                       </div>
                       <div class="declaration">
                         <h5>Declaration</h5>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">NSDictionary</span><span class="o">*</span><span class="p">)</span><span class="n">barButtonItemFontAttributes</span><span class="p">;</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">instancetype</span><span class="p">)</span><span class="nf">initWithImage</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">UIImage</span> <span class="o">*</span><span class="p">)</span><span class="nv">image</span>
+                               <span class="nf">veepId</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">veepId</span><span class="p">;</span></code></pre>
 
                         </div>
                       </div>
+                      <div>
+                        <h5>Parameters</h5>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>(UIImage*)image</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The UIImage that this instance will subclass</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>(NSString*)veepId</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A veep identifier. Veep metadata will be associated with the image using this identifier. The veep Id is returned as part of the veep creation process.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h5>Return Value</h5>
+                        <p>An instance of VPKImage.</p>
+                      </div>
                       <div class="slightly-smaller">
                         
-                          <a href="https://github.com/veepionyc/VPKitDemo/tree/2.6.0/VPKit.framework/Headers/VPKStyles.h#L" class="button">Show on GitHub</a>
+                          <a href="https://github.com/veepionyc/VPKitDemo/tree/2.6.0/VPKit.framework/Headers/VPKImage.h#L78" class="button">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -465,9 +469,9 @@
                 <li class="item">
                   <div class="item-heading">
                     <code>
-                    <a name="/c:objc(cs)VPKStyles(im)barButtonItemFontAttributesDisabled"></a>
-                    <a name="//apple_ref/objc/Method/-barButtonItemFontAttributesDisabled" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)VPKStyles(im)barButtonItemFontAttributesDisabled">-barButtonItemFontAttributesDisabled</a>
+                    <a name="/c:objc(cs)VPKImage(im)initWithImage:url:"></a>
+                    <a name="//apple_ref/objc/Method/-initWithImage:url:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)VPKImage(im)initWithImage:url:">-initWithImage:url:</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -475,20 +479,64 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Use initWithImage:url if you are identifying veep content using the original URI used to create the veep.</p>
+<div class="aside aside-see">
+    <p class="aside-title">See</p>
+    <p><code><a href="../Classes/VPKImage.html#/c:objc(cs)VPKImage(im)initWithImage:veepId:">-initWithImage:veepId:</a></code></p>
+
+</div>
 
                       </div>
                       <div class="declaration">
                         <h5>Declaration</h5>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">NSDictionary</span><span class="o">*</span><span class="p">)</span><span class="n">barButtonItemFontAttributesDisabled</span><span class="p">;</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">instancetype</span><span class="p">)</span><span class="nf">initWithImage</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">UIImage</span> <span class="o">*</span><span class="p">)</span><span class="nv">image</span>
+                                  <span class="nf">url</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSURL</span> <span class="o">*</span><span class="p">)</span><span class="nv">contentURI</span><span class="p">;</span></code></pre>
 
                         </div>
                       </div>
+                      <div>
+                        <h5>Parameters</h5>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>(UIImage*)image</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The UIImage that this instance will subclass</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>(NSURL*)contentURI</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The contentURI is the unique identifier for the veep&rsquo;d resource.
+In the case of an image this will often be the source URL used to obtain the UIImage.
+In the case of video this will be the source address of the video asset.
+The contentURI must be the same URI as was used to create the veep as that is how veeps are identified.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h5>Return Value</h5>
+                        <p>An instance of VPKImage.</p>
+                      </div>
                       <div class="slightly-smaller">
                         
-                          <a href="https://github.com/veepionyc/VPKitDemo/tree/2.6.0/VPKit.framework/Headers/VPKStyles.h#L" class="button">Show on GitHub</a>
+                          <a href="https://github.com/veepionyc/VPKitDemo/tree/2.6.0/VPKit.framework/Headers/VPKImage.h#L102" class="button">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -496,9 +544,9 @@
                 <li class="item">
                   <div class="item-heading">
                     <code>
-                    <a name="/c:objc(cs)VPKStyles(im)barButtonItemFontAttributesEnabled"></a>
-                    <a name="//apple_ref/objc/Method/-barButtonItemFontAttributesEnabled" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)VPKStyles(im)barButtonItemFontAttributesEnabled">-barButtonItemFontAttributesEnabled</a>
+                    <a name="/c:objc(cs)VPKImage(im)updateWithVeep:"></a>
+                    <a name="//apple_ref/objc/Method/-updateWithVeep:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)VPKImage(im)updateWithVeep:">-updateWithVeep:</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -506,20 +554,20 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>sets the veep, veepId and originalContentUri</p>
 
                       </div>
                       <div class="declaration">
                         <h5>Declaration</h5>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">NSDictionary</span><span class="o">*</span><span class="p">)</span><span class="n">barButtonItemFontAttributesEnabled</span><span class="p">;</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">updateWithVeep</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">VPKVeep</span> <span class="o">*</span><span class="p">)</span><span class="nv">veep</span><span class="p">;</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
                         
-                          <a href="https://github.com/veepionyc/VPKitDemo/tree/2.6.0/VPKit.framework/Headers/VPKStyles.h#L" class="button">Show on GitHub</a>
+                          <a href="https://github.com/veepionyc/VPKitDemo/tree/2.6.0/VPKit.framework/Headers/VPKImage.h#L107" class="button">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -527,9 +575,9 @@
                 <li class="item">
                   <div class="item-heading">
                     <code>
-                    <a name="/c:objc(cs)VPKStyles(im)configureNavBar:"></a>
-                    <a name="//apple_ref/objc/Method/-configureNavBar:" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)VPKStyles(im)configureNavBar:">-configureNavBar:</a>
+                    <a name="/c:objc(cs)VPKImage(im)updateWithPublicVeep:"></a>
+                    <a name="//apple_ref/objc/Method/-updateWithPublicVeep:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)VPKImage(im)updateWithPublicVeep:">-updateWithPublicVeep:</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -537,20 +585,20 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>sets the publicVeep (a veep header stub), veepId and originalContentUri.</p>
 
                       </div>
                       <div class="declaration">
                         <h5>Declaration</h5>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">configureNavBar</span><span class="p">:(</span><span class="n">UINavigationBar</span><span class="o">*</span><span class="p">)</span><span class="nv">navBar</span><span class="p">;</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">updateWithPublicVeep</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/VPKPublicVeep.html">VPKPublicVeep</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">veep</span><span class="p">;</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
                         
-                          <a href="https://github.com/veepionyc/VPKitDemo/tree/2.6.0/VPKit.framework/Headers/VPKStyles.h#L" class="button">Show on GitHub</a>
+                          <a href="https://github.com/veepionyc/VPKitDemo/tree/2.6.0/VPKit.framework/Headers/VPKImage.h#L112" class="button">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -558,9 +606,9 @@
                 <li class="item">
                   <div class="item-heading">
                     <code>
-                    <a name="/c:objc(cs)VPKStyles(im)configureCellNavBar:"></a>
-                    <a name="//apple_ref/objc/Method/-configureCellNavBar:" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)VPKStyles(im)configureCellNavBar:">-configureCellNavBar:</a>
+                    <a name="/c:objc(cs)VPKImage(im)updateWithVeepId:"></a>
+                    <a name="//apple_ref/objc/Method/-updateWithVeepId:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)VPKImage(im)updateWithVeepId:">-updateWithVeepId:</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -568,51 +616,39 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>sets <code><a href="../Classes/VPKImage.html#/c:objc(cs)VPKImage(py)veep">veep</a></code> to nil and <code><a href="../Classes/VPKImage.html#/c:objc(cs)VPKImage(py)veepId">veepId</a></code> to veepId.</p>
 
                       </div>
                       <div class="declaration">
                         <h5>Declaration</h5>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">configureCellNavBar</span><span class="p">:(</span><span class="n">UINavigationBar</span><span class="o">*</span><span class="p">)</span><span class="nv">navBar</span><span class="p">;</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">updateWithVeepId</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">veepId</span><span class="p">;</span></code></pre>
 
                         </div>
                       </div>
-                      <div class="slightly-smaller">
-                        
-                          <a href="https://github.com/veepionyc/VPKitDemo/tree/2.6.0/VPKit.framework/Headers/VPKStyles.h#L" class="button">Show on GitHub</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div class="item-heading">
-                    <code>
-                    <a name="/c:objc(cs)VPKStyles(im)configureBarButtonItem:"></a>
-                    <a name="//apple_ref/objc/Method/-configureBarButtonItem:" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)VPKStyles(im)configureBarButtonItem:">-configureBarButtonItem:</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h5>Declaration</h5>
-                        <div class="language">
-                          <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">configureBarButtonItem</span><span class="p">:(</span><span class="n">UIBarButtonItem</span><span class="o">*</span><span class="p">)</span><span class="nv">barButtonItem</span><span class="p">;</span></code></pre>
-
-                        </div>
+                      <div>
+                        <h5>Parameters</h5>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>veepId</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The unique identifier for a veep.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
                       </div>
                       <div class="slightly-smaller">
                         
-                          <a href="https://github.com/veepionyc/VPKitDemo/tree/2.6.0/VPKit.framework/Headers/VPKStyles.h#L" class="button">Show on GitHub</a>
+                          <a href="https://github.com/veepionyc/VPKitDemo/tree/2.6.0/VPKit.framework/Headers/VPKImage.h#L120" class="button">Show on GitHub</a>
                       </div>
                     </section>
                   </div>

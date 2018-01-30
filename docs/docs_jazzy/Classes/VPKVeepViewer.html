@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang='en'>
   <head>
-    <title>VPKUserStats Class Reference</title>
+    <title>VPKVeepViewer Class Reference</title>
     <link rel='stylesheet' type='text/css' href='../css/jazzy.css' />
     <link rel='stylesheet' type='text/css' href='../css/highlight.css' />
     <meta charset='utf-8'>
@@ -10,9 +10,9 @@
   </head>
   <body>
 
-    <a name='//apple_ref/objc/Class/VPKUserStats' class='dashAnchor'></a>
+    <a name='//apple_ref/objc/Class/VPKVeepViewer' class='dashAnchor'></a>
 
-    <a title='VPKUserStats Class Reference'></a>
+    <a title='VPKVeepViewer Class Reference'></a>
 
     <header class='header'>
       <p class='header-col header-col--primary'>
@@ -34,7 +34,7 @@
     <p class='breadcrumbs'>
       <a class='breadcrumb' href='../index.html'>VPKit Reference</a>
       <img class='carat' src='../img/carat.png' />
-      VPKUserStats Class Reference
+      VPKVeepViewer Class Reference
     </p>
 
     <div class='content-wrapper'>
@@ -209,10 +209,20 @@
 
         <section class='section'>
           <div class='section-content'>
-            <h1>VPKUserStats</h1>
+            <h1>VPKVeepViewer</h1>
               <div class='declaration'>
                 <div class='language'>
-                  <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">VPKUserStats</span> <span class="p">:</span> <span class="nc">VPKParseableObject</span></code></pre>
+                  <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">VPKVeepViewer</span> <span class="p">:</span> <span class="nc"><a href="../Classes/VPKViewController.html">VPKViewController</a></span>
+<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">weak</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">id</span> <span class="o">&lt;</span><span class="n"><a href="../Protocols/VPKVeepViewerDelegate.html">VPKVeepViewerDelegate</a></span><span class="o">&gt;</span> <span class="n">delegate</span><span class="p">;</span>
+
+
+
+
+
+
+
+
+<span class="k">@end</span></code></pre>
 
                 </div>
               </div>
@@ -228,9 +238,9 @@
                 <li class="item">
                   <div class="item-heading">
                     <code>
-                    <a name="/c:objc(cs)VPKUserStats(py)impressions"></a>
-                    <a name="//apple_ref/objc/Property/impressions" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)VPKUserStats(py)impressions">impressions</a>
+                    <a name="/c:objc(cs)VPKVeepViewer(py)delegate"></a>
+                    <a name="//apple_ref/objc/Property/delegate" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)VPKVeepViewer(py)delegate">delegate</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -245,168 +255,13 @@
                         <h5>Declaration</h5>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">strong</span><span class="p">)</span> <span class="n">NSNumber</span><span class="o">*</span> <span class="n">impressions</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">weak</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">id</span> <span class="o">&lt;</span><span class="n"><a href="../Protocols/VPKVeepViewerDelegate.html">VPKVeepViewerDelegate</a></span><span class="o">&gt;</span> <span class="n">delegate</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
                         
-                          <a href="https://github.com/veepionyc/VPKitDemo/tree/2.6.0/VPKit.framework/Headers/VPKUserStats.h#L" class="button">Show on GitHub</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div class="item-heading">
-                    <code>
-                    <a name="/c:objc(cs)VPKUserStats(py)views"></a>
-                    <a name="//apple_ref/objc/Property/views" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)VPKUserStats(py)views">views</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h5>Declaration</h5>
-                        <div class="language">
-                          <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">strong</span><span class="p">)</span> <span class="n">NSNumber</span><span class="o">*</span> <span class="n">views</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div class="slightly-smaller">
-                        
-                          <a href="https://github.com/veepionyc/VPKitDemo/tree/2.6.0/VPKit.framework/Headers/VPKUserStats.h#L" class="button">Show on GitHub</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div class="item-heading">
-                    <code>
-                    <a name="/c:objc(cs)VPKUserStats(py)referrals"></a>
-                    <a name="//apple_ref/objc/Property/referrals" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)VPKUserStats(py)referrals">referrals</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h5>Declaration</h5>
-                        <div class="language">
-                          <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">strong</span><span class="p">)</span> <span class="n">NSNumber</span><span class="o">*</span> <span class="n">referrals</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div class="slightly-smaller">
-                        
-                          <a href="https://github.com/veepionyc/VPKitDemo/tree/2.6.0/VPKit.framework/Headers/VPKUserStats.h#L" class="button">Show on GitHub</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div class="item-heading">
-                    <code>
-                    <a name="/c:objc(cs)VPKUserStats(py)__impressions"></a>
-                    <a name="//apple_ref/objc/Property/__impressions" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)VPKUserStats(py)__impressions">__impressions</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h5>Declaration</h5>
-                        <div class="language">
-                          <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">assign</span><span class="p">,</span> <span class="n">readonly</span><span class="p">)</span> <span class="n">NSUInteger</span> <span class="n">__impressions</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div class="slightly-smaller">
-                        
-                          <a href="https://github.com/veepionyc/VPKitDemo/tree/2.6.0/VPKit.framework/Headers/VPKUserStats.h#L" class="button">Show on GitHub</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div class="item-heading">
-                    <code>
-                    <a name="/c:objc(cs)VPKUserStats(py)__views"></a>
-                    <a name="//apple_ref/objc/Property/__views" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)VPKUserStats(py)__views">__views</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h5>Declaration</h5>
-                        <div class="language">
-                          <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">assign</span><span class="p">,</span> <span class="n">readonly</span><span class="p">)</span> <span class="n">NSUInteger</span> <span class="n">__views</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div class="slightly-smaller">
-                        
-                          <a href="https://github.com/veepionyc/VPKitDemo/tree/2.6.0/VPKit.framework/Headers/VPKUserStats.h#L" class="button">Show on GitHub</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div class="item-heading">
-                    <code>
-                    <a name="/c:objc(cs)VPKUserStats(py)__referrals"></a>
-                    <a name="//apple_ref/objc/Property/__referrals" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)VPKUserStats(py)__referrals">__referrals</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h5>Declaration</h5>
-                        <div class="language">
-                          <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">assign</span><span class="p">,</span> <span class="n">readonly</span><span class="p">)</span> <span class="n">NSUInteger</span> <span class="n">__referrals</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div class="slightly-smaller">
-                        
-                          <a href="https://github.com/veepionyc/VPKitDemo/tree/2.6.0/VPKit.framework/Headers/VPKUserStats.h#L" class="button">Show on GitHub</a>
+                          <a href="https://github.com/veepionyc/VPKitDemo/tree/2.6.0/VPKit.framework/Headers/VPKVeepViewer.h#L" class="button">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
