@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>VPKImage Class Reference</title>
+
+	<link rel="stylesheet" href="../css/style.css">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
+	<meta name="generator" content="appledoc 2.2.1 (build 1333)">
+</head>
+<body class="appledoc">
+	<header>
+		<div class="container" class="hide-in-xcode">
+			
+			<h1 id="library-title">
+				<a href="../index.html">VPKit </a>
+			</h1>
+
+			<p id="developer-home">
+				<a href="../index.html">Veepio</a>
+			</p>
+			
+		</div>
+	</header>
+
+	<aside>
+		<div class="container">
+			<nav>
+				<ul id="header-buttons" role="toolbar">
+					<li><a href="../index.html">Index</a></li>
+<li><a href="../hierarchy.html">Hierarchy</a></li>
+
+					<li id="on-this-page" role="navigation">
+						<label>
+							On This Page
+
+							<div class="chevron">
+								<div class="chevy chevron-left"></div>
+								<div class="chevy chevron-right"></div>
+							</div>
+
+							<select id="jump-to">
+	<option value="top">Jump To&#133;</option>
+	
+	<option value="overview">Overview</option>
+	
+
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+
+	
+	
+	<optgroup label="Properties">
+		
+		<option value="//api/name/mediaIdentifier">mediaIdentifier</option>
+		
+		<option value="//api/name/originalContentURI">originalContentURI</option>
+		
+		<option value="//api/name/publicVeep">publicVeep</option>
+		
+		<option value="//api/name/veep">veep</option>
+		
+		<option value="//api/name/veepId">veepId</option>
+		
+	</optgroup>
+	
+
+	
+
+	
+	<optgroup label="Instance Methods">
+		
+		<option value="//api/name/initWithImage:url:">- initWithImage:url:</option>
+		
+		<option value="//api/name/initWithImage:veepId:">- initWithImage:veepId:</option>
+		
+		<option value="//api/name/updateWithPublicVeep:">- updateWithPublicVeep:</option>
+		
+		<option value="//api/name/updateWithVeep:">- updateWithVeep:</option>
+		
+		<option value="//api/name/updateWithVeepId:">- updateWithVeepId:</option>
+		
+	</optgroup>
+	
+	
+</select>
+						</label>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</aside>
+
+	<article>
+		<div id="overview_contents" class="container">
+			<div id="content">
+				<main role="main">
+					<h1 class="title">VPKImage Class Reference</h1>
+
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<th>Inherits from</th>
+	<td>UIImage</td>
+</tr><tr>
+	<th>Declared in</th>
+	<td>VPKImage.h</td>
+</tr>
+						</tbody></table></div>
+					
+
+                    
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>Drop-in replacement (subclass) for UIImage
+For use in conjunction with <a href="../Classes/VPKPreview.html">VPKPreview</a></p>
+
+<p>If VPKImage is initialised with null <a href="#//api/name/veepId">veepId</a> or imageURL it will behave as a standard UIImage</p>
+					</div>
+					
+					
+
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						
+
+						
+						
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/veepId" title="veepId"></a>
+	<h3 class="method-title"><code><a href="#//api/name/veepId">&nbsp;&nbsp;veepId</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The veepId, if available.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly, nullable) NSString *veepId</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">VPKImage.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/originalContentURI" title="originalContentURI"></a>
+	<h3 class="method-title"><code><a href="#//api/name/originalContentURI">&nbsp;&nbsp;originalContentURI</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The original content URI, if available.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly, nullable) NSURL *originalContentURI</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>In the case of an image <a href="#//api/name/veep">veep</a>, this will match the source URL of the supplied image.</p>
+
+<p>For a video <a href="#//api/name/veep">veep</a>, this is the source URI for the video media (<em>not</em> the placeholder image). This need not be an actual URL, but should be the unique identifier used when creating the <a href="#//api/name/veep">veep</a> (for example, it could be a youtube id).</p>
+
+<p>The URI is used to match the content to it&rsquo;s <a href="#//api/name/veep">veep</a> metadata. If a <a href="#//api/name/veepId">veepId</a> is provided, the URI is not required as the <a href="#//api/name/veep">veep</a> will be fetched by it&rsquo;s id.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">VPKImage.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/veep" title="veep"></a>
+	<h3 class="method-title"><code><a href="#//api/name/veep">&nbsp;&nbsp;veep</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The veep metadata associated with the image, if  available</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly, nullable) VPKVeep *veep</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">VPKImage.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/publicVeep" title="publicVeep"></a>
+	<h3 class="method-title"><code><a href="#//api/name/publicVeep">&nbsp;&nbsp;publicVeep</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>An abbreviated, header-only version of a <a href="#//api/name/veep">veep</a>, if available.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly, nullable) VPKPublicVeep *publicVeep</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">VPKImage.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/mediaIdentifier" title="mediaIdentifier"></a>
+	<h3 class="method-title"><code><a href="#//api/name/mediaIdentifier">&nbsp;&nbsp;mediaIdentifier</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>A courtesy property that the host app can use for tracking purposes.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, nullable) NSString *mediaIdentifier</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">VPKImage.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/initWithImage:veepId:" title="initWithImage:veepId:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/initWithImage:veepId:">&ndash;&nbsp;initWithImage:veepId:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Use initWithImage:<a href="#//api/name/veepId">veepId</a> if you are identifying <a href="#//api/name/veep">veep</a> content using the unique identifier (id) of the <a href="#//api/name/veep">veep</a>.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (instancetype)initWithImage:(UIImage *)<em>image</em> veepId:(nullable NSString *)<em>veepId</em></code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>An instance of VPKImage.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection see-also-section">
+				<h4 class="method-subtitle">See Also</h4>
+				<ul>
+					
+					<li><code><p><code>-initWithImage:url:</code></p>
+
+<p>@param (UIImage*)image
+The UIImage that this instance will subclass</p>
+
+<p>@param (NSString*)<a href="#//api/name/veepId">@property veepId</a>
+A <a href="#//api/name/veep">@property veep</a> identifier. Veep metadata will be associated with the image using this identifier. The <a href="#//api/name/veep">@property veep</a> Id is returned as part of the <a href="#//api/name/veep">@property veep</a> creation process.</p></code></li>
+					
+				</ul>
+			</div>
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">VPKImage.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/initWithImage:url:" title="initWithImage:url:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/initWithImage:url:">&ndash;&nbsp;initWithImage:url:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Use initWithImage:url if you are identifying <a href="#//api/name/veep">veep</a> content using the original URI used to create the <a href="#//api/name/veep">veep</a>.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (instancetype)initWithImage:(UIImage *)<em>image</em> url:(NSURL *)<em>contentURI</em></code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>An instance of VPKImage.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection see-also-section">
+				<h4 class="method-subtitle">See Also</h4>
+				<ul>
+					
+					<li><code><p><code>-initWithImage:veepId:</code></p>
+
+<p>@param (UIImage*)image
+The UIImage that this instance will subclass</p>
+
+<p>@param (NSURL*)contentURI
+The contentURI is the unique identifier for the veep&rsquo;d resource.
+In the case of an image this will often be the source URL used to obtain the UIImage.
+In the case of video this will be the source address of the video asset.
+The contentURI must be the same URI as was used to create the <a href="#//api/name/veep">@property veep</a> as that is how veeps are identified.</p></code></li>
+					
+				</ul>
+			</div>
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">VPKImage.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/updateWithVeep:" title="updateWithVeep:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/updateWithVeep:">&ndash;&nbsp;updateWithVeep:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>sets the <a href="#//api/name/veep">veep</a>, <a href="#//api/name/veepId">veepId</a> and originalContentUri</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)updateWithVeep:(VPKVeep *)<em>veep</em></code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">VPKImage.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/updateWithPublicVeep:" title="updateWithPublicVeep:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/updateWithPublicVeep:">&ndash;&nbsp;updateWithPublicVeep:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>sets the <a href="#//api/name/publicVeep">publicVeep</a> (a <a href="#//api/name/veep">veep</a> header stub), <a href="#//api/name/veepId">veepId</a> and originalContentUri.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)updateWithPublicVeep:(VPKPublicVeep *)<em>veep</em></code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">VPKImage.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/updateWithVeepId:" title="updateWithVeepId:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/updateWithVeepId:">&ndash;&nbsp;updateWithVeepId:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>sets <a href="#//api/name/veep"><code>veep</code></a> to nil and <a href="#//api/name/veepId"><code>veepId</code></a> to <a href="#//api/name/veepId">veepId</a>.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)updateWithVeepId:(nullable NSString *)<em>veepId</em></code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>@param <a href="#//api/name/veepId">veepId</a>
+The unique identifier for a <a href="#//api/name/veep">veep</a>.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">VPKImage.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+					</div>
+					
+					
+
+                    
+				</main>
+
+				<footer>
+					<div class="footer-copyright">
+						
+						<p class="copyright">Copyright &copy; 2018 Veepio. All rights reserved. Updated: 2018-04-09</p>
+						
+						
+						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1333)</a>.</p>
+						
+					</div>
+				</footer>
+			</div>
+		</div>
+	</article>
+
+	<script src="../js/script.js"></script>
+</body>
+</html>
