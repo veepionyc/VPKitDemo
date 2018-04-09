@@ -3,7 +3,7 @@
 //  VPKitDemo
 //
 //  Created by jonathan on 01/03/2016.
-//  Copyright © 2016 jonathan. All rights reserved.
+//  Copyright © 2016 VEEPIO LLC. All rights reserved.
 //
 
 #import "AppDelegate.h"

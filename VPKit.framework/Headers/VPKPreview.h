@@ -88,18 +88,54 @@
  */
 @property (nonatomic, assign) BOOL useCache;
 
+/**
+ Shows the veep content icon.
+ */
 - (void)showIcon;
+
+/**
+ Hides the veep content icon.
+ */
 - (void)hideIcon;
+
+/**
+ Shows the veep content icon, optionally animated.
+ @param animated
+ Enables (disables) icon animation.
+ */
 - (void)showIcon:(BOOL)animated;
+
+/**
+ Hides the veep content icon, optionally animated.
+ @param animated
+ Enables (disables) icon animation.
+ */
 - (void)hideIcon:(BOOL)animated;
+
+/**
+ Reset the preview: sets the image, imageurl and corresponding veep metadata to nil.
+ */
 - (void)reset;
+
+/**
+ Dismisses the veepviewer or veepeditor view controller, if it is currently presented.
+ @param animated
+ Enables (disables) icon animation.
+ */
+- (void)dismiss:(BOOL)animated;
 
 
 /**
  returns playback time if a video is currently playing in the VPKit SDK.
  Returns -1 if video not loaded.
 */
-- (NSTimeInterval)currentPlaybackTime;
+- (Float64)currentPlaybackTime;
+
+/**
+ returns video duration if a video is currently loaded in the VPKit SDK.
+ Returns -1 if video not loaded.
+ */
+- (Float64)duration;
 
 /**
  returns NSDictionary of Quality of Service data for currently playing video. Returns nil if video not loaded.

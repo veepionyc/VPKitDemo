@@ -97,8 +97,8 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)logVeepViewClose;
 
 #pragma mark - heartbeat
-
-- (NSTimeInterval)currentPlaybackTime;
+- (Float64)duration;
+- (Float64)currentPlaybackTime;
 - (nullable NSDictionary*)qualityOfServiceDict;
 
 @end
