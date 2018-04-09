@@ -29,7 +29,7 @@ NS_ASSUME_NONNULL_BEGIN
  *  impressions
  *  navigations
  
- @see VPKCompetitiveStatsItem
+ @see `VPKCompetitiveStatsItem`
  */
 @interface VPKCompetitiveStats: VPKParseableObject
 

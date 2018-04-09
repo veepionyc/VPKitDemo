@@ -99,41 +99,6 @@
       "warning": "undocumented"
     },
     {
-      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit_7/VPKit.framework/Headers/VPKPreview.h",
-      "line": 91,
-      "symbol": "VPKPreview.-showIcon",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit_7/VPKit.framework/Headers/VPKPreview.h",
-      "line": 92,
-      "symbol": "VPKPreview.-hideIcon",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit_7/VPKit.framework/Headers/VPKPreview.h",
-      "line": 93,
-      "symbol": "VPKPreview.-showIcon:",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit_7/VPKit.framework/Headers/VPKPreview.h",
-      "line": 94,
-      "symbol": "VPKPreview.-hideIcon:",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit_7/VPKit.framework/Headers/VPKPreview.h",
-      "line": 95,
-      "symbol": "VPKPreview.-reset",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
-      "warning": "undocumented"
-    },
-    {
       "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit_7/VPKit.framework/Headers/VPKStyles.h",
       "line": 24,
       "symbol": "VPKStyles.lineWidth",

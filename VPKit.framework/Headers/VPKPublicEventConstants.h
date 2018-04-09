@@ -12,9 +12,18 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+/**
+ 
+ Names for VPKEvent NSNotifications
+ 
+ A number of event messages are available to intercept as NSNotification objects.
+ 
+ The notification objects include a userInfo dictionary with a single VPKIdentifierKey entry. If a mediaIdentifier string is set on the VPKPreview's VPKImage, this will be returned as the value. The identifier may aid in ensuring that the correct media events are handled.
+ 
+ @see VPKImage.mediaIdentifier
+ */
 
-
-#pragma mark - Names for VPKit Video NSNotification events
+#pragma mark - Names for VPKEvent NSNotifications
 
 /**
  NSNotification sent when a video is loaded and ready to play
@@ -57,27 +66,30 @@ FOUNDATION_EXPORT NSString *const VPKEventVideoSeekStart;
 FOUNDATION_EXPORT NSString *const VPKEventVideoSeekComplete;
 
 /**
- Not sent
+ :nodoc:  Not sent
  */
 FOUNDATION_EXPORT NSString *const VPKEventVideoAdStart;
 
 /**
- Not sent
+ :nodoc:  Not sent
  */
 FOUNDATION_EXPORT NSString *const VPKEventVideoAdComplete;
 
 /**
- Not sent
+ :nodoc:  Not sent
  */
 FOUNDATION_EXPORT NSString *const VPKEventVideoChapterStart;
 
 /**
- Not sent
+ :nodoc:  Not sent
  */
 FOUNDATION_EXPORT NSString *const VPKEventVideoChapterComplete;
 
 
-
+/**
+ 
+ Quality of Service dictionary keys
+ */
 
 #pragma mark - Quality of Service dictionary keys
 
@@ -118,7 +130,18 @@ FOUNDATION_EXPORT NSString *const VPKEventVideoStartupTimeKey;
 FOUNDATION_EXPORT NSString *const VPKEventVideoPlaybackTypeKey;
 
 
+/**
+ :nodoc:
+ */
 FOUNDATION_EXPORT NSString *const VPKSessionDataKey;
+
+/**
+ 
+ Key to retrieve media identifier from VPKit Video NSNotification event info dictionary.
+ 
+ @see `VPKImage.mediaIdentifier`
+ */
+
 
 FOUNDATION_EXPORT NSString *const VPKIdentifierKey;
 
