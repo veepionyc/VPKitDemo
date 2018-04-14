@@ -12,8 +12,6 @@
 		AB86A51C1DD2DF4100843D98 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB86A51A1DD2DF4100843D98 /* Main.storyboard */; };
 		AB86A51E1DD2DF4100843D98 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB86A51D1DD2DF4100843D98 /* Assets.xcassets */; };
 		AB86A5211DD2DF4100843D98 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB86A51F1DD2DF4100843D98 /* LaunchScreen.storyboard */; };
-		AB9BDF1A1E70E9C4008413C2 /* VPKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB9BDF181E70E9B6008413C2 /* VPKit.framework */; };
-		AB9BDF1B1E70E9C4008413C2 /* VPKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AB9BDF181E70E9B6008413C2 /* VPKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -23,7 +21,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				AB9BDF1B1E70E9C4008413C2 /* VPKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -38,7 +35,6 @@
 		AB86A51D1DD2DF4100843D98 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AB86A5201DD2DF4100843D98 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AB86A5221DD2DF4100843D98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AB9BDF181E70E9B6008413C2 /* VPKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VPKit.framework; path = ../VPKit.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,7 +42,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AB9BDF1A1E70E9C4008413C2 /* VPKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,7 +51,6 @@
 		AB86A50A1DD2DF4100843D98 = {
 			isa = PBXGroup;
 			children = (
-				AB9BDF181E70E9B6008413C2 /* VPKit.framework */,
 				AB86A5151DD2DF4100843D98 /* VPKitDemoSwift */,
 				AB86A5141DD2DF4100843D98 /* Products */,
 			);
@@ -94,7 +88,6 @@
 				AB86A5101DD2DF4100843D98 /* Frameworks */,
 				AB86A5111DD2DF4100843D98 /* Resources */,
 				ABDB57621E358CA900DBE17C /* Embed Frameworks */,
-				ABFCE3DF1E94386C007DD125 /* Strip Frameworks */,
 			);
 			buildRules = (
 			);
@@ -152,23 +145,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		ABFCE3DF1E94386C007DD125 /* Strip Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Strip Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "bash \"${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}/VPKit.framework/strip-frameworks.sh\"";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		AB86A50F1DD2DF4100843D98 /* Sources */ = {
