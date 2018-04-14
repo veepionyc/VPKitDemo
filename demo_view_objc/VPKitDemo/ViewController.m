@@ -39,7 +39,13 @@
 
 }
 
+- (BOOL)shouldAutorotate {
+    return NO;
+}
 
+- (UIInterfaceOrientationMask)supportedInterfaceOrientations {
+    return UIInterfaceOrientationMaskPortrait;
+}
 
 #pragma mark - configuration
 
@@ -76,17 +82,5 @@
     //NSLog(@"tapped %@",tapGestureRecognizer);
 }
 
-
-- (BOOL)shouldAutorotate {
-    return YES;
-}
-
-- (UIInterfaceOrientationMask)supportedInterfaceOrientations {
-    // return  UIInterfaceOrientationMaskPortraitUpsideDown;
-    return UIInterfaceOrientationMaskPortrait;
-
-  //  return  UIInterfaceOrientationMaskPortrait;
-    //return UIInterfaceOrientationLandscapeLeft | UIInterfaceOrientationLandscapeRight;
-}
 
 @end
