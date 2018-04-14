@@ -7,13 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AB7C7C552082614800D370EC /* ViewController_Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7C7C542082614800D370EC /* ViewController_Layout.swift */; };
 		AB86A5171DD2DF4100843D98 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB86A5161DD2DF4100843D98 /* AppDelegate.swift */; };
 		AB86A5191DD2DF4100843D98 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB86A5181DD2DF4100843D98 /* ViewController.swift */; };
 		AB86A51C1DD2DF4100843D98 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB86A51A1DD2DF4100843D98 /* Main.storyboard */; };
 		AB86A51E1DD2DF4100843D98 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB86A51D1DD2DF4100843D98 /* Assets.xcassets */; };
 		AB86A5211DD2DF4100843D98 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB86A51F1DD2DF4100843D98 /* LaunchScreen.storyboard */; };
-		AB9BDF1A1E70E9C4008413C2 /* VPKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB9BDF181E70E9B6008413C2 /* VPKit.framework */; };
-		AB9BDF1B1E70E9C4008413C2 /* VPKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AB9BDF181E70E9B6008413C2 /* VPKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -23,7 +22,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				AB9BDF1B1E70E9C4008413C2 /* VPKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -31,6 +29,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		AB7C7C542082614800D370EC /* ViewController_Layout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController_Layout.swift; sourceTree = "<group>"; };
 		AB86A5131DD2DF4100843D98 /* VPKitDemoSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VPKitDemoSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB86A5161DD2DF4100843D98 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AB86A5181DD2DF4100843D98 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -38,7 +37,6 @@
 		AB86A51D1DD2DF4100843D98 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AB86A5201DD2DF4100843D98 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AB86A5221DD2DF4100843D98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AB9BDF181E70E9B6008413C2 /* VPKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VPKit.framework; path = ../VPKit.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,7 +44,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AB9BDF1A1E70E9C4008413C2 /* VPKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,7 +53,6 @@
 		AB86A50A1DD2DF4100843D98 = {
 			isa = PBXGroup;
 			children = (
-				AB9BDF181E70E9B6008413C2 /* VPKit.framework */,
 				AB86A5151DD2DF4100843D98 /* VPKitDemoSwift */,
 				AB86A5141DD2DF4100843D98 /* Products */,
 			);
@@ -75,6 +71,7 @@
 			children = (
 				AB86A5161DD2DF4100843D98 /* AppDelegate.swift */,
 				AB86A5181DD2DF4100843D98 /* ViewController.swift */,
+				AB7C7C542082614800D370EC /* ViewController_Layout.swift */,
 				AB86A51A1DD2DF4100843D98 /* Main.storyboard */,
 				AB86A51D1DD2DF4100843D98 /* Assets.xcassets */,
 				AB86A51F1DD2DF4100843D98 /* LaunchScreen.storyboard */,
@@ -94,7 +91,6 @@
 				AB86A5101DD2DF4100843D98 /* Frameworks */,
 				AB86A5111DD2DF4100843D98 /* Resources */,
 				ABDB57621E358CA900DBE17C /* Embed Frameworks */,
-				ABFCE3DF1E94386C007DD125 /* Strip Frameworks */,
 			);
 			buildRules = (
 			);
@@ -112,7 +108,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0810;
-				LastUpgradeCheck = 0820;
+				LastUpgradeCheck = 0920;
 				ORGANIZATIONNAME = Veepio;
 				TargetAttributes = {
 					AB86A5121DD2DF4100843D98 = {
@@ -153,29 +149,13 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		ABFCE3DF1E94386C007DD125 /* Strip Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Strip Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "bash \"${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}/VPKit.framework/strip-frameworks.sh\"";
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
 		AB86A50F1DD2DF4100843D98 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				AB86A5191DD2DF4100843D98 /* ViewController.swift in Sources */,
+				AB7C7C552082614800D370EC /* ViewController_Layout.swift in Sources */,
 				AB86A5171DD2DF4100843D98 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -211,7 +191,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -219,7 +201,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
@@ -262,7 +248,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -270,7 +258,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
@@ -318,7 +310,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
@@ -344,7 +336,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;

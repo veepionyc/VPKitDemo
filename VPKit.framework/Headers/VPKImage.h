@@ -65,10 +65,10 @@ NS_ASSUME_NONNULL_BEGIN
  @see `-initWithImage:url:`
  
  
- @param (UIImage*)image
+ @param image
  The UIImage that this instance will subclass
  
- @param (NSString*)veepId
+ @param veepId
  A veep identifier. Veep metadata will be associated with the image using this identifier. The veep Id is returned as part of the veep creation process.
  
  @return An instance of VPKImage.
@@ -85,11 +85,11 @@ NS_ASSUME_NONNULL_BEGIN
  
  
  
- @param (UIImage*)image
+ @param image
  The UIImage that this instance will subclass
  
  
- @param (NSURL*)contentURI
+ @param contentURI
  The contentURI is the unique identifier for the veep'd resource.
  In the case of an image this will often be the source URL used to obtain the UIImage.
  In the case of video this will be the source address of the video asset.

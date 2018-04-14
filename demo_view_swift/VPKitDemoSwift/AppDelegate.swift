@@ -74,8 +74,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         VPKit.styles().margin = 12
         VPKit.styles().color.navBar = UIColor.init(white: 0.1, alpha: 1.0)
-        VPKit.styles().font.navBarFont = UIFont .systemFont(ofSize: 18, weight: UIFontWeightHeavy);
-        VPKit.styles().font.cellNavBarFont = UIFont .systemFont(ofSize: 14, weight: UIFontWeightBold);
+        VPKit.styles().font.navBarFont = UIFont .systemFont(ofSize: 18, weight: UIFont.Weight.heavy);
+        VPKit.styles().font.cellNavBarFont = UIFont .systemFont(ofSize: 14, weight: UIFont.Weight.bold);
         
         return true
     }
