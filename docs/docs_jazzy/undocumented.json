@@ -1,6 +1,328 @@
 {
   "warnings": [
     {
+      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit_7/VPKit.framework/Headers/VPKEnvironment.h",
+      "line": 12,
+      "symbol": "VPKUserType",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit_7/VPKit.framework/Headers/VPKEnvironment.h",
+      "line": 12,
+      "symbol": "VPKUserType",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit_7/VPKit.framework/Headers/VPKEnvironment.h",
+      "line": 13,
+      "symbol": "VPKUserType.VPKUserTypeUnknown",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit_7/VPKit.framework/Headers/VPKEnvironment.h",
+      "line": 14,
+      "symbol": "VPKUserType.VPKUserTypeAnonymous",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit_7/VPKit.framework/Headers/VPKEnvironment.h",
+      "line": 15,
+      "symbol": "VPKUserType.VPKUserTypeLightweight",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit_7/VPKit.framework/Headers/VPKEnvironment.h",
+      "line": 16,
+      "symbol": "VPKUserType.VPKUserTypeHeavyweight",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit_7/VPKit.framework/Headers/VPKEnvironment.h",
+      "line": 20,
+      "symbol": "VPKUser",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit_7/VPKit.framework/Headers/VPKEnvironment.h",
+      "line": 21,
+      "symbol": "VPKUser.email",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit_7/VPKit.framework/Headers/VPKEnvironment.h",
+      "line": 22,
+      "symbol": "VPKUser.canDelete",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit_7/VPKit.framework/Headers/VPKEnvironment.h",
+      "line": 23,
+      "symbol": "VPKUser.canCreate",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit_7/VPKit.framework/Headers/VPKEnvironment.h",
+      "line": 24,
+      "symbol": "VPKUser.userType",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit_7/VPKit.framework/Headers/VPKEnvironment.h",
+      "line": 27,
+      "symbol": "VPKApp",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit_7/VPKit.framework/Headers/VPKEnvironment.h",
+      "line": 28,
+      "symbol": "VPKApp.veepPublicByDefault",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit_7/VPKit.framework/Headers/VPKEnvironment.h",
+      "line": 29,
+      "symbol": "VPKApp.name",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit_7/VPKit.framework/Headers/VPKEnvironment.h",
+      "line": 30,
+      "symbol": "VPKApp.appId",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit_7/VPKit.framework/Headers/VPKEnvironment.h",
+      "line": 31,
+      "symbol": "VPKApp.identifier",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit_7/VPKit.framework/Headers/VPKEnvironment.h",
+      "line": 32,
+      "symbol": "VPKApp.appName",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit_7/VPKit.framework/Headers/VPKEnvironment.h",
+      "line": 33,
+      "symbol": "VPKApp.clientId",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit_7/VPKit.framework/Headers/VPKEnvironment.h",
+      "line": 34,
+      "symbol": "VPKApp.clientSecret",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit_7/VPKit.framework/Headers/VPKEnvironment.h",
+      "line": 35,
+      "symbol": "VPKApp.uuid",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit_7/VPKit.framework/Headers/VPKEnvironment.h",
+      "line": 36,
+      "symbol": "VPKApp.idfa",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit_7/VPKit.framework/Headers/VPKEnvironment.h",
+      "line": 38,
+      "symbol": "VPKApp.-info",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit_7/VPKit.framework/Headers/VPKEnvironment.h",
+      "line": 39,
+      "symbol": "VPKApp.-consumerId",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit_7/VPKit.framework/Headers/VPKEnvironment.h",
+      "line": 40,
+      "symbol": "VPKApp.-sendIDFA:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit_7/VPKit.framework/Headers/VPKEnvironment.h",
+      "line": 45,
+      "symbol": "VPKDevice",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit_7/VPKit.framework/Headers/VPKEnvironment.h",
+      "line": 48,
+      "symbol": "VPKDevice.-machineName",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit_7/VPKit.framework/Headers/VPKEnvironment.h",
+      "line": 49,
+      "symbol": "VPKDevice.-platform",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit_7/VPKit.framework/Headers/VPKEnvironment.h",
+      "line": 50,
+      "symbol": "VPKDevice.-osVersion",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit_7/VPKit.framework/Headers/VPKEnvironment.h",
+      "line": 53,
+      "symbol": "VPKSdk",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit_7/VPKit.framework/Headers/VPKEnvironment.h",
+      "line": 54,
+      "symbol": "VPKSdk.-info",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit_7/VPKit.framework/Headers/VPKEnvironment.h",
+      "line": 55,
+      "symbol": "VPKSdk.-infoString",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit_7/VPKit.framework/Headers/VPKEnvironment.h",
+      "line": 60,
+      "symbol": "VPKEnvironment",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit_7/VPKit.framework/Headers/VPKEnvironment.h",
+      "line": 61,
+      "symbol": "VPKEnvironment.userDefaults",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit_7/VPKit.framework/Headers/VPKEnvironment.h",
+      "line": 62,
+      "symbol": "VPKEnvironment.user",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit_7/VPKit.framework/Headers/VPKEnvironment.h",
+      "line": 63,
+      "symbol": "VPKEnvironment.app",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit_7/VPKit.framework/Headers/VPKEnvironment.h",
+      "line": 64,
+      "symbol": "VPKEnvironment.device",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit_7/VPKit.framework/Headers/VPKEnvironment.h",
+      "line": 65,
+      "symbol": "VPKEnvironment.sdk",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit_7/VPKit.framework/Headers/VPKEnvironment.h",
+      "line": 68,
+      "symbol": "VPKEnvironment.ipAddressDevice",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit_7/VPKit.framework/Headers/VPKEnvironment.h",
+      "line": 69,
+      "symbol": "VPKEnvironment.ipAddressNetwork",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit_7/VPKit.framework/Headers/VPKEnvironment.h",
+      "line": 71,
+      "symbol": "VPKEnvironment.shouldMonetise",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit_7/VPKit.framework/Headers/VPKEnvironment.h",
+      "line": 72,
+      "symbol": "VPKEnvironment.production",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit_7/VPKit.framework/Headers/VPKEnvironment.h",
+      "line": 73,
+      "symbol": "VPKEnvironment.initialized",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit_7/VPKit.framework/Headers/VPKEnvironment.h",
+      "line": 74,
+      "symbol": "VPKEnvironment.loggedIn",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit_7/VPKit.framework/Headers/VPKEnvironment.h",
+      "line": 75,
+      "symbol": "VPKEnvironment.forwardErrors",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit_7/VPKit.framework/Headers/VPKEnvironment.h",
+      "line": 77,
+      "symbol": "VPKEnvironment.+shared",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit_7/VPKit.framework/Headers/VPKEnvironment.h",
+      "line": 78,
+      "symbol": "VPKEnvironment.-sendIDFA:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
       "file": "/Volumes/jScratch/_new/__veepio/_code/__frameworks/VPKit_7/VPKit.framework/Headers/VPKFontStyles.h",
       "line": 22,
       "symbol": "VPKFontStyles.barButtonItemFontDisabled",

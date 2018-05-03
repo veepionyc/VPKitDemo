@@ -14,12 +14,12 @@
 @class VPKVeepEditor;
 @class VPKImage;
 @class VPKPublicVeep;
-@class VPKEnvironment;
 @class VPKVeep;
 
 #import "VPKStats.h"
 #import "VPKStyles.h"
 #import "VPKPreview.h"
+#import "VPKEnvironment.h"
 
 NS_ASSUME_NONNULL_BEGIN
 typedef NS_ENUM(NSInteger, VPKServerEnvironment) {
