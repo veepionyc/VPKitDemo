@@ -144,11 +144,17 @@ class ViewController:
              */
             
             if (success) {
-                guard let vpEditor = VPKit.editor(with: image, from: view) else { return }
-                vpEditor.delegate = self
-                vpEditor.modalPresentationStyle = UIModalPresentationStyle.overFullScreen
-                self?.present(vpEditor, animated: true, completion: nil)
-
+                
+                do {
+                     let vpEditor = try VPKit.editor(with: image, from: view)
+                    vpEditor.delegate = self
+                    vpEditor.modalPresentationStyle = UIModalPresentationStyle.overFullScreen
+                    self?.present(vpEditor, animated: true, completion: nil)
+                    
+                } catch let err as NSError {
+                    print(err)
+                }
+                
             } else {
                 print("\(String(describing: error))")
             }
