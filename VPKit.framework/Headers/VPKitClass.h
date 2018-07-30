@@ -20,6 +20,7 @@
 #import "VPKStyles.h"
 #import "VPKPreview.h"
 #import "VPKEnvironment.h"
+#import "VPKPublicConstants.h"
 
 NS_ASSUME_NONNULL_BEGIN
 typedef NS_ENUM(NSInteger, VPKServerEnvironment) {
@@ -56,9 +57,9 @@ typedef void (^VPKDailyStatsBlock)(VPKDailyStats* _Nullable stats, NSError* _Nul
 
 /**
      sets the location for error dialogue handling - in the SDK or in the host app.
-     
-     @param forwardErrors 
-         YES - error alerts are supressed in the SDK and NSNotifications are forwarded for interception by the host app.
+ 
+     @param forwardErrors
+         YES - error alerts are supressed in the SDK and NSNotifications are forwarded for interception by the host app. The notification name is vpkErrorNotification. The NSError is added to the Notification's userInfo dictionary with key vpkErrorKey
          NO - user-facing error alerts are presented by the SDK.
  
  
@@ -204,9 +205,7 @@ Instance-level heavyweight authentication for users with email identifier and pa
 
 + (nullable VPKVeepViewer*)viewerWithImage:(VPKImage*)image fromView:(UIView*)view;
 
-+ (nullable VPKVeepEditor*)editorWithImage:(UIImage*)image fromView:(UIView*)view;
-
-+ (nullable VPKVeepEditor*)editorWithImage:(UIImage*)image fromView:(UIView*)view error:( NSError* _Nullable *)error;
++ (nullable VPKVeepEditor*)editorWithImage:(UIImage*)image fromView:(UIView*)view error:( NSError* _Nullable *)errorPtr;
 
 
 #pragma mark - environment

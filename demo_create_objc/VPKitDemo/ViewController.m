@@ -22,8 +22,8 @@
 , VPKPreviewDelegate
 >
 
-@property (nonatomic, strong) VPKVeepViewer* vpViewer;
-@property (nonatomic, strong) VPKVeepEditor* vpEditor;
+//@property (nonatomic, strong) VPKVeepViewer* vpViewer;
+//@property (nonatomic, strong) VPKVeepEditor* vpEditor;
 
 
 @end
@@ -42,8 +42,10 @@
     [self configureEditor];
     self.constraints = [[NSMutableArray alloc] init];
     [self configureConstraints];
+    [self configureErrorHandling];
 
 }
+
 
 - (BOOL)shouldAutorotate {
     return NO;
@@ -52,6 +54,34 @@
 - (UIInterfaceOrientationMask)supportedInterfaceOrientations {
     return UIInterfaceOrientationMaskPortrait;
 }
+
+#pragma mark - error handling
+
+/*
+ error handling is optional
+ */
+
+- (void)configureErrorHandling {
+    
+    [VPKit forwardErrorNotifications:YES];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(errorNotification:) name:vpkErrorNotification object:nil];
+}
+
+- (void)errorNotification:(NSNotification*)notification {
+    NSError* error = notification.userInfo[vpkErrorKey];
+    
+    /*
+     shouldAlertUser is advisory - that the error is of a type the user should be alerted to.
+     */
+    BOOL shouldAlertUser = [notification.userInfo[vpkPresentErrorKey] boolValue];
+
+    NSLog(@"%s %@",__func__,error);
+    if (shouldAlertUser) {
+        //present error dialog
+    }
+}
+
+
 
 #pragma mark - configuration
 
@@ -113,67 +143,61 @@
      */
     
     
-    self.vpViewer =  [VPKit viewerWithImage:image
+    VPKVeepViewer* vpViewer =  [VPKit viewerWithImage:image
                                    fromView:view];
-    self.vpViewer.delegate = self;
-    self.vpViewer.modalPresentationStyle = UIModalPresentationOverFullScreen;
-    [self presentViewController:self.vpViewer animated:YES completion:nil];
+    vpViewer.delegate = self;
+    vpViewer.modalPresentationStyle = UIModalPresentationOverFullScreen;
+    [self presentViewController:vpViewer animated:YES completion:nil];
 
 }
 
 - (void)invokeEditor:(VPKImage*)image fromView:(UIView*)view {
     
-    __block UIActivityIndicatorView* activityView = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhite];
-    [activityView stopAnimating];
-    
-    activityView.center = CGPointMake(self.editorPreview.bounds.size.width/2.0f, self.editorPreview.bounds.size.height/2.0f);
-
-    dispatch_time_t  when  =dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC));
-    dispatch_queue_t queue = dispatch_get_main_queue();
-    dispatch_after(when, queue, ^{
-        if (activityView) {
-            [self.editorPreview addSubview:activityView];
-            [activityView startAnimating];
-        }
-    });
-    
     /*
         
      invoking the VPKVeepEditor
      
-        
      set the editor's transitioning delegate to a custom transitioning object (or nil) to override supplied transition animations
      
      this code is all OPTIONAL - if you don't set the delegate on VPKPreview, presenting and dismissing behaviour occurs as a default. However, at some point before invoking the editor, user authentication needs to be dealt with.
 
     */
-    __weak typeof(self) weakself = self;
+    
+    UIActivityIndicatorView* activityView = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhite];
+    activityView.center = CGPointMake(self.editorPreview.bounds.size.width/2.0f, self.editorPreview.bounds.size.height/2.0f);
+    [self.editorPreview addSubview:activityView];
+    [activityView startAnimating];
+    
+    /*
+     
+     Authentication
+     
+     We authenticate before invoking the editor, as veep creation requires an authenticated user.
+     
+     Authenticated users are weak (no password) or strong (password-protected)
+     
+     If responseCode to a weak login attempt is 401 (unauthorised), we can make a similar call for strong authentication with a password.
+     
+     User account admin can be an implementation detail in the host app or the Veepio Developer control panel.
+     
+     */
+    
     [VPKit authenticateWithEmail:@"test@example.com"
                       completion:^(BOOL success, NSInteger responseCode, NSError * _Nonnull error) {
-         __strong typeof(self) strongself = weakself;
-       
-        /*
-         
-         Authentication 
-         
-         We authenticate before invoking the editor, as veep creation requires an authenticated user.
-         
-         Authenticated users are weak (no password) or strong (password-protected)
-    
-         If responseCode to a weak login attempt is 401 (unauthorised), we can make a similar call for strong authentication with a password.
-        
-         User account admin can be an implementation detail in the host app or the Veepio Developer control panel.
-         
-         */
-                          [activityView removeFromSuperview];
-                          activityView = nil;
+
+       [activityView removeFromSuperview];
         
         if (success) {
-            strongself.vpEditor =  [VPKit editorWithImage:image
-                                           fromView:view];
-            strongself.vpEditor.delegate = self;
-            strongself.vpEditor.modalPresentationStyle = UIModalPresentationOverFullScreen;
-            [strongself presentViewController:strongself.vpEditor animated:YES completion:nil];
+            error = nil;
+            VPKVeepEditor* vpEditor =  [VPKit editorWithImage:image
+                                                 fromView:view error:&error];
+            if (vpEditor) {
+                vpEditor.delegate = self;
+                vpEditor.modalPresentationStyle = UIModalPresentationOverFullScreen;
+                [self presentViewController:vpEditor animated:YES completion:nil];
+            } else {
+                NSLog(@"%@",error);
+            }
         } else {
             NSLog(@"%@",error);
         }
@@ -226,8 +250,6 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 
 }
-
-
 
 
 
