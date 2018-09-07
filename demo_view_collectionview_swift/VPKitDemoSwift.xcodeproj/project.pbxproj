@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AB59DF722142BC7E0020B212 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB59DF712142BC7E0020B212 /* NavigationController.swift */; };
 		ABB2066E1E71B1A20028BF48 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABB2066C1E71B1980028BF48 /* AdSupport.framework */; };
 		ABC557DF1E5E28BB00AE8425 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB86A5161DD2DF4100843D98 /* AppDelegate.swift */; };
 		ABC557E41E5E28BB00AE8425 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB86A51F1DD2DF4100843D98 /* LaunchScreen.storyboard */; };
@@ -32,12 +33,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		AB59DF712142BC7E0020B212 /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		AB86A5161DD2DF4100843D98 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AB86A51D1DD2DF4100843D98 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AB86A5201DD2DF4100843D98 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AB86A5221DD2DF4100843D98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ABB2066C1E71B1980028BF48 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
-		ABC557EE1E5E28BB00AE8425 /* VPKitDemoSwiftBinary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VPKitDemoSwiftBinary.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		ABC557EE1E5E28BB00AE8425 /* VPKitDemoSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VPKitDemoSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABCD2319214287C80001CE3F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		ABECD8CE1E65E46200184B29 /* VPKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VPKit.framework; path = ../VPKit.framework; sourceTree = "<group>"; };
 		ABFB76311E709C29006FB57B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -77,7 +79,7 @@
 		AB86A5141DD2DF4100843D98 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				ABC557EE1E5E28BB00AE8425 /* VPKitDemoSwiftBinary.app */,
+				ABC557EE1E5E28BB00AE8425 /* VPKitDemoSwift.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -86,6 +88,7 @@
 			isa = PBXGroup;
 			children = (
 				AB86A5161DD2DF4100843D98 /* AppDelegate.swift */,
+				AB59DF712142BC7E0020B212 /* NavigationController.swift */,
 				ABCD2319214287C80001CE3F /* ViewController.swift */,
 				AB86A51D1DD2DF4100843D98 /* Assets.xcassets */,
 				ABFB76301E709C29006FB57B /* Main.storyboard */,
@@ -98,9 +101,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		ABC557DB1E5E28BB00AE8425 /* VPKitDemoSwiftBinary */ = {
+		ABC557DB1E5E28BB00AE8425 /* VPKitDemoSwift */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = ABC557EB1E5E28BB00AE8425 /* Build configuration list for PBXNativeTarget "VPKitDemoSwiftBinary" */;
+			buildConfigurationList = ABC557EB1E5E28BB00AE8425 /* Build configuration list for PBXNativeTarget "VPKitDemoSwift" */;
 			buildPhases = (
 				ABC557DD1E5E28BB00AE8425 /* Sources */,
 				ABC557E11E5E28BB00AE8425 /* Frameworks */,
@@ -112,9 +115,9 @@
 			);
 			dependencies = (
 			);
-			name = VPKitDemoSwiftBinary;
+			name = VPKitDemoSwift;
 			productName = VPKitDemoSwift;
-			productReference = ABC557EE1E5E28BB00AE8425 /* VPKitDemoSwiftBinary.app */;
+			productReference = ABC557EE1E5E28BB00AE8425 /* VPKitDemoSwift.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -146,7 +149,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				ABC557DB1E5E28BB00AE8425 /* VPKitDemoSwiftBinary */,
+				ABC557DB1E5E28BB00AE8425 /* VPKitDemoSwift */,
 			);
 		};
 /* End PBXProject section */
@@ -187,6 +190,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ABCD231B214287C80001CE3F /* ViewController.swift in Sources */,
+				AB59DF722142BC7E0020B212 /* NavigationController.swift in Sources */,
 				ABC557DF1E5E28BB00AE8425 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -380,7 +384,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		ABC557EB1E5E28BB00AE8425 /* Build configuration list for PBXNativeTarget "VPKitDemoSwiftBinary" */ = {
+		ABC557EB1E5E28BB00AE8425 /* Build configuration list for PBXNativeTarget "VPKitDemoSwift" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				ABC557EC1E5E28BB00AE8425 /* Debug */,

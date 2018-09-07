@@ -9,6 +9,9 @@
 import UIKit
 import VPKit
 
+
+// MARK: Data
+
 enum media : String {
     case apple1
     ,apple2
@@ -44,40 +47,31 @@ enum media : String {
         }
         return veepId
     }
-
-    
-
-    
-    
 }
+
+// MARK: Cell
 
 class PreviewCell: UICollectionViewCell {
     @IBOutlet weak var preview: VPKPreview!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        preview.reset()
         preview.invokeViewerForAllImages = true
         preview.iconLength =
             UIScreen.main.bounds.size.width/10
-
-
     }
     
     override func prepareForReuse() {
         preview.reset()
     }
-    
-    
-    
-    
 }
 
-
-private let previewCell = "PreviewCell"
+// MARK: ViewController
 
 class CollectionViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
-   
+    
+    private let previewCell = "PreviewCell"
+
     let data = [media.apple1, media.apple2, media.apple3, media.KrispyGlas, media.stock_photo, media.tomcruise, media.tomcruise2]
     
     override func viewDidLoad() {
@@ -91,6 +85,8 @@ class CollectionViewController: UICollectionViewController, UICollectionViewDele
     override func willRotate(to toInterfaceOrientation: UIInterfaceOrientation, duration: TimeInterval) {
         self.collectionViewLayout.invalidateLayout()
     }
+    
+   
     
     // MARK: UICollectionViewDataSource
 
