@@ -69,6 +69,12 @@
 
 
 /**
+if YES touching a VPKPreview will invoke the VPKit image viewer for all images. If NO, viewer will be invoked only for Veep'd images. Default is NO.
+ */
+@property (nonatomic, assign) BOOL invokeViewerForAllImages;
+
+    
+/**
  if YES the preview will animate when touched for better touch feedback.
  Default is NO.
  */
