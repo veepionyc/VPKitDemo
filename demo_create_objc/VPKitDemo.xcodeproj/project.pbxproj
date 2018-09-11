@@ -15,6 +15,7 @@
 		AB1F17CC1C866C3700F740A2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB1F17CA1C866C3700F740A2 /* LaunchScreen.storyboard */; };
 		AB9BDF161E70E99B008413C2 /* VPKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB9BDF131E70E989008413C2 /* VPKit.framework */; };
 		AB9BDF171E70E99B008413C2 /* VPKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AB9BDF131E70E989008413C2 /* VPKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		ABBA66EC2148121200BF85BA /* ViewController_AutoLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = ABBA66EB2148121200BF85BA /* ViewController_AutoLayout.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -44,6 +45,8 @@
 		AB1F17CB1C866C3700F740A2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AB1F17CD1C866C3700F740A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AB9BDF131E70E989008413C2 /* VPKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VPKit.framework; path = ../VPKit.framework; sourceTree = "<group>"; };
+		ABBA66EA2148121200BF85BA /* ViewController_AutoLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewController_AutoLayout.h; path = ../../../demo_create_objc/VPKitDemo/ViewController_AutoLayout.h; sourceTree = "<group>"; };
+		ABBA66EB2148121200BF85BA /* ViewController_AutoLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ViewController_AutoLayout.m; path = ../../../demo_create_objc/VPKitDemo/ViewController_AutoLayout.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +94,8 @@
 				AB1F17C01C866C3700F740A2 /* AppDelegate.m */,
 				AB1F17C21C866C3700F740A2 /* ViewController.h */,
 				AB1F17C31C866C3700F740A2 /* ViewController.m */,
+				ABBA66EA2148121200BF85BA /* ViewController_AutoLayout.h */,
+				ABBA66EB2148121200BF85BA /* ViewController_AutoLayout.m */,
 				AB1F17C51C866C3700F740A2 /* Main.storyboard */,
 				AB1F17C81C866C3700F740A2 /* Assets.xcassets */,
 				AB1F17CA1C866C3700F740A2 /* LaunchScreen.storyboard */,
@@ -202,6 +207,7 @@
 				AB1F17C41C866C3700F740A2 /* ViewController.m in Sources */,
 				AB1F17C11C866C3700F740A2 /* AppDelegate.m in Sources */,
 				AB1F17BE1C866C3700F740A2 /* main.m in Sources */,
+				ABBA66EC2148121200BF85BA /* ViewController_AutoLayout.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -332,7 +338,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Veep The Veeper (2YL8SFLV92)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_TEAM = 6R3CG82D75;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -366,7 +372,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Veepio Holdings, LLC (6R3CG82D75)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_TEAM = 6R3CG82D75;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
