@@ -203,7 +203,7 @@ Instance-level heavyweight authentication for users with email identifier and pa
  *  ---------------------------------------------------------------------------------------
  */
 
-+ (nullable VPKVeepViewer*)viewerWithImage:(VPKImage*)image fromView:(UIView*)view;
++ (nullable VPKVeepViewer*)viewerWithImage:(UIImage*)image fromView:(UIView*)view;
 
 + (nullable VPKVeepEditor*)editorWithImage:(UIImage*)image fromView:(UIView*)view error:( NSError* _Nullable *)errorPtr;
 
