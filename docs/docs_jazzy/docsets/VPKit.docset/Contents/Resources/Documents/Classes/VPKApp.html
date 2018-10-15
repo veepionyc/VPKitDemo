@@ -19,11 +19,11 @@
         <a class='header-link' href='../index.html'>
           VPKit Docs
         </a>
-         (47% documented)
+         (46% documented)
       </p>
     
         <p class='header-col header-col--secondary'>
-          <a class='header-link' href='https://github.com/veepionyc/VPKitDemo/tree/2.6.6'>
+          <a class='header-link' href='https://github.com/veepionyc/VPKitDemo/tree/2.6.8'>
             <img class='header-icon' src='../img/gh.png'/>
             View on GitHub
           </a>
@@ -150,6 +150,9 @@
             <a class='nav-group-name-link' href='../Enumerations.html'>Enumerations</a>
             <ul class='nav-group-tasks'>
               <li class='nav-group-task'>
+                <a class='nav-group-task-link' href='../Enums/VPKEnvironmentType.html'>VPKEnvironmentType</a>
+              </li>
+              <li class='nav-group-task'>
                 <a class='nav-group-task-link' href='../Enums/VPKServerEnvironment.html'>VPKServerEnvironment</a>
               </li>
               <li class='nav-group-task'>
@@ -218,13 +221,15 @@
                   <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">VPKApp</span> <span class="p">:</span> <span class="nc">NSObject</span>
 <span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">assign</span><span class="p">)</span> <span class="n">BOOL</span> <span class="n">veepPublicByDefault</span><span class="p">;</span>
 <span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">copy</span><span class="p">)</span> <span class="n">NSString</span><span class="o">*</span> <span class="n">name</span><span class="p">;</span>
-<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">copy</span><span class="p">)</span> <span class="n">NSString</span><span class="o">*</span> <span class="n">appId</span><span class="p">;</span>  <span class="c1">//legacy use
+<span class="c1">//@property (nonatomic, copy) NSString* appId;  //legacy use
 </span><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">copy</span><span class="p">)</span> <span class="n">NSString</span><span class="o">*</span> <span class="n">identifier</span><span class="p">;</span> <span class="c1">// the db key
-</span><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">copy</span><span class="p">)</span> <span class="n">NSString</span><span class="o">*</span> <span class="n">appName</span><span class="p">;</span>
-<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">copy</span><span class="p">)</span> <span class="n">NSString</span><span class="o">*</span> <span class="n">clientId</span><span class="p">;</span>
+//@property (nonatomic, copy) NSString* appName;
+</span><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">copy</span><span class="p">)</span> <span class="n">NSString</span><span class="o">*</span> <span class="n">clientId</span><span class="p">;</span>
 <span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">copy</span><span class="p">)</span> <span class="n">NSString</span><span class="o">*</span> <span class="n">clientSecret</span><span class="p">;</span>
 <span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">copy</span><span class="p">)</span> <span class="n">NSString</span><span class="o">*</span> <span class="n">uuid</span><span class="p">;</span>
 <span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">copy</span><span class="p">)</span> <span class="n">NSString</span><span class="o">*</span> <span class="n">idfa</span><span class="p">;</span>
+
+
 
 <span class="k">-</span> <span class="p">(</span><span class="n">NSDictionary</span><span class="o">*</span><span class="p">)</span><span class="n">info</span><span class="p">;</span>
 <span class="k">-</span> <span class="p">(</span><span class="n">NSString</span><span class="o">*</span><span class="p">)</span><span class="n">consumerId</span><span class="p">;</span>
@@ -270,7 +275,7 @@
                       </div>
                       <div class="slightly-smaller">
                         
-                          <a href="https://github.com/veepionyc/VPKitDemo/tree/2.6.6/VPKit.framework/Headers/VPKEnvironment.h#L" class="button">Show on GitHub</a>
+                          <a href="https://github.com/veepionyc/VPKitDemo/tree/2.6.8/VPKit.framework/Headers/VPKEnvironment.h#L" class="button">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -301,38 +306,7 @@
                       </div>
                       <div class="slightly-smaller">
                         
-                          <a href="https://github.com/veepionyc/VPKitDemo/tree/2.6.6/VPKit.framework/Headers/VPKEnvironment.h#L" class="button">Show on GitHub</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div class="item-heading">
-                    <code>
-                    <a name="/c:objc(cs)VPKApp(py)appId"></a>
-                    <a name="//apple_ref/objc/Property/appId" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)VPKApp(py)appId">appId</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h5>Declaration</h5>
-                        <div class="language">
-                          <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">copy</span><span class="p">)</span> <span class="n">NSString</span><span class="o">*</span> <span class="n">appId</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div class="slightly-smaller">
-                        
-                          <a href="https://github.com/veepionyc/VPKitDemo/tree/2.6.6/VPKit.framework/Headers/VPKEnvironment.h#L" class="button">Show on GitHub</a>
+                          <a href="https://github.com/veepionyc/VPKitDemo/tree/2.6.8/VPKit.framework/Headers/VPKEnvironment.h#L" class="button">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -363,38 +337,7 @@
                       </div>
                       <div class="slightly-smaller">
                         
-                          <a href="https://github.com/veepionyc/VPKitDemo/tree/2.6.6/VPKit.framework/Headers/VPKEnvironment.h#L" class="button">Show on GitHub</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div class="item-heading">
-                    <code>
-                    <a name="/c:objc(cs)VPKApp(py)appName"></a>
-                    <a name="//apple_ref/objc/Property/appName" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)VPKApp(py)appName">appName</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h5>Declaration</h5>
-                        <div class="language">
-                          <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">copy</span><span class="p">)</span> <span class="n">NSString</span><span class="o">*</span> <span class="n">appName</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div class="slightly-smaller">
-                        
-                          <a href="https://github.com/veepionyc/VPKitDemo/tree/2.6.6/VPKit.framework/Headers/VPKEnvironment.h#L" class="button">Show on GitHub</a>
+                          <a href="https://github.com/veepionyc/VPKitDemo/tree/2.6.8/VPKit.framework/Headers/VPKEnvironment.h#L" class="button">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -425,7 +368,7 @@
                       </div>
                       <div class="slightly-smaller">
                         
-                          <a href="https://github.com/veepionyc/VPKitDemo/tree/2.6.6/VPKit.framework/Headers/VPKEnvironment.h#L" class="button">Show on GitHub</a>
+                          <a href="https://github.com/veepionyc/VPKitDemo/tree/2.6.8/VPKit.framework/Headers/VPKEnvironment.h#L" class="button">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -456,7 +399,7 @@
                       </div>
                       <div class="slightly-smaller">
                         
-                          <a href="https://github.com/veepionyc/VPKitDemo/tree/2.6.6/VPKit.framework/Headers/VPKEnvironment.h#L" class="button">Show on GitHub</a>
+                          <a href="https://github.com/veepionyc/VPKitDemo/tree/2.6.8/VPKit.framework/Headers/VPKEnvironment.h#L" class="button">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -487,7 +430,7 @@
                       </div>
                       <div class="slightly-smaller">
                         
-                          <a href="https://github.com/veepionyc/VPKitDemo/tree/2.6.6/VPKit.framework/Headers/VPKEnvironment.h#L" class="button">Show on GitHub</a>
+                          <a href="https://github.com/veepionyc/VPKitDemo/tree/2.6.8/VPKit.framework/Headers/VPKEnvironment.h#L" class="button">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -518,7 +461,7 @@
                       </div>
                       <div class="slightly-smaller">
                         
-                          <a href="https://github.com/veepionyc/VPKitDemo/tree/2.6.6/VPKit.framework/Headers/VPKEnvironment.h#L" class="button">Show on GitHub</a>
+                          <a href="https://github.com/veepionyc/VPKitDemo/tree/2.6.8/VPKit.framework/Headers/VPKEnvironment.h#L" class="button">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -549,7 +492,7 @@
                       </div>
                       <div class="slightly-smaller">
                         
-                          <a href="https://github.com/veepionyc/VPKitDemo/tree/2.6.6/VPKit.framework/Headers/VPKEnvironment.h#L" class="button">Show on GitHub</a>
+                          <a href="https://github.com/veepionyc/VPKitDemo/tree/2.6.8/VPKit.framework/Headers/VPKEnvironment.h#L" class="button">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -580,7 +523,7 @@
                       </div>
                       <div class="slightly-smaller">
                         
-                          <a href="https://github.com/veepionyc/VPKitDemo/tree/2.6.6/VPKit.framework/Headers/VPKEnvironment.h#L" class="button">Show on GitHub</a>
+                          <a href="https://github.com/veepionyc/VPKitDemo/tree/2.6.8/VPKit.framework/Headers/VPKEnvironment.h#L" class="button">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -611,7 +554,7 @@
                       </div>
                       <div class="slightly-smaller">
                         
-                          <a href="https://github.com/veepionyc/VPKitDemo/tree/2.6.6/VPKit.framework/Headers/VPKEnvironment.h#L" class="button">Show on GitHub</a>
+                          <a href="https://github.com/veepionyc/VPKitDemo/tree/2.6.8/VPKit.framework/Headers/VPKEnvironment.h#L" class="button">Show on GitHub</a>
                       </div>
                     </section>
                   </div>

@@ -15,6 +15,7 @@
 @class VPKImage;
 @class VPKPublicVeep;
 @class VPKVeep;
+@class VPKAuthorization;
 
 #import "VPKStats.h"
 #import "VPKStyles.h"
@@ -81,13 +82,27 @@ Obtain these credentials by registering your app with the VEEPIO developer porta
 
 
  */
-+ (void)setApplicationId:(nonnull NSString*)appId
++ (void)setApplicationId:(nonnull NSString*)appName
                 clientId:(nullable NSString*)clientId
                   clientSecret:(nullable NSString*)clientSecret;
 
-- (void)setApplicationId:(nonnull NSString*)appId
+- (void)setApplicationId:(nonnull NSString*)appName
                 clientId:(nullable NSString*)clientId
             clientSecret:(nullable NSString*)clientSecret;
+
++ (void)setAuth:(VPKAuthorization *)auth
+            env:(VPKEnvironmentType)env
+          identifier:(NSString*)identifier
+        name:(NSString*)name
+      canCreate:(BOOL)canCreate
+      canDelete:(BOOL)canDelete;
+
+- (void)setAuth:(VPKAuthorization *)auth
+            env:(VPKEnvironmentType)env
+          identifier:(NSString*)identifier
+        name:(NSString*)name
+      canCreate:(BOOL)canCreate
+      canDelete:(BOOL)canDelete;
 
 + (void)setProduction:(BOOL)production;
 

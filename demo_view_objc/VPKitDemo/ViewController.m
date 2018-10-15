@@ -28,7 +28,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.versionLabel.text = [VPKit sdkVersion];
-    [self configureViewer1WithTestUrl];
+    [self configureViewer1WithTestVideo];
     [self configureViewer2];
     [self configureConstraints];
     self.viewerPreview1.passThroughDelegate = self;
