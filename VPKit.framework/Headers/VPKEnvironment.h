@@ -17,6 +17,13 @@ typedef  NS_ENUM(NSUInteger, VPKUserType) {
 
 };
 
+typedef NS_ENUM(NSUInteger, VPKEnvironmentType) {
+    VPKEnvironmentTypeNone,
+    VPKEnvironmentTypeDev,
+    VPKEnvironmentTypeSandbox,
+    VPKEnvironmentTypeProduction,
+};
+
 @interface VPKUser : NSObject
 @property (nonatomic, strong) NSString* email;
 @property (nonatomic, assign) BOOL canDelete;
@@ -27,13 +34,15 @@ typedef  NS_ENUM(NSUInteger, VPKUserType) {
 @interface VPKApp : NSObject
 @property (nonatomic, assign) BOOL veepPublicByDefault;
 @property (nonatomic, copy) NSString* name;
-@property (nonatomic, copy) NSString* appId;  //legacy use
+//@property (nonatomic, copy) NSString* appId;  //legacy use
 @property (nonatomic, copy) NSString* identifier; // the db key
-@property (nonatomic, copy) NSString* appName;
+//@property (nonatomic, copy) NSString* appName;
 @property (nonatomic, copy) NSString* clientId;
 @property (nonatomic, copy) NSString* clientSecret;
 @property (nonatomic, copy) NSString* uuid;
 @property (nonatomic, copy) NSString* idfa;
+
+
 
 - (NSDictionary*)info;
 - (NSString*)consumerId;

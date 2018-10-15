@@ -30,6 +30,10 @@
  */
 @property (nullable, nonatomic, strong) NSURL* originalContentURI;
 /**
+ Alternative URIs for veep'd media item
+ */
+@property (nullable, nonatomic, strong) NSArray <NSString*>* alternativeContentURIs;
+/**
  Width of media item at soure URI
  */
 @property (nullable, nonatomic, strong) NSNumber* originalContentWidth;

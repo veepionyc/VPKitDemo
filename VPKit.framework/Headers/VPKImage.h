@@ -37,6 +37,12 @@ NS_ASSUME_NONNULL_BEGIN
  
  */
 @property (nonatomic, strong, readonly, nullable) NSURL* originalContentURI;
+    
+/**
+ An array of alternative identifiers, if available
+*/
+    
+@property (nonatomic, strong, nullable) NSArray* alternativeURIs;
 
 /**
  The veep metadata associated with the image, if  available

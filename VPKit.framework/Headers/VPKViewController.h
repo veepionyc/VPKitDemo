@@ -52,8 +52,8 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)configureVeepView;
 
 
-- (void)showNavBar;
-- (void)hideNavBar;
+- (void)showNavBar:(BOOL)animated;
+- (void)hideNavBar:(BOOL)animated;
 
 - (void)showFooter;
 - (void)showFooter:(nullable void ( ^)(BOOL finished))completion;
