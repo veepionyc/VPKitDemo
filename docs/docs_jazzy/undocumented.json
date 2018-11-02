@@ -744,35 +744,35 @@
     },
     {
       "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/VPKit.framework/Headers/VPKitClass.h",
-      "line": 228,
+      "line": 233,
       "symbol": "VPKit.+styles",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.class",
       "warning": "undocumented"
     },
     {
       "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/VPKit.framework/Headers/VPKitClass.h",
-      "line": 230,
+      "line": 235,
       "symbol": "VPKit.+environment",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.class",
       "warning": "undocumented"
     },
     {
       "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/VPKit.framework/Headers/VPKitClass.h",
-      "line": 232,
+      "line": 237,
       "symbol": "VPKit.-environment",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/VPKit.framework/Headers/VPKitClass.h",
-      "line": 253,
+      "line": 258,
       "symbol": "VPKit.-requestVeepWithURL:completionBlock:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/VPKit.framework/Headers/VPKitClass.h",
-      "line": 274,
+      "line": 279,
       "symbol": "VPKit.-getVeepHeaderWithURI:useCache:completionBlock:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
