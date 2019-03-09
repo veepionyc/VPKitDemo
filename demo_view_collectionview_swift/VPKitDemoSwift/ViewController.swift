@@ -37,19 +37,25 @@ enum media : String {
     func veepId() -> String {
         var veepId = ""
         switch(self){
+            
+            //stills
         case .apple1,
              .apple2,
              .apple3,
              .stock_photo,
-             .KrispyGlas: veepId = "1787"
+             .KrispyGlas:
+            veepId = "1787"
+            
+            //video
         case .tomcruise,
-             .tomcruise2: veepId="1788"
+             .tomcruise2:
+            veepId="1788"
         }
         return veepId
     }
 }
 
-// MARK: Cell
+// MARK: -
 
 class PreviewCell: UICollectionViewCell {
     @IBOutlet weak var preview: VPKPreview!
@@ -57,19 +63,27 @@ class PreviewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         preview.invokeViewerForAllImages = true
-        preview.iconLength =
-            UIScreen.main.bounds.size.width/10
     }
     
     override func prepareForReuse() {
         preview.reset()
     }
+   
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        preview.iconLength =
+            preview.bounds.size.width/4
+    }
 }
 
-// MARK: ViewController
+// MARK: -
 
 class CollectionViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
     
+//    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+//        return UIInterfaceOrientationMask.portrait
+//    }
+//    
     private let previewCell = "PreviewCell"
 
     let data = [media.apple1, media.apple2, media.apple3, media.KrispyGlas, media.stock_photo, media.tomcruise, media.tomcruise2]
@@ -106,6 +120,9 @@ class CollectionViewController: UICollectionViewController, UICollectionViewDele
         let media = data [idx]
         let image = (choice==1) ? media.vpkImage() : media.image()
         cell.preview.image = image
+        
+        //set to false for a preview to also forwared touches to didSelectItemAt:
+        cell.preview.tapGR.cancelsTouchesInView  = false
 
         return cell
     }
@@ -116,6 +133,11 @@ class CollectionViewController: UICollectionViewController, UICollectionViewDele
         let length = (((self.collectionView?.bounds.size.width)! / 3.0)-16 )
             return  CGSize(width: length, height: length)
         
+    }
+    
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        //only if cell.preview.tapGR.cancelsTouchesInView  = false
+        print("didselect")
     }
 
 

@@ -58,7 +58,6 @@
  The optional  touch delegate affords the host app full control over the invoking of Veep Viewer and Veep Editors. If not set, VPKPreview will handle the presenting and dismissing of Viewers and Editors. If set, the host app is responsible for VeepViewer and VeepEditor management using the touch delegate callback.
  */
 
-//@property (nullable, nonatomic, weak) id <VPKPreviewDelegate> delegate;
 @property (nullable, nonatomic, weak) id <VPKPreviewDelegate> delegate;
 
 /**
@@ -66,6 +65,12 @@
  */
 
 @property (nullable, nonatomic, weak) id <VPKPreviewPassThroughDelegate> passThroughDelegate;
+
+/**
+ Readonly UITapGesetureRecognizer - set cancelsTouchesInView to NO to continue to receive didSelect: messages in collection view cells.
+ */
+
+@property (nonatomic, strong, nonnull, readonly) UITapGestureRecognizer* tapGR;
 
 
 /**

@@ -80,5 +80,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
     
+    func application(_ application: UIApplication, supportedInterfaceOrientationsFor window: UIWindow?) -> UIInterfaceOrientationMask {
+        /*
+            if the host app is restricting orientation in the app delegate,
+            rotation should be enabled for the Veep Viewer like this:
+        */
+        
+        var mask : UIInterfaceOrientationMask = .portrait  // app default
+
+            if UIApplication.shared.keyWindow is VPKWindow {
+                mask = .allButUpsideDown  // veep viewer default
+            }
+        
+            return mask;
+    }
+    
 }
 

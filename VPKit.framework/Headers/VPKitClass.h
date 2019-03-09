@@ -222,6 +222,11 @@ Instance-level heavyweight authentication for users with email identifier and pa
 
 + (nullable VPKVeepEditor*)editorWithImage:(UIImage*)image fromView:(UIView*)view error:( NSError* _Nullable *)errorPtr;
 
+/**
+ presents a viewer on a new overlaying UIWindow - allows full orientation changes on the viewer while underlying controller may have more restricted orientations.
+*/
+    
++ (void)presentViewer:(VPKVeepViewer*)viewer;
 
 #pragma mark - environment
 

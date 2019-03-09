@@ -60,8 +60,6 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)hideFooter;
 - (void)hideFooter:(nullable void ( ^)(BOOL finished))completion;
 
-
-
 - (void)trackSelected:(nonnull NSString*)trackId;
 
 //- (nonnull UIBarButtonItem*)backButton;
