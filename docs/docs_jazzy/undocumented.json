@@ -442,13 +442,6 @@
       "warning": "undocumented"
     },
     {
-      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/VPKit.framework/Headers/VPKPreview.h",
-      "line": 62,
-      "symbol": "VPKPreview.delegate",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
-      "warning": "undocumented"
-    },
-    {
       "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/VPKit.framework/Headers/VPKPublicConstants.h",
       "line": 15,
       "symbol": "vpkErrorNotification",
