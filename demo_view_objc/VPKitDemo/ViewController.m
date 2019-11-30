@@ -12,10 +12,6 @@
 
 
 @interface ViewController ()<VPKPreviewPassThroughDelegate>
-@property (nonatomic, strong) VPKVeepViewer* vpViewer;
-@property (nonatomic, strong) VPKVeepEditor* vpEditor;
-
-
 @end
 
 @implementation ViewController
@@ -57,6 +53,7 @@
     NSURL* imageURL = [NSURL URLWithString:@"https://raw.githubusercontent.com/veepionyc/VPKitDemo/master/VPKitDemoObjC/VPKitDemo/Assets.xcassets/stock_photo.imageset/photo-1468818461933-b1d79f62434e.jpg"];
     image = [[VPKImage alloc] initWithImage:image url:imageURL];
     self.viewerPreview1.image = image;
+    self.viewerPreview1.invokeViewerForAllImages = YES;
 }
 
 
@@ -64,7 +61,7 @@
     
     UIImage* image = [UIImage imageNamed:@"tomcruise"];
     NSURL* contentURL = [NSURL URLWithString:@"youtube://ITjsb22-EwQ"];
-
+    self.viewerPreview1.invokeViewerForAllImages    = YES;
     image = [[VPKImage alloc] initWithImage:image url:contentURL];
     self.viewerPreview1.image = image;
 }
