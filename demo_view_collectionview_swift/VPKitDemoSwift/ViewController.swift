@@ -91,7 +91,7 @@ class CollectionViewController: UICollectionViewController, UICollectionViewDele
     override func viewDidLoad() {
         super.viewDidLoad()
         self.collectionView?.delegate = self;
-        self.collectionView?.contentInset = UIEdgeInsetsMake(10, 10, 10, 10)
+        self.collectionView?.contentInset = UIEdgeInsets.init(top: 10, left: 10, bottom: 10, right: 10)
         self.navigationItem.title =  "VPKit \(VPKit.sdkVersion())"
 
     }

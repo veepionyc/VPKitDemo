@@ -56,10 +56,10 @@ extension ViewController {
         view.superview?.addConstraint(
             NSLayoutConstraint.init(
                 item: view,
-                attribute: NSLayoutAttribute.height,
-                relatedBy: NSLayoutRelation.equal,
+                attribute: NSLayoutConstraint.Attribute.height,
+                relatedBy: NSLayoutConstraint.Relation.equal,
                 toItem: view,
-                attribute: NSLayoutAttribute.width,
+                attribute: NSLayoutConstraint.Attribute.width,
                 multiplier: ratio, constant: 0)
         )
     }
