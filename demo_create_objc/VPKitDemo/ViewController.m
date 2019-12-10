@@ -145,9 +145,7 @@
     
     VPKVeepViewer* vpViewer =  [VPKit viewerWithImage:image
                                    fromView:view];
-    vpViewer.delegate = self;
-    vpViewer.modalPresentationStyle = UIModalPresentationOverFullScreen;
-    [self presentViewController:vpViewer animated:YES completion:nil];
+    [VPKit presentViewer:vpViewer];
 
 }
 

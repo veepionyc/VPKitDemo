@@ -11,138 +11,44 @@
 
 @implementation ViewController (AutoLayout)
 
-
-#pragma mark - (layout boilerplate for the demo app, not relevant to the SDK)
-
 - (void)configureConstraints {
-    if (@available (iOS 9, *)) {
-        [self configureConstraints_new];
-    } else {
-        [self configureConstraints_old];
-    }
-}
-
-- (NSDictionary*)constraintsDict {
-    return @{
-             @"_titleLabel":self.titleLabel
-             ,@"_viewerPreview1":self.viewerPreview1
-             ,@"_viewerPreview2":self.viewerPreview2
-             ,@"_consumeLabel":self.consumeLabel
-             ,@"_createlabel":self.createLabel
-             ,@"_versionLabel":self.versionLabel
-             };
-}
-
-- (void)configureConstraints_new {
-    NSDictionary* dict = [self constraintsDict];
-    for (UIView* view in dict.allValues) {
+    for (UIView* view in self.view.subviews) {
         view.translatesAutoresizingMaskIntoConstraints = NO;
     };
     
     for (UIView* view in @[self.titleLabel,self.consumeLabel,self.createLabel,self.versionLabel]) {
-        if (@available(iOS 11, *)) {
-            [view.leftAnchor constraintEqualToAnchor:self.view.safeAreaLayoutGuide.leftAnchor constant:20].active = YES;
-            [view.rightAnchor constraintEqualToAnchor:self.view.safeAreaLayoutGuide.rightAnchor constant:-20].active = YES;
-        } else {
-            [view.leftAnchor constraintEqualToAnchor:self.view.layoutMarginsGuide.leftAnchor constant:20].active = YES;
-            [view.rightAnchor constraintEqualToAnchor:self.view.layoutMarginsGuide.rightAnchor constant:-20].active = YES;
-        }
+        [view.leftAnchor constraintEqualToAnchor:self.view.safeAreaLayoutGuide.leftAnchor constant:20].active = YES;
+        [view.rightAnchor constraintEqualToAnchor:self.view.safeAreaLayoutGuide.rightAnchor constant:-20].active = YES;
         [view.heightAnchor constraintEqualToConstant:30].active = YES;
     }
     
-    UILayoutGuide* guide1 = [[UILayoutGuide alloc] init];
-    UILayoutGuide* guide2 = [[UILayoutGuide alloc]  init];
-    UILayoutGuide* guide3 = [[UILayoutGuide alloc]  init];
-    UILayoutGuide* guide4 = [[UILayoutGuide alloc]  init];
-    
-    for (UILayoutGuide* guide in @[guide1,guide2,guide3,guide4]) {
-        [self.view addLayoutGuide:guide];
-        if (![guide isEqual:guide1])
-            [guide1.heightAnchor constraintEqualToAnchor:guide.heightAnchor].active = YES;
+    NSMutableArray<UILayoutGuide*>* guides = [[NSMutableArray alloc] init];
+    for (int i = 0; i<4; i++) {
+        guides[i] = [[UILayoutGuide alloc] init];
+        [self.view addLayoutGuide:guides[i]];
+        if (i>0) {
+            [guides[0].heightAnchor constraintEqualToAnchor:guides[i].heightAnchor].active = YES;
+        }
     }
-    
-    if (@available (iOS 11, *)) {
-        [guide1.topAnchor constraintEqualToAnchor:self.view.safeAreaLayoutGuide.topAnchor].active = YES;
-    } else {
-        [guide1.topAnchor constraintEqualToAnchor:self.view.topAnchor].active = YES;
-        
-    }
-    
-    [guide1.bottomAnchor constraintEqualToAnchor:self.titleLabel.topAnchor].active = YES;
-    [self.titleLabel.bottomAnchor constraintEqualToAnchor:guide2.topAnchor].active = YES;
-    [guide2.bottomAnchor constraintEqualToAnchor:self.viewerPreview1.topAnchor].active = YES;
+
+    [guides[0].topAnchor constraintEqualToAnchor:self.view.safeAreaLayoutGuide.topAnchor].active = YES;
+    [guides[0].bottomAnchor constraintEqualToAnchor:self.titleLabel.topAnchor].active = YES;
+    [self.titleLabel.bottomAnchor constraintEqualToAnchor:guides[1].topAnchor].active = YES;
+    [guides[1].bottomAnchor constraintEqualToAnchor:self.viewerPreview1.topAnchor].active = YES;
     [self.viewerPreview1.bottomAnchor constraintEqualToAnchor:self.consumeLabel.topAnchor].active = YES;
-    [self.consumeLabel.bottomAnchor constraintEqualToAnchor:guide3.topAnchor].active = YES;
-    [guide3.bottomAnchor constraintEqualToAnchor:self.viewerPreview2.topAnchor].active = YES;
+    [self.consumeLabel.bottomAnchor constraintEqualToAnchor:guides[2].topAnchor].active = YES;
+    [guides[2].bottomAnchor constraintEqualToAnchor:self.viewerPreview2.topAnchor].active = YES;
     [self.viewerPreview2.bottomAnchor constraintEqualToAnchor:self.createLabel.topAnchor].active = YES;
-    [self.createLabel.bottomAnchor constraintEqualToAnchor:guide4.topAnchor].active = YES;
-    [guide4.bottomAnchor constraintEqualToAnchor:self.versionLabel.topAnchor].active = YES;
+    [self.createLabel.bottomAnchor constraintEqualToAnchor:guides[3].topAnchor].active = YES;
+    [guides[3].bottomAnchor constraintEqualToAnchor:self.versionLabel.topAnchor].active = YES;
     
-    if (@available (iOS 11, *)) {
-        [self.versionLabel.bottomAnchor constraintEqualToAnchor:self.view.safeAreaLayoutGuide.bottomAnchor].active = YES;
-    } else {
-        [self.versionLabel.bottomAnchor constraintEqualToAnchor:self.view.bottomAnchor].active = YES;
-        
-    }
+    [self.versionLabel.bottomAnchor constraintEqualToAnchor:self.view.safeAreaLayoutGuide.bottomAnchor].active = YES;
+    [self.versionLabel.bottomAnchor constraintEqualToAnchor:self.view.bottomAnchor].active = YES;
     
     [self.viewerPreview1.heightAnchor constraintEqualToAnchor:self.view.heightAnchor multiplier:0.28].active = YES;
     [self.viewerPreview2.heightAnchor constraintEqualToAnchor:self.view.heightAnchor multiplier:0.28].active = YES;;
     [self.viewerPreview1.centerXAnchor constraintEqualToAnchor:self.view.centerXAnchor].active =YES;
     [self.viewerPreview2.centerXAnchor constraintEqualToAnchor:self.view.centerXAnchor].active =YES;
-    
-    
-    //   [_viewerPreview1.heightAnchor constraintEqualToAnchor:_viewerPreview2.heightAnchor].active = YES;
-    
-    
-    //    CGSize size = self.viewerPreview1.image.size;
-    //    if (size.width > 0)
-    //        [self alignHeightToView:self.viewerPreview1 ratio: size.height/size.width];
-    //    size = self.viewerPreview2.image.size;
-    //    if (size.width > 0)
-    //        [self alignHeightToView:self.viewerPreview2 ratio: size.height/size.width];
-    //
-    //
-    
-    
-}
-
-- (void)configureConstraints_old {
-    NSLog(@"%s",__func__);
-    
-    NSDictionary* dict = [self constraintsDict]; 
-    for (UIView* view in dict.allValues) {
-        view.translatesAutoresizingMaskIntoConstraints = NO;
-    };
-    CGFloat ratio = self.view.bounds.size.height>0?self.view.bounds.size.width/self.view.bounds.size.height:1.0;
-    CGFloat vMargin = 80*ratio;
-    CGFloat tMargin = self.view.bounds.size.height/20.0;
-    NSArray* formats =
-    @[
-      @"H:|-(vMargin)-[_titleLabel]-(vMargin)-|",
-      @"H:|-(vMargin)-[_viewerPreview1]-(vMargin)-|",
-      @"H:|-(vMargin)-[_consumeLabel]-(vMargin)-|",
-      @"H:|-(vMargin)-[_viewerPreview2]-(vMargin)-|",
-      @"H:|-(vMargin)-[_createLabel]-(vMargin)-|",
-      @"H:|-(vMargin)-[_versionLabel]-(vMargin)-|",
-      
-      @"V:|-(tMargin)-[_titleLabel]-(18)-[_viewerPreview1]-(4)-[_consumeLabel]-(18)-[_viewerPreview2]-(4)-[_createLabel]",
-      @"V:[_versionLabel]-(8)-|"
-      ];
-    
-    
-    for (NSString* format in formats) {
-        [self.view addConstraints:
-         [NSLayoutConstraint constraintsWithVisualFormat:format
-                                                 options:0
-                                                 metrics:@{@"vMargin":@(vMargin),@"tMargin":@(tMargin)}
-                                                   views:dict]];
-    }
-    CGSize size = self.viewerPreview1.image.size;
-    if (size.width > 0)
-        [self alignHeightToView:self.viewerPreview1 ratio: size.height/size.width];
-    size = self.viewerPreview2.image.size;
-    if (size.width > 0)
-        [self alignHeightToView:self.viewerPreview2 ratio: size.height/size.width];
     
 }
 
@@ -156,22 +62,11 @@
         if (size.height > 0) {
             [self.constraints addObject:[self alignWidthToHeight:view ratio:size.width/size.height]];
         }
-        
     }
     [self.view addConstraints:self.constraints];
     
 }
 
-- (void)alignHeightToWidth:(UIView*)view ratio:(CGFloat)ratio{
-    [view.superview addConstraint:
-     [NSLayoutConstraint constraintWithItem:view
-                                  attribute:NSLayoutAttributeHeight
-                                  relatedBy:NSLayoutRelationEqual
-                                     toItem:view
-                                  attribute:NSLayoutAttributeWidth
-                                 multiplier:ratio
-                                   constant:0]];
-}
 
 - (NSLayoutConstraint*)alignWidthToHeight:(UIView*)view ratio:(CGFloat)ratio{
     return
@@ -184,16 +79,6 @@
                                   constant:0];
 }
 
-- (void)alignHeightToView:(UIView*)view ratio:(CGFloat)ratio{
-    [view.superview addConstraint:
-     [NSLayoutConstraint constraintWithItem:view
-                                  attribute:NSLayoutAttributeHeight
-                                  relatedBy:NSLayoutRelationEqual
-                                     toItem:self.view
-                                  attribute:NSLayoutAttributeHeight
-                                 multiplier:0.4
-                                   constant:0]];
-}
 - (void)traitCollectionDidChange:(UITraitCollection *)previousTraitCollection {
     [super traitCollectionDidChange:previousTraitCollection];
     [self updateViewConstraints];

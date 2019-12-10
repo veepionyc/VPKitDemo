@@ -8,11 +8,10 @@
 
 #ifndef VPKConstants_h
 #define VPKConstants_h
-#import <UIKit/UIKit.h>
-#import "VPKModels.h"
 #import "VPKUtils.h"
-//#import "VPKViews.h"
-@class VPKVeep;
+#import "VPKPublicConstants.h"
+
+
 
 
 #define GOOGLE_BACK_FUNCTION //undef TBR
@@ -54,20 +53,11 @@ typedef NS_ENUM(NSInteger, VPKViewMode ) {
 
 
 
-//#define VPK_EMBEDDED_ERROR_KEY @"VPK_EMBEDDED_ERROR_KEY"
-//#define VPK_RESET_NOTIFICATION @"VPK_RESET_NOTIFICATION"
-
-static NSString* const vpkErrorNotification = @"vpkErrorNotification";
-static NSString* const vpkErrorKey = @"vpkErrorKey";
-
-static NSString* const vpkInternalErrorNotification = @"vpkInternalErrorNotification";
-static NSString* const vpkInternalErrorKey = @"vpkInternalErrorKey";
-static NSString* const vpkPresentErrorKey = @"vpkPresentErrorKey";
-
 static NSString* const kSearchBoxLocation = @"kSearchBoxLocation";
 
 static NSString* const kSearchBoxFocussed = @"kSearchBoxFocussed";
 static NSString* const kWindowTouchStarted = @"kWindowTouchStarted";
+static NSString* const kWebViewExpanded = @"kWebViewExpanded";
 
 static NSString* const kUpArrowButtonTouched = @"kUpArrowButtonTouched";
 static NSString* const kDownArrowButtonTouched = @"kDownArrowButtonTouched";
@@ -88,37 +78,6 @@ static const CGFloat kGoogleHeight = 258;
 static const CGFloat kCellNavbarHeight = 44;
 static const CGFloat kNavbarHeight = 64;
 static const CGFloat kNavbarHeightExtended = 84;
-
-
-
-//backend API locations
-//static NSString* const kLambdaScheme = @"https";
-//static NSString* const kDockerScheme = @"https";
-//static NSString* const kLambdaHost = @"yhc88w66n1.execute-api.us-east-1.amazonaws.com";
-//static NSString* const kDockerHost = @"sdk-api.dev.veep.io";
-//static NSString* const kLambaEndpoint = @"dev";
-//static NSString* const kDockerEndpoint = @"";
-//
-////static NSString* const kLambdaVersionPrefix = @"/api/v1.0";
-////static NSString* const kDockerVersionPrefix = @"/api/v1.0";
-//static NSString* const kLambdaVersionPrefix = @"";
-//static NSString* const kDockerVersionPrefix = @"";
-
-
-//typedef NS_ENUM(NSInteger, VPKBackendType) {
-//    VPKBackendTypeNone,
-//    VPKBackendTypeLambda,
-//    VPKBackendTypeDocker
-//};
-
-//static VPKBackendType const kBackendType = VPKBackendTypeDocker;
-
-
-
-
-
-
- 
 
 
 #endif /* VPKConstants_h */
