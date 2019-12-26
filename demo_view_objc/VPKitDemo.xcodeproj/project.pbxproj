@@ -45,8 +45,8 @@
 		AB1F17CB1C866C3700F740A2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AB1F17CD1C866C3700F740A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AB9BDF1C1E70E9F0008413C2 /* VPKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VPKit.framework; path = ../VPKit.framework; sourceTree = "<group>"; };
-		ABBA66ED2148123800BF85BA /* ViewController_AutoLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewController_AutoLayout.h; path = ../../../demo_view_objc/VPKitDemo/ViewController_AutoLayout.h; sourceTree = "<group>"; };
-		ABBA66EE2148123800BF85BA /* ViewController_AutoLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ViewController_AutoLayout.m; path = ../../../demo_view_objc/VPKitDemo/ViewController_AutoLayout.m; sourceTree = "<group>"; };
+		ABBA66ED2148123800BF85BA /* ViewController_AutoLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController_AutoLayout.h; sourceTree = "<group>"; };
+		ABBA66EE2148123800BF85BA /* ViewController_AutoLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController_AutoLayout.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
