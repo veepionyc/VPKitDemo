@@ -217,13 +217,38 @@ Instance-level heavyweight authentication for users with email identifier and pa
  * @name View Controllers
  *  ---------------------------------------------------------------------------------------
  */
+/**
+Create a VPKVeepViewer. This is the view controller for viewing image and video content with Veep metadata.
+ @param preview The VPKPreview containing the image to be viewed with the VeepViewer.This view's image provides the image data for viewing. The view frame is used for the transition geometry when presenting and dismissing.
+ */
 
-+ (nullable VPKVeepViewer*)viewerWithImage:(UIImage*)image fromView:(UIView*)view;
++ (nullable VPKVeepViewer*)viewerWithPreview:(VPKPreview*)preview; //NEW 2.7.0
 
+
+/**
+Create a VPKVeepViewer. Usse this method to provide image data with higher resolution than contained in the VPKPreview imageView.
+ @prama image The image data for display in the Veep Viewer.
+ @param preview A VPKPreview that handles the Viewer delegate methods and provdies frame geometry for presenting and dismissing the Veep Viewr.
+
+*/
+
++ (nullable VPKVeepViewer*)viewerWithImage:(UIImage*)image fromPreview:(VPKPreview*)preview;  //NEW 2.7.0
+
+/**
+Create a VPKVeepViewer. DEPRECATED from v 2.7.0
+@param image the image to be viewed with the VeepViewer.
+@param view  the view framing the image. This view is used to provide the transition geometry when presenting and dismissing.
+*/
+
++ (nullable VPKVeepViewer*)viewerWithImage:(UIImage*)image fromView:(UIView*)view; //DEPRECATED 2.7.0
+
+/**
+ Create a VPKVeepEditor. This is the view controller for creating and editing Veep metadata for image and video content.
+ */
 + (nullable VPKVeepEditor*)editorWithImage:(UIImage*)image fromView:(UIView*)view error:( NSError* _Nullable *)errorPtr;
 
 /**
- presents a viewer on a new overlaying UIWindow - allows full orientation changes on the viewer while underlying controller may have more restricted orientations.
+Presents a viewer on a new overlaying UIWindow - allows full orientation changes on the viewer while underlying controller may have more restricted orientations.
 */
     
 + (void)presentViewer:(VPKVeepViewer*)viewer;
@@ -245,33 +270,33 @@ Instance-level heavyweight authentication for users with email identifier and pa
 + (void) requestVeep:(NSString*)veepId completionBlock:(VPKitPublicVeepErrorCompletionBlock)completion;
 
 /**
- request a veep by veepId and return a VPKVeep in the completion handler
+ Request a veep by veepId and return a VPKVeep in the completion handler.
  */
 
 + (void) getVeep:(NSString*)veepId completionBlock:(VPKitVeepErrorCompletionBlock)completion;
 
 /**
- request a veep by originalContentURI and return a VPKPublicVeep in the completion handler
+Request a veep by originalContentURI and return a VPKPublicVeep in the completion handler.
  */
 + (void) requestVeepWithURL:(NSURL*)imageURL completionBlock:(VPKitPublicVeepErrorCompletionBlock)completion;
 
 - (void) requestVeepWithURL:(NSURL*)imageURL completionBlock:(VPKitPublicVeepErrorCompletionBlock)completion;
 
 /**
- request a veep by originalContentURI and return a VPKVeep in the completion handler
+Request a veep by originalContentURI and return a VPKVeep in the completion handler.
  */
 
 + (void) getVeepWithURL:(NSURL*)imageURL completionBlock:(VPKitVeepErrorCompletionBlock)completion;
 
 
 /**
- request a veep identifier by originalContentURI and return the identifier as an NSString in the completion handler
+Request a veep identifier by originalContentURI and return the identifier as an NSString in the completion handler.
  */
 
 + (void) getVeepIdWithURI:(NSURL*)originalContentURI useCache:(BOOL)useCache completionBlock:(VPKVeepIdentifierErrorCompletionBlock)completion;
 
 /**
- request a veep header by originalContentURI and return the header as an VPKPublicVeep in the completion handler
+Request a veep header by originalContentURI and return the header as an VPKPublicVeep in the completion handler.
  */
 
 + (void) getVeepHeaderWithURI:(NSURL*)originalContentURI useCache:(BOOL)useCache completionBlock:(VPKitPublicVeepErrorCompletionBlock)completion;
@@ -281,7 +306,7 @@ Instance-level heavyweight authentication for users with email identifier and pa
 /**
 A string representation of the VPKit version.
  
- @return NSString description with version and build numbers.
+@return NSString description with version and build numbers.
  */
 
 + (NSString*)sdkVersion;

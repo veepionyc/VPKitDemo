@@ -8,77 +8,60 @@
 
 import UIKit
 
-
-
 extension ViewController {
+    
     func configureConstraints()
     {
-        let views:[String:UIView] =  [
-            "titleLabel":self.titleLabel!
-            ,"consumeLabel":self.consumeLabel!
-            ,"createLabel":self.createLabel!
-            ,"viewerPreview":self.viewerPreview!
-            ,"editorPreview":self.editorPreview!
-            ,"versionLabel":self.versionLabel!
-            
-            
-        ]
-        for (_,view) in views {
+        for view in self.view.subviews  {
             view.translatesAutoresizingMaskIntoConstraints = false
+            view.leftAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.leftAnchor, constant: 20).isActive = true
+            view.rightAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.rightAnchor, constant:-20).isActive = true
+            if view is UILabel {
+                view.heightAnchor.constraint(equalToConstant: 30).isActive = true
+            }
         }
         
-        var ratio : CGFloat =  1.0
-        let height = self.view.bounds.size.height
-        
-        if (height>0) {
-            let width = self.view.bounds.size.width
-            ratio = width/height
+        var guides = [UILayoutGuide]()
+        for idx in 0...3 {
+            guides.append(UILayoutGuide())
+            self.view.addLayoutGuide(guides[idx])
+            guides[0].heightAnchor.constraint(equalTo: guides[idx].heightAnchor).isActive = true
         }
-        
-        
-        
-        let vMargin = 80 * ratio;
-        let tMargin = height / 20.0
-        let formats =
-            [
-                "H:|-(vMargin)-[titleLabel]-(vMargin)-|",
-                "H:|-(vMargin)-[viewerPreview]-(vMargin)-|",
-                "H:|-(vMargin)-[consumeLabel]-(vMargin)-|",
-                "H:|-(vMargin)-[editorPreview]-(vMargin)-|",
-                "H:|-(vMargin)-[createLabel]-(vMargin)-|",
-                "H:|-(vMargin)-[versionLabel]-(vMargin)-|",
-                "V:|-(tMargin)-[titleLabel]-(18)-[viewerPreview]-(4)-[consumeLabel]-(18)-[editorPreview]-(4)-[createLabel]",
-                "V:[versionLabel]-(8)-|"
-        ];
-        
-        for format in formats {
-            self.view.addConstraints(
-                NSLayoutConstraint.constraints(withVisualFormat: format,
-                                               options:NSLayoutFormatOptions(rawValue:0),
-                                               metrics: ["vMargin":vMargin, "tMargin":tMargin],
-                                               views: views)
-            )
-        }
-        
+        NSLayoutConstraint.activate( [
+            guides[0].topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor)
+            ,titleLabel.topAnchor.constraint(equalTo: guides[0].bottomAnchor)
+            ,guides[1].topAnchor.constraint(equalTo: titleLabel.bottomAnchor)
+            ,viewerPreview.topAnchor.constraint(equalTo: guides[1].bottomAnchor)
+            ,consumeLabel.topAnchor.constraint(equalTo: viewerPreview.bottomAnchor)
+            ,guides[2].topAnchor.constraint(equalTo: consumeLabel.bottomAnchor)
+            ,editorPreview.topAnchor.constraint(equalTo: guides[2].bottomAnchor)
+            ,createLabel.topAnchor.constraint(equalTo: editorPreview.bottomAnchor)
+            ,guides[3].topAnchor.constraint(equalTo: createLabel.bottomAnchor)
+            ,versionLabel.topAnchor.constraint(equalTo: guides[3].bottomAnchor)
+            ,versionLabel.bottomAnchor.constraint(equalTo:self.view.safeAreaLayoutGuide.bottomAnchor)
+        ])
+
         guard let vImage = self.viewerPreview?.image else {return}
         var size = vImage.size;
         self.alignHeightToWidth(view:self.viewerPreview!, ratio: size.height/size.width);
         guard let eImage = self.editorPreview?.image else {return}
         size = eImage.size;
         self.alignHeightToWidth(view:self.editorPreview!, ratio: size.height/size.width);
-        
+
     }
+
     
     func alignHeightToWidth (view:UIView, ratio:CGFloat)
     {
         view.superview?.addConstraint(
             NSLayoutConstraint.init(
                 item: view,
-                attribute: NSLayoutAttribute.height,
-                relatedBy: NSLayoutRelation.equal,
+                attribute: NSLayoutConstraint.Attribute.height,
+                relatedBy: NSLayoutConstraint.Relation.equal,
                 toItem: view,
-                attribute: NSLayoutAttribute.width,
+                attribute: NSLayoutConstraint.Attribute.width,
                 multiplier: ratio, constant: 0)
         )
     }
 }
+

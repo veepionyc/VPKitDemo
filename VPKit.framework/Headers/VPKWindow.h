@@ -11,6 +11,8 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface VPKWindow : UIWindow
+@property (nonatomic, strong) UIWindow* presentingWindow;
++ (nullable UIWindow *)findWindow;
 
 @end
 

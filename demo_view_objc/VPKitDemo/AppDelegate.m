@@ -35,7 +35,14 @@
     NSString* clientId = @"1zArpBErovQ1MjVHvigJqXwE8qt47U2Yy5XzG3CP";
     NSString* clientSecret = @"VpLIvEetceUnHBEIf6fLUwLxELBh2QesZ6iLLiPHCesRLXfOLLJNcFfmp03wJfGaJquO3V8KqHjtvzlufuXfWWgcpWVw9wxfBJNYdZh96JHV5hk44dJbqiCqplrKcSml";
     
-
+    
+    /*
+    NSString* appId = @"VeepMaker-Eagles";
+    NSString* clientId = @"XGTDTI3XGF91yoSudZmfYXuVu3ZZ5OeHM2UfCtZv";
+    NSString* clientSecret = @"4LNUTdiQkakzJH4ZWWnjqiiPX2zc4IADXaLANw0UIUAD35EWbw6NVEd2tLBJKx95jTCXTjIFj4wRUCsgXjAeHb2HtUYDYSaEz3GWuK6xJO7TAS0fZPQP4AZOatMCkFi0";
+    
+    
+    */
     /*
      
      INITIALISATION

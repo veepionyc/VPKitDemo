@@ -12,8 +12,8 @@
 
 #import <Foundation/Foundation.h>
 
-FOUNDATION_EXPORT NSString* const vpkErrorNotification;
-FOUNDATION_EXPORT NSString* const vpkErrorKey;
-FOUNDATION_EXPORT NSString* const vpkPresentErrorKey;
+extern NSString* const vpkErrorNotification;
+extern NSString* const vpkErrorKey;
+extern NSString* const vpkPresentErrorKey;
 
 #endif /* Header_h */

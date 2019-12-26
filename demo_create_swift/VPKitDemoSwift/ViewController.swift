@@ -39,7 +39,7 @@ class ViewController:
     {
         super.viewDidLoad()
         self.versionLabel.text = VPKit.sdkVersion()
-        self.configureViewerWithTestImage()
+        self.configureViewerWithTestVideo()
         self.configureEditor()
         self.configureConstraints()
         
