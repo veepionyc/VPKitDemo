@@ -43,7 +43,6 @@
     [guides[3].bottomAnchor constraintEqualToAnchor:self.versionLabel.topAnchor].active = YES;
     
     [self.versionLabel.bottomAnchor constraintEqualToAnchor:self.view.safeAreaLayoutGuide.bottomAnchor].active = YES;
-    [self.versionLabel.bottomAnchor constraintEqualToAnchor:self.view.bottomAnchor].active = YES;
     
     [self.viewerPreview.heightAnchor constraintEqualToAnchor:self.view.heightAnchor multiplier:0.28].active = YES;
     [self.editorPreview.heightAnchor constraintEqualToAnchor:self.view.heightAnchor multiplier:0.28].active = YES;;
