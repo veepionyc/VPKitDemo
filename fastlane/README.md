@@ -125,11 +125,6 @@ fastlane deploy
 fastlane finished
 ```
 
-### complete
-```
-fastlane complete
-```
-
 
 ----
 

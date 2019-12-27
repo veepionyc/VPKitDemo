@@ -227,7 +227,7 @@ Create a VPKVeepViewer. This is the view controller for viewing image and video 
 
 /**
 Create a VPKVeepViewer. Usse this method to provide image data with higher resolution than contained in the VPKPreview imageView.
- @prama image The image data for display in the Veep Viewer.
+ @param image The image data for display in the Veep Viewer.
  @param preview A VPKPreview that handles the Viewer delegate methods and provdies frame geometry for presenting and dismissing the Veep Viewr.
 
 */
