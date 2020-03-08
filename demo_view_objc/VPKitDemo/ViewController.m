@@ -67,6 +67,7 @@
 
     image = [[VPKImage alloc] initWithImage:image url:contentURL];
     self.viewerPreview1.image = image;
+    self.viewerPreview1.autoplay = YES;
 }
 
 
