@@ -99,6 +99,12 @@ if YES touching a VPKPreview will invoke the VPKit image viewer for all images. 
  */
 @property (nonatomic, assign) BOOL useCache;
 
+
+/**
+autoplay. Default is NO;
+ */
+@property (nonatomic, assign) BOOL autoplay;
+
 /**
  Shows the veep content icon.
  */

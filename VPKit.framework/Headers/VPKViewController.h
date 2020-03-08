@@ -37,6 +37,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) VPKStyles* styles;
 @property (nonatomic, assign) BOOL forwardErrors;
 @property (nonatomic, copy) VPKSessionData* sessionData;
+@property (nonatomic, assign) BOOL autoplay;
 
 - (nonnull UIView*)transitioningView;
 - (nonnull UIImageView*)transitioningImageView;
