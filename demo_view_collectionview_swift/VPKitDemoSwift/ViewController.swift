@@ -91,7 +91,7 @@ class CollectionViewController: UICollectionViewController, UICollectionViewDele
     override func viewDidLoad() {
         super.viewDidLoad()
         self.collectionView?.delegate = self;
-        self.collectionView?.contentInset = UIEdgeInsets.init(top: 10, left: 10, bottom: 10, right: 10)
+        self.collectionView?.contentInset = UIEdgeInsetsMake(10, 10, 10, 10)
         self.navigationItem.title =  "VPKit \(VPKit.sdkVersion())"
 
     }
@@ -116,8 +116,9 @@ class CollectionViewController: UICollectionViewController, UICollectionViewDele
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell:PreviewCell = collectionView.dequeueReusableCell(withReuseIdentifier: previewCell, for: indexPath) as! PreviewCell
         let idx: Int = Int(arc4random_uniform(UInt32(data.count)))
+        let choice = arc4random_uniform(2)
         let media = data [idx]
-        let image =  media.vpkImage()
+        let image = (choice==1) ? media.vpkImage() : media.image()
         cell.preview.image = image
         
         //set to false for a preview to also forwared touches to didSelectItemAt:
