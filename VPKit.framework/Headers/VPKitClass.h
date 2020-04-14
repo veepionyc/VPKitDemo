@@ -15,14 +15,14 @@
 @class VPKImage;
 @class VPKPublicVeep;
 @class VPKVeep;
+@class VPKVeepFetcher;
 @class VPKAuthorization;
 
 #import "VPKStats.h"
 #import "VPKStyles.h"
 #import "VPKPreview.h"
-#import "VPKEnvironment.h"
 #import "VPKPublicConstants.h"
-
+#import "VPKEnvironment.h"
 NS_ASSUME_NONNULL_BEGIN
 typedef NS_ENUM(NSInteger, VPKServerEnvironment) {
     VPKServerDev,
@@ -224,7 +224,6 @@ Create a VPKVeepViewer. This is the view controller for viewing image and video 
 
 + (nullable VPKVeepViewer*)viewerWithPreview:(VPKPreview*)preview; //NEW 2.7.0
 
-
 /**
 Create a VPKVeepViewer. Usse this method to provide image data with higher resolution than contained in the VPKPreview imageView.
  @param image The image data for display in the Veep Viewer.
@@ -243,17 +242,16 @@ Create a VPKVeepViewer. DEPRECATED from v 2.7.0
 + (nullable VPKVeepViewer*)viewerWithImage:(UIImage*)image fromView:(UIView*)view; //DEPRECATED 2.7.0
 
 /**
- Create a VPKVeepEditor. This is the view controller for creating and editing Veep metadata for image and video content.
- */
-+ (nullable VPKVeepEditor*)editorWithImage:(UIImage*)image fromView:(UIView*)view error:( NSError* _Nullable *)errorPtr;
-
-/**
 Presents a viewer on a new overlaying UIWindow - allows full orientation changes on the viewer while underlying controller may have more restricted orientations.
 */
     
 + (void)presentViewer:(VPKVeepViewer*)viewer;
 
-#pragma mark - environment
+#pragma mark - environment 
++ (nonnull VPKVeepFetcher*)fetcher;
+
+- (nonnull VPKVeepFetcher*)fetcher;
+
 
 + (nonnull VPKStyles*)styles;
 
@@ -311,67 +309,6 @@ A string representation of the VPKit version.
 
 + (NSString*)sdkVersion;
 
-#pragma mark - veep distribution
-
-/**
-Copy veeps from the default app to a destination app. The default app is invoked by the class method. The destination app instance is passed in as a parameter.
- 
- @param veepId The identifier of the veep to be copied.
- @param kit Instance of VPKit that represents the destination app to copy to.
- @param completion Block to run on completion of distribution network request.
- */
-
-+ (void)copyVeep:(NSString*)veepId
-           toKit:(VPKit*)kit
-      completion:(VPKitPublicVeepErrorCompletionBlock)completion;
-
-/**
-Remove the most recent version of a veep from the default app.
-
- This is a *lightweight* deletion. It deletes the most recent version of a veep leaving previous versions intact.
- 
- @param veepId The identifier of the veep to be deleted.
- @param completion Block to run on completion of distribution network request.
- */
-+ (void)deleteVeep:(NSString*)veepId
-        completion:(VPKBOOLErrorBlock)completion;
-
-/**
-Remove the most recent version of a veep from an app instance.
-
- This is a *lightweight* deletion. It deletes the most recent version of a veep leaving previous versions intact.
- 
- @param veepId The identifier of the veep to be deleted.
- @param completion Block to run on completion of distribution network request.
- */
-- (void)deleteVeep:(NSString*)veepId
-        completion:(VPKBOOLErrorBlock)completion;
-
-
-
-/**
-Remove all versions of a veep from the default app.
- 
- This is a *heavyweight* deletion. It deletes the current version and all previous versions as identified by the veep's root ID.
-
- @param veepId The identifier of the veep to be removed.
-
- @param completion Block to run on completion of network request.
- */
-
-+ (void)deleteVeeps:(NSString*)veepId completion:(VPKBOOLErrorBlock)completion;
-
-/**
-Remove all versions of a veep from an app instance.
-
- This is a *heavyweight* deletion. It deletes the current version and all previous versions as identified by the veep's root ID.
- 
- @param veepId The identifier of the veep to be removed.
- 
- @param completion Block to run on completion of network request.
- */
-
-- (void)deleteVeeps:(NSString*)veepId completion:(VPKBOOLErrorBlock)completion;
 
 NS_ASSUME_NONNULL_END
 @end

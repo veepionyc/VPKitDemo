@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <title>VPKImage Class Reference</title>
+    <link rel='stylesheet' type='text/css' href='../css/jazzy.css' />
+    <link rel='stylesheet' type='text/css' href='../css/highlight.css' />
+    <meta charset='utf-8'>
+    <script src='../js/jquery.min.js' defer></script>
+    <script src='../js/jazzy.js' defer></script>
+  </head>
+  <body>
+
+    <a name='//apple_ref/objc/Class/VPKImage' class='dashAnchor'></a>
+
+    <a title='VPKImage Class Reference'></a>
+
+    <header class='header'>
+      <p class='header-col header-col--primary'>
+        <a class='header-link' href='../index.html'>
+          VPKit Docs
+        </a>
+         (48% documented)
+      </p>
+    
+        <p class='header-col header-col--secondary'>
+          <a class='header-link' href='https://github.com/veepionyc/VPKitDemo/tree/2.8.1'>
+            <img class='header-icon' src='../img/gh.png'/>
+            View on GitHub
+          </a>
+        </p>
+    
+    </header>
+
+    <p class='breadcrumbs'>
+      <a class='breadcrumb' href='../index.html'>VPKit Reference</a>
+      <img class='carat' src='../img/carat.png' />
+      VPKImage Class Reference
+    </p>
+
+    <div class='content-wrapper'>
+      <nav class='navigation'>
+        <ul class='nav-groups'>
+          <li class='nav-group-name'>
+            <a class='nav-group-name-link' href='../Classes.html'>Classes</a>
+            <ul class='nav-group-tasks'>
+              <li class='nav-group-task'>
+                <a class='nav-group-task-link' href='../Classes/VPKApp.html'>VPKApp</a>
+              </li>
+              <li class='nav-group-task'>
+                <a class='nav-group-task-link' href='../Classes/VPKColorStyles.html'>VPKColorStyles</a>
+              </li>
+              <li class='nav-group-task'>
+                <a class='nav-group-task-link' href='../Classes/VPKDevice.html'>VPKDevice</a>
+              </li>
+              <li class='nav-group-task'>
+                <a class='nav-group-task-link' href='../Classes/VPKEnvironment.html'>VPKEnvironment</a>
+              </li>
+              <li class='nav-group-task'>
+                <a class='nav-group-task-link' href='../Classes/VPKFontStyles.html'>VPKFontStyles</a>
+              </li>
+              <li class='nav-group-task'>
+                <a class='nav-group-task-link' href='../Classes/VPKImage.html'>VPKImage</a>
+              </li>
+              <li class='nav-group-task'>
+                <a class='nav-group-task-link' href='../Classes/VPKPreview.html'>VPKPreview</a>
+              </li>
+              <li class='nav-group-task'>
+                <a class='nav-group-task-link' href='../Classes/VPKPublicVeep.html'>VPKPublicVeep</a>
+              </li>
+              <li class='nav-group-task'>
+                <a class='nav-group-task-link' href='../Classes/VPKSdk.html'>VPKSdk</a>
+              </li>
+              <li class='nav-group-task'>
+                <a class='nav-group-task-link' href='../Classes/VPKStyles.html'>VPKStyles</a>
+              </li>
+              <li class='nav-group-task'>
+                <a class='nav-group-task-link' href='../Classes/VPKUser.html'>VPKUser</a>
+              </li>
+              <li class='nav-group-task'>
+                <a class='nav-group-task-link' href='../Classes/VPKVeepViewer.html'>VPKVeepViewer</a>
+              </li>
+              <li class='nav-group-task'>
+                <a class='nav-group-task-link' href='../Classes/VPKit.html'>VPKit</a>
+              </li>
+            </ul>
+          </li>
+          <li class='nav-group-name'>
+            <a class='nav-group-name-link' href='../Constants.html'>Constants</a>
+            <ul class='nav-group-tasks'>
+              <li class='nav-group-task'>
+                <a class='nav-group-task-link' href='../Constants.html#/c:@VPKEventVideoComplete'>VPKEventVideoComplete</a>
+              </li>
+              <li class='nav-group-task'>
+                <a class='nav-group-task-link' href='../Constants.html#/c:@VPKEventVideoFramesPerSecondKey'>VPKEventVideoFramesPerSecondKey</a>
+              </li>
+              <li class='nav-group-task'>
+                <a class='nav-group-task-link' href='../Constants.html#/c:@VPKEventVideoLoad'>VPKEventVideoLoad</a>
+              </li>
+              <li class='nav-group-task'>
+                <a class='nav-group-task-link' href='../Constants.html#/c:@VPKEventVideoNumberOfDroppedVideoFrames'>VPKEventVideoNumberOfDroppedVideoFrames</a>
+              </li>
+              <li class='nav-group-task'>
+                <a class='nav-group-task-link' href='../Constants.html#/c:@VPKEventVideoObservedBitrateKey'>VPKEventVideoObservedBitrateKey</a>
+              </li>
+              <li class='nav-group-task'>
+                <a class='nav-group-task-link' href='../Constants.html#/c:@VPKEventVideoPause'>VPKEventVideoPause</a>
+              </li>
+              <li class='nav-group-task'>
+                <a class='nav-group-task-link' href='../Constants.html#/c:@VPKEventVideoPlay'>VPKEventVideoPlay</a>
+              </li>
+              <li class='nav-group-task'>
+                <a class='nav-group-task-link' href='../Constants.html#/c:@VPKEventVideoPlayRequested'>VPKEventVideoPlayRequested</a>
+              </li>
+              <li class='nav-group-task'>
+                <a class='nav-group-task-link' href='../Constants.html#/c:@VPKEventVideoPlaybackBitrateKey'>VPKEventVideoPlaybackBitrateKey</a>
+              </li>
+              <li class='nav-group-task'>
+                <a class='nav-group-task-link' href='../Constants.html#/c:@VPKEventVideoPlaybackTypeKey'>VPKEventVideoPlaybackTypeKey</a>
+              </li>
+              <li class='nav-group-task'>
+                <a class='nav-group-task-link' href='../Constants.html#/c:@VPKEventVideoSeekComplete'>VPKEventVideoSeekComplete</a>
+              </li>
+              <li class='nav-group-task'>
+                <a class='nav-group-task-link' href='../Constants.html#/c:@VPKEventVideoSeekStart'>VPKEventVideoSeekStart</a>
+              </li>
+              <li class='nav-group-task'>
+                <a class='nav-group-task-link' href='../Constants.html#/c:@VPKEventVideoStartupTimeKey'>VPKEventVideoStartupTimeKey</a>
+              </li>
+              <li class='nav-group-task'>
+                <a class='nav-group-task-link' href='../Constants.html#/c:@VPKEventVideoUnload'>VPKEventVideoUnload</a>
+              </li>
+              <li class='nav-group-task'>
+                <a class='nav-group-task-link' href='../Constants.html#/c:@VPKIdentifierKey'>VPKIdentifierKey</a>
+              </li>
+              <li class='nav-group-task'>
+                <a class='nav-group-task-link' href='../Constants.html#/c:@vpkErrorKey'>vpkErrorKey</a>
+              </li>
+              <li class='nav-group-task'>
+                <a class='nav-group-task-link' href='../Constants.html#/c:@vpkErrorNotification'>vpkErrorNotification</a>
+              </li>
+              <li class='nav-group-task'>
+                <a class='nav-group-task-link' href='../Constants.html#/c:@vpkPresentErrorKey'>vpkPresentErrorKey</a>
+              </li>
+            </ul>
+          </li>
+          <li class='nav-group-name'>
+            <a class='nav-group-name-link' href='../Enumerations.html'>Enumerations</a>
+            <ul class='nav-group-tasks'>
+              <li class='nav-group-task'>
+                <a class='nav-group-task-link' href='../Enums/VPKEnvironmentType.html'>VPKEnvironmentType</a>
+              </li>
+              <li class='nav-group-task'>
+                <a class='nav-group-task-link' href='../Enums/VPKServerEnvironment.html'>VPKServerEnvironment</a>
+              </li>
+              <li class='nav-group-task'>
+                <a class='nav-group-task-link' href='../Enums/VPKUserType.html'>VPKUserType</a>
+              </li>
+            </ul>
+          </li>
+          <li class='nav-group-name'>
+            <a class='nav-group-name-link' href='../Protocols.html'>Protocols</a>
+            <ul class='nav-group-tasks'>
+              <li class='nav-group-task'>
+                <a class='nav-group-task-link' href='../Protocols/VPKPreviewDelegate.html'>VPKPreviewDelegate</a>
+              </li>
+              <li class='nav-group-task'>
+                <a class='nav-group-task-link' href='../Protocols/VPKPreviewPassThroughDelegate.html'>VPKPreviewPassThroughDelegate</a>
+              </li>
+              <li class='nav-group-task'>
+                <a class='nav-group-task-link' href='../Protocols/VPKVeepViewerDelegate.html'>VPKVeepViewerDelegate</a>
+              </li>
+            </ul>
+          </li>
+          <li class='nav-group-name'>
+            <a class='nav-group-name-link' href='../Type Definitions.html'>Type Definitions</a>
+            <ul class='nav-group-tasks'>
+              <li class='nav-group-task'>
+                <a class='nav-group-task-link' href='../Type Definitions.html#/c:VPKitClass.h@T@VPKBOOLErrorBlock'>VPKBOOLErrorBlock</a>
+              </li>
+              <li class='nav-group-task'>
+                <a class='nav-group-task-link' href='../Type Definitions.html#/c:VPKitClass.h@T@VPKCompetitiveStatsBlock'>VPKCompetitiveStatsBlock</a>
+              </li>
+              <li class='nav-group-task'>
+                <a class='nav-group-task-link' href='../Type Definitions.html#/c:VPKitClass.h@T@VPKDailyStatsBlock'>VPKDailyStatsBlock</a>
+              </li>
+              <li class='nav-group-task'>
+                <a class='nav-group-task-link' href='../Type Definitions.html#/c:VPKitClass.h@T@VPKNetworkResponseBlock'>VPKNetworkResponseBlock</a>
+              </li>
+              <li class='nav-group-task'>
+                <a class='nav-group-task-link' href='../Type Definitions.html#/c:VPKitClass.h@T@VPKUserStatsErrorBlock'>VPKUserStatsErrorBlock</a>
+              </li>
+              <li class='nav-group-task'>
+                <a class='nav-group-task-link' href='../Type Definitions.html#/c:VPKitClass.h@T@VPKVeepIdentifierErrorCompletionBlock'>VPKVeepIdentifierErrorCompletionBlock</a>
+              </li>
+              <li class='nav-group-task'>
+                <a class='nav-group-task-link' href='../Type Definitions.html#/c:VPKitClass.h@T@VPKitConsumerIdCompletionBlock'>VPKitConsumerIdCompletionBlock</a>
+              </li>
+              <li class='nav-group-task'>
+                <a class='nav-group-task-link' href='../Type Definitions.html#/c:VPKitClass.h@T@VPKitPublicVeepErrorCompletionBlock'>VPKitPublicVeepErrorCompletionBlock</a>
+              </li>
+              <li class='nav-group-task'>
+                <a class='nav-group-task-link' href='../Type Definitions.html#/c:VPKitClass.h@T@VPKitVeepErrorCompletionBlock'>VPKitVeepErrorCompletionBlock</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class='main-content'>
+
+        <section class='section'>
+          <div class='section-content'>
+            <h1>VPKImage</h1>
+              <div class='declaration'>
+                <div class='language'>
+                  <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">VPKImage</span> <span class="p">:</span> <span class="nc">UIImage</span></code></pre>
+
+                </div>
+              </div>
+            <p>Drop-in replacement (subclass) for UIImage
+For use in conjunction with VPKPreview</p>
+
+<p>If VPKImage is initialised with null veepId or imageURL it will behave as a standard UIImage</p>
+<div class="aside aside-see">
+    <p class="aside-title">See</p>
+    <code><a href="../Classes/VPKPreview.html">VPKPreview</a></code>
+
+</div>
+
+          </div>
+        </section>
+
+        <section class='section'>
+          <div class='section-content'>
+            <div class="task-group">
+              <ul class='item-container'>
+                <li class="item">
+                  <div class="item-heading">
+                    <code>
+                    <a name="/c:objc(cs)VPKImage(py)veepId"></a>
+                    <a name="//apple_ref/objc/Property/veepId" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)VPKImage(py)veepId">veepId</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The veepId, if available.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h5>Declaration</h5>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">veepId</span><span class="p">;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        
+                          <a href="https://github.com/veepionyc/VPKitDemo/tree/2.8.1/VPKit.framework/Headers/VPKImage.h#L27" class="button">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div class="item-heading">
+                    <code>
+                    <a name="/c:objc(cs)VPKImage(py)originalContentURI"></a>
+                    <a name="//apple_ref/objc/Property/originalContentURI" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)VPKImage(py)originalContentURI">originalContentURI</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The original content URI, if available.</p>
+
+<p>In the case of an image veep, this will match the source URL of the supplied image.</p>
+
+<p>For a video veep, this is the source URI for the video media (<em>not</em> the placeholder image). This need not be an actual URL, but should be the unique identifier used when creating the veep (for example, it could be a youtube id).</p>
+
+<p>The URI is used to match the content to it&rsquo;s veep metadata. If a veepId is provided, the URI is not required as the veep will be fetched by it&rsquo;s id.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h5>Declaration</h5>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">NSURL</span> <span class="o">*</span><span class="n">originalContentURI</span><span class="p">;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        
+                          <a href="https://github.com/veepionyc/VPKitDemo/tree/2.8.1/VPKit.framework/Headers/VPKImage.h#L39" class="button">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div class="item-heading">
+                    <code>
+                    <a name="/c:objc(cs)VPKImage(py)alternativeURIs"></a>
+                    <a name="//apple_ref/objc/Property/alternativeURIs" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)VPKImage(py)alternativeURIs">alternativeURIs</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>An array of alternative identifiers, if available</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h5>Declaration</h5>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">NSArray</span> <span class="o">*</span><span class="n">alternativeURIs</span><span class="p">;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        
+                          <a href="https://github.com/veepionyc/VPKitDemo/tree/2.8.1/VPKit.framework/Headers/VPKImage.h#L45" class="button">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div class="item-heading">
+                    <code>
+                    <a name="/c:objc(cs)VPKImage(py)veep"></a>
+                    <a name="//apple_ref/objc/Property/veep" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)VPKImage(py)veep">veep</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The veep metadata associated with the image, if  available</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h5>Declaration</h5>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">VPKVeep</span> <span class="o">*</span><span class="n">veep</span><span class="p">;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        
+                          <a href="https://github.com/veepionyc/VPKitDemo/tree/2.8.1/VPKit.framework/Headers/VPKImage.h#L50" class="button">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div class="item-heading">
+                    <code>
+                    <a name="/c:objc(cs)VPKImage(py)publicVeep"></a>
+                    <a name="//apple_ref/objc/Property/publicVeep" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)VPKImage(py)publicVeep">publicVeep</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>An abbreviated, header-only version of a veep, if available.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h5>Declaration</h5>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n"><a href="../Classes/VPKPublicVeep.html">VPKPublicVeep</a></span> <span class="o">*</span><span class="n">publicVeep</span><span class="p">;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        
+                          <a href="https://github.com/veepionyc/VPKitDemo/tree/2.8.1/VPKit.framework/Headers/VPKImage.h#L55" class="button">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div class="item-heading">
+                    <code>
+                    <a name="/c:objc(cs)VPKImage(py)mediaIdentifier"></a>
+                    <a name="//apple_ref/objc/Property/mediaIdentifier" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)VPKImage(py)mediaIdentifier">mediaIdentifier</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A courtesy property that the host app can use for tracking purposes.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h5>Declaration</h5>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">mediaIdentifier</span><span class="p">;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        
+                          <a href="https://github.com/veepionyc/VPKitDemo/tree/2.8.1/VPKit.framework/Headers/VPKImage.h#L60" class="button">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div class="item-heading">
+                    <code>
+                    <a name="/c:objc(cs)VPKImage(im)initWithImage:veepId:"></a>
+                    <a name="//apple_ref/objc/Method/-initWithImage:veepId:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)VPKImage(im)initWithImage:veepId:">-initWithImage:veepId:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Use initWithImage:veepId if you are identifying veep content using the unique identifier (id) of the veep.</p>
+<div class="aside aside-see">
+    <p class="aside-title">See</p>
+    <p><code><a href="../Classes/VPKImage.html#/c:objc(cs)VPKImage(im)initWithImage:url:">-initWithImage:url:</a></code></p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h5>Declaration</h5>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">instancetype</span><span class="p">)</span><span class="nf">initWithImage</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">UIImage</span> <span class="o">*</span><span class="p">)</span><span class="nv">image</span>
+                               <span class="nf">veepId</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">veepId</span><span class="p">;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h5>Parameters</h5>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>image</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The UIImage that this instance will subclass</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>veepId</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A veep identifier. Veep metadata will be associated with the image using this identifier. The veep Id is returned as part of the veep creation process.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h5>Return Value</h5>
+                        <p>An instance of VPKImage.</p>
+                      </div>
+                      <div class="slightly-smaller">
+                        
+                          <a href="https://github.com/veepionyc/VPKitDemo/tree/2.8.1/VPKit.framework/Headers/VPKImage.h#L84" class="button">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div class="item-heading">
+                    <code>
+                    <a name="/c:objc(cs)VPKImage(im)initWithImage:url:"></a>
+                    <a name="//apple_ref/objc/Method/-initWithImage:url:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)VPKImage(im)initWithImage:url:">-initWithImage:url:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Use initWithImage:url if you are identifying veep content using the original URI used to create the veep.</p>
+<div class="aside aside-see">
+    <p class="aside-title">See</p>
+    <p><code><a href="../Classes/VPKImage.html#/c:objc(cs)VPKImage(im)initWithImage:veepId:">-initWithImage:veepId:</a></code></p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h5>Declaration</h5>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">instancetype</span><span class="p">)</span><span class="nf">initWithImage</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">UIImage</span> <span class="o">*</span><span class="p">)</span><span class="nv">image</span>
+                                  <span class="nf">url</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSURL</span> <span class="o">*</span><span class="p">)</span><span class="nv">contentURI</span><span class="p">;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h5>Parameters</h5>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>image</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The UIImage that this instance will subclass</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>contentURI</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The contentURI is the unique identifier for the veep&rsquo;d resource.
+In the case of an image this will often be the source URL used to obtain the UIImage.
+In the case of video this will be the source address of the video asset.
+The contentURI must be the same URI as was used to create the veep as that is how veeps are identified.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h5>Return Value</h5>
+                        <p>An instance of VPKImage.</p>
+                      </div>
+                      <div class="slightly-smaller">
+                        
+                          <a href="https://github.com/veepionyc/VPKitDemo/tree/2.8.1/VPKit.framework/Headers/VPKImage.h#L108" class="button">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div class="item-heading">
+                    <code>
+                    <a name="/c:objc(cs)VPKImage(im)updateWithVeep:"></a>
+                    <a name="//apple_ref/objc/Method/-updateWithVeep:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)VPKImage(im)updateWithVeep:">-updateWithVeep:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>sets the veep, veepId and originalContentUri</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h5>Declaration</h5>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">updateWithVeep</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">VPKVeep</span> <span class="o">*</span><span class="p">)</span><span class="nv">veep</span><span class="p">;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        
+                          <a href="https://github.com/veepionyc/VPKitDemo/tree/2.8.1/VPKit.framework/Headers/VPKImage.h#L113" class="button">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div class="item-heading">
+                    <code>
+                    <a name="/c:objc(cs)VPKImage(im)updateWithPublicVeep:"></a>
+                    <a name="//apple_ref/objc/Method/-updateWithPublicVeep:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)VPKImage(im)updateWithPublicVeep:">-updateWithPublicVeep:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>sets the publicVeep (a veep header stub), veepId and originalContentUri.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h5>Declaration</h5>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">updateWithPublicVeep</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/VPKPublicVeep.html">VPKPublicVeep</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">veep</span><span class="p">;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        
+                          <a href="https://github.com/veepionyc/VPKitDemo/tree/2.8.1/VPKit.framework/Headers/VPKImage.h#L118" class="button">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div class="item-heading">
+                    <code>
+                    <a name="/c:objc(cs)VPKImage(im)updateWithVeepId:"></a>
+                    <a name="//apple_ref/objc/Method/-updateWithVeepId:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)VPKImage(im)updateWithVeepId:">-updateWithVeepId:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>sets <code><a href="../Classes/VPKImage.html#/c:objc(cs)VPKImage(py)veep">veep</a></code> to nil and <code><a href="../Classes/VPKImage.html#/c:objc(cs)VPKImage(py)veepId">veepId</a></code> to veepId.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h5>Declaration</h5>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">updateWithVeepId</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">veepId</span><span class="p">;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h5>Parameters</h5>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>veepId</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The unique identifier for a veep.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        
+                          <a href="https://github.com/veepionyc/VPKitDemo/tree/2.8.1/VPKit.framework/Headers/VPKImage.h#L126" class="button">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+      </article>
+    </div>
+    <section class='footer'>
+      <p>© 2019 <a class="link" href="https://veep.io" target="_blank" rel="external">Veepio</a>. All rights reserved.</p>
+      <p>Generated by <a class='link' href='https://github.com/realm/jazzy' target='_blank' rel='external'>jazzy ♪♫ v0.9.1</a>, a <a class='link' href='http://realm.io' target='_blank' rel='external'>Realm</a> project.</p>
+    </section>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-114402605-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'UA-114402605-1');
+    </script>
+    <script async src="https://www.google-analytics.com/analytics.js"></script>
+    <!-- End Google Analytics -->
+  </body>
+</div>
+</html>
