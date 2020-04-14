@@ -11,20 +11,20 @@
 
 This is a binary distribution of the VPKit framework. Swift and Objective-C compatible.
 
-`VPKit.framework` - fat binary dynamic framework. Runs on simulator and device. Not suitable for app store submission.
-`VPKit_framework_iphoneos.zip` - zip file containing thin binary dynamic framework. Runs on device only. Suitable for app store submission.
+`VPKit.framework` - fat binary dynamic framework. Runs on simulator and device. Not suitable for app store submission. For the app store either use the included thin arm64 binary (`VPKit_framework_iphoneos.zip`) or run the provided `strip_frameworks.sh` script in the project build phases.  
 
 
 Demo host apps are provided in Objective-C and Swift. 
 
-_View_ - shows quick-start integration with minimal code requirements. View veeps only.  
+__View__ - shows quick-start integration with minimal code requirements. View veeps only.  
 
-_Create_ - more elaborate integration example with use of delegates. Create new veeps, view existing veeps.  
+__Create__ - more elaborate integration example with use of delegates. Create new veeps, view existing veeps. _Removed from VPKit - refer to VPKitMaker SDK for creating veeps_.
 
 
 
-Documentation: [veepionyc.github.io](https://veepionyc.github.io)   
-Help: sdk_support@veepio.com or use the [VPKitDemo issue tracker](https://github.com/veepionyc/VPKitDemo/issues)]j)
+Documentation: [veepionyc.github.io](https://veepionyc.github.io)     
+Class reference: [https://veepionyc.github.io/reference]()  
+Help: sdk_support@veepio.com  
 
 ![](https://veepionyc.github.io/assets/img/consume.jpg)
 ![](https://veepionyc.github.io/assets/img/create.jpg)
