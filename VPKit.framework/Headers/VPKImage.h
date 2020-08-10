@@ -55,9 +55,11 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong, readonly, nullable) VPKPublicVeep* publicVeep;
 
 /**
- A courtesy property that the host app can use for tracking purposes.
+Optional properties that the host app can use for tracking purposes.
  */
 @property (nonatomic, strong, nullable) NSString* mediaIdentifier;
+@property (nonatomic, strong, nullable) NSString* customData;
+
 
 /**
  deprecated 2.5
