@@ -421,13 +421,6 @@
       "warning": "undocumented"
     },
     {
-      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/VPKit.framework/Headers/VPKImage.h",
-      "line": 61,
-      "symbol": "VPKImage.customData",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
-      "warning": "undocumented"
-    },
-    {
       "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/VPKit.framework/Headers/VPKPreview.h",
       "line": 14,
       "symbol": "VPKPreviewDelegate",

@@ -55,14 +55,8 @@
     //    NSURL* imageURL = [NSURL URLWithString:@"https://phieagles.akamaized.net//PHI/videos/dct/video_audio/2017/12-December/171204_PP_WentzWEB_1-500k.mp4"];
 
     NSURL* imageURL = [NSURL URLWithString:@"https://raw.githubusercontent.com/veepionyc/VPKitDemo/master/VPKitDemoObjC/VPKitDemo/Assets.xcassets/stock_photo.imageset/photo-1468818461933-b1d79f62434e.jpg"];
-    VPKImage* vpkImage = [[VPKImage alloc] initWithImage:image url:imageURL];
-    
-    //optional parameters
-    vpkImage.mediaIdentifier = @"mediaIdentifier";
-    vpkImage.customData = @"customData";
-    
-    vpkImage = [[VPKImage alloc] initWithImage:image url:imageURL];
-    self.viewerPreview1.image = vpkImage;
+    image = [[VPKImage alloc] initWithImage:image url:imageURL];
+    self.viewerPreview1.image = image;
 }
 
 
@@ -71,13 +65,8 @@
     UIImage* image = [UIImage imageNamed:@"tomcruise"];
     NSURL* contentURL = [NSURL URLWithString:@"youtube://ITjsb22-EwQ"];
 
-    VPKImage* vpkImage = [[VPKImage alloc] initWithImage:image url:contentURL];
-    
-    //optional parameters
-    vpkImage.mediaIdentifier = @"mediaIdentifier";
-    vpkImage.customData = @"customData";
-    
-    self.viewerPreview1.image = vpkImage;
+    image = [[VPKImage alloc] initWithImage:image url:contentURL];
+    self.viewerPreview1.image = image;
     self.viewerPreview1.autoplay = YES;
 }
 
