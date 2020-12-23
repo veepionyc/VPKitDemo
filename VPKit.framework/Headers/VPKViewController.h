@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+@class VPKPlayerItem;
 @class VPKVeepFetcher;
 @class VPKVeepVideoImageView;
 @class VPKCollectionVC;
@@ -17,6 +17,8 @@
 @class VPKVeep;
 @class VPKImage;
 @class VPKSessionData;
+@class VPKPlayerItem;
+
 typedef NS_ENUM(NSInteger, VPKViewMode );
 
 NS_ASSUME_NONNULL_BEGIN
@@ -27,7 +29,6 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong, nonnull) UIView* sourceView;
 @property (nonatomic, assign) CGRect toRect;
 @property (nonatomic, assign) CGRect fromRect;
-@property (nonatomic, strong, nullable) id selectedTrackObserver;
 @property (nonatomic, strong, nonnull) VPKCollectionVC* collectionVC;
 //@property (nonatomic, strong, nullable) NSString* veepId;
 @property (nonatomic, strong, nonnull) VPKBlurTouchView* touchView;
@@ -37,6 +38,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, assign) BOOL forwardErrors;
 @property (nonatomic, copy) VPKSessionData* sessionData;
 @property (nonatomic, assign) BOOL autoplay;
+@property (nonatomic, strong) VPKPlayerItem* currentItem;
 
 - (nonnull UIView*)transitioningView;
 - (nonnull UIImageView*)transitioningImageView;
@@ -50,10 +52,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 - (void)configureVeepView;
+- (void)configureList:(NSArray<VPKPlayerItem*>*)list;
 
-
-//- (void)showNavBar:(BOOL)animated;
-//- (void)hideNavBar:(BOOL)animated;
 
 - (void)showFooter;
 - (void)showFooter:(nullable void ( ^)(BOOL finished))completion;
@@ -62,11 +62,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)trackSelected:(nonnull NSString*)trackId;
 
-//- (nonnull UIBarButtonItem*)backButton;
-//- (nonnull UIBarButtonItem*)dismissButton;
-//- (nonnull UIBarButtonItem*)cancelButton;
-//- (nonnull UIBarButtonItem*)nextButton;
-//- (nonnull UIBarButtonItem*)publishButton;
 
 - (void)resetCollectionVC;
 

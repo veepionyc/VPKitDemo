@@ -10,7 +10,6 @@
 #import "VPKViewController.h"
 
 @class VPKVeepViewer;
-
 @protocol VPKVeepViewerDelegate <NSObject>
 
 - (void)veepViewer:(nonnull VPKVeepViewer*)viewer didFinishViewingWithInfo:(nullable NSDictionary*)info;
@@ -21,10 +20,6 @@
 
 @interface VPKVeepViewer : VPKViewController
 @property (nonatomic, weak, nullable) id <VPKVeepViewerDelegate> delegate;
-
-
-
-
 
 
 

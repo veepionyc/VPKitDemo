@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 @class VPKImage;
 @class VPKPreview;
-
+@class VPKPlayerItem;
 @class VPKPreview;
 @protocol VPKPreviewDelegate <NSObject>
 
@@ -101,9 +101,14 @@ if YES touching a VPKPreview will invoke the VPKit image viewer for all images. 
 
 
 /**
-autoplay. Default is NO;
+autoplay. Default is YES;
  */
 @property (nonatomic, assign) BOOL autoplay;
+
+/**
+optional video playlist
+ */
+@property (nonatomic, copy) NSArray <VPKPlayerItem*>* _Nonnull  playlist;
 
 /**
  Shows the veep content icon.
