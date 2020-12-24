@@ -541,21 +541,21 @@
     },
     {
       "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/VPKit.framework/Headers/VPKVeepViewer.h",
-      "line": 17,
+      "line": 16,
       "symbol": "VPKVeepViewerDelegate.-veepViewerDidCancel:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/VPKit.framework/Headers/VPKVeepViewer.h",
-      "line": 21,
+      "line": 20,
       "symbol": "VPKVeepViewer",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.class",
       "warning": "undocumented"
     },
     {
       "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/VPKit.framework/Headers/VPKVeepViewer.h",
-      "line": 22,
+      "line": 21,
       "symbol": "VPKVeepViewer.delegate",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
       "warning": "undocumented"

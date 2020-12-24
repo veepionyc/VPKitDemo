@@ -11,9 +11,8 @@
 
 @class VPKVeepViewer;
 @protocol VPKVeepViewerDelegate <NSObject>
-
+@optional
 - (void)veepViewer:(nonnull VPKVeepViewer*)viewer didFinishViewingWithInfo:(nullable NSDictionary*)info;
-
 - (void)veepViewerDidCancel:(nonnull VPKVeepViewer*)viewer;
 
 @end
