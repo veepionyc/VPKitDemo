@@ -62,4 +62,11 @@ lane :finished	 do
 
 end
 
+lane :temp do
+    sync_podspec_version(version:framework_version())
+    git_commit(path:".", message: "deployed - v #{framework_version()}")
+    add_git_tag(tag:"#{framework_version()}")
+    push_to_git_remote
+    deploy_to_cocoapods
+end
 
