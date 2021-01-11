@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
 s.name              = "VPKit"
-s.version = "2.9.3"
+s.version = "2.9.6"
 s.summary			= "VPKit vends veeps."
 s.homepage          = "http://www.veepio.com"
 
