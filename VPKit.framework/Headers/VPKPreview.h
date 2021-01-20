@@ -11,6 +11,8 @@
 @class VPKPreview;
 @class VPKPlayerItem;
 @class VPKPreview;
+@protocol VPKAdHandler;
+
 @protocol VPKPreviewDelegate <NSObject>
 
 - (void)vpkPreviewTouched:(nonnull VPKPreview*)preview image:(nonnull VPKImage*)image;
@@ -109,6 +111,12 @@ autoplay. Default is YES;
 optional video playlist
  */
 @property (nonatomic, copy) NSArray <VPKPlayerItem*>* _Nonnull  playlist;
+
+/**
+optional ad handler
+ */
+@property (nonatomic, weak, nullable) id <VPKAdHandler> adHandler;
+
 
 /**
  Shows the veep content icon.
