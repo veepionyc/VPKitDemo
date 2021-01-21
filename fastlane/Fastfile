@@ -9,13 +9,13 @@ OBJC_PROJECTS = [CONSUME_OBJC_PROJECT]
 DEPLOYMENT_DEMO_PROJECTS = [CONSUME_SWIFT_PROJECT,CONSUME_OBJC_PROJECT]
 
 def deployed_framework_version()
-    path = "../#{FRAMEWORK_PLIST}"
+    path = "#{FRAMEWORK_PLIST}"
     puts "#{path}"
     framework_val("#{path}",'CFBundleShortVersionString')
 end
 
 def deployed_framework_build()
-    path = "../#{FRAMEWORK_PLIST}"
+    path = "#{FRAMEWORK_PLIST}"
     puts "#{path}"
     framework_val("#{path}",'CFBundleVersion')
 end
@@ -77,10 +77,9 @@ lane :finished	 do
 end
 
 lane :temp do
-    sync_podspec_version(version:framework_version())
-    git_commit(path:".", message: "deployed - v #{deployed_framework_version()}")
-    add_git_tag(tag:"#{deployed_framework_version()}")
-    push_to_git_remote
-    deploy_to_cocoapods
+    _version = deployed_framework_version()
+
+    _build = deployed_framework_build()
+    puts "#{_version}  #{_build}"
 end
 

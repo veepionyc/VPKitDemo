@@ -90,6 +90,11 @@ fastlane build_docs
 fastlane test
 ```
 
+### test2
+```
+fastlane test2
+```
+
 ### sync_project_version_numbers
 ```
 fastlane sync_project_version_numbers
