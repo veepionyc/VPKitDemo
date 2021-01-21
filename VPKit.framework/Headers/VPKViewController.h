@@ -18,6 +18,7 @@
 @class VPKImage;
 @class VPKSessionData;
 @class VPKPlayerItem;
+@protocol VPKAdHandler;
 
 typedef NS_ENUM(NSInteger, VPKViewMode );
 
@@ -39,6 +40,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy) VPKSessionData* sessionData;
 @property (nonatomic, assign) BOOL autoplay;
 @property (nonatomic, strong) VPKPlayerItem* currentItem;
+@property (nonatomic, weak, nullable) id <VPKAdHandler> adHandler;
 
 - (nonnull UIView*)transitioningView;
 - (nonnull UIImageView*)transitioningImageView;
@@ -77,8 +79,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)expandWebView:(NSNotification*)notification;
     
-- (UIEdgeInsets)safeInsets;
-
 - (VPKImage*)vpkImage;
 
 - (void)logVeepView:(VPKVeep*)veep;

@@ -18,11 +18,11 @@
         <a class='header-link' href='index.html'>
           VPKit Docs
         </a>
-         (48% documented)
+         (51% documented)
       </p>
     
         <p class='header-col header-col--secondary'>
-          <a class='header-link' href='https://github.com/veepionyc/VPKitDemo/tree/2.9.6'>
+          <a class='header-link' href='https://github.com/veepionyc/VPKitDemo/tree/2.9.8'>
             <img class='header-icon' src='img/gh.png'/>
             View on GitHub
           </a>
@@ -59,6 +59,9 @@
               </li>
               <li class='nav-group-task'>
                 <a class='nav-group-task-link' href='Classes/VPKImage.html'>VPKImage</a>
+              </li>
+              <li class='nav-group-task'>
+                <a class='nav-group-task-link' href='Classes/VPKPlayerItem.html'>VPKPlayerItem</a>
               </li>
               <li class='nav-group-task'>
                 <a class='nav-group-task-link' href='Classes/VPKPreview.html'>VPKPreview</a>
@@ -160,6 +163,9 @@
             <a class='nav-group-name-link' href='Protocols.html'>Protocols</a>
             <ul class='nav-group-tasks'>
               <li class='nav-group-task'>
+                <a class='nav-group-task-link' href='Protocols/VPKAdHandler.html'>VPKAdHandler</a>
+              </li>
+              <li class='nav-group-task'>
                 <a class='nav-group-task-link' href='Protocols/VPKPreviewDelegate.html'>VPKPreviewDelegate</a>
               </li>
               <li class='nav-group-task'>
@@ -221,6 +227,51 @@
                 <li class="item">
                   <div class="item-heading">
                     <code>
+                    <a name="/c:objc(pl)VPKAdHandler"></a>
+                    <a name="//apple_ref/objc/Protocol/VPKAdHandler" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(pl)VPKAdHandler">VPKAdHandler</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Protocol for handling pre-roll video advertising.</p>
+
+<p>When an object conforming to this protocol is assigned to a <code><a href="Classes/VPKPreview.html">VPKPreview</a></code> or <code><a href="Classes/VPKVeepViewer.html">VPKVeepViewer</a></code>, VPKit video content will be loaded and paused to allow the host app to manage preroll advertising.</p>
+
+<p><code>view</code>, <code>controller</code> and <code>completion</code> objects will be returned to facilitate correct handling and display of prerolls.</p>
+
+<p>When the <code>completion</code> block is called, control will return to the SDK to play the requested video content.</p>
+
+<p>Designed for <a href="https://developers.google.com/interactive-media-ads/docs/sdks/ios/client-side/">GoogleAds Interactive Media Ads</a> requirements.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h5>Declaration</h5>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@protocol</span> <span class="nc">VPKAdHandler</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        
+                          <a href="Protocols/VPKAdHandler.html" class="button">See more</a>
+                        
+                          <a href="https://github.com/veepionyc/VPKitDemo/tree/2.9.8/demo/VPKit.framework/Headers/VPKAdHandler.h#L27-L48" class="button">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class='item-container'>
+                <li class="item">
+                  <div class="item-heading">
+                    <code>
                     <a name="/c:objc(pl)VPKPreviewDelegate"></a>
                     <a name="//apple_ref/objc/Protocol/VPKPreviewDelegate" class="dashAnchor"></a>
                     <a class="token" href="#/c:objc(pl)VPKPreviewDelegate">VPKPreviewDelegate</a>
@@ -250,7 +301,7 @@
                         
                           <a href="Protocols/VPKPreviewDelegate.html" class="button">See more</a>
                         
-                          <a href="https://github.com/veepionyc/VPKitDemo/tree/2.9.6/VPKit.framework/Headers/VPKPreview.h#L14-L18" class="button">Show on GitHub</a>
+                          <a href="https://github.com/veepionyc/VPKitDemo/tree/2.9.8/demo/VPKit.framework/Headers/VPKPreview.h#L16-L20" class="button">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -293,7 +344,7 @@
                         
                           <a href="Protocols/VPKPreviewPassThroughDelegate.html" class="button">See more</a>
                         
-                          <a href="https://github.com/veepionyc/VPKitDemo/tree/2.9.6/VPKit.framework/Headers/VPKPreview.h#L20-L30" class="button">Show on GitHub</a>
+                          <a href="https://github.com/veepionyc/VPKitDemo/tree/2.9.8/demo/VPKit.framework/Headers/VPKPreview.h#L22-L32" class="button">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -335,7 +386,7 @@
                         
                           <a href="Protocols/VPKVeepViewerDelegate.html" class="button">See more</a>
                         
-                          <a href="https://github.com/veepionyc/VPKitDemo/tree/2.9.6/VPKit.framework/Headers/VPKVeepViewer.h#L13-L18" class="button">Show on GitHub</a>
+                          <a href="https://github.com/veepionyc/VPKitDemo/tree/2.9.8/demo/VPKit.framework/Headers/VPKVeepViewer.h#L13-L18" class="button">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -348,7 +399,7 @@
       </article>
     </div>
     <section class='footer'>
-      <p>© 2019 <a class="link" href="https://veep.io" target="_blank" rel="external">Veepio</a>. All rights reserved.</p>
+      <p>© 2021 <a class="link" href="https://veep.io" target="_blank" rel="external">Veepio</a>. All rights reserved.</p>
       <p>Generated by <a class='link' href='https://github.com/realm/jazzy' target='_blank' rel='external'>jazzy ♪♫ v0.9.1</a>, a <a class='link' href='http://realm.io' target='_blank' rel='external'>Realm</a> project.</p>
     </section>
     <!-- Global site tag (gtag.js) - Google Analytics -->

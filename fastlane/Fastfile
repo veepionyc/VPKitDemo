@@ -1,22 +1,34 @@
-import "../../fastlane/Fastfile"
+import "../../../fastlane/Fastfile"
 
 
 CONSUME_SWIFT_PROJECT =  "demo_view_swift/#{SWIFT_PROJECT}"
 CONSUME_OBJC_PROJECT = "demo_view_objc/#{OBJC_PROJECT}"
 
-# SWIFT_PROJECTS = [CREATE_SWIFT_PROJECT,CONSUME_SWIFT_PROJECT]
-# OBJC_PROJECTS = [CREATE_OBJC_PROJECT,CONSUME_OBJC_PROJECT]
 SWIFT_PROJECTS = [CONSUME_SWIFT_PROJECT]
 OBJC_PROJECTS = [CONSUME_OBJC_PROJECT]
-# DEPLOYMENT_DEMO_PROJECTS = [CREATE_SWIFT_PROJECT,CONSUME_SWIFT_PROJECT,CREATE_OBJC_PROJECT,CONSUME_OBJC_PROJECT]
 DEPLOYMENT_DEMO_PROJECTS = [CONSUME_SWIFT_PROJECT,CONSUME_OBJC_PROJECT]
 
+def deployed_framework_version()
+    path = "#{FRAMEWORK_PLIST}"
+    puts "#{path}"
+    framework_val("#{path}",'CFBundleShortVersionString')
+end
+
+def deployed_framework_build()
+    path = "#{FRAMEWORK_PLIST}"
+    puts "#{path}"
+    framework_val("#{path}",'CFBundleVersion')
+end
 
 
 lane :sync_project_version_numbers do
-    _version = framework_version()
-    _build = framework_build()
+    sh("pwd")
+    _version = deployed_framework_version()
+    _build = deployed_framework_build()
+    puts "$CONSUME_SWIFT_PROJECT"
+    puts "$CONSUME_OBJC_PROJECT"
     DEPLOYMENT_DEMO_PROJECTS.each do |project|
+        puts "$project"
         increment_version_number(xcodeproj:project,version_number:_version)
         increment_build_number(xcodeproj:project,build_number:_build)
     end
@@ -46,9 +58,9 @@ end
 lane :publish_and_deploy do
     sync_project_version_numbers	
     test_projects    
-    sync_podspec_version(version:framework_version())
-    git_commit(path:".", message: "deployed - v #{framework_version()}")
-    add_git_tag(tag:"#{framework_version()}")
+    sync_podspec_version(version:deployed_framework_version())
+    git_commit(path:".", message: "deployed - v #{deployed_framework_version()}")
+    add_git_tag(tag:"#{deployed_framework_version()}")
     push_to_git_remote
     deploy_to_cocoapods
 end
@@ -65,10 +77,9 @@ lane :finished	 do
 end
 
 lane :temp do
-    sync_podspec_version(version:framework_version())
-    git_commit(path:".", message: "deployed - v #{framework_version()}")
-    add_git_tag(tag:"#{framework_version()}")
-    push_to_git_remote
-    deploy_to_cocoapods
+    _version = deployed_framework_version()
+
+    _build = deployed_framework_build()
+    puts "#{_version}  #{_build}"
 end
 
