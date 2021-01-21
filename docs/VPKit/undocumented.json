@@ -527,37 +527,16 @@
     },
     {
       "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.framework/Headers/VPKVeepViewer.h",
-      "line": 13,
+      "line": 14,
       "symbol": "VPKVeepViewerDelegate",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.protocol",
       "warning": "undocumented"
     },
     {
       "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.framework/Headers/VPKVeepViewer.h",
-      "line": 15,
-      "symbol": "VPKVeepViewerDelegate.-veepViewer:didFinishViewingWithInfo:",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.framework/Headers/VPKVeepViewer.h",
-      "line": 16,
+      "line": 23,
       "symbol": "VPKVeepViewerDelegate.-veepViewerDidCancel:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.framework/Headers/VPKVeepViewer.h",
-      "line": 20,
-      "symbol": "VPKVeepViewer",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.class",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.framework/Headers/VPKVeepViewer.h",
-      "line": 21,
-      "symbol": "VPKVeepViewer.delegate",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
       "warning": "undocumented"
     },
     {

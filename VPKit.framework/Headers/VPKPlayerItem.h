@@ -12,7 +12,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 /**
- Metadata object for creating a video  , which consists of an array of these items.
+ Metadata object for defining a video as part of a video playlist, which consists of an array of these items. Video playlists can be assigned to the `playlist` property of a `VPKPreview` or `VPKVeepViewer`
  */
 
 @interface VPKPlayerItem : NSObject
@@ -28,12 +28,12 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong, nullable)  NSString* title;
 
 /**
- Preview image URL, if provided
+ Preview image URL, if provided. One of `previewURL` and `previewImage` is required.
  */
 @property (nonatomic, strong, nullable) NSURL* previewURL;
 
 /**
- Preview UIImage, if provided
+ Preview UIImage, if provided.  One of `previewImage` and `previewURL` is required.
  */
 @property (nonatomic, strong, nullable) UIImage* previewImage;
 

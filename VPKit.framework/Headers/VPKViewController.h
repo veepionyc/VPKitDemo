@@ -39,8 +39,6 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, assign) BOOL forwardErrors;
 @property (nonatomic, copy) VPKSessionData* sessionData;
 @property (nonatomic, assign) BOOL autoplay;
-@property (nonatomic, strong) VPKPlayerItem* currentItem;
-@property (nonatomic, weak, nullable) id <VPKAdHandler> adHandler;
 
 - (nonnull UIView*)transitioningView;
 - (nonnull UIImageView*)transitioningImageView;
@@ -54,7 +52,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 - (void)configureVeepView;
-- (void)configureList:(NSArray<VPKPlayerItem*>*)list;
 
 
 - (void)showFooter;
