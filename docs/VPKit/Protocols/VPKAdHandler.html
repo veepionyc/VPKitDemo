@@ -23,7 +23,7 @@
       </p>
     
         <p class='header-col header-col--secondary'>
-          <a class='header-link' href='https://github.com/veepionyc/VPKitDemo/tree/2.9.7'>
+          <a class='header-link' href='https://github.com/veepionyc/VPKitDemo/tree/2.9.8'>
             <img class='header-icon' src='../img/gh.png'/>
             View on GitHub
           </a>
@@ -222,7 +222,15 @@
 
                 </div>
               </div>
-            <p>Protocol for handling pre-roll video advertising</p>
+            <p>Protocol for handling pre-roll video advertising.</p>
+
+<p>When an object conforming to this protocol is assigned to a <code><a href="../Classes/VPKPreview.html">VPKPreview</a></code> or <code><a href="../Classes/VPKVeepViewer.html">VPKVeepViewer</a></code>, VPKit video content will be loaded and paused to allow the host app to manage preroll advertising.</p>
+
+<p><code>view</code>, <code>controller</code> and <code>completion</code> objects will be returned to facilitate correct handling and display of prerolls.</p>
+
+<p>When the <code>completion</code> block is called, control will return to the SDK to play the requested video content.</p>
+
+<p>Designed for <a href="https://developers.google.com/interactive-media-ads/docs/sdks/ios/client-side/">GoogleAds Interactive Media Ads</a> requirements.</p>
 
           </div>
         </section>
@@ -244,7 +252,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Implement this method to provide view, controller and completion block to an advertising handler</p>
+                        <p>Implement this method to provide view, controller and completion block to an advertising handler.</p>
 
                       </div>
                       <div class="declaration">
@@ -282,7 +290,7 @@
                               <td>
                                 <div>
                                   <p>The parent viewController for the <code>view</code>. This is the viewController that must be used
-                     to present an in-app browser for click-through ad content</p>
+                     to present an in-app browser for click-through ad content.</p>
                                 </div>
                               </td>
                             </tr>
@@ -294,7 +302,7 @@
                               </td>
                               <td>
                                 <div>
-                                  <p>the completion function that must be called when ad handler is finished</p>
+                                  <p>The completion block that must be called when the preroll ad has finished playing. The VPKit SDK video will not play until this block is called.</p>
                                 </div>
                               </td>
                             </tr>
@@ -303,7 +311,7 @@
                       </div>
                       <div class="slightly-smaller">
                         
-                          <a href="https://github.com/veepionyc/VPKitDemo/tree/2.9.7/demo/VPKit.framework/Headers/VPKAdHandler.h#L28" class="button">Show on GitHub</a>
+                          <a href="https://github.com/veepionyc/VPKitDemo/tree/2.9.8/demo/VPKit.framework/Headers/VPKAdHandler.h#L40" class="button">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -321,7 +329,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Implement this method to clean up interrupted ad handling</p>
+                        <p>Implement this method to clean up interrupted ad handling.</p>
 
                       </div>
                       <div class="declaration">
@@ -334,7 +342,7 @@
                       </div>
                       <div class="slightly-smaller">
                         
-                          <a href="https://github.com/veepionyc/VPKitDemo/tree/2.9.7/demo/VPKit.framework/Headers/VPKAdHandler.h#L34" class="button">Show on GitHub</a>
+                          <a href="https://github.com/veepionyc/VPKitDemo/tree/2.9.8/demo/VPKit.framework/Headers/VPKAdHandler.h#L46" class="button">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
