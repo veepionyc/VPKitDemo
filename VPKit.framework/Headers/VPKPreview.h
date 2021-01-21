@@ -38,7 +38,7 @@
  
  If assigned a standard UIImage, (or a VPKImage that doesn't use it's custom initialisers) this class  behaves as a standard UIImageView.
  
- @see VPKImage
+ @see `VPKImage`
  */
 
 

@@ -19,11 +19,11 @@
         <a class='header-link' href='../index.html'>
           VPKit Docs
         </a>
-         (51% documented)
+         (52% documented)
       </p>
     
         <p class='header-col header-col--secondary'>
-          <a class='header-link' href='https://github.com/veepionyc/VPKitDemo/tree/2.9.8'>
+          <a class='header-link' href='https://github.com/veepionyc/VPKitDemo/tree/2.9.9'>
             <img class='header-icon' src='../img/gh.png'/>
             View on GitHub
           </a>
@@ -218,17 +218,16 @@
             <h1>VPKVeepViewer</h1>
               <div class='declaration'>
                 <div class='language'>
-                  <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">VPKVeepViewer</span> <span class="p">:</span> <span class="nc">VPKViewController</span>
-<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">weak</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">id</span> <span class="o">&lt;</span><span class="n"><a href="../Protocols/VPKVeepViewerDelegate.html">VPKVeepViewerDelegate</a></span><span class="o">&gt;</span> <span class="n">delegate</span><span class="p">;</span>
-
-
-
-
-<span class="k">@end</span></code></pre>
+                  <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">VPKVeepViewer</span> <span class="p">:</span> <span class="nc">VPKViewController</span></code></pre>
 
                 </div>
               </div>
-            <p>Undocumented</p>
+            <p>A full-screen media viewer for images and video. The <code>VPKVeepViewer</code> displays accompanying veep data when available and includes a self-contained web browser. While the VPKVeepViewer can be created directly by the host app it is recommended to use a <code><a href="../Classes/VPKPreview.html">VPKPreview</a></code> image preview object which can internally manage creating presenting and dismissing of a veep viewer.</p>
+<div class="aside aside-see">
+    <p class="aside-title">See</p>
+    <code><a href="../Classes/VPKPreview.html">VPKPreview</a></code>
+
+</div>
 
           </div>
         </section>
@@ -250,20 +249,84 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>An optional delegate conforming to <code><a href="../Protocols/VPKVeepViewerDelegate.html">VPKVeepViewerDelegate</a></code>. If assigned, the delegate must manage dismissing of this <code>VPKVeepViewer</code>.</p>
 
                       </div>
                       <div class="declaration">
                         <h5>Declaration</h5>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">weak</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">id</span> <span class="o">&lt;</span><span class="n"><a href="../Protocols/VPKVeepViewerDelegate.html">VPKVeepViewerDelegate</a></span><span class="o">&gt;</span> <span class="n">delegate</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">weak</span><span class="p">,</span> <span class="n">readwrite</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="../Protocols/VPKVeepViewerDelegate.html">VPKVeepViewerDelegate</a></span><span class="o">&gt;</span>
+    <span class="n">delegate</span><span class="p">;</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
                         
-                          <a href="https://github.com/veepionyc/VPKitDemo/tree/2.9.8/demo/VPKit.framework/Headers/VPKVeepViewer.h#L" class="button">Show on GitHub</a>
+                          <a href="https://github.com/veepionyc/VPKitDemo/tree/2.9.9/demo/VPKit.framework/Headers/VPKVeepViewer.h#L40" class="button">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div class="item-heading">
+                    <code>
+                    <a name="/c:objc(cs)VPKVeepViewer(py)adHandler"></a>
+                    <a name="//apple_ref/objc/Property/adHandler" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)VPKVeepViewer(py)adHandler">adHandler</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>An optional <code>adHandler</code> conforming to the <code><a href="../Protocols/VPKAdHandler.html">VPKAdHandler</a></code> protocol. Assign an <code>adHandler</code> to insert preroll advertising on video content.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h5>Declaration</h5>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">weak</span><span class="p">,</span> <span class="n">readwrite</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="../Protocols/VPKAdHandler.html">VPKAdHandler</a></span><span class="o">&gt;</span> <span class="n">adHandler</span><span class="p">;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        
+                          <a href="https://github.com/veepionyc/VPKitDemo/tree/2.9.9/demo/VPKit.framework/Headers/VPKVeepViewer.h#L46" class="button">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div class="item-heading">
+                    <code>
+                    <a name="/c:objc(cs)VPKVeepViewer(py)playlist"></a>
+                    <a name="//apple_ref/objc/Property/playlist" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)VPKVeepViewer(py)playlist">playlist</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>An optional array of <code><a href="../Classes/VPKPlayerItem.html">VPKPlayerItem</a></code> video media items. If assigned, a video playlist will display beneath the playing video.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h5>Declaration</h5>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">readwrite</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span>
+    <span class="n">NSArray</span><span class="o">&lt;</span><span class="n"><a href="../Classes/VPKPlayerItem.html">VPKPlayerItem</a></span> <span class="o">*&gt;</span> <span class="o">*</span><span class="n">playlist</span><span class="p">;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        
+                          <a href="https://github.com/veepionyc/VPKitDemo/tree/2.9.9/demo/VPKit.framework/Headers/VPKVeepViewer.h#L52" class="button">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
