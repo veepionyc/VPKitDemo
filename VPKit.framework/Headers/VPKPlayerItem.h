@@ -11,6 +11,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+
 /**
  Metadata object for defining a video as part of a video playlist, which consists of an array of these items. Video playlists can be assigned to the `playlist` property of a `VPKPreview` or `VPKVeepViewer`
  */
@@ -18,41 +19,54 @@ NS_ASSUME_NONNULL_BEGIN
 @interface VPKPlayerItem : NSObject
 
 /**
- Video media item URL. This is the only required property.
+ Video media item URL (required)
  */
-@property (nonatomic, strong, nonnull) NSURL* originalContentURL;
+@property (nonatomic, copy, nonnull) NSURL* originalContentURL;
 
 /**
- Title string, if provided
+ Preview image URL (required).
+ 
+ This will be used as the thumbnail image in the playlist, and as the poster image for the video.
  */
-@property (nonatomic, strong, nullable)  NSString* title;
+@property (nonatomic, copy, nonnull) NSURL* previewURL;
+
 
 /**
- Preview image URL, if provided. One of `previewURL` and `previewImage` is required.
+ Title string, if provided (optional)
  */
-@property (nonatomic, strong, nullable) NSURL* previewURL;
+@property (nonatomic, copy, nullable)  NSString* title;
+
 
 /**
- Preview UIImage, if provided.  One of `previewImage` and `previewURL` is required.
+Media identifier string, if provided (optional)
  */
-@property (nonatomic, strong, nullable) UIImage* previewImage;
+@property (nonatomic, copy, nullable) NSString* mediaIdentifier;
 
 /**
- Placeholder UIImage, if provided. Will be replaced with `previewImage`, as obtained from a `previewURL`, when available
+Custom data dictionary of strings (optional)
  */
-@property (nonatomic, strong, nullable) UIImage* placeholderImage;
+@property (nonatomic, copy, nullable) NSDictionary<NSString*, NSString*>* customData;
 
-/**
-Media identifier string, if provided
- */
-@property (nonatomic, strong, nullable) NSString* mediaIdentifier;
 
-/**
-Custom data string, if provided
- */
-@property (nonatomic, strong, nullable) NSString* customData;
 
 @end
+
+/**
+ VPKPlaylist stores a collection of VPKPlayerItem items and optionally a placeholder image for VPKPlayerItem cells.
+ */
+@interface VPKPlaylist : NSObject
+/**
+ Array of `VPKPlayerItem` objects.
+ */
+@property (nonatomic, copy, nonnull, readonly) NSArray <VPKPlayerItem*>*   items;
+/**
+ Optional placeholder image.
+ */
+@property (nonatomic, strong, nullable) UIImage* placeholderImage;
+- (instancetype) initWithItems:(NSArray <VPKPlayerItem*>*) items;
+@end
+
+
 
 NS_ASSUME_NONNULL_END
 

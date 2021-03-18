@@ -37,7 +37,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) VPKVeepFetcher* fetcher;
 @property (nonatomic, strong) VPKStyles* styles;
 @property (nonatomic, assign) BOOL forwardErrors;
-@property (nonatomic, copy) VPKSessionData* sessionData;
+@property (nonatomic, copy) VPKSessionData* mainSessionData;
 @property (nonatomic, assign) BOOL autoplay;
 
 - (nonnull UIView*)transitioningView;
@@ -78,7 +78,7 @@ NS_ASSUME_NONNULL_BEGIN
     
 - (VPKImage*)vpkImage;
 
-- (void)logVeepView:(VPKVeep*)veep;
+- (void)logVeepView;
 - (void)logVeepSelect:(NSString*)trackId;
 - (void)logProductView:(NSString*)trackId URL:(NSURL*)URL;
 - (void)logProductNavigation:(NSString*)trackId URL:(NSURL*)URL;

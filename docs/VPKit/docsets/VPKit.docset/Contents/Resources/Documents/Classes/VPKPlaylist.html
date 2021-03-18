@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang='en'>
   <head>
-    <title>VPKUserType Enumeration Reference</title>
+    <title>VPKPlaylist Class Reference</title>
     <link rel='stylesheet' type='text/css' href='../css/jazzy.css' />
     <link rel='stylesheet' type='text/css' href='../css/highlight.css' />
     <meta charset='utf-8'>
@@ -10,9 +10,9 @@
   </head>
   <body>
 
-    <a name='//apple_ref/objc/Enum/VPKUserType' class='dashAnchor'></a>
+    <a name='//apple_ref/objc/Class/VPKPlaylist' class='dashAnchor'></a>
 
-    <a title='VPKUserType Enumeration Reference'></a>
+    <a title='VPKPlaylist Class Reference'></a>
 
     <header class='header'>
       <p class='header-col header-col--primary'>
@@ -34,7 +34,7 @@
     <p class='breadcrumbs'>
       <a class='breadcrumb' href='../index.html'>VPKit Reference</a>
       <img class='carat' src='../img/carat.png' />
-      VPKUserType Enumeration Reference
+      VPKPlaylist Class Reference
     </p>
 
     <div class='content-wrapper'>
@@ -221,20 +221,14 @@
 
         <section class='section'>
           <div class='section-content'>
-            <h1>VPKUserType</h1>
+            <h1>VPKPlaylist</h1>
               <div class='declaration'>
                 <div class='language'>
-                  <pre class="highlight objective_c"><code><span class="n">NS_ENUM</span><span class="p">(</span><span class="n">NSUInteger</span><span class="p">,</span> <span class="n">VPKUserType</span><span class="p">)</span> <span class="p">{</span>
-    <span class="n">VPKUserTypeUnknown</span><span class="p">,</span>
-    <span class="n">VPKUserTypeAnonymous</span><span class="p">,</span>
-    <span class="n">VPKUserTypeLightweight</span><span class="p">,</span>
-    <span class="n">VPKUserTypeHeavyweight</span>
-
-<span class="p">}</span></code></pre>
+                  <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">VPKPlaylist</span> <span class="p">:</span> <span class="nc">NSObject</span></code></pre>
 
                 </div>
               </div>
-            <p>Undocumented</p>
+            <p>VPKPlaylist stores a collection of VPKPlayerItem items and optionally a placeholder image for VPKPlayerItem cells.</p>
 
           </div>
         </section>
@@ -246,9 +240,9 @@
                 <li class="item">
                   <div class="item-heading">
                     <code>
-                    <a name="/c:@E@VPKUserType@VPKUserTypeUnknown"></a>
-                    <a name="//apple_ref/objc/Case/VPKUserTypeUnknown" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@E@VPKUserType@VPKUserTypeUnknown">VPKUserTypeUnknown</a>
+                    <a name="/c:objc(cs)VPKPlaylist(py)items"></a>
+                    <a name="//apple_ref/objc/Property/items" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)VPKPlaylist(py)items">items</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -256,20 +250,20 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Array of <code><a href="../Classes/VPKPlayerItem.html">VPKPlayerItem</a></code> objects.</p>
 
                       </div>
                       <div class="declaration">
                         <h5>Declaration</h5>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="n">VPKUserTypeUnknown</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">copy</span><span class="p">,</span> <span class="n">readonly</span><span class="p">,</span> <span class="n">nonnull</span><span class="p">)</span> <span class="n">NSArray</span><span class="o">&lt;</span><span class="n"><a href="../Classes/VPKPlayerItem.html">VPKPlayerItem</a></span> <span class="o">*&gt;</span> <span class="o">*</span><span class="n">items</span><span class="p">;</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
                         
-                          <a href="https://github.com/veepionyc/VPKitDemo/tree/2.9.10/demo/VPKit.framework/Headers/VPKEnvironment.h#L" class="button">Show on GitHub</a>
+                          <a href="https://github.com/veepionyc/VPKitDemo/tree/2.9.10/demo/VPKit.framework/Headers/VPKPlayerItem.h#L61" class="button">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -277,9 +271,9 @@
                 <li class="item">
                   <div class="item-heading">
                     <code>
-                    <a name="/c:@E@VPKUserType@VPKUserTypeAnonymous"></a>
-                    <a name="//apple_ref/objc/Case/VPKUserTypeAnonymous" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@E@VPKUserType@VPKUserTypeAnonymous">VPKUserTypeAnonymous</a>
+                    <a name="/c:objc(cs)VPKPlaylist(py)placeholderImage"></a>
+                    <a name="//apple_ref/objc/Property/placeholderImage" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)VPKPlaylist(py)placeholderImage">placeholderImage</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -287,20 +281,20 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Optional placeholder image.</p>
 
                       </div>
                       <div class="declaration">
                         <h5>Declaration</h5>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="n">VPKUserTypeAnonymous</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">readwrite</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">UIImage</span> <span class="o">*</span><span class="n">placeholderImage</span><span class="p">;</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
                         
-                          <a href="https://github.com/veepionyc/VPKitDemo/tree/2.9.10/demo/VPKit.framework/Headers/VPKEnvironment.h#L" class="button">Show on GitHub</a>
+                          <a href="https://github.com/veepionyc/VPKitDemo/tree/2.9.10/demo/VPKit.framework/Headers/VPKPlayerItem.h#L65" class="button">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -308,9 +302,9 @@
                 <li class="item">
                   <div class="item-heading">
                     <code>
-                    <a name="/c:@E@VPKUserType@VPKUserTypeLightweight"></a>
-                    <a name="//apple_ref/objc/Case/VPKUserTypeLightweight" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@E@VPKUserType@VPKUserTypeLightweight">VPKUserTypeLightweight</a>
+                    <a name="/c:objc(cs)VPKPlaylist(im)initWithItems:"></a>
+                    <a name="//apple_ref/objc/Method/-initWithItems:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)VPKPlaylist(im)initWithItems:">-initWithItems:</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -325,44 +319,13 @@
                         <h5>Declaration</h5>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="n">VPKUserTypeLightweight</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">instancetype</span><span class="p">)</span> <span class="nf">initWithItems</span><span class="p">:(</span><span class="n">NSArray</span> <span class="o">&lt;</span><span class="n"><a href="../Classes/VPKPlayerItem.html">VPKPlayerItem</a></span><span class="o">*&gt;*</span><span class="p">)</span> <span class="n"><a href="../Classes/VPKPlaylist.html#/c:objc(cs)VPKPlaylist(py)items">items</a></span><span class="p">;</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
                         
-                          <a href="https://github.com/veepionyc/VPKitDemo/tree/2.9.10/demo/VPKit.framework/Headers/VPKEnvironment.h#L" class="button">Show on GitHub</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div class="item-heading">
-                    <code>
-                    <a name="/c:@E@VPKUserType@VPKUserTypeHeavyweight"></a>
-                    <a name="//apple_ref/objc/Case/VPKUserTypeHeavyweight" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@E@VPKUserType@VPKUserTypeHeavyweight">VPKUserTypeHeavyweight</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h5>Declaration</h5>
-                        <div class="language">
-                          <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="n">VPKUserTypeHeavyweight</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div class="slightly-smaller">
-                        
-                          <a href="https://github.com/veepionyc/VPKitDemo/tree/2.9.10/demo/VPKit.framework/Headers/VPKEnvironment.h#L" class="button">Show on GitHub</a>
+                          <a href="https://github.com/veepionyc/VPKitDemo/tree/2.9.10/demo/VPKit.framework/Headers/VPKPlayerItem.h#L" class="button">Show on GitHub</a>
                       </div>
                     </section>
                   </div>

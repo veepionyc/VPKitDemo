@@ -23,7 +23,7 @@
       </p>
     
         <p class='header-col header-col--secondary'>
-          <a class='header-link' href='https://github.com/veepionyc/VPKitDemo/tree/2.9.9'>
+          <a class='header-link' href='https://github.com/veepionyc/VPKitDemo/tree/2.9.10'>
             <img class='header-icon' src='../img/gh.png'/>
             View on GitHub
           </a>
@@ -63,6 +63,9 @@
               </li>
               <li class='nav-group-task'>
                 <a class='nav-group-task-link' href='../Classes/VPKPlayerItem.html'>VPKPlayerItem</a>
+              </li>
+              <li class='nav-group-task'>
+                <a class='nav-group-task-link' href='../Classes/VPKPlaylist.html'>VPKPlaylist</a>
               </li>
               <li class='nav-group-task'>
                 <a class='nav-group-task-link' href='../Classes/VPKPreview.html'>VPKPreview</a>
@@ -167,6 +170,9 @@
                 <a class='nav-group-task-link' href='../Protocols/VPKAdHandler.html'>VPKAdHandler</a>
               </li>
               <li class='nav-group-task'>
+                <a class='nav-group-task-link' href='../Protocols/VPKMediaIdentifier.html'>VPKMediaIdentifier</a>
+              </li>
+              <li class='nav-group-task'>
                 <a class='nav-group-task-link' href='../Protocols/VPKPreviewDelegate.html'>VPKPreviewDelegate</a>
               </li>
               <li class='nav-group-task'>
@@ -244,51 +250,20 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Video media item URL. This is the only required property.</p>
+                        <p>Video media item URL (required)</p>
 
                       </div>
                       <div class="declaration">
                         <h5>Declaration</h5>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">readwrite</span><span class="p">,</span> <span class="n">nonnull</span><span class="p">)</span> <span class="n">NSURL</span> <span class="o">*</span><span class="n">originalContentURL</span><span class="p">;</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">copy</span><span class="p">,</span> <span class="n">readwrite</span><span class="p">,</span> <span class="n">nonnull</span><span class="p">)</span> <span class="n">NSURL</span> <span class="o">*</span><span class="n">originalContentURL</span><span class="p">;</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
                         
-                          <a href="https://github.com/veepionyc/VPKitDemo/tree/2.9.9/demo/VPKit.framework/Headers/VPKPlayerItem.h#L23" class="button">Show on GitHub</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div class="item-heading">
-                    <code>
-                    <a name="/c:objc(cs)VPKPlayerItem(py)title"></a>
-                    <a name="//apple_ref/objc/Property/title" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)VPKPlayerItem(py)title">title</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Title string, if provided</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h5>Declaration</h5>
-                        <div class="language">
-                          <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">readwrite</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">title</span><span class="p">;</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div class="slightly-smaller">
-                        
-                          <a href="https://github.com/veepionyc/VPKitDemo/tree/2.9.9/demo/VPKit.framework/Headers/VPKPlayerItem.h#L28" class="button">Show on GitHub</a>
+                          <a href="https://github.com/veepionyc/VPKitDemo/tree/2.9.10/demo/VPKit.framework/Headers/VPKPlayerItem.h#L24" class="button">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -306,20 +281,22 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Preview image URL, if provided. One of <code>previewURL</code> and <code><a href="../Classes/VPKPlayerItem.html#/c:objc(cs)VPKPlayerItem(py)previewImage">previewImage</a></code> is required.</p>
+                        <p>Preview image URL (required).</p>
+
+<p>This will be used as the thumbnail image in the playlist, and as the poster image for the video.</p>
 
                       </div>
                       <div class="declaration">
                         <h5>Declaration</h5>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">readwrite</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">NSURL</span> <span class="o">*</span><span class="n">previewURL</span><span class="p">;</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">copy</span><span class="p">,</span> <span class="n">readwrite</span><span class="p">,</span> <span class="n">nonnull</span><span class="p">)</span> <span class="n">NSURL</span> <span class="o">*</span><span class="n">previewURL</span><span class="p">;</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
                         
-                          <a href="https://github.com/veepionyc/VPKitDemo/tree/2.9.9/demo/VPKit.framework/Headers/VPKPlayerItem.h#L33" class="button">Show on GitHub</a>
+                          <a href="https://github.com/veepionyc/VPKitDemo/tree/2.9.10/demo/VPKit.framework/Headers/VPKPlayerItem.h#L31" class="button">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -327,9 +304,9 @@
                 <li class="item">
                   <div class="item-heading">
                     <code>
-                    <a name="/c:objc(cs)VPKPlayerItem(py)previewImage"></a>
-                    <a name="//apple_ref/objc/Property/previewImage" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)VPKPlayerItem(py)previewImage">previewImage</a>
+                    <a name="/c:objc(cs)VPKPlayerItem(py)title"></a>
+                    <a name="//apple_ref/objc/Property/title" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)VPKPlayerItem(py)title">title</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -337,51 +314,20 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Preview UIImage, if provided.  One of <code>previewImage</code> and <code><a href="../Classes/VPKPlayerItem.html#/c:objc(cs)VPKPlayerItem(py)previewURL">previewURL</a></code> is required.</p>
+                        <p>Title string, if provided (optional)</p>
 
                       </div>
                       <div class="declaration">
                         <h5>Declaration</h5>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">readwrite</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">UIImage</span> <span class="o">*</span><span class="n">previewImage</span><span class="p">;</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">copy</span><span class="p">,</span> <span class="n">readwrite</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">title</span><span class="p">;</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
                         
-                          <a href="https://github.com/veepionyc/VPKitDemo/tree/2.9.9/demo/VPKit.framework/Headers/VPKPlayerItem.h#L38" class="button">Show on GitHub</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div class="item-heading">
-                    <code>
-                    <a name="/c:objc(cs)VPKPlayerItem(py)placeholderImage"></a>
-                    <a name="//apple_ref/objc/Property/placeholderImage" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)VPKPlayerItem(py)placeholderImage">placeholderImage</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Placeholder UIImage, if provided. Will be replaced with <code><a href="../Classes/VPKPlayerItem.html#/c:objc(cs)VPKPlayerItem(py)previewImage">previewImage</a></code>, as obtained from a <code><a href="../Classes/VPKPlayerItem.html#/c:objc(cs)VPKPlayerItem(py)previewURL">previewURL</a></code>, when available</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h5>Declaration</h5>
-                        <div class="language">
-                          <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">readwrite</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">UIImage</span> <span class="o">*</span><span class="n">placeholderImage</span><span class="p">;</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div class="slightly-smaller">
-                        
-                          <a href="https://github.com/veepionyc/VPKitDemo/tree/2.9.9/demo/VPKit.framework/Headers/VPKPlayerItem.h#L43" class="button">Show on GitHub</a>
+                          <a href="https://github.com/veepionyc/VPKitDemo/tree/2.9.10/demo/VPKit.framework/Headers/VPKPlayerItem.h#L37" class="button">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -399,20 +345,20 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Media identifier string, if provided</p>
+                        <p>Media identifier string, if provided (optional)</p>
 
                       </div>
                       <div class="declaration">
                         <h5>Declaration</h5>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">readwrite</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">mediaIdentifier</span><span class="p">;</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">copy</span><span class="p">,</span> <span class="n">readwrite</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">mediaIdentifier</span><span class="p">;</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
                         
-                          <a href="https://github.com/veepionyc/VPKitDemo/tree/2.9.9/demo/VPKit.framework/Headers/VPKPlayerItem.h#L48" class="button">Show on GitHub</a>
+                          <a href="https://github.com/veepionyc/VPKitDemo/tree/2.9.10/demo/VPKit.framework/Headers/VPKPlayerItem.h#L43" class="button">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -430,20 +376,21 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Custom data string, if provided</p>
+                        <p>Custom data dictionary of strings (optional)</p>
 
                       </div>
                       <div class="declaration">
                         <h5>Declaration</h5>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">readwrite</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">customData</span><span class="p">;</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">copy</span><span class="p">,</span> <span class="n">readwrite</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span>
+    <span class="n">NSDictionary</span><span class="o">&lt;</span><span class="n">NSString</span> <span class="o">*</span><span class="p">,</span> <span class="n">NSString</span> <span class="o">*&gt;</span> <span class="o">*</span><span class="n">customData</span><span class="p">;</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
                         
-                          <a href="https://github.com/veepionyc/VPKitDemo/tree/2.9.9/demo/VPKit.framework/Headers/VPKPlayerItem.h#L53" class="button">Show on GitHub</a>
+                          <a href="https://github.com/veepionyc/VPKitDemo/tree/2.9.10/demo/VPKit.framework/Headers/VPKPlayerItem.h#L48" class="button">Show on GitHub</a>
                       </div>
                     </section>
                   </div>

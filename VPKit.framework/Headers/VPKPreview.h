@@ -10,6 +10,7 @@
 @class VPKImage;
 @class VPKPreview;
 @class VPKPlayerItem;
+@class VPKPlaylist;
 @class VPKPreview;
 @protocol VPKAdHandler;
 
@@ -110,7 +111,7 @@ autoplay. Default is YES;
 /**
 optional video playlist
  */
-@property (nonatomic, copy) NSArray <VPKPlayerItem*>* _Nonnull  playlist;
+@property (nonatomic, copy, nullable) VPKPlaylist*   playlist;
 
 /**
 optional ad handler

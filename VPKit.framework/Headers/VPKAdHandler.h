@@ -10,6 +10,13 @@
 #define VPKAdHandler_h
 
 @import UIKit;
+
+@protocol VPKMediaIdentifier
+
+@property (nullable, nonatomic, copy, readonly) NSDictionary* customData;
+@property (nullable, nonatomic, copy, readonly) NSString* mediaIdentifier;
+@end
+
 /**
 Protocol for handling pre-roll video advertising.
 
@@ -33,15 +40,24 @@ Protocol for handling pre-roll video advertising.
  @param     view          The view on top of which an advertising videoPlayer should be placed, using the same frame.
  @param     controller    The parent viewController for the `view`. This is the viewController that must be used
                           to present an in-app browser for click-through ad content.
+ 
+ @param     identifier    An object conforming to `VPKMediaIdentifier` protocol.
+                          Returns any optional `mediaIdentifier` string and `customData` dictionary
+                          associated with the currently loaded meda item
  @param     completion    The completion block that must be called when the preroll ad has finished playing. The VPKit SDK video will not play until this block is called.
 
  */
- 
-- (void)handlePrerollOnView:(UIView*)view viewController:(UIViewController*)controller completion:(void(^)(void))completion;
+
+
+- (void)handlePreroll:(nonnull UIView*)view
+           controller:(nonnull UIViewController*)controller
+           identifier:(nonnull id<VPKMediaIdentifier>)identifier
+           completion:(nonnull void(^)(void))completion;
 
 /**
  Implement this method to clean up interrupted ad handling.
  */
+
 
 - (void)stopPreroll;
 
