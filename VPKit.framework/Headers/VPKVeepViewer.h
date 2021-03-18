@@ -10,6 +10,7 @@
 #import "VPKViewController.h"
 
 @class VPKVeepViewer;
+@class VPKPlaylist;
 
 @protocol VPKVeepViewerDelegate <NSObject>
 
@@ -47,9 +48,9 @@
 
 
 /**
- An optional array of `VPKPlayerItem` video media items. If assigned, a video playlist will display beneath the playing video.
+ An optional `VPKPlaylist` holding an array of `VPKPlayerItem` video media items. If assigned, a video playlist will display beneath the playing video.
  */
-@property (nonatomic, strong, nullable) NSArray<VPKPlayerItem*>* playlist;
+@property (nonatomic, strong, nullable) VPKPlaylist* playlist;
 
 
 

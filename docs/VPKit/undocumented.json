@@ -1,6 +1,27 @@
 {
   "warnings": [
     {
+      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.framework/Headers/VPKAdHandler.h",
+      "line": 14,
+      "symbol": "VPKMediaIdentifier",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.framework/Headers/VPKAdHandler.h",
+      "line": 16,
+      "symbol": "VPKMediaIdentifier.customData",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.framework/Headers/VPKAdHandler.h",
+      "line": 17,
+      "symbol": "VPKMediaIdentifier.mediaIdentifier",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
+      "warning": "undocumented"
+    },
+    {
       "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.framework/Headers/VPKEnvironment.h",
       "line": 12,
       "symbol": "VPKUserType",
@@ -428,22 +449,29 @@
       "warning": "undocumented"
     },
     {
+      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.framework/Headers/VPKPlayerItem.h",
+      "line": 66,
+      "symbol": "VPKPlaylist.-initWithItems:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
       "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.framework/Headers/VPKPreview.h",
-      "line": 16,
+      "line": 17,
       "symbol": "VPKPreviewDelegate",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.protocol",
       "warning": "undocumented"
     },
     {
       "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.framework/Headers/VPKPreview.h",
-      "line": 18,
+      "line": 19,
       "symbol": "VPKPreviewDelegate.-vpkPreviewTouched:image:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.framework/Headers/VPKPreview.h",
-      "line": 22,
+      "line": 23,
       "symbol": "VPKPreviewPassThroughDelegate",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.protocol",
       "warning": "undocumented"
@@ -527,14 +555,14 @@
     },
     {
       "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.framework/Headers/VPKVeepViewer.h",
-      "line": 14,
+      "line": 15,
       "symbol": "VPKVeepViewerDelegate",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.protocol",
       "warning": "undocumented"
     },
     {
       "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.framework/Headers/VPKVeepViewer.h",
-      "line": 23,
+      "line": 24,
       "symbol": "VPKVeepViewerDelegate.-veepViewerDidCancel:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"

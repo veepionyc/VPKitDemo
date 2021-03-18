@@ -31,9 +31,9 @@ NS_ASSUME_NONNULL_BEGIN
  
  In the case of an image veep, this will match the source URL of the supplied image.
  
- For a video veep, this is the source URI for the video media (_not_ the placeholder image). This need not be an actual URL, but should be the unique identifier used when creating the veep (for example, it could be a youtube id).
+ For a video veep, this is the source URI for the video media (not the poster image). This may not be an actual URL, but should be the unique identifier used when creating the veep (for example, it could be a youtube id with an appropriate scheme).
  
- The URI is used to match the content to it's veep metadata. If a veepId is provided, the URI is not required as the veep will be fetched by it's id.
+ The URI is used to match the content to it's veep metadata. If a veepId is provided, the URI is ignored as the veep will be fetched by the veepId.
  
  */
 @property (nonatomic, strong, readonly, nullable) NSURL* originalContentURI;
@@ -58,7 +58,7 @@ NS_ASSUME_NONNULL_BEGIN
 Optional properties that the host app can use for tracking purposes.
  */
 @property (nonatomic, strong, nullable) NSString* mediaIdentifier;
-@property (nonatomic, strong, nullable) NSString* customData;
+@property (nonatomic, strong, nullable) NSDictionary<NSString*,NSString*>* customData;
 
 
 /**
@@ -118,16 +118,6 @@ Optional properties that the host app can use for tracking purposes.
  sets the publicVeep (a veep header stub), veepId and originalContentUri.
  */
 - (void)updateWithPublicVeep:(VPKPublicVeep*)veep;
-
-/**
- sets `veep` to nil and `veepId` to veepId.
- 
- @param veepId
- The unique identifier for a veep.
- */
-- (void)updateWithVeepId:(nullable NSString*)veepId;
-
-
 
 @end
 NS_ASSUME_NONNULL_END
