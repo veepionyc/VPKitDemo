@@ -59,7 +59,7 @@
     
     //optional parameters
     vpkImage.mediaIdentifier = @"mediaIdentifier";
-    vpkImage.customData = @{@"customDataKey":@"customDataValue"};
+    vpkImage.customData = @"customData";
     
     vpkImage = [[VPKImage alloc] initWithImage:image url:imageURL];
     self.viewerPreview1.image = vpkImage;
@@ -75,7 +75,7 @@
     
     //optional parameters
     vpkImage.mediaIdentifier = @"mediaIdentifier";
-    vpkImage.customData = @{@"customDataKey":@"customDataValue"};
+    vpkImage.customData = @"customData";
     
     self.viewerPreview1.image = vpkImage;
     self.viewerPreview1.autoplay = YES;

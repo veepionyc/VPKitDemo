@@ -19,11 +19,11 @@
         <a class='header-link' href='../index.html'>
           VPKit Docs
         </a>
-         (52% documented)
+         (54% documented)
       </p>
     
         <p class='header-col header-col--secondary'>
-          <a class='header-link' href='https://github.com/veepionyc/VPKitDemo/tree/2.9.10'>
+          <a class='header-link' href='https://github.com/veepionyc/VPKitDemo/tree/2.9.11'>
             <img class='header-icon' src='../img/gh.png'/>
             View on GitHub
           </a>
@@ -271,7 +271,7 @@ For use in conjunction with VPKPreview</p>
                       </div>
                       <div class="slightly-smaller">
                         
-                          <a href="https://github.com/veepionyc/VPKitDemo/tree/2.9.10/demo/VPKit.framework/Headers/VPKImage.h#L27" class="button">Show on GitHub</a>
+                          <a href="https://github.com/veepionyc/VPKitDemo/tree/2.9.11/demo/VPKit.xcframework/ios-arm64/VPKit.framework/Headers/VPKImage.h#L27" class="button">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -308,7 +308,7 @@ For use in conjunction with VPKPreview</p>
                       </div>
                       <div class="slightly-smaller">
                         
-                          <a href="https://github.com/veepionyc/VPKitDemo/tree/2.9.10/demo/VPKit.framework/Headers/VPKImage.h#L39" class="button">Show on GitHub</a>
+                          <a href="https://github.com/veepionyc/VPKitDemo/tree/2.9.11/demo/VPKit.xcframework/ios-arm64/VPKit.framework/Headers/VPKImage.h#L39" class="button">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -339,7 +339,7 @@ For use in conjunction with VPKPreview</p>
                       </div>
                       <div class="slightly-smaller">
                         
-                          <a href="https://github.com/veepionyc/VPKitDemo/tree/2.9.10/demo/VPKit.framework/Headers/VPKImage.h#L45" class="button">Show on GitHub</a>
+                          <a href="https://github.com/veepionyc/VPKitDemo/tree/2.9.11/demo/VPKit.xcframework/ios-arm64/VPKit.framework/Headers/VPKImage.h#L45" class="button">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -370,7 +370,7 @@ For use in conjunction with VPKPreview</p>
                       </div>
                       <div class="slightly-smaller">
                         
-                          <a href="https://github.com/veepionyc/VPKitDemo/tree/2.9.10/demo/VPKit.framework/Headers/VPKImage.h#L50" class="button">Show on GitHub</a>
+                          <a href="https://github.com/veepionyc/VPKitDemo/tree/2.9.11/demo/VPKit.xcframework/ios-arm64/VPKit.framework/Headers/VPKImage.h#L50" class="button">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -401,7 +401,7 @@ For use in conjunction with VPKPreview</p>
                       </div>
                       <div class="slightly-smaller">
                         
-                          <a href="https://github.com/veepionyc/VPKitDemo/tree/2.9.10/demo/VPKit.framework/Headers/VPKImage.h#L55" class="button">Show on GitHub</a>
+                          <a href="https://github.com/veepionyc/VPKitDemo/tree/2.9.11/demo/VPKit.xcframework/ios-arm64/VPKit.framework/Headers/VPKImage.h#L55" class="button">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -419,7 +419,7 @@ For use in conjunction with VPKPreview</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Optional properties that the host app can use for tracking purposes.</p>
+                        <p>Optional string that the host app can use for tracking purposes.</p>
 
                       </div>
                       <div class="declaration">
@@ -432,7 +432,7 @@ For use in conjunction with VPKPreview</p>
                       </div>
                       <div class="slightly-smaller">
                         
-                          <a href="https://github.com/veepionyc/VPKitDemo/tree/2.9.10/demo/VPKit.framework/Headers/VPKImage.h#L60" class="button">Show on GitHub</a>
+                          <a href="https://github.com/veepionyc/VPKitDemo/tree/2.9.11/demo/VPKit.xcframework/ios-arm64/VPKit.framework/Headers/VPKImage.h#L60" class="button">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -450,20 +450,21 @@ For use in conjunction with VPKPreview</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Optional dictionary whose keys and values must be strings. The host app can use for tracking purposes.</p>
 
                       </div>
                       <div class="declaration">
                         <h5>Declaration</h5>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">NSDictionary</span><span class="o">&lt;</span><span class="n">NSString</span><span class="o">*</span><span class="p">,</span><span class="n">NSString</span><span class="o">*&gt;*</span> <span class="n">customData</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">readwrite</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span>
+    <span class="n">NSDictionary</span><span class="o">&lt;</span><span class="n">NSString</span> <span class="o">*</span><span class="p">,</span> <span class="n">NSString</span> <span class="o">*&gt;</span> <span class="o">*</span><span class="n">customData</span><span class="p">;</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
                         
-                          <a href="https://github.com/veepionyc/VPKitDemo/tree/2.9.10/demo/VPKit.framework/Headers/VPKImage.h#L" class="button">Show on GitHub</a>
+                          <a href="https://github.com/veepionyc/VPKitDemo/tree/2.9.11/demo/VPKit.xcframework/ios-arm64/VPKit.framework/Headers/VPKImage.h#L65" class="button">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -535,7 +536,7 @@ For use in conjunction with VPKPreview</p>
                       </div>
                       <div class="slightly-smaller">
                         
-                          <a href="https://github.com/veepionyc/VPKitDemo/tree/2.9.10/demo/VPKit.framework/Headers/VPKImage.h#L86" class="button">Show on GitHub</a>
+                          <a href="https://github.com/veepionyc/VPKitDemo/tree/2.9.11/demo/VPKit.xcframework/ios-arm64/VPKit.framework/Headers/VPKImage.h#L90" class="button">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -610,7 +611,7 @@ The contentURI must be the same URI as was used to create the veep as that is ho
                       </div>
                       <div class="slightly-smaller">
                         
-                          <a href="https://github.com/veepionyc/VPKitDemo/tree/2.9.10/demo/VPKit.framework/Headers/VPKImage.h#L110" class="button">Show on GitHub</a>
+                          <a href="https://github.com/veepionyc/VPKitDemo/tree/2.9.11/demo/VPKit.xcframework/ios-arm64/VPKit.framework/Headers/VPKImage.h#L114" class="button">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -641,7 +642,7 @@ The contentURI must be the same URI as was used to create the veep as that is ho
                       </div>
                       <div class="slightly-smaller">
                         
-                          <a href="https://github.com/veepionyc/VPKitDemo/tree/2.9.10/demo/VPKit.framework/Headers/VPKImage.h#L115" class="button">Show on GitHub</a>
+                          <a href="https://github.com/veepionyc/VPKitDemo/tree/2.9.11/demo/VPKit.xcframework/ios-arm64/VPKit.framework/Headers/VPKImage.h#L119" class="button">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -672,7 +673,7 @@ The contentURI must be the same URI as was used to create the veep as that is ho
                       </div>
                       <div class="slightly-smaller">
                         
-                          <a href="https://github.com/veepionyc/VPKitDemo/tree/2.9.10/demo/VPKit.framework/Headers/VPKImage.h#L120" class="button">Show on GitHub</a>
+                          <a href="https://github.com/veepionyc/VPKitDemo/tree/2.9.11/demo/VPKit.xcframework/ios-arm64/VPKit.framework/Headers/VPKImage.h#L124" class="button">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
