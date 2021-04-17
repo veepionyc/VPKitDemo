@@ -12,6 +12,6 @@ s.platform          = :ios
 s.source            = { :git => "https://github.com/veepionyc/VPKitDemo.git",:tag => "#{s.version}"}
 
 s.ios.deployment_target = '11.0'
-s.ios.vendored_frameworks = 'VPKit.framework'	
+s.ios.vendored_frameworks = 'VPKit.xcframework'	
     
 end

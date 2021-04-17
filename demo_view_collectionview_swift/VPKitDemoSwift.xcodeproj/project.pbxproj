@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,8 +13,8 @@
 		ABC557E41E5E28BB00AE8425 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB86A51F1DD2DF4100843D98 /* LaunchScreen.storyboard */; };
 		ABC557E51E5E28BB00AE8425 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB86A51D1DD2DF4100843D98 /* Assets.xcassets */; };
 		ABCD231B214287C80001CE3F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABCD2319214287C80001CE3F /* ViewController.swift */; };
-		ABECD8CF1E65E46200184B29 /* VPKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABECD8CE1E65E46200184B29 /* VPKit.framework */; };
-		ABECD8D01E65E46200184B29 /* VPKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = ABECD8CE1E65E46200184B29 /* VPKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		ABECD8CF1E65E46200184B29 /* VPKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABECD8CE1E65E46200184B29 /* VPKit.xcframework */; };
+		ABECD8D01E65E46200184B29 /* VPKit.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = ABECD8CE1E65E46200184B29 /* VPKit.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		ABFB76331E709C29006FB57B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABFB76301E709C29006FB57B /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -25,7 +25,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				ABECD8D01E65E46200184B29 /* VPKit.framework in Embed Frameworks */,
+				ABECD8D01E65E46200184B29 /* VPKit.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -41,7 +41,7 @@
 		ABB2066C1E71B1980028BF48 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		ABC557EE1E5E28BB00AE8425 /* VPKitDemoSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VPKitDemoSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABCD2319214287C80001CE3F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		ABECD8CE1E65E46200184B29 /* VPKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VPKit.framework; path = ../VPKit.framework; sourceTree = "<group>"; };
+		ABECD8CE1E65E46200184B29 /* VPKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = VPKit.xcframework; path = ../VPKit.xcframework; sourceTree = "<group>"; };
 		ABFB76311E709C29006FB57B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -51,7 +51,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ABB2066E1E71B1A20028BF48 /* AdSupport.framework in Frameworks */,
-				ABECD8CF1E65E46200184B29 /* VPKit.framework in Frameworks */,
+				ABECD8CF1E65E46200184B29 /* VPKit.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,7 +69,7 @@
 		AB86A50A1DD2DF4100843D98 = {
 			isa = PBXGroup;
 			children = (
-				ABECD8CE1E65E46200184B29 /* VPKit.framework */,
+				ABECD8CE1E65E46200184B29 /* VPKit.xcframework */,
 				AB86A5151DD2DF4100843D98 /* VPKitDemoSwift */,
 				AB86A5141DD2DF4100843D98 /* Products */,
 				4864441F2B694E54E21C9198 /* Frameworks */,
@@ -323,7 +323,8 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -343,7 +344,10 @@
 				);
 				INFOPLIST_FILE = "VPKitDemoSwift/Binary-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.veepio.VPKDemoSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -368,7 +372,10 @@
 				);
 				INFOPLIST_FILE = "VPKitDemoSwift/Binary-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.veepio.VPKDemoSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";

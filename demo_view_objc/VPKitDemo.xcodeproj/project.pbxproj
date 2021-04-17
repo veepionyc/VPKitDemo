@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,8 +13,8 @@
 		AB1F17C71C866C3700F740A2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB1F17C51C866C3700F740A2 /* Main.storyboard */; };
 		AB1F17C91C866C3700F740A2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB1F17C81C866C3700F740A2 /* Assets.xcassets */; };
 		AB1F17CC1C866C3700F740A2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB1F17CA1C866C3700F740A2 /* LaunchScreen.storyboard */; };
-		AB9BDF1E1E70E9FA008413C2 /* VPKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB9BDF1C1E70E9F0008413C2 /* VPKit.framework */; };
-		AB9BDF1F1E70E9FA008413C2 /* VPKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AB9BDF1C1E70E9F0008413C2 /* VPKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		AB9BDF1E1E70E9FA008413C2 /* VPKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB9BDF1C1E70E9F0008413C2 /* VPKit.xcframework */; };
+		AB9BDF1F1E70E9FA008413C2 /* VPKit.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AB9BDF1C1E70E9F0008413C2 /* VPKit.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		ABBA66EF2148123800BF85BA /* ViewController_AutoLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = ABBA66EE2148123800BF85BA /* ViewController_AutoLayout.m */; };
 /* End PBXBuildFile section */
 
@@ -25,7 +25,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				AB9BDF1F1E70E9FA008413C2 /* VPKit.framework in Embed Frameworks */,
+				AB9BDF1F1E70E9FA008413C2 /* VPKit.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -44,7 +44,7 @@
 		AB1F17C81C866C3700F740A2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AB1F17CB1C866C3700F740A2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AB1F17CD1C866C3700F740A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AB9BDF1C1E70E9F0008413C2 /* VPKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VPKit.framework; path = ../VPKit.framework; sourceTree = "<group>"; };
+		AB9BDF1C1E70E9F0008413C2 /* VPKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = VPKit.xcframework; path = ../VPKit.xcframework; sourceTree = "<group>"; };
 		ABBA66ED2148123800BF85BA /* ViewController_AutoLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController_AutoLayout.h; sourceTree = "<group>"; };
 		ABBA66EE2148123800BF85BA /* ViewController_AutoLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController_AutoLayout.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -54,7 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AB9BDF1E1E70E9FA008413C2 /* VPKit.framework in Frameworks */,
+				AB9BDF1E1E70E9FA008413C2 /* VPKit.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,7 +72,7 @@
 		AB1F17B01C866C3700F740A2 = {
 			isa = PBXGroup;
 			children = (
-				AB9BDF1C1E70E9F0008413C2 /* VPKit.framework */,
+				AB9BDF1C1E70E9F0008413C2 /* VPKit.xcframework */,
 				AB1F17BB1C866C3700F740A2 /* VPKitDemo */,
 				AB1F17BA1C866C3700F740A2 /* Products */,
 				54DE0DBF416CFA6047AACDA0 /* Frameworks */,
@@ -124,7 +124,6 @@
 				AB1F17B61C866C3700F740A2 /* Frameworks */,
 				AB1F17B71C866C3700F740A2 /* Resources */,
 				AB7E2C121DD3C2BB005CD150 /* Embed Frameworks */,
-				ABFCE3E01E943887007DD125 /* Strip Frameworks */,
 			);
 			buildRules = (
 			);
@@ -141,7 +140,7 @@
 		AB1F17B11C866C3700F740A2 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 1130;
+				LastUpgradeCheck = 1230;
 				ORGANIZATIONNAME = jonathan;
 				TargetAttributes = {
 					AB1F17B81C866C3700F740A2 = {
@@ -181,23 +180,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		ABFCE3E01E943887007DD125 /* Strip Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Strip Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "bash \"${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}/VPKit.framework/strip-frameworks.sh\"";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		AB1F17B51C866C3700F740A2 /* Sources */ = {
@@ -256,6 +238,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = NO;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -280,7 +263,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -311,6 +294,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = NO;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -329,7 +313,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -354,8 +338,11 @@
 					"$(PROJECT_DIR)/../",
 				);
 				INFOPLIST_FILE = VPKitDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -389,8 +376,11 @@
 					"$(PROJECT_DIR)/../",
 				);
 				INFOPLIST_FILE = VPKitDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
