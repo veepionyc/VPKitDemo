@@ -77,10 +77,7 @@ lane :finished	 do
 end
 
 lane :temp do
-    sh("pwd")
-    _version = deployed_framework_version()
-
-    _build = deployed_framework_build()
-    puts "#{_version}  #{_build}"
+        push_to_git_remote
+        deploy_to_cocoapods
 end
 
