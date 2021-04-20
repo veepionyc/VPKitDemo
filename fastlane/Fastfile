@@ -50,8 +50,8 @@ lane :pre_deploy do
 end
 
 lane :deploy_to_cocoapods do
-    xcversion(version: "11.6")
-    ensure_xcode_version(version: "11.6")
+    xcversion(version: "12.3")
+    ensure_xcode_version(version: "12.3")
     sh("pod trunk push '../VPKit.podspec' --verbose --allow-warnings")
 end
 
@@ -77,7 +77,6 @@ lane :finished	 do
 end
 
 lane :temp do
-        push_to_git_remote
         deploy_to_cocoapods
 end
 
