@@ -9,13 +9,13 @@ OBJC_PROJECTS = [CONSUME_OBJC_PROJECT]
 DEPLOYMENT_DEMO_PROJECTS = [CONSUME_SWIFT_PROJECT,CONSUME_OBJC_PROJECT]
 
 def deployed_framework_version()
-    path = "#{FRAMEWORK_PLIST}"
-    puts "#{path}"
+    path = "../#{IOS_FRAMEWORK_PLIST}"
+    puts "deployed_framework_version path #{path}"
     framework_val("#{path}",'CFBundleShortVersionString')
 end
 
 def deployed_framework_build()
-    path = "#{FRAMEWORK_PLIST}"
+    path = "../#{IOS_FRAMEWORK_PLIST}"
     puts "#{path}"
     framework_val("#{path}",'CFBundleVersion')
 end
@@ -50,8 +50,8 @@ lane :pre_deploy do
 end
 
 lane :deploy_to_cocoapods do
-    xcversion(version: "11.6")
-    ensure_xcode_version(version: "11.6")
+    xcversion(version: "12.3")
+    ensure_xcode_version(version: "12.3")
     sh("pod trunk push '../VPKit.podspec' --verbose --allow-warnings")
 end
 
@@ -77,9 +77,6 @@ lane :finished	 do
 end
 
 lane :temp do
-    _version = deployed_framework_version()
-
-    _build = deployed_framework_build()
-    puts "#{_version}  #{_build}"
+        deploy_to_cocoapods
 end
 

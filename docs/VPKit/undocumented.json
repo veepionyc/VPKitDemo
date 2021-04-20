@@ -1,756 +1,721 @@
 {
   "warnings": [
     {
-      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.framework/Headers/VPKAdHandler.h",
-      "line": 14,
-      "symbol": "VPKMediaIdentifier",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.protocol",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.framework/Headers/VPKAdHandler.h",
-      "line": 16,
-      "symbol": "VPKMediaIdentifier.customData",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.framework/Headers/VPKAdHandler.h",
-      "line": 17,
-      "symbol": "VPKMediaIdentifier.mediaIdentifier",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.framework/Headers/VPKEnvironment.h",
+      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.xcframework/ios-arm64/VPKit.framework/Headers/VPKEnvironment.h",
       "line": 12,
       "symbol": "VPKUserType",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enum",
       "warning": "undocumented"
     },
     {
-      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.framework/Headers/VPKEnvironment.h",
+      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.xcframework/ios-arm64/VPKit.framework/Headers/VPKEnvironment.h",
       "line": 12,
       "symbol": "VPKUserType",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
       "warning": "undocumented"
     },
     {
-      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.framework/Headers/VPKEnvironment.h",
+      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.xcframework/ios-arm64/VPKit.framework/Headers/VPKEnvironment.h",
       "line": 13,
       "symbol": "VPKUserType.VPKUserTypeUnknown",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
-      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.framework/Headers/VPKEnvironment.h",
+      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.xcframework/ios-arm64/VPKit.framework/Headers/VPKEnvironment.h",
       "line": 14,
       "symbol": "VPKUserType.VPKUserTypeAnonymous",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
-      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.framework/Headers/VPKEnvironment.h",
+      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.xcframework/ios-arm64/VPKit.framework/Headers/VPKEnvironment.h",
       "line": 15,
       "symbol": "VPKUserType.VPKUserTypeLightweight",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
-      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.framework/Headers/VPKEnvironment.h",
+      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.xcframework/ios-arm64/VPKit.framework/Headers/VPKEnvironment.h",
       "line": 16,
       "symbol": "VPKUserType.VPKUserTypeHeavyweight",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
-      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.framework/Headers/VPKEnvironment.h",
+      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.xcframework/ios-arm64/VPKit.framework/Headers/VPKEnvironment.h",
       "line": 20,
       "symbol": "VPKEnvironmentType",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enum",
       "warning": "undocumented"
     },
     {
-      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.framework/Headers/VPKEnvironment.h",
+      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.xcframework/ios-arm64/VPKit.framework/Headers/VPKEnvironment.h",
       "line": 20,
       "symbol": "VPKEnvironmentType",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
       "warning": "undocumented"
     },
     {
-      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.framework/Headers/VPKEnvironment.h",
+      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.xcframework/ios-arm64/VPKit.framework/Headers/VPKEnvironment.h",
       "line": 21,
       "symbol": "VPKEnvironmentType.VPKEnvironmentTypeNone",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
-      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.framework/Headers/VPKEnvironment.h",
+      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.xcframework/ios-arm64/VPKit.framework/Headers/VPKEnvironment.h",
       "line": 22,
       "symbol": "VPKEnvironmentType.VPKEnvironmentTypeDev",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
-      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.framework/Headers/VPKEnvironment.h",
+      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.xcframework/ios-arm64/VPKit.framework/Headers/VPKEnvironment.h",
       "line": 23,
       "symbol": "VPKEnvironmentType.VPKEnvironmentTypeSandbox",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
-      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.framework/Headers/VPKEnvironment.h",
+      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.xcframework/ios-arm64/VPKit.framework/Headers/VPKEnvironment.h",
       "line": 24,
       "symbol": "VPKEnvironmentType.VPKEnvironmentTypeProduction",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
-      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.framework/Headers/VPKEnvironment.h",
+      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.xcframework/ios-arm64/VPKit.framework/Headers/VPKEnvironment.h",
       "line": 27,
       "symbol": "VPKUser",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.class",
       "warning": "undocumented"
     },
     {
-      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.framework/Headers/VPKEnvironment.h",
+      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.xcframework/ios-arm64/VPKit.framework/Headers/VPKEnvironment.h",
       "line": 28,
       "symbol": "VPKUser.email",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
       "warning": "undocumented"
     },
     {
-      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.framework/Headers/VPKEnvironment.h",
+      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.xcframework/ios-arm64/VPKit.framework/Headers/VPKEnvironment.h",
       "line": 29,
       "symbol": "VPKUser.canDelete",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
       "warning": "undocumented"
     },
     {
-      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.framework/Headers/VPKEnvironment.h",
+      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.xcframework/ios-arm64/VPKit.framework/Headers/VPKEnvironment.h",
       "line": 30,
       "symbol": "VPKUser.canCreate",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
       "warning": "undocumented"
     },
     {
-      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.framework/Headers/VPKEnvironment.h",
+      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.xcframework/ios-arm64/VPKit.framework/Headers/VPKEnvironment.h",
       "line": 31,
       "symbol": "VPKUser.userType",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
       "warning": "undocumented"
     },
     {
-      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.framework/Headers/VPKEnvironment.h",
+      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.xcframework/ios-arm64/VPKit.framework/Headers/VPKEnvironment.h",
       "line": 34,
       "symbol": "VPKApp",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.class",
       "warning": "undocumented"
     },
     {
-      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.framework/Headers/VPKEnvironment.h",
+      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.xcframework/ios-arm64/VPKit.framework/Headers/VPKEnvironment.h",
       "line": 35,
       "symbol": "VPKApp.veepPublicByDefault",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
       "warning": "undocumented"
     },
     {
-      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.framework/Headers/VPKEnvironment.h",
+      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.xcframework/ios-arm64/VPKit.framework/Headers/VPKEnvironment.h",
       "line": 36,
       "symbol": "VPKApp.name",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
       "warning": "undocumented"
     },
     {
-      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.framework/Headers/VPKEnvironment.h",
+      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.xcframework/ios-arm64/VPKit.framework/Headers/VPKEnvironment.h",
       "line": 38,
       "symbol": "VPKApp.identifier",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
       "warning": "undocumented"
     },
     {
-      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.framework/Headers/VPKEnvironment.h",
+      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.xcframework/ios-arm64/VPKit.framework/Headers/VPKEnvironment.h",
       "line": 40,
       "symbol": "VPKApp.clientId",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
       "warning": "undocumented"
     },
     {
-      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.framework/Headers/VPKEnvironment.h",
+      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.xcframework/ios-arm64/VPKit.framework/Headers/VPKEnvironment.h",
       "line": 41,
       "symbol": "VPKApp.clientSecret",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
       "warning": "undocumented"
     },
     {
-      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.framework/Headers/VPKEnvironment.h",
+      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.xcframework/ios-arm64/VPKit.framework/Headers/VPKEnvironment.h",
       "line": 42,
       "symbol": "VPKApp.uuid",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
       "warning": "undocumented"
     },
     {
-      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.framework/Headers/VPKEnvironment.h",
+      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.xcframework/ios-arm64/VPKit.framework/Headers/VPKEnvironment.h",
       "line": 43,
       "symbol": "VPKApp.idfa",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
       "warning": "undocumented"
     },
     {
-      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.framework/Headers/VPKEnvironment.h",
+      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.xcframework/ios-arm64/VPKit.framework/Headers/VPKEnvironment.h",
       "line": 47,
       "symbol": "VPKApp.-info",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.framework/Headers/VPKEnvironment.h",
+      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.xcframework/ios-arm64/VPKit.framework/Headers/VPKEnvironment.h",
       "line": 48,
       "symbol": "VPKApp.-consumerId",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.framework/Headers/VPKEnvironment.h",
+      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.xcframework/ios-arm64/VPKit.framework/Headers/VPKEnvironment.h",
       "line": 49,
       "symbol": "VPKApp.-sendIDFA:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.framework/Headers/VPKEnvironment.h",
+      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.xcframework/ios-arm64/VPKit.framework/Headers/VPKEnvironment.h",
       "line": 54,
       "symbol": "VPKDevice",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.class",
       "warning": "undocumented"
     },
     {
-      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.framework/Headers/VPKEnvironment.h",
+      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.xcframework/ios-arm64/VPKit.framework/Headers/VPKEnvironment.h",
       "line": 57,
       "symbol": "VPKDevice.-machineName",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.framework/Headers/VPKEnvironment.h",
+      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.xcframework/ios-arm64/VPKit.framework/Headers/VPKEnvironment.h",
       "line": 58,
       "symbol": "VPKDevice.-platform",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.framework/Headers/VPKEnvironment.h",
+      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.xcframework/ios-arm64/VPKit.framework/Headers/VPKEnvironment.h",
       "line": 59,
       "symbol": "VPKDevice.-osVersion",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.framework/Headers/VPKEnvironment.h",
+      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.xcframework/ios-arm64/VPKit.framework/Headers/VPKEnvironment.h",
       "line": 62,
       "symbol": "VPKSdk",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.class",
       "warning": "undocumented"
     },
     {
-      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.framework/Headers/VPKEnvironment.h",
+      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.xcframework/ios-arm64/VPKit.framework/Headers/VPKEnvironment.h",
       "line": 63,
       "symbol": "VPKSdk.-info",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.framework/Headers/VPKEnvironment.h",
+      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.xcframework/ios-arm64/VPKit.framework/Headers/VPKEnvironment.h",
       "line": 64,
       "symbol": "VPKSdk.-infoString",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.framework/Headers/VPKEnvironment.h",
+      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.xcframework/ios-arm64/VPKit.framework/Headers/VPKEnvironment.h",
       "line": 69,
       "symbol": "VPKEnvironment",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.class",
       "warning": "undocumented"
     },
     {
-      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.framework/Headers/VPKEnvironment.h",
+      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.xcframework/ios-arm64/VPKit.framework/Headers/VPKEnvironment.h",
       "line": 70,
       "symbol": "VPKEnvironment.userDefaults",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
       "warning": "undocumented"
     },
     {
-      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.framework/Headers/VPKEnvironment.h",
+      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.xcframework/ios-arm64/VPKit.framework/Headers/VPKEnvironment.h",
       "line": 71,
       "symbol": "VPKEnvironment.user",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
       "warning": "undocumented"
     },
     {
-      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.framework/Headers/VPKEnvironment.h",
+      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.xcframework/ios-arm64/VPKit.framework/Headers/VPKEnvironment.h",
       "line": 72,
       "symbol": "VPKEnvironment.app",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
       "warning": "undocumented"
     },
     {
-      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.framework/Headers/VPKEnvironment.h",
+      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.xcframework/ios-arm64/VPKit.framework/Headers/VPKEnvironment.h",
       "line": 73,
       "symbol": "VPKEnvironment.device",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
       "warning": "undocumented"
     },
     {
-      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.framework/Headers/VPKEnvironment.h",
+      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.xcframework/ios-arm64/VPKit.framework/Headers/VPKEnvironment.h",
       "line": 74,
       "symbol": "VPKEnvironment.sdk",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
       "warning": "undocumented"
     },
     {
-      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.framework/Headers/VPKEnvironment.h",
+      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.xcframework/ios-arm64/VPKit.framework/Headers/VPKEnvironment.h",
       "line": 77,
       "symbol": "VPKEnvironment.ipAddressDevice",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
       "warning": "undocumented"
     },
     {
-      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.framework/Headers/VPKEnvironment.h",
+      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.xcframework/ios-arm64/VPKit.framework/Headers/VPKEnvironment.h",
       "line": 78,
       "symbol": "VPKEnvironment.ipAddressNetwork",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
       "warning": "undocumented"
     },
     {
-      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.framework/Headers/VPKEnvironment.h",
+      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.xcframework/ios-arm64/VPKit.framework/Headers/VPKEnvironment.h",
       "line": 80,
       "symbol": "VPKEnvironment.shouldMonetise",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
       "warning": "undocumented"
     },
     {
-      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.framework/Headers/VPKEnvironment.h",
+      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.xcframework/ios-arm64/VPKit.framework/Headers/VPKEnvironment.h",
       "line": 81,
       "symbol": "VPKEnvironment.production",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
       "warning": "undocumented"
     },
     {
-      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.framework/Headers/VPKEnvironment.h",
+      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.xcframework/ios-arm64/VPKit.framework/Headers/VPKEnvironment.h",
       "line": 82,
       "symbol": "VPKEnvironment.initialized",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
       "warning": "undocumented"
     },
     {
-      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.framework/Headers/VPKEnvironment.h",
+      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.xcframework/ios-arm64/VPKit.framework/Headers/VPKEnvironment.h",
       "line": 83,
       "symbol": "VPKEnvironment.loggedIn",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
       "warning": "undocumented"
     },
     {
-      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.framework/Headers/VPKEnvironment.h",
+      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.xcframework/ios-arm64/VPKit.framework/Headers/VPKEnvironment.h",
       "line": 84,
       "symbol": "VPKEnvironment.forwardErrors",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
       "warning": "undocumented"
     },
     {
-      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.framework/Headers/VPKEnvironment.h",
+      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.xcframework/ios-arm64/VPKit.framework/Headers/VPKEnvironment.h",
       "line": 86,
       "symbol": "VPKEnvironment.+shared",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.class",
       "warning": "undocumented"
     },
     {
-      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.framework/Headers/VPKEnvironment.h",
+      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.xcframework/ios-arm64/VPKit.framework/Headers/VPKEnvironment.h",
       "line": 87,
       "symbol": "VPKEnvironment.-sendIDFA:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.framework/Headers/VPKFontStyles.h",
+      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.xcframework/ios-arm64/VPKit.framework/Headers/VPKFontStyles.h",
       "line": 22,
       "symbol": "VPKFontStyles.barButtonItemFontDisabled",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
       "warning": "undocumented"
     },
     {
-      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.framework/Headers/VPKFontStyles.h",
+      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.xcframework/ios-arm64/VPKit.framework/Headers/VPKFontStyles.h",
       "line": 23,
       "symbol": "VPKFontStyles.barButtonItemFontEnabled",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
       "warning": "undocumented"
     },
     {
-      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.framework/Headers/VPKFontStyles.h",
+      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.xcframework/ios-arm64/VPKit.framework/Headers/VPKFontStyles.h",
       "line": 24,
       "symbol": "VPKFontStyles.barButtonItemFont",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
       "warning": "undocumented"
     },
     {
-      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.framework/Headers/VPKFontStyles.h",
+      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.xcframework/ios-arm64/VPKit.framework/Headers/VPKFontStyles.h",
       "line": 25,
       "symbol": "VPKFontStyles.navBarFont",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
       "warning": "undocumented"
     },
     {
-      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.framework/Headers/VPKFontStyles.h",
+      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.xcframework/ios-arm64/VPKit.framework/Headers/VPKFontStyles.h",
       "line": 26,
       "symbol": "VPKFontStyles.cellNavBarFont",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
       "warning": "undocumented"
     },
     {
-      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.framework/Headers/VPKFontStyles.h",
+      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.xcframework/ios-arm64/VPKit.framework/Headers/VPKFontStyles.h",
       "line": 28,
       "symbol": "VPKFontStyles.cellLabelFont",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
       "warning": "undocumented"
     },
     {
-      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.framework/Headers/VPKFontStyles.h",
+      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.xcframework/ios-arm64/VPKit.framework/Headers/VPKFontStyles.h",
       "line": 29,
       "symbol": "VPKFontStyles.cellTextViewFont",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
       "warning": "undocumented"
     },
     {
-      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.framework/Headers/VPKFontStyles.h",
+      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.xcframework/ios-arm64/VPKit.framework/Headers/VPKFontStyles.h",
       "line": 30,
       "symbol": "VPKFontStyles.bigLabelFont",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
       "warning": "undocumented"
     },
     {
-      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.framework/Headers/VPKFontStyles.h",
+      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.xcframework/ios-arm64/VPKit.framework/Headers/VPKFontStyles.h",
       "line": 32,
       "symbol": "VPKFontStyles.alertFontTitleName",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
       "warning": "undocumented"
     },
     {
-      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.framework/Headers/VPKFontStyles.h",
+      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.xcframework/ios-arm64/VPKit.framework/Headers/VPKFontStyles.h",
       "line": 33,
       "symbol": "VPKFontStyles.alertFontBodyName",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
       "warning": "undocumented"
     },
     {
-      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.framework/Headers/VPKImage.h",
-      "line": 61,
-      "symbol": "VPKImage.customData",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.framework/Headers/VPKPlayerItem.h",
-      "line": 66,
-      "symbol": "VPKPlaylist.-initWithItems:",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.framework/Headers/VPKPreview.h",
+      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.xcframework/ios-arm64/VPKit.framework/Headers/VPKPreview.h",
       "line": 17,
       "symbol": "VPKPreviewDelegate",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.protocol",
       "warning": "undocumented"
     },
     {
-      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.framework/Headers/VPKPreview.h",
+      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.xcframework/ios-arm64/VPKit.framework/Headers/VPKPreview.h",
       "line": 19,
       "symbol": "VPKPreviewDelegate.-vpkPreviewTouched:image:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.framework/Headers/VPKPreview.h",
+      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.xcframework/ios-arm64/VPKit.framework/Headers/VPKPreview.h",
       "line": 23,
       "symbol": "VPKPreviewPassThroughDelegate",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.protocol",
       "warning": "undocumented"
     },
     {
-      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.framework/Headers/VPKPublicConstants.h",
+      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.xcframework/ios-arm64/VPKit.framework/Headers/VPKPublicConstants.h",
       "line": 15,
       "symbol": "vpkErrorNotification",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
       "warning": "undocumented"
     },
     {
-      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.framework/Headers/VPKPublicConstants.h",
+      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.xcframework/ios-arm64/VPKit.framework/Headers/VPKPublicConstants.h",
       "line": 16,
       "symbol": "vpkErrorKey",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
       "warning": "undocumented"
     },
     {
-      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.framework/Headers/VPKPublicConstants.h",
+      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.xcframework/ios-arm64/VPKit.framework/Headers/VPKPublicConstants.h",
       "line": 17,
       "symbol": "vpkPresentErrorKey",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
       "warning": "undocumented"
     },
     {
-      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.framework/Headers/VPKStyles.h",
+      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.xcframework/ios-arm64/VPKit.framework/Headers/VPKStyles.h",
       "line": 24,
       "symbol": "VPKStyles.lineWidth",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
       "warning": "undocumented"
     },
     {
-      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.framework/Headers/VPKStyles.h",
+      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.xcframework/ios-arm64/VPKit.framework/Headers/VPKStyles.h",
       "line": 60,
       "symbol": "VPKStyles.-configureAppearance",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.framework/Headers/VPKStyles.h",
+      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.xcframework/ios-arm64/VPKit.framework/Headers/VPKStyles.h",
       "line": 61,
       "symbol": "VPKStyles.-barButtonItemFontAttributes",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.framework/Headers/VPKStyles.h",
+      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.xcframework/ios-arm64/VPKit.framework/Headers/VPKStyles.h",
       "line": 62,
       "symbol": "VPKStyles.-barButtonItemFontAttributesDisabled",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.framework/Headers/VPKStyles.h",
+      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.xcframework/ios-arm64/VPKit.framework/Headers/VPKStyles.h",
       "line": 63,
       "symbol": "VPKStyles.-barButtonItemFontAttributesEnabled",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.framework/Headers/VPKStyles.h",
+      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.xcframework/ios-arm64/VPKit.framework/Headers/VPKStyles.h",
       "line": 64,
       "symbol": "VPKStyles.-configureNavBar:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.framework/Headers/VPKStyles.h",
+      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.xcframework/ios-arm64/VPKit.framework/Headers/VPKStyles.h",
       "line": 65,
       "symbol": "VPKStyles.-configureCellNavBar:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.framework/Headers/VPKStyles.h",
+      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.xcframework/ios-arm64/VPKit.framework/Headers/VPKStyles.h",
       "line": 66,
       "symbol": "VPKStyles.-configureBarButtonItem:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.framework/Headers/VPKVeepViewer.h",
+      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.xcframework/ios-arm64/VPKit.framework/Headers/VPKVeepViewer.h",
       "line": 15,
       "symbol": "VPKVeepViewerDelegate",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.protocol",
       "warning": "undocumented"
     },
     {
-      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.framework/Headers/VPKVeepViewer.h",
+      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.xcframework/ios-arm64/VPKit.framework/Headers/VPKVeepViewer.h",
       "line": 24,
       "symbol": "VPKVeepViewerDelegate.-veepViewerDidCancel:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.framework/Headers/VPKitClass.h",
+      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.xcframework/ios-arm64/VPKit.framework/Headers/VPKitClass.h",
       "line": 27,
       "symbol": "VPKServerEnvironment",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enum",
       "warning": "undocumented"
     },
     {
-      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.framework/Headers/VPKitClass.h",
+      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.xcframework/ios-arm64/VPKit.framework/Headers/VPKitClass.h",
       "line": 27,
       "symbol": "VPKServerEnvironment",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
       "warning": "undocumented"
     },
     {
-      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.framework/Headers/VPKitClass.h",
+      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.xcframework/ios-arm64/VPKit.framework/Headers/VPKitClass.h",
       "line": 28,
       "symbol": "VPKServerEnvironment.VPKServerDev",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
-      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.framework/Headers/VPKitClass.h",
+      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.xcframework/ios-arm64/VPKit.framework/Headers/VPKitClass.h",
       "line": 29,
       "symbol": "VPKServerEnvironment.VPKServerProduction",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
-      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.framework/Headers/VPKitClass.h",
+      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.xcframework/ios-arm64/VPKit.framework/Headers/VPKitClass.h",
       "line": 32,
       "symbol": "VPKNetworkResponseBlock",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
       "warning": "undocumented"
     },
     {
-      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.framework/Headers/VPKitClass.h",
+      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.xcframework/ios-arm64/VPKit.framework/Headers/VPKitClass.h",
       "line": 34,
       "symbol": "VPKBOOLErrorBlock",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
       "warning": "undocumented"
     },
     {
-      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.framework/Headers/VPKitClass.h",
+      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.xcframework/ios-arm64/VPKit.framework/Headers/VPKitClass.h",
       "line": 36,
       "symbol": "VPKitConsumerIdCompletionBlock",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
       "warning": "undocumented"
     },
     {
-      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.framework/Headers/VPKitClass.h",
+      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.xcframework/ios-arm64/VPKit.framework/Headers/VPKitClass.h",
       "line": 38,
       "symbol": "VPKitPublicVeepErrorCompletionBlock",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
       "warning": "undocumented"
     },
     {
-      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.framework/Headers/VPKitClass.h",
+      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.xcframework/ios-arm64/VPKit.framework/Headers/VPKitClass.h",
       "line": 40,
       "symbol": "VPKitVeepErrorCompletionBlock",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
       "warning": "undocumented"
     },
     {
-      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.framework/Headers/VPKitClass.h",
+      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.xcframework/ios-arm64/VPKit.framework/Headers/VPKitClass.h",
       "line": 43,
       "symbol": "VPKVeepIdentifierErrorCompletionBlock",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
       "warning": "undocumented"
     },
     {
-      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.framework/Headers/VPKitClass.h",
+      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.xcframework/ios-arm64/VPKit.framework/Headers/VPKitClass.h",
       "line": 46,
       "symbol": "VPKUserStatsErrorBlock",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
       "warning": "undocumented"
     },
     {
-      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.framework/Headers/VPKitClass.h",
+      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.xcframework/ios-arm64/VPKit.framework/Headers/VPKitClass.h",
       "line": 49,
       "symbol": "VPKCompetitiveStatsBlock",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
       "warning": "undocumented"
     },
     {
-      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.framework/Headers/VPKitClass.h",
+      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.xcframework/ios-arm64/VPKit.framework/Headers/VPKitClass.h",
       "line": 51,
       "symbol": "VPKDailyStatsBlock",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
       "warning": "undocumented"
     },
     {
-      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.framework/Headers/VPKitClass.h",
+      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.xcframework/ios-arm64/VPKit.framework/Headers/VPKitClass.h",
       "line": 89,
       "symbol": "VPKit.-setApplicationId:clientId:clientSecret:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.framework/Headers/VPKitClass.h",
+      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.xcframework/ios-arm64/VPKit.framework/Headers/VPKitClass.h",
       "line": 93,
       "symbol": "VPKit.+setAuth:env:identifier:name:canCreate:canDelete:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.class",
       "warning": "undocumented"
     },
     {
-      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.framework/Headers/VPKitClass.h",
+      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.xcframework/ios-arm64/VPKit.framework/Headers/VPKitClass.h",
       "line": 100,
       "symbol": "VPKit.-setAuth:env:identifier:name:canCreate:canDelete:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.framework/Headers/VPKitClass.h",
+      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.xcframework/ios-arm64/VPKit.framework/Headers/VPKitClass.h",
       "line": 107,
       "symbol": "VPKit.+setProduction:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.class",
       "warning": "undocumented"
     },
     {
-      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.framework/Headers/VPKitClass.h",
+      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.xcframework/ios-arm64/VPKit.framework/Headers/VPKitClass.h",
       "line": 109,
       "symbol": "VPKit.-setProduction:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.framework/Headers/VPKitClass.h",
+      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.xcframework/ios-arm64/VPKit.framework/Headers/VPKitClass.h",
       "line": 122,
       "symbol": "VPKit.-initUnique",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.framework/Headers/VPKitClass.h",
+      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.xcframework/ios-arm64/VPKit.framework/Headers/VPKitClass.h",
       "line": 191,
       "symbol": "VPKit.+authorized",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.class",
       "warning": "undocumented"
     },
     {
-      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.framework/Headers/VPKitClass.h",
+      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.xcframework/ios-arm64/VPKit.framework/Headers/VPKitClass.h",
       "line": 251,
       "symbol": "VPKit.+fetcher",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.class",
       "warning": "undocumented"
     },
     {
-      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.framework/Headers/VPKitClass.h",
+      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.xcframework/ios-arm64/VPKit.framework/Headers/VPKitClass.h",
       "line": 253,
       "symbol": "VPKit.-fetcher",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.framework/Headers/VPKitClass.h",
+      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.xcframework/ios-arm64/VPKit.framework/Headers/VPKitClass.h",
       "line": 256,
       "symbol": "VPKit.+styles",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.class",
       "warning": "undocumented"
     },
     {
-      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.framework/Headers/VPKitClass.h",
+      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.xcframework/ios-arm64/VPKit.framework/Headers/VPKitClass.h",
       "line": 258,
       "symbol": "VPKit.+environment",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.class",
       "warning": "undocumented"
     },
     {
-      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.framework/Headers/VPKitClass.h",
+      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.xcframework/ios-arm64/VPKit.framework/Headers/VPKitClass.h",
       "line": 260,
       "symbol": "VPKit.-environment",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.framework/Headers/VPKitClass.h",
+      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.xcframework/ios-arm64/VPKit.framework/Headers/VPKitClass.h",
       "line": 281,
       "symbol": "VPKit.-requestVeepWithURL:completionBlock:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.framework/Headers/VPKitClass.h",
+      "file": "/Volumes/Home/Users/Shared/Recovery/__veepio/_code/__frameworks/VPKit_7/demo/VPKit.xcframework/ios-arm64/VPKit.framework/Headers/VPKitClass.h",
       "line": 302,
       "symbol": "VPKit.-getVeepHeaderWithURI:useCache:completionBlock:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",

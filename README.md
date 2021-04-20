@@ -11,8 +11,7 @@
 
 This is a binary distribution of the VPKit framework. Swift and Objective-C compatible.
 
-`VPKit.framework` - fat binary dynamic framework. Runs on simulator and device. Not suitable for app store submission. For the app store either use the included thin arm64 binary (`VPKit_framework_iphoneos.zip`) or run the provided `strip_frameworks.sh` script in the project build phases.  
-
+`VPKit.xcframework` - binary dynamic xcframework with slices for `ios-arm64` and `ios-x86_64-simulator`
 
 Demo host apps are provided in Objective-C and Swift. 
 
