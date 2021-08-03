@@ -33,9 +33,6 @@
 	</array>
 	<key>CFBundlePackageType</key>
 	<string>XFWK</string>
-	<key>NSHumanReadableCopyright</key>
-	<string>© 2021-04-17 Veepio LLC x12.3 v2.9.11-6  #d6e2c40
-</string>
 	<key>XCFrameworkFormatVersion</key>
 	<string>1.0</string>
 </dict>
