@@ -185,6 +185,12 @@ returns a sessionId.
 - (nullable NSString*)mediaIdentifier;
 
 /**
+ returns a custom data dictionary.
+ */
+- (nullable NSDictionary*)customData;
+
+
+/**
 Utility method for preview of youtube veep (experimental).
  */
 
