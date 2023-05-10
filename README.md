@@ -11,7 +11,7 @@
 
 This is a binary distribution of the VPKit framework. Swift and Objective-C compatible.
 
-`VPKit.xcframework` - binary dynamic xcframework with slices for `ios-arm64` and `ios-x86_64-simulator`
+`VPKit.xcframework` - binary dynamic xcframework with slices for `ios-arm64` and `ios-arm64_x86_64-simulator`
 
 Demo host apps are provided in Objective-C and Swift. 
 
