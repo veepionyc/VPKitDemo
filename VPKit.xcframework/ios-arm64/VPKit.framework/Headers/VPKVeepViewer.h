@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "VPKViewController.h"
+#import <VPKit/VPKViewController.h>
 
 @class VPKVeepViewer;
 @class VPKPlaylist;

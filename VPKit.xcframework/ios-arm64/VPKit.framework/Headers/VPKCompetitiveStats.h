@@ -7,8 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "VPKParseableObject.h"
-#import "VPKCompetitiveStatsItem.h"
+#import <VPKit/VPKParseableObject.h>
+#import <VPKit/VPKCompetitiveStatsItem.h>
 NS_ASSUME_NONNULL_BEGIN
 
 /**

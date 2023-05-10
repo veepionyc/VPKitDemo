@@ -9,11 +9,11 @@
 #ifndef VPKStats_h
 #define VPKStats_h
 
-#import "VPKStatsConstants.h"
-#import "VPKDailyStats.h"
-#import "VPKCompetitiveStats.h"
-#import "VPKCompetitiveStatsItem.h"
-#import "VPKUserStats.h"
+#import <VPKit/VPKStatsConstants.h>
+#import <VPKit/VPKDailyStats.h>
+#import <VPKit/VPKCompetitiveStats.h>
+#import <VPKit/VPKCompetitiveStatsItem.h>
+#import <VPKit/VPKUserStats.h>
 
 
 
