@@ -6,7 +6,7 @@
 //  Copyright © 2016 jonathan. All rights reserved.
 //
 
-#import "VPKParseableObject.h"
+#import <VPKit/VPKParseableObject.h>
 
 @interface VPKUserStats : VPKParseableObject
 

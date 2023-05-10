@@ -18,11 +18,11 @@
 @class VPKVeepFetcher;
 @class VPKAuthorization;
 
-#import "VPKStats.h"
-#import "VPKStyles.h"
-#import "VPKPreview.h"
-#import "VPKPublicConstants.h"
-#import "VPKEnvironment.h"
+#import <VPKit/VPKStats.h>
+#import <VPKit/VPKStyles.h>
+#import <VPKit/VPKPreview.h>
+#import <VPKit/VPKPublicConstants.h>
+#import <VPKit/VPKEnvironment.h>
 NS_ASSUME_NONNULL_BEGIN
 typedef NS_ENUM(NSInteger, VPKServerEnvironment) {
     VPKServerDev,

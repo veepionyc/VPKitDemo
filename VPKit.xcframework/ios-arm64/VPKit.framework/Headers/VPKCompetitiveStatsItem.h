@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "VPKParseableObject.h"
+#import <VPKit/VPKParseableObject.h>
 NS_ASSUME_NONNULL_BEGIN
 
 

@@ -7,8 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "VPKColorStyles.h"
-#import "VPKFontStyles.h"
+#import <VPKit/VPKColorStyles.h>
+#import <VPKit/VPKFontStyles.h>
 
 
 /**

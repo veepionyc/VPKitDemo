@@ -9,7 +9,7 @@
 #ifndef VPKAdHandler_h
 #define VPKAdHandler_h
 
-@import UIKit;
+#import <UIKit/UIKit.h>
 
 /**
  Protocol for callback object sent to `VPKAdHandler`

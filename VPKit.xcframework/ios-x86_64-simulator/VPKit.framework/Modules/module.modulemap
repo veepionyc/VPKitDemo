@@ -1,6 +1,0 @@
-framework module VPKit {
-  umbrella header "VPKit.h"
-
-  export *
-  module * { export * }
-}
