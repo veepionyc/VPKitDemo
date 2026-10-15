@@ -31,6 +31,8 @@ In Xcode choose *File > Add Package Dependencies…*, enter `https://github.com/
 
 ### CocoaPods
 
+The public CocoaPods trunk currently serves VPKit 2.10.3; 2.11.8 will be available there shortly. Until then, use the Swift package or the manual installation.
+
 ```ruby
 platform :ios, '12.0'
 
