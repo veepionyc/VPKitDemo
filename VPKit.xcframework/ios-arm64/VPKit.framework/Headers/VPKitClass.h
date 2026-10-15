@@ -24,10 +24,7 @@
 #import <VPKit/VPKPublicConstants.h>
 #import <VPKit/VPKEnvironment.h>
 NS_ASSUME_NONNULL_BEGIN
-typedef NS_ENUM(NSInteger, VPKServerEnvironment) {
-    VPKServerDev,
-    VPKServerProduction
-};
+
 
 typedef void (^VPKNetworkResponseBlock)(BOOL success, NSInteger responseCode, NSError* _Nullable error);
 
@@ -122,14 +119,32 @@ set to YES if requiring Amazon affiliation button during Veep Create
 - (instancetype)initUnique;
 
 /**
-IDFA support - optional
- 
-This requires host app linking to AdSupport.framework ("link binary with libarires" section of project Build Phases)
- 
- @param idfa  Setting this option to YES entails additional reporting requirements when submitting to the app store
- 
-[See Apple docs for more information](https://developer.apple.com/library/content/documentation/LanguagesUtilities/Conceptual/iTunesConnect_Guide/Chapters/SubmittingTheApp.html#//apple_ref/doc/uid/TP40011225-CH33-SW8)
- 
+ Where analytics records are delivered. Defaults to the Veepio collector on Google Cloud Run;
+ pass nil to send them to the SDK API host instead (the fallback path).
+ */
++ (void)setAnalyticsCollectorURL:(nullable NSURL*)url;
++ (nullable NSURL*)analyticsCollectorURL;
+
+/**
+ Advertising identifier (IDFA) support. Explicit opt-in; the default is NO.
+
+ With `YES`, VPKit adds the IDFA to the `context.idfa` field of its analytics records, but
+ only while `ATTrackingManager.trackingAuthorizationStatus` is `.authorized` (iOS 14.5+).
+ VPKit never presents the tracking prompt: request it in the host app with
+ `ATTrackingManager.requestTrackingAuthorization` before or after calling this. The
+ installation UUID remains the primary consumer identifier either way.
+
+ The identifier is read by reflection, so hosts that never opt in do not link AdSupport or
+ AppTrackingTransparency. A host that opts in must:
+
+ - link `AdSupport.framework` and `AppTrackingTransparency.framework`;
+ - add `NSUserTrackingUsageDescription` to its Info.plist;
+ - set `NSPrivacyTracking` to `true` in its own privacy manifest and list the analytics
+   collector host (`veepio-events-collector-859240999434.us-central1.run.app`) under
+   `NSPrivacyTrackingDomains`. VPKit's bundled manifest declares no tracking because the
+   default is off.
+
+ @param idfa YES to enable collection, NO (default) to disable it.
  */
 + (void)sendIDFA:(BOOL)idfa;
 

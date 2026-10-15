@@ -9,17 +9,9 @@
 import UIKit
 import VPKit
 
-//optional for IDFA support
-import AdSupport
 
-
-
-
-@UIApplicationMain
+@main
 class AppDelegate: UIResponder, UIApplicationDelegate {
-    
-    var window: UIWindow?
-    
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
@@ -46,25 +38,31 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         VPKit.setApplicationId(appId,
                                clientId: clientId,
                                clientSecret: clientSecret)
-
         
         /*
          
-         IDFA support
+         ENVIRONMENT
          
-         (optional) send IDFA for Veep tracking
-         
-         This requires host app linking to AdSupport.framework ("link binary with libarires" section of project Build Phases)
-         
-         Setting this option to YES entails additional reporting requirements when submitting to the app store
-         
-         https://developer.apple.com/library/content/documentation/LanguagesUtilities/Conceptual/iTunesConnect_Guide/Chapters/SubmittingTheApp.html#//apple_ref/doc/uid/TP40011225-CH33-SW8
+         The sandbox service is offline; use the production environment.
          
          */
         
-        VPKit.sendIDFA(true)
+        VPKit.environment().production = true
         
-       
+        /*
+         
+         IDFA support - optional, off by default
+         
+         Since VPKit 2.11 advertising-identifier collection is an explicit opt-in
+         (VPKit.sendIDFA(true)), honoured only while the app holds App Tracking
+         Transparency authorisation. This demo does not opt in. An app that does must
+         link AdSupport and AppTrackingTransparency, add NSUserTrackingUsageDescription,
+         and declare tracking in its own privacy manifest.
+         See https://veepionyc.github.io/ for details.
+         
+         */
+        
+        
         /*
          
          STYLE SETTINGS - OPTIONAL
@@ -73,12 +71,32 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
          */
         
         VPKit.styles().margin = 12
-        VPKit.styles().color.navBar = UIColor.init(white: 0.1, alpha: 1.0)
-        VPKit.styles().font.navBarFont = UIFont .systemFont(ofSize: 18, weight: UIFont.Weight.heavy);
-        VPKit.styles().font.cellNavBarFont = UIFont .systemFont(ofSize: 14, weight: UIFont.Weight.bold);
+        VPKit.styles().color.navBar = UIColor(white: 0.1, alpha: 1.0)
+        VPKit.styles().font.navBarFont = UIFont.systemFont(ofSize: 18, weight: .heavy)
+        VPKit.styles().font.cellNavBarFont = UIFont.systemFont(ofSize: 14, weight: .bold)
         
         return true
     }
     
+    // MARK: UISceneSession lifecycle
+    
+    func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
+        return UISceneConfiguration(name: "Default", sessionRole: connectingSceneSession.role)
+    }
+    
 }
 
+
+/*
+ 
+ SCENE DELEGATE
+ 
+ Apps built with the iOS 27 SDK must adopt the UIScene life cycle, otherwise they launch
+ without a window. UIKit loads Main.storyboard into this scene's window from the
+ UIApplicationSceneManifest entry in Info.plist. VPKit itself works under either life cycle.
+ 
+ */
+
+class SceneDelegate: UIResponder, UIWindowSceneDelegate {
+    var window: UIWindow?
+}

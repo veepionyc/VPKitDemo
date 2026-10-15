@@ -7,15 +7,8 @@
 //
 
 #import "AppDelegate.h"
-#import "VPKit/VPKit.h"
+#import <VPKit/VPKit.h>
 
-//optional for IDFA support
-@import AdSupport;
-
-
-@interface AppDelegate ()
-
-@end
 
 @implementation AppDelegate
 
@@ -37,13 +30,6 @@
     
     
     /*
-    NSString* appId = @"VeepMaker-Eagles";
-    NSString* clientId = @"XGTDTI3XGF91yoSudZmfYXuVu3ZZ5OeHM2UfCtZv";
-    NSString* clientSecret = @"4LNUTdiQkakzJH4ZWWnjqiiPX2zc4IADXaLANw0UIUAD35EWbw6NVEd2tLBJKx95jTCXTjIFj4wRUCsgXjAeHb2HtUYDYSaEz3GWuK6xJO7TAS0fZPQP4AZOatMCkFi0";
-    
-    
-    */
-    /*
      
      INITIALISATION
      
@@ -53,23 +39,28 @@
                    clientId:clientId
                clientSecret:clientSecret];
     
-    [VPKit setProduction:YES];
     /*
      
+     ENVIRONMENT
      
-     IDFA support - optional
-     
-     (optional) send IDFA for Veep tracking
-     
-     This requires host app linking to AdSupport.framework ("link binary with libarires" section of project Build Phases)
-     
-     Setting this option to YES entails additional reporting requirements when submitting to the app store
-     
-     https://developer.apple.com/library/content/documentation/LanguagesUtilities/Conceptual/iTunesConnect_Guide/Chapters/SubmittingTheApp.html#//apple_ref/doc/uid/TP40011225-CH33-SW8
+     The sandbox service is offline; use the production environment.
      
      */
     
-    [VPKit sendIDFA:YES];
+    VPKit.environment.production = YES;
+    
+    /*
+     
+     IDFA support - optional, off by default
+     
+     Since VPKit 2.11 advertising-identifier collection is an explicit opt-in
+     ([VPKit sendIDFA:YES]), honoured only while the app holds App Tracking
+     Transparency authorisation. This demo does not opt in. An app that does must
+     link AdSupport and AppTrackingTransparency, add NSUserTrackingUsageDescription,
+     and declare tracking in its own privacy manifest.
+     See https://veepionyc.github.io/ for details.
+     
+     */
     
     
     /*
@@ -79,7 +70,7 @@
      
      */
     
-    [VPKit styles].margin = 0;
+    VPKit.styles.margin = 0;
     VPKit.styles.color.navBar = [UIColor colorWithWhite:0.1 alpha:1.0];
     VPKit.styles.font.navBarFont = [UIFont systemFontOfSize:18 weight:UIFontWeightHeavy];
     VPKit.styles.font.cellNavBarFont = [UIFont systemFontOfSize:14 weight:UIFontWeightBold];
@@ -89,5 +80,16 @@
 }
 
 
+#pragma mark - UISceneSession lifecycle
+
+- (UISceneConfiguration *)application:(UIApplication *)application configurationForConnectingSceneSession:(UISceneSession *)connectingSceneSession options:(UISceneConnectionOptions *)options {
+    return [[UISceneConfiguration alloc] initWithName:@"Default" sessionRole:connectingSceneSession.role];
+}
+
+
+@end
+
+
+@implementation SceneDelegate
 
 @end

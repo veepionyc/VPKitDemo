@@ -40,13 +40,19 @@ typedef NS_ENUM(NSUInteger, VPKEnvironmentType) {
 @property (nonatomic, copy) NSString* clientId;
 @property (nonatomic, copy) NSString* clientSecret;
 @property (nonatomic, copy) NSString* uuid;
-@property (nonatomic, copy) NSString* idfa;
 
 
 
 - (NSDictionary*)info;
+/// Installation UUID, always the primary consumer identifier ("uuid:...").
 - (NSString*)consumerId;
+/// Opt in to advertising-identifier collection (default NO). See VPKEnvironment.idfa.
 - (void)sendIDFA:(BOOL)idfa;
+/// YES after sendIDFA:YES.
+- (BOOL)isIDFAEnabled;
+/// The advertising identifier, or nil unless collection is enabled AND the host app holds
+/// AppTrackingTransparency authorisation. Read by reflection: nothing is linked.
+- (NSString*)idfa;
 
 
 @end
@@ -74,8 +80,6 @@ typedef NS_ENUM(NSUInteger, VPKEnvironmentType) {
 @property (nonatomic, strong) VPKSdk* sdk;
 
 
-@property (nonatomic, strong) NSString* ipAddressDevice;
-@property (nonatomic, strong) NSString* ipAddressNetwork;
 
 @property (nonatomic, assign) BOOL shouldMonetise;
 @property (nonatomic, assign) BOOL production;
@@ -84,7 +88,20 @@ typedef NS_ENUM(NSUInteger, VPKEnvironmentType) {
 @property (nonatomic, assign) BOOL forwardErrors;
 
 + (instancetype)shared;
+
+/// Opt in to advertising-identifier collection (default NO). See +[VPKit sendIDFA:] for
+/// the host app's App Store obligations.
 - (void)sendIDFA:(BOOL)idfa;
+
+/**
+ The advertising identifier (IDFA) as an uppercase UUID string, or nil.
+
+ Non-nil only when all of these hold: `sendIDFA:YES` was called, the device runs iOS 14.5+
+ and `ATTrackingManager.trackingAuthorizationStatus` is `.authorized`, and the identifier is
+ not the all-zero value. VPKit never presents the tracking prompt; the host app owns that.
+ The installation UUID (`app.consumerId`) stays the primary consumer identifier.
+ */
+@property (nonatomic, copy, readonly) NSString* idfa;
 
 
 

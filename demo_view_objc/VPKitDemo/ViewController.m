@@ -13,7 +13,6 @@
 
 @interface ViewController ()<VPKPreviewPassThroughDelegate>
 @property (nonatomic, strong) VPKVeepViewer* vpViewer;
-@property (nonatomic, strong) VPKVeepEditor* vpEditor;
 
 
 @end

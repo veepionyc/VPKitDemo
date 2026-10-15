@@ -27,6 +27,8 @@ NS_ASSUME_NONNULL_BEGIN
 @interface VPKViewController : UIViewController
 @property (nonatomic, strong) VPKVeepVideoImageView* veepView;
 @property (nonatomic, weak, nullable) UIImage* image;
+@property (nonatomic, weak, nullable) UIImage* originalImage;
+
 @property (nonatomic, strong, nonnull) UIView* sourceView;
 @property (nonatomic, assign) CGRect toRect;
 @property (nonatomic, assign) CGRect fromRect;
